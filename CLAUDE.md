@@ -9,9 +9,11 @@ Web application to help users select better riders for Tour de France fantasy le
 - ✅ 100% data integration - all 261 riders matched with PCS data
 - ✅ Flask web application with rider listing and filtering
 - ✅ Rider comparison tool implemented
-- ✅ Team builder with budget optimization
+- ✅ Team builder with budget optimization and team constraints
 - ✅ Statistics page with charts and insights
 - ✅ All text converted to English
+- ✅ 5-tier value system (Excellent/Great/Good/Average/Poor)
+- ✅ Team filtering functionality
 - ✅ Complete functional web application ready
 
 ## Data Sources
@@ -32,12 +34,15 @@ Web application to help users select better riders for Tour de France fantasy le
 - **PCS Integration**: procyclingstats library
 - **Frontend**: HTML templates + Bootstrap/Tailwind
 
-## Key Features to Implement
-1. Rider data integration (fantasy + PCS)
-2. Filtering/sorting by category, price, points
-3. Rider comparison tool
-4. Team builder with 100-credit budget constraint
-5. Value analysis and recommendations
+## Key Features Implemented
+1. ✅ Rider data integration (fantasy + PCS) - 100% match rate
+2. ✅ Filtering/sorting by category, team, price, points
+3. ✅ Rider comparison tool with side-by-side stats
+4. ✅ Team builder with 100-credit budget constraint and team limits
+5. ✅ Value analysis with 5-tier rating system
+6. ✅ Statistics dashboard with charts and insights
+7. ✅ Responsive UI with Bootstrap styling
+8. ✅ Team optimization algorithms (value/points/balanced strategies)
 
 ## Development Commands
 ```bash
