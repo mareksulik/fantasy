@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2><i class="fas fa-users"></i> TdF 2025 Riders</h2>
+    <h2><i class="fas fa-users"></i> Tour de France 2025 Riders</h2>
     <span class="badge bg-primary fs-6">
         {{ filtered_count }} / {{ total_count }} riders
     </span>
@@ -16,10 +16,10 @@
         <h6 class="mb-0"><i class="fas fa-filter"></i> Filters and Sorting</h6>
     </div>
     <div class="card-body">
-        <form method="GET" class="row g-3">
+        <form method="GET" class="row g-3 small">
             <div class="col-md-2">
                 <label for="category" class="form-label">Category</label>
-                <select class="form-select" id="category" name="category">
+                <select class="form-select form-select-sm" id="category" name="category">
                     <option value="all" {% if current_filters.category == 'all' %}selected{% endif %}>All</option>
                     <option value="leaders" {% if current_filters.category == 'leaders' %}selected{% endif %}>Leaders</option>
                     <option value="sprinters" {% if current_filters.category == 'sprinters' %}selected{% endif %}>Sprinters</option>
@@ -30,7 +30,7 @@
             
             <div class="col-md-3">
                 <label for="team" class="form-label">Team</label>
-                <select class="form-select" id="team" name="team">
+                <select class="form-select form-select-sm" id="team" name="team">
                     <option value="all" {% if current_filters.team == 'all' %}selected{% endif %}>All teams</option>
                     {% for team in all_teams %}
                     <option value="{{ team }}" {% if current_filters.team == team %}selected{% endif %}>
@@ -40,21 +40,21 @@
                 </select>
             </div>
             
-            <div class="col-md-2">
+            <div class="col-md-1">
                 <label for="min_price" class="form-label">Min. price</label>
-                <input type="number" class="form-control" id="min_price" name="min_price" 
+                <input type="number" class="form-control form-control-sm" id="min_price" name="min_price" 
                        value="{{ current_filters.min_price or '' }}" min="5" max="27">
             </div>
             
-            <div class="col-md-2">
+            <div class="col-md-1">
                 <label for="max_price" class="form-label">Max. price</label>
-                <input type="number" class="form-control" id="max_price" name="max_price" 
+                <input type="number" class="form-control form-control-sm" id="max_price" name="max_price" 
                        value="{{ current_filters.max_price or '' }}" min="5" max="27">
             </div>
             
             <div class="col-md-2">
                 <label for="sort" class="form-label">Sort by</label>
-                <select class="form-select" id="sort" name="sort">
+                <select class="form-select form-select-sm" id="sort" name="sort">
                     <option value="points_per_credit" {% if current_filters.sort == 'points_per_credit' %}selected{% endif %}>
                         Points/Credit (best)
                     </option>
@@ -71,10 +71,10 @@
             </div>
             
             <div class="col-md-2 d-flex align-items-end">
-                <button type="submit" class="btn btn-primary me-2">
+                <button type="submit" class="btn btn-primary btn-sm me-2">
                     <i class="fas fa-search"></i> Filter
                 </button>
-                <a href="{{ url_for('riders') }}" class="btn btn-outline-secondary">
+                <a href="{{ url_for('riders') }}" class="btn btn-outline-secondary btn-sm">
                     <i class="fas fa-times"></i>
                 </a>
             </div>
