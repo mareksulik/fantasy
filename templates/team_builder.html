@@ -1,0 +1,308 @@
+{% extends "base.html" %}
+
+{% block title %}Team Builder - Fantasy TdF Helper{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2><i class="fas fa-users-cog"></i> Team Builder</h2>
+    <div class="badge bg-info fs-6">
+        Budget: 100 credits
+    </div>
+</div>
+
+<!-- Strategy Selection -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h6 class="mb-0"><i class="fas fa-cog"></i> Build Strategy</h6>
+    </div>
+    <div class="card-body">
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label for="budget" class="form-label">Budget</label>
+                <input type="number" class="form-control" id="budget" value="100" min="50" max="100">
+            </div>
+            <div class="col-md-4">
+                <label for="strategy" class="form-label">Strategy</label>
+                <select class="form-select" id="strategy">
+                    <option value="value">Best Value (Points/Credit)</option>
+                    <option value="points">Highest Points</option>
+                    <option value="balanced">Balanced Approach</option>
+                </select>
+            </div>
+            <div class="col-md-4 d-flex align-items-end">
+                <button class="btn btn-primary w-100" onclick="optimizeTeam()">
+                    <i class="fas fa-magic"></i> Optimize Team
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Current Team -->
+<div id="currentTeam" class="card mb-4" style="display: none;">
+    <div class="card-header d-flex justify-content-between align-items-center">
+        <h6 class="mb-0"><i class="fas fa-users"></i> Your Team</h6>
+        <div>
+            <span id="teamCost" class="badge bg-primary me-2">0 credits</span>
+            <span id="teamPoints" class="badge bg-success">0 points</span>
+        </div>
+    </div>
+    <div class="card-body">
+        <div id="teamMembers" class="row"></div>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Team Statistics</h6>
+                        <div class="row">
+                            <div class="col-6">
+                                <div id="totalCost" class="fw-bold text-primary">0</div>
+                                <small class="text-muted">Total Cost</small>
+                            </div>
+                            <div class="col-6">
+                                <div id="remainingBudget" class="fw-bold text-success">100</div>
+                                <small class="text-muted">Remaining</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card bg-light">
+                    <div class="card-body text-center">
+                        <h6 class="card-title">Performance</h6>
+                        <div class="row">
+                            <div class="col-6">
+                                <div id="totalPoints" class="fw-bold text-success">0</div>
+                                <small class="text-muted">Total Points</small>
+                            </div>
+                            <div class="col-6">
+                                <div id="avgEfficiency" class="fw-bold text-info">0</div>
+                                <small class="text-muted">Avg P/C</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mt-3 text-center">
+            <button class="btn btn-outline-danger" onclick="clearTeam()">
+                <i class="fas fa-trash"></i> Clear Team
+            </button>
+            <button class="btn btn-success" onclick="exportTeam()">
+                <i class="fas fa-download"></i> Export Team
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Manual Team Building by Category -->
+<div class="row">
+    {% for category, riders in categories.items() %}
+    <div class="col-lg-6 mb-4">
+        <div class="card h-100">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h6 class="mb-0">
+                    <i class="fas fa-{{ 'crown' if category == 'Leaders' else 'rocket' if category == 'Sprinters' else 'mountain' if category == 'Climbers' else 'star' }}"></i>
+                    {{ category }}
+                </h6>
+                <span class="badge bg-secondary">{{ riders|length }} riders</span>
+            </div>
+            <div class="card-body" style="max-height: 400px; overflow-y: auto;">
+                {% for rider in riders[:15] %}
+                <div class="rider-row d-flex justify-content-between align-items-center mb-2 p-2 border rounded">
+                    <div class="flex-grow-1">
+                        <div class="fw-bold">{{ rider.fantasy_name }}</div>
+                        <small class="text-muted">{{ rider.team }}</small>
+                    </div>
+                    <div class="text-center me-2">
+                        <div class="small fw-bold {{ get_value_class(rider.value_category) }}">
+                            {{ "%.1f"|format(rider.points_per_credit or 0) }}
+                        </div>
+                        <small class="text-muted">P/C</small>
+                    </div>
+                    <div class="text-center me-2">
+                        <div class="small fw-bold">{{ rider.price }}</div>
+                        <small class="text-muted">cr</small>
+                    </div>
+                    <button class="btn btn-outline-primary btn-sm" onclick="addToTeam('{{ rider.fantasy_name }}', {{ rider.price }}, {{ rider.pcs_points_2025 or 0 }}, '{{ rider.category }}')">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                {% endfor %}
+                {% if riders|length > 15 %}
+                <div class="text-center">
+                    <small class="text-muted">... and {{ riders|length - 15 }} more riders</small>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Loading Modal -->
+<div class="modal fade" id="loadingModal" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-body text-center py-4">
+                <div class="spinner-border text-primary mb-3" role="status"></div>
+                <div>Optimizing your team...</div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let currentTeam = [];
+let maxBudget = 100;
+
+function optimizeTeam() {
+    const budget = parseInt(document.getElementById('budget').value);
+    const strategy = document.getElementById('strategy').value;
+    
+    // Show loading modal
+    const modal = new bootstrap.Modal(document.getElementById('loadingModal'));
+    modal.show();
+    
+    fetch(`/api/optimize-team?budget=${budget}&strategy=${strategy}`)
+        .then(response => response.json())
+        .then(data => {
+            modal.hide();
+            if (data.success) {
+                currentTeam = data.team;
+                maxBudget = budget;
+                updateTeamDisplay();
+                displayTeamStats(data.stats);
+            } else {
+                alert('Error optimizing team: ' + data.message);
+            }
+        })
+        .catch(error => {
+            modal.hide();
+            alert('Error: ' + error.message);
+        });
+}
+
+function addToTeam(name, price, points, category) {
+    const totalCost = currentTeam.reduce((sum, rider) => sum + rider.price, 0);
+    
+    if (totalCost + price > maxBudget) {
+        alert(`Adding ${name} would exceed your budget of ${maxBudget} credits.`);
+        return;
+    }
+    
+    if (currentTeam.length >= 8) {
+        alert('Team is full! Maximum 8 riders allowed.');
+        return;
+    }
+    
+    if (currentTeam.find(rider => rider.fantasy_name === name)) {
+        alert('Rider already in team!');
+        return;
+    }
+    
+    currentTeam.push({
+        fantasy_name: name,
+        price: price,
+        pcs_points_2025: points,
+        category: category
+    });
+    
+    updateTeamDisplay();
+}
+
+function removeFromTeam(name) {
+    currentTeam = currentTeam.filter(rider => rider.fantasy_name !== name);
+    updateTeamDisplay();
+}
+
+function updateTeamDisplay() {
+    const teamDiv = document.getElementById('currentTeam');
+    const membersDiv = document.getElementById('teamMembers');
+    
+    if (currentTeam.length === 0) {
+        teamDiv.style.display = 'none';
+        return;
+    }
+    
+    teamDiv.style.display = 'block';
+    
+    membersDiv.innerHTML = currentTeam.map(rider => `
+        <div class="col-md-6 col-lg-4 mb-2">
+            <div class="card card-sm">
+                <div class="card-body p-2">
+                    <div class="d-flex justify-content-between align-items-start">
+                        <div class="flex-grow-1">
+                            <div class="fw-bold small">${rider.fantasy_name}</div>
+                            <span class="badge badge-sm bg-primary">${rider.category}</span>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-bold">${rider.price} cr</div>
+                            <button class="btn btn-outline-danger btn-sm" onclick="removeFromTeam('${rider.fantasy_name}')">
+                                <i class="fas fa-times"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    `).join('');
+    
+    // Update stats
+    const totalCost = currentTeam.reduce((sum, rider) => sum + rider.price, 0);
+    const totalPoints = currentTeam.reduce((sum, rider) => sum + rider.pcs_points_2025, 0);
+    const avgEfficiency = totalCost > 0 ? totalPoints / totalCost : 0;
+    
+    document.getElementById('teamCost').textContent = `${totalCost} credits`;
+    document.getElementById('teamPoints').textContent = `${Math.round(totalPoints)} points`;
+    document.getElementById('totalCost').textContent = totalCost;
+    document.getElementById('remainingBudget').textContent = maxBudget - totalCost;
+    document.getElementById('totalPoints').textContent = Math.round(totalPoints);
+    document.getElementById('avgEfficiency').textContent = avgEfficiency.toFixed(1);
+}
+
+function displayTeamStats(stats) {
+    document.getElementById('teamCost').textContent = `${stats.total_cost} credits`;
+    document.getElementById('teamPoints').textContent = `${Math.round(stats.total_points)} points`;
+    document.getElementById('totalCost').textContent = stats.total_cost;
+    document.getElementById('remainingBudget').textContent = stats.remaining_budget;
+    document.getElementById('totalPoints').textContent = Math.round(stats.total_points);
+    document.getElementById('avgEfficiency').textContent = stats.avg_points_per_credit.toFixed(1);
+}
+
+function clearTeam() {
+    if (confirm('Are you sure you want to clear your team?')) {
+        currentTeam = [];
+        updateTeamDisplay();
+    }
+}
+
+function exportTeam() {
+    if (currentTeam.length === 0) {
+        alert('No team to export!');
+        return;
+    }
+    
+    const teamData = {
+        team: currentTeam,
+        stats: {
+            total_cost: currentTeam.reduce((sum, rider) => sum + rider.price, 0),
+            total_points: currentTeam.reduce((sum, rider) => sum + rider.pcs_points_2025, 0),
+            team_size: currentTeam.length
+        },
+        created: new Date().toISOString()
+    };
+    
+    const blob = new Blob([JSON.stringify(teamData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'fantasy_tdf_team.json';
+    a.click();
+    URL.revokeObjectURL(url);
+}
+</script>
+{% endblock %}

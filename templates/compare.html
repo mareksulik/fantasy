@@ -1,0 +1,238 @@
+{% extends "base.html" %}
+
+{% block title %}Compare Riders - Fantasy TdF Helper{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2><i class="fas fa-balance-scale"></i> Compare Riders</h2>
+    <a href="{{ url_for('riders') }}" class="btn btn-outline-primary">
+        <i class="fas fa-arrow-left"></i> Back to Riders
+    </a>
+</div>
+
+{% if riders|length == 0 %}
+<div class="text-center py-5">
+    <i class="fas fa-balance-scale fa-3x text-muted mb-3"></i>
+    <h4 class="text-muted">No Riders Selected</h4>
+    <p class="text-muted">Select riders from the main list to compare them side by side.</p>
+    <a href="{{ url_for('riders') }}" class="btn btn-primary">
+        <i class="fas fa-users"></i> Browse Riders
+    </a>
+</div>
+{% elif riders|length == 1 %}
+<div class="alert alert-info">
+    <h6 class="alert-heading"><i class="fas fa-info-circle"></i> Add More Riders</h6>
+    <p class="mb-0">You have selected 1 rider. Add more riders to compare their stats side by side.</p>
+</div>
+{% endif %}
+
+{% if riders|length > 1 %}
+<!-- Comparison Table -->
+<div class="card">
+    <div class="card-header">
+        <h5 class="mb-0">
+            <i class="fas fa-table"></i> Rider Comparison 
+            <span class="badge bg-primary">{{ riders|length }} riders</span>
+        </h5>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Metric</th>
+                        {% for rider in riders %}
+                        <th class="text-center">{{ rider.fantasy_name }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="fw-bold">Team</td>
+                        {% for rider in riders %}
+                        <td class="text-center">{{ rider.team }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">Category</td>
+                        {% for rider in riders %}
+                        <td class="text-center">
+                            <span class="badge bg-primary">{{ rider.category }}</span>
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">Price</td>
+                        {% for rider in riders %}
+                        <td class="text-center fw-bold">{{ rider.price }} credits</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">PCS Points 2025</td>
+                        {% for rider in riders %}
+                        <td class="text-center">{{ format_number(rider.pcs_points_2025 or 0) }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">Points/Credit Ratio</td>
+                        {% for rider in riders %}
+                        <td class="text-center {{ get_value_class(rider.value_category) }}">
+                            {{ "%.1f"|format(rider.points_per_credit or 0) }}
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">Value Rating</td>
+                        {% for rider in riders %}
+                        <td class="text-center">
+                            <span class="badge bg-{{ 'success' if rider.value_category == 'Excellent' else 'warning' if rider.value_category == 'Good' else 'secondary' }}">
+                                {{ rider.value_category }}
+                            </span>
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">PCS Rank</td>
+                        {% for rider in riders %}
+                        <td class="text-center">
+                            {% if rider.pcs_rank %}
+                                #{{ rider.pcs_rank }}
+                                {% if rider.pcs_rank <= 20 %}
+                                <i class="fas fa-trophy text-warning"></i>
+                                {% endif %}
+                            {% else %}
+                                -
+                            {% endif %}
+                        </td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td class="fw-bold">Nationality</td>
+                        {% for rider in riders %}
+                        <td class="text-center">{{ rider.pcs_nationality or '?' }}</td>
+                        {% endfor %}
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<!-- Individual Cards -->
+<div class="row mt-4">
+    {% for rider in riders %}
+    <div class="col-lg-6 col-xl-4 mb-4">
+        <div class="card h-100 {{ get_category_class(rider.category) }}">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h6 class="mb-0">{{ rider.fantasy_name }}</h6>
+                <span class="badge bg-secondary">{{ rider.price }} cr</span>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-2">
+                    <i class="fas fa-flag"></i> {{ rider.pcs_nationality or '?' }} | 
+                    <i class="fas fa-users"></i> {{ rider.team }}
+                </p>
+                
+                <div class="row text-center mb-3">
+                    <div class="col-6">
+                        <div class="fw-bold">{{ format_number(rider.pcs_points_2025 or 0) }}</div>
+                        <div class="text-muted small">PCS Points</div>
+                    </div>
+                    <div class="col-6">
+                        <div class="fw-bold {{ get_value_class(rider.value_category) }}">
+                            {{ "%.1f"|format(rider.points_per_credit or 0) }}
+                        </div>
+                        <div class="text-muted small">P/C Ratio</div>
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <span class="badge bg-primary">{{ rider.category }}</span>
+                    <span class="badge bg-{{ 'success' if rider.value_category == 'Excellent' else 'warning' if rider.value_category == 'Good' else 'secondary' }}">
+                        {{ rider.value_category }}
+                    </span>
+                    {% if rider.pcs_rank and rider.pcs_rank <= 50 %}
+                    <span class="badge bg-warning text-dark">
+                        <i class="fas fa-trophy"></i> #{{ rider.pcs_rank }} PCS
+                    </span>
+                    {% endif %}
+                </div>
+                
+                <div class="d-grid gap-2">
+                    {% if rider.pcs_url %}
+                    <a href="{{ rider.pcs_url }}" target="_blank" class="btn btn-outline-info btn-sm">
+                        <i class="fas fa-external-link-alt"></i> View on PCS
+                    </a>
+                    {% endif %}
+                    <button class="btn btn-outline-danger btn-sm" onclick="removeRider('{{ rider.fantasy_name }}')">
+                        <i class="fas fa-times"></i> Remove from comparison
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<!-- Add More Riders -->
+<div class="card mt-4">
+    <div class="card-header">
+        <h6 class="mb-0"><i class="fas fa-plus"></i> Add More Riders</h6>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-8">
+                <select id="riderSelect" class="form-select">
+                    <option value="">Select a rider to add...</option>
+                    {% for rider in all_riders %}
+                    {% if rider not in riders %}
+                    <option value="{{ rider.fantasy_name }}">
+                        {{ rider.fantasy_name }} ({{ rider.team }}) - {{ rider.price }} credits
+                    </option>
+                    {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-4">
+                <button class="btn btn-primary w-100" onclick="addRider()">
+                    <i class="fas fa-plus"></i> Add to Comparison
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function addRider() {
+    const select = document.getElementById('riderSelect');
+    const riderName = select.value;
+    
+    if (riderName) {
+        const currentParams = new URLSearchParams(window.location.search);
+        currentParams.append('riders', riderName);
+        window.location.href = '{{ url_for("compare") }}?' + currentParams.toString();
+    }
+}
+
+function removeRider(riderName) {
+    const currentParams = new URLSearchParams(window.location.search);
+    const riders = currentParams.getAll('riders');
+    const filteredRiders = riders.filter(r => r !== riderName);
+    
+    const newParams = new URLSearchParams();
+    filteredRiders.forEach(rider => newParams.append('riders', rider));
+    
+    window.location.href = '{{ url_for("compare") }}?' + newParams.toString();
+}
+
+// Allow enter key to add rider
+document.getElementById('riderSelect').addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        addRider();
+    }
+});
+</script>
+{% endblock %}

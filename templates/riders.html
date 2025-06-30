@@ -1,0 +1,223 @@
+{% extends "base.html" %}
+
+{% block title %}Riders - Fantasy TdF Helper{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2><i class="fas fa-users"></i> TdF 2025 Riders</h2>
+    <span class="badge bg-primary fs-6">
+        {{ filtered_count }} / {{ total_count }} riders
+    </span>
+</div>
+
+<!-- Filtre -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h6 class="mb-0"><i class="fas fa-filter"></i> Filters and Sorting</h6>
+    </div>
+    <div class="card-body">
+        <form method="GET" class="row g-3">
+            <div class="col-md-3">
+                <label for="category" class="form-label">Category</label>
+                <select class="form-select" id="category" name="category">
+                    <option value="all" {% if current_filters.category == 'all' %}selected{% endif %}>All</option>
+                    <option value="leaders" {% if current_filters.category == 'leaders' %}selected{% endif %}>Leaders</option>
+                    <option value="sprinters" {% if current_filters.category == 'sprinters' %}selected{% endif %}>Sprinters</option>
+                    <option value="climbers" {% if current_filters.category == 'climbers' %}selected{% endif %}>Climbers</option>
+                    <option value="all-rounders" {% if current_filters.category == 'all-rounders' %}selected{% endif %}>All-rounders</option>
+                </select>
+            </div>
+            
+            <div class="col-md-2">
+                <label for="min_price" class="form-label">Min. price</label>
+                <input type="number" class="form-control" id="min_price" name="min_price" 
+                       value="{{ current_filters.min_price or '' }}" min="5" max="27">
+            </div>
+            
+            <div class="col-md-2">
+                <label for="max_price" class="form-label">Max. price</label>
+                <input type="number" class="form-control" id="max_price" name="max_price" 
+                       value="{{ current_filters.max_price or '' }}" min="5" max="27">
+            </div>
+            
+            <div class="col-md-3">
+                <label for="sort" class="form-label">Sort by</label>
+                <select class="form-select" id="sort" name="sort">
+                    <option value="points_per_credit" {% if current_filters.sort == 'points_per_credit' %}selected{% endif %}>
+                        Points/Credit (best)
+                    </option>
+                    <option value="pcs_points" {% if current_filters.sort == 'pcs_points' %}selected{% endif %}>
+                        PCS Points (highest)
+                    </option>
+                    <option value="price" {% if current_filters.sort == 'price' %}selected{% endif %}>
+                        Price (lowest)
+                    </option>
+                    <option value="name" {% if current_filters.sort == 'name' %}selected{% endif %}>
+                        Name (A-Z)
+                    </option>
+                </select>
+            </div>
+            
+            <div class="col-md-2 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary me-2">
+                    <i class="fas fa-search"></i> Filter
+                </button>
+                <a href="{{ url_for('riders') }}" class="btn btn-outline-secondary">
+                    <i class="fas fa-times"></i>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Zoznam jazdcov -->
+<div class="row">
+    {% for rider in riders %}
+    <div class="col-lg-6 col-xl-4 mb-3">
+        <div class="card rider-card {{ get_category_class(rider.category) }} h-100">
+            <div class="card-body">
+                <div class="d-flex justify-content-between align-items-start mb-2">
+                    <h6 class="card-title mb-0">{{ rider.fantasy_name }}</h6>
+                    <span class="badge bg-secondary">{{ rider.price }} cr</span>
+                </div>
+                
+                <p class="text-muted small mb-2">
+                    <i class="fas fa-flag"></i> {{ rider.pcs_nationality or '?' }} | 
+                    <i class="fas fa-users"></i> {{ rider.team }}
+                </p>
+                
+                <div class="row text-center small">
+                    <div class="col-4">
+                        <div class="fw-bold">{{ format_number(rider.pcs_points_2025 or 0) }}</div>
+                        <div class="text-muted">PCS Points</div>
+                    </div>
+                    <div class="col-4">
+                        <div class="fw-bold {{ get_value_class(rider.value_category) }}">
+                            {{ "%.1f"|format(rider.points_per_credit or 0) }}
+                        </div>
+                        <div class="text-muted">P/C Ratio</div>
+                    </div>
+                    <div class="col-4">
+                        <span class="badge bg-{{ 'success' if rider.value_category == 'Excellent' else 'warning' if rider.value_category == 'Good' else 'secondary' }}">
+                            {{ rider.value_category }}
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="mt-2">
+                    <span class="badge bg-primary">{{ rider.category }}</span>
+                    {% if rider.pcs_rank and rider.pcs_rank <= 50 %}
+                    <span class="badge bg-warning text-dark">
+                        <i class="fas fa-trophy"></i> #{{ rider.pcs_rank }} PCS
+                    </span>
+                    {% endif %}
+                </div>
+                
+                <div class="mt-3">
+                    <div class="btn-group w-100" role="group">
+                        <button type="button" class="btn btn-sm btn-outline-primary" 
+                                onclick="addToCompare('{{ rider.fantasy_name }}')">
+                            <i class="fas fa-plus"></i> Compare
+                        </button>
+                        {% if rider.pcs_url %}
+                        <a href="{{ rider.pcs_url }}" target="_blank" class="btn btn-sm btn-outline-info">
+                            <i class="fas fa-external-link-alt"></i> PCS
+                        </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+{% if not riders %}
+<div class="text-center py-5">
+    <i class="fas fa-search fa-3x text-muted mb-3"></i>
+    <h4 class="text-muted">No riders match the filters</h4>
+    <p class="text-muted">Try changing the filters or reset them.</p>
+    <a href="{{ url_for('riders') }}" class="btn btn-primary">
+        <i class="fas fa-refresh"></i> Reset filters
+    </a>
+</div>
+{% endif %}
+
+<!-- Floating compare button -->
+<div id="comparePanel" class="position-fixed bottom-0 end-0 m-3" style="display: none;">
+    <div class="card">
+        <div class="card-body p-3">
+            <h6 class="card-title mb-2">
+                <i class="fas fa-balance-scale"></i> Compare 
+                <span id="compareCount" class="badge bg-primary">0</span>
+            </h6>
+            <div id="compareList" class="mb-2"></div>
+            <div class="btn-group w-100">
+                <button class="btn btn-success btn-sm" onclick="goToCompare()">
+                    <i class="fas fa-arrow-right"></i> Compare
+                </button>
+                <button class="btn btn-outline-secondary btn-sm" onclick="clearCompare()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+let compareList = [];
+
+function addToCompare(riderName) {
+    if (!compareList.includes(riderName) && compareList.length < 5) {
+        compareList.push(riderName);
+        updateComparePanel();
+    }
+}
+
+function removeFromCompare(riderName) {
+    compareList = compareList.filter(name => name !== riderName);
+    updateComparePanel();
+}
+
+function updateComparePanel() {
+    const panel = document.getElementById('comparePanel');
+    const count = document.getElementById('compareCount');
+    const list = document.getElementById('compareList');
+    
+    count.textContent = compareList.length;
+    
+    if (compareList.length > 0) {
+        panel.style.display = 'block';
+        list.innerHTML = compareList.map(name => 
+            `<span class="badge bg-secondary me-1">
+                ${name} 
+                <button type="button" class="btn-close btn-close-white" 
+                        style="font-size: 0.6em;" 
+                        onclick="removeFromCompare('${name}')"></button>
+            </span>`
+        ).join('');
+    } else {
+        panel.style.display = 'none';
+    }
+}
+
+function goToCompare() {
+    if (compareList.length >= 2) {
+        const params = compareList.map(name => 'riders=' + encodeURIComponent(name)).join('&');
+        window.location.href = '{{ url_for("compare") }}?' + params;
+    } else {
+        alert('Select at least 2 riders to compare.');
+    }
+}
+
+function clearCompare() {
+    compareList = [];
+    updateComparePanel();
+}
+
+// JavaScript helper functions for interactivity
+// (CSS triedy sa riešia cez Flask template funkcie)
+</script>
+{% endblock %}

@@ -1,0 +1,273 @@
+{% extends "base.html" %}
+
+{% block title %}Statistics - Fantasy TdF Helper{% endblock %}
+
+{% block content %}
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2><i class="fas fa-chart-bar"></i> Statistics & Analytics</h2>
+    <span class="badge bg-info fs-6">{{ stats.total_riders }} total riders</span>
+</div>
+
+<!-- Overview Cards -->
+<div class="row mb-4">
+    <div class="col-md-3 mb-3">
+        <div class="card bg-primary text-white">
+            <div class="card-body text-center">
+                <i class="fas fa-users fa-2x mb-2"></i>
+                <h4 class="mb-0">{{ stats.total_riders }}</h4>
+                <small>Total Riders</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card bg-success text-white">
+            <div class="card-body text-center">
+                <i class="fas fa-check-circle fa-2x mb-2"></i>
+                <h4 class="mb-0">{{ stats.matched_riders }}</h4>
+                <small>PCS Data Matched</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card bg-info text-white">
+            <div class="card-body text-center">
+                <i class="fas fa-percentage fa-2x mb-2"></i>
+                <h4 class="mb-0">{{ "%.1f"|format(stats.match_rate) }}%</h4>
+                <small>Match Rate</small>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 mb-3">
+        <div class="card bg-warning text-white">
+            <div class="card-body text-center">
+                <i class="fas fa-coins fa-2x mb-2"></i>
+                <h4 class="mb-0">{{ "%.1f"|format(stats.avg_price) }}</h4>
+                <small>Avg Price</small>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Category Breakdown -->
+<div class="row">
+    <div class="col-lg-8 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h6 class="mb-0"><i class="fas fa-chart-pie"></i> Category Statistics</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th class="text-center">Count</th>
+                                <th class="text-center">Avg Price</th>
+                                <th class="text-center">Avg Points</th>
+                                <th class="text-center">Avg P/C Ratio</th>
+                                <th class="text-center">Best Value</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for category, data in category_stats.items() %}
+                            <tr>
+                                <td>
+                                    <i class="fas fa-{{ 'crown' if category == 'Leaders' else 'rocket' if category == 'Sprinters' else 'mountain' if category == 'Climbers' else 'star' }} me-2"></i>
+                                    <strong>{{ category }}</strong>
+                                </td>
+                                <td class="text-center">{{ data.count }}</td>
+                                <td class="text-center">{{ "%.1f"|format(data.avg_price) }}</td>
+                                <td class="text-center">{{ "%.0f"|format(data.avg_points) }}</td>
+                                <td class="text-center">{{ "%.1f"|format(data.avg_points_per_credit) }}</td>
+                                <td class="text-center">
+                                    <span class="badge bg-success">{{ data.best_value.fantasy_name }}</span>
+                                </td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-4 mb-4">
+        <div class="card h-100">
+            <div class="card-header">
+                <h6 class="mb-0"><i class="fas fa-trophy"></i> Top Performers</h6>
+            </div>
+            <div class="card-body">
+                <h6 class="text-muted">Best Value Picks by Category:</h6>
+                {% for category, data in category_stats.items() %}
+                <div class="d-flex justify-content-between align-items-center mb-2 p-2 bg-light rounded">
+                    <div>
+                        <div class="fw-bold">{{ data.best_value.fantasy_name }}</div>
+                        <small class="text-muted">{{ category }}</small>
+                    </div>
+                    <div class="text-end">
+                        <div class="fw-bold text-success">{{ "%.1f"|format(data.best_value.points_per_credit) }}</div>
+                        <small class="text-muted">P/C</small>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Price Distribution -->
+<div class="row">
+    <div class="col-lg-6 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h6 class="mb-0"><i class="fas fa-coins"></i> Price Distribution</h6>
+            </div>
+            <div class="card-body">
+                <canvas id="priceChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-lg-6 mb-4">
+        <div class="card">
+            <div class="card-header">
+                <h6 class="mb-0"><i class="fas fa-chart-line"></i> Value Categories</h6>
+            </div>
+            <div class="card-body">
+                <canvas id="valueChart" width="400" height="200"></canvas>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Insights -->
+<div class="card">
+    <div class="card-header">
+        <h6 class="mb-0"><i class="fas fa-lightbulb"></i> Key Insights</h6>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6">
+                <h6>💡 Smart Picks:</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>
+                        Look for riders with "Excellent" value rating
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>
+                        {{ stats.match_rate|round(1) }}% of riders have complete PCS data
+                    </li>
+                    <li class="mb-2">
+                        <i class="fas fa-check text-success me-2"></i>
+                        Average price across all categories: {{ "%.1f"|format(stats.avg_price) }} credits
+                    </li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h6>📊 Category Insights:</h6>
+                <ul class="list-unstyled">
+                    {% for category, data in category_stats.items() %}
+                    <li class="mb-2">
+                        <i class="fas fa-info-circle text-info me-2"></i>
+                        {{ category }}: {{ data.count }} riders, avg {{ "%.1f"|format(data.avg_price) }} credits
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+// Price Distribution Chart
+const priceCtx = document.getElementById('priceChart').getContext('2d');
+const priceData = {
+    {% for category, data in category_stats.items() %}
+    '{{ category }}': {{ data.avg_price|round(1) }},
+    {% endfor %}
+};
+
+new Chart(priceCtx, {
+    type: 'bar',
+    data: {
+        labels: Object.keys(priceData),
+        datasets: [{
+            label: 'Average Price (Credits)',
+            data: Object.values(priceData),
+            backgroundColor: [
+                'rgba(220, 53, 69, 0.8)',   // Leaders - red
+                'rgba(40, 167, 69, 0.8)',   // Sprinters - green  
+                'rgba(23, 162, 184, 0.8)',  // Climbers - blue
+                'rgba(255, 193, 7, 0.8)'    // All-rounders - yellow
+            ],
+            borderColor: [
+                'rgba(220, 53, 69, 1)',
+                'rgba(40, 167, 69, 1)',
+                'rgba(23, 162, 184, 1)',
+                'rgba(255, 193, 7, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        scales: {
+            y: {
+                beginAtZero: true,
+                title: {
+                    display: true,
+                    text: 'Credits'
+                }
+            }
+        },
+        plugins: {
+            legend: {
+                display: false
+            }
+        }
+    }
+});
+
+// Value Categories Pie Chart
+const valueCtx = document.getElementById('valueChart').getContext('2d');
+
+// We'll create dummy data for value distribution since we don't have it in the backend yet
+const valueDistribution = {
+    'Excellent': 45,
+    'Good': 78,
+    'Average': 89,
+    'Poor': 32,
+    'Unknown': 17
+};
+
+new Chart(valueCtx, {
+    type: 'doughnut',
+    data: {
+        labels: Object.keys(valueDistribution),
+        datasets: [{
+            data: Object.values(valueDistribution),
+            backgroundColor: [
+                'rgba(40, 167, 69, 0.8)',   // Excellent - green
+                'rgba(23, 162, 184, 0.8)',  // Good - blue
+                'rgba(255, 193, 7, 0.8)',   // Average - yellow
+                'rgba(220, 53, 69, 0.8)',   // Poor - red
+                'rgba(108, 117, 125, 0.8)'  // Unknown - gray
+            ],
+            borderWidth: 2
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'bottom'
+            }
+        }
+    }
+});
+</script>
+{% endblock %}

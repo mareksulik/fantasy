@@ -1,0 +1,262 @@
+fantasy_name,team,category,price,pcs_match_found,match_similarity,pcs_name,pcs_rank,pcs_points_2025,pcs_nationality,pcs_team,pcs_url,points_per_credit,value_category
+T. POGAČAR,UAE Team Emirates XRG,Leaders,27,True,1.0,POGAČAR Tadej,1.0,2300.0,SI,UAE Team Emirates - XRG,https://www.procyclingstats.com/rider/tadej-pogacar,85.18518518518519,Excellent
+J. VINGEGAARD HANSEN,Team Visma | Lease a Bike,Leaders,24,True,1.0,VINGEGAARD Jonas,33.0,573.0,DK,Team Visma | Lease a Bike,https://www.procyclingstats.com/rider/jonas-vingegaard,23.875,Average
+J. MILAN,Lidl-Trek,Sprinters,22,True,1.1,MILAN Jonathan,19.0,694.0,IT,Lidl - Trek,https://www.procyclingstats.com/rider/jonathan-milan,31.545454545454547,Good
+T. MERLIER,Soudal Quick-Step,Sprinters,22,True,1.1,MERLIER Tim,11.0,799.0,BE,Soudal Quick-Step,https://www.procyclingstats.com/rider/tim-merlier,36.31818181818182,Good
+J. PHILIPSEN,Alpecin - Deceuninck,Sprinters,22,True,1.1,PHILIPSEN Jasper,30.0,606.0,BE,Alpecin - Deceuninck,https://www.procyclingstats.com/rider/jasper-philipsen,27.545454545454547,Average
+M. VAN DER POEL,Alpecin - Deceuninck,All-rounders,22,True,1.0,VAN DER POEL Mathieu,4.0,1113.0,NL,Alpecin - Deceuninck,https://www.procyclingstats.com/rider/mathieu-van-der-poel,50.59090909090909,Excellent
+R. EVENEPOEL,Soudal Quick-Step,Leaders,21,True,1.0,EVENEPOEL Remco,15.0,728.0,BE,Soudal Quick-Step,https://www.procyclingstats.com/rider/remco-evenepoel,34.666666666666664,Good
+P. ROGLIC,Red Bull - Bora - Hansgrohe,Leaders,20,True,1.0,ROGLIČ Primož,39.0,533.0,SI,Red Bull - BORA - hansgrohe,https://www.procyclingstats.com/rider/primoz-roglic,26.65,Average
+J. ALMEIDA,UAE Team Emirates XRG,Climbers,20,True,1.1,ALMEIDA João,2.0,1634.0,PT,UAE Team Emirates - XRG,https://www.procyclingstats.com/rider/joao-almeida,81.7,Excellent
+A. YATES,UAE Team Emirates XRG,Leaders,19,True,1.1,YATES Adam,63.0,419.0,GB,UAE Team Emirates - XRG,https://www.procyclingstats.com/rider/adam-yates,22.05263157894737,Average
+W. VAN AERT,Team Visma | Lease a Bike,All-rounders,19,True,1.0,VAN DER POEL Mathieu,4.0,1113.0,NL,Alpecin - Deceuninck,https://www.procyclingstats.com/rider/mathieu-van-der-poel,58.578947368421055,Excellent
+B. GIRMAY,Intermarché - Wanty,Sprinters,19,True,1.1,GIRMAY Biniam,49.0,468.0,ER,Intermarché - Wanty,https://www.procyclingstats.com/rider/biniam-girmay,24.63157894736842,Average
+R. CARAPAZ,EF Education - Easypost,Leaders,19,True,1.1,CARAPAZ Richard,28.0,612.0,EC,EF Education - EasyPost,https://www.procyclingstats.com/rider/richard-carapaz,32.21052631578947,Good
+F. GANNA,Ineos Grenadiers,All-rounders,18,True,1.1,GANNA Filippo,12.0,788.0,IT,INEOS Grenadiers,https://www.procyclingstats.com/rider/filippo-ganna,43.77777777777778,Good
+F. LIPOWITZ,Red Bull - Bora - Hansgrohe,Leaders,18,True,1.1,LIPOWITZ Florian,26.0,616.0,DE,Red Bull - BORA - hansgrohe,https://www.procyclingstats.com/rider/florian-lipowitz,34.22222222222222,Good
+E. MAS NICOLAU,Movistar Team,Leaders,18,True,1.0,MAS Enric,27.0,613.0,ES,Movistar Team,https://www.procyclingstats.com/rider/enric-mas,34.05555555555556,Good
+M. JORGENSON,Team Visma | Lease a Bike,Climbers,18,True,1.1,JORGENSON Matteo,24.0,633.0,US,Team Visma | Lease a Bike,https://www.procyclingstats.com/rider/matteo-jorgenson,35.166666666666664,Good
+C. RODRIGUEZ,Ineos Grenadiers,Leaders,18,False,0.0,,,0.0,,,,0.0,Unknown
+K. GROVES,Alpecin - Deceuninck,Sprinters,17,True,1.1,GROVES Kaden,71.0,389.0,AU,Alpecin - Deceuninck,https://www.procyclingstats.com/rider/kaden-groves,22.88235294117647,Average
+A. VLASOV,Red Bull - Bora - Hansgrohe,Climbers,17,True,0.6831468531468531,VELASCO Simone,57.0,454.0,IT,XDS Astana Team,https://www.procyclingstats.com/rider/simone-velasco,26.705882352941178,Average
+S. BUITRAGO SANCHEZ,Bahrain Victorious,Leaders,17,True,0.7015438596491228,MARTINEZ Lenny,13.0,753.0,FR,Bahrain - Victorious,https://www.procyclingstats.com/rider/lenny-martinez,44.294117647058826,Good
+S. YATES,Team Visma | Lease a Bike,Climbers,17,True,1.1,YATES Simon,23.0,636.0,GB,Team Visma | Lease a Bike,https://www.procyclingstats.com/rider/simon-yates,37.411764705882355,Good
+M. JENSEN,Lidl-Trek,Leaders,17,True,0.76,PEDERSEN Mads,3.0,1632.0,DK,Lidl - Trek,https://www.procyclingstats.com/rider/mads-pedersen,96.0,Excellent
+D. GROENEWEGEN,Team Jayco AlUla,Sprinters,17,True,1.1,GROENEWEGEN Dylan,99.0,326.0,NL,Team Jayco AlUla,https://www.procyclingstats.com/rider/dylan-groenewegen,19.176470588235293,Average
+B. O'CONNOR,Team Jayco AlUla,Leaders,17,False,0.0,,,0.0,,,,0.0,Unknown
+E. ONLEY,Team Picnic PostNL,Leaders,16,True,1.0635714285714286,ONLEY Oscar,9.0,880.0,GB,Team Picnic PostNL,https://www.procyclingstats.com/rider/oscar-onley,55.0,Excellent
+F. GAVIRIA RENDON,Movistar Team,Sprinters,16,True,0.7105454545454545,ROMEO Iván,83.0,365.0,ES,Movistar Team,https://www.procyclingstats.com/rider/ivan-romeo,22.8125,Average
+A. DE LIE,Lotto,Sprinters,16,True,0.5299870129870129,MERLIER Tim,11.0,799.0,BE,Soudal Quick-Step,https://www.procyclingstats.com/rider/tim-merlier,49.9375,Good
+J. MEEUS,Red Bull - Bora - Hansgrohe,Sprinters,16,True,1.1,MEEUS Jordi,60.0,432.0,BE,Red Bull - BORA - hansgrohe,https://www.procyclingstats.com/rider/jordi-meeus,27.0,Average
+J. ALAPHILIPPE,Tudor Pro Cycling Team,All-rounders,16,True,0.6207934782608695,PHILIPSEN Jasper,30.0,606.0,BE,Alpecin - Deceuninck,https://www.procyclingstats.com/rider/jasper-philipsen,37.875,Good
+S. KUSS,Team Visma | Lease a Bike,Climbers,16,True,0.5527142857142857,ULISSI Diego,78.0,370.0,IT,XDS Astana Team,https://www.procyclingstats.com/rider/diego-ulissi,23.125,Average
+J. HINDLEY,Red Bull - Bora - Hansgrohe,Climbers,16,True,0.5727083333333333,ONLEY Oscar,9.0,880.0,GB,Team Picnic PostNL,https://www.procyclingstats.com/rider/oscar-onley,55.0,Excellent
+M. MOHORIC,Bahrain Victorious,All-rounders,16,False,0.0,,,0.0,,,,0.0,Unknown
+F. GALL,Decathlon AG2R La Mondiale Team,Leaders,16,True,1.1,GALL Felix,64.0,413.0,AT,Decathlon AG2R La Mondiale Team,https://www.procyclingstats.com/rider/felix-gall,25.8125,Average
+A. DAINESE,Tudor Pro Cycling Team,Sprinters,15,False,0.0,,,0.0,,,,0.0,Unknown
+K. VAUQUELIN,Arkea-B&B Hotels,Leaders,15,True,1.0875,VAUQUELIN Kévin,8.0,939.0,FR,Arkéa - B&B Hotels,https://www.procyclingstats.com/rider/kevin-vauquelin,62.6,Excellent
+T. STEWART,Israël - Premier Tech,Sprinters,15,True,0.5435338345864662,HOFSTETTER Hugo,76.0,375.0,FR,Israel - Premier Tech,https://www.procyclingstats.com/rider/hugo-hofstetter,25.0,Average
+P. ACKERMANN,Israël - Premier Tech,Sprinters,15,True,0.5976735316552249,SCHACHMANN Maximilian,69.0,397.0,DE,Soudal Quick-Step,https://www.procyclingstats.com/rider/maximilian-schachmann,26.466666666666665,Average
+B. HEALY,EF Education - Easypost,All-rounders,15,True,1.1,HEALY Ben,54.0,457.0,IE,EF Education - EasyPost,https://www.procyclingstats.com/rider/ben-healy,30.466666666666665,Good
+L. MARTINEZ,Bahrain Victorious,Climbers,15,True,1.1,MARTINEZ Lenny,13.0,753.0,FR,Bahrain - Victorious,https://www.procyclingstats.com/rider/lenny-martinez,50.2,Excellent
+T. ARENSMAN,Ineos Grenadiers,Climbers,15,True,1.1,ARENSMAN Thymen,58.0,454.0,NL,INEOS Grenadiers,https://www.procyclingstats.com/rider/thymen-arensman,30.266666666666666,Good
+T. JOHANNESSEN,Uno-X Mobility,Leaders,15,True,0.5643401983218915,ANDRESEN Tobias Lund,34.0,567.0,DK,Team Picnic PostNL,https://www.procyclingstats.com/rider/tobias-lund-andresen,37.8,Good
+A. KRISTOFF,Uno-X Mobility,Sprinters,15,False,0.0,,,0.0,,,,0.0,Unknown
+N. POWLESS,EF Education - Easypost,All-rounders,15,True,1.1,POWLESS Neilson,22.0,650.0,US,EF Education - EasyPost,https://www.procyclingstats.com/rider/neilson-powless,43.333333333333336,Good
+P. BAUHAUS,Bahrain Victorious,Sprinters,15,False,0.0,,,0.0,,,,0.0,Unknown
+E. AFFINI,Team Visma | Lease a Bike,All-rounders,14,True,0.532136752136752,VAN AERT Wout,10.0,859.0,BE,Team Visma | Lease a Bike,https://www.procyclingstats.com/rider/wout-van-aert,61.357142857142854,Excellent
+E. DUNBAR,Team Jayco AlUla,Leaders,14,False,0.0,,,0.0,,,,0.0,Unknown
+F. FISHER - BLACK,Red Bull - Bora - Hansgrohe,All-rounders,14,True,0.800375,FISHER-BLACK Finn,61.0,424.0,NZ,Red Bull - BORA - hansgrohe,https://www.procyclingstats.com/rider/finn-fisher-black,30.285714285714285,Good
+E. RUBIO REYES,Movistar Team,Climbers,14,True,0.5589642857142857,YATES Adam,63.0,419.0,GB,UAE Team Emirates - XRG,https://www.procyclingstats.com/rider/adam-yates,29.928571428571427,Average
+T. NYS,Lidl-Trek,All-rounders,14,True,1.1,NYS Thibau,77.0,374.0,BE,Lidl - Trek,https://www.procyclingstats.com/rider/thibau-nys,26.714285714285715,Average
+M. FRETIN,Cofidis,Sprinters,14,True,1.1,FRETIN Milan,41.0,522.0,BE,Cofidis,https://www.procyclingstats.com/rider/milan-fretin,37.285714285714285,Good
+R. GREGOIRE,Groupama - FDJ,All-rounders,14,True,1.000125,GRÉGOIRE Romain,31.0,598.0,FR,Groupama - FDJ,https://www.procyclingstats.com/rider/romain-gregoire1,42.714285714285715,Good
+P. SIVAKOV,UAE Team Emirates XRG,Climbers,14,False,0.0,,,0.0,,,,0.0,Unknown
+M. STORER,Tudor Pro Cycling Team,Climbers,14,True,1.1,STORER Michael,21.0,687.0,AU,Tudor Pro Cycling Team,https://www.procyclingstats.com/rider/michael-storer,49.07142857142857,Good
+M. CORT NIELSEN,Uno-X Mobility,All-rounders,14,True,0.5910526315789473,ANDRESEN Tobias Lund,34.0,567.0,DK,Team Picnic PostNL,https://www.procyclingstats.com/rider/tobias-lund-andresen,40.5,Good
+A. LUTSENKO,Israël - Premier Tech,Leaders,14,False,0.0,,,0.0,,,,0.0,Unknown
+S. HIGUITA GARCIA,XDS Astana Team,Climbers,13,True,0.5446153846153846,SCARONI Christian,18.0,701.0,IT,XDS Astana Team,https://www.procyclingstats.com/rider/christian-scaroni,53.92307692307692,Excellent
+J. NARVAEZ PRADO,UAE Team Emirates XRG,All-rounders,13,True,0.8060416666666665,MORGADO António,46.0,470.0,PT,UAE Team Emirates - XRG,https://www.procyclingstats.com/rider/antonio-morgado,36.15384615384615,Good
+M. HIRSCHI,Tudor Pro Cycling Team,All-rounders,13,True,1.1,HIRSCHI Marc,98.0,332.0,CH,Tudor Pro Cycling Team,https://www.procyclingstats.com/rider/marc-hirschi,25.53846153846154,Average
+P. BITTNER,Team Picnic PostNL,Sprinters,13,False,0.0,,,0.0,,,,0.0,Unknown
+L. PLAPP,Team Jayco AlUla,All-rounders,13,False,0.0,,,0.0,,,,0.0,Unknown
+J. BERCKMOES,Lotto,Sprinters,13,False,0.0,,,0.0,,,,0.0,Unknown
+L. KÄMNA,Lidl-Trek,Climbers,13,False,0.0,,,0.0,,,,0.0,Unknown
+S. WATSON,Ineos Grenadiers,All-rounders,13,True,1.1,WATSON Samuel,45.0,470.0,GB,INEOS Grenadiers,https://www.procyclingstats.com/rider/samuel-watson,36.15384615384615,Good
+M. SHEFFIELD,Ineos Grenadiers,All-rounders,13,True,1.1,SHEFFIELD Magnus,42.0,505.0,US,INEOS Grenadiers,https://www.procyclingstats.com/rider/magnus-sheffield,38.84615384615385,Good
+T. FOSS,Ineos Grenadiers,All-rounders,13,True,0.501085995085995,POWLESS Neilson,22.0,650.0,US,EF Education - EasyPost,https://www.procyclingstats.com/rider/neilson-powless,50.0,Good
+C. RODRIGUEZ MARTIN,Arkea-B&B Hotels,Climbers,13,True,0.8556249999999999,MARTIN Guillaume,48.0,469.0,FR,Groupama - FDJ,https://www.procyclingstats.com/rider/guillaume-martin,36.07692307692308,Good
+S. BISSEGGER,Decathlon AG2R La Mondiale Team,All-rounders,13,False,0.0,,,0.0,,,,0.0,Unknown
+I. VAN WILDER,Soudal Quick-Step,Climbers,13,True,0.5146153846153846,MAGNIER Paul,20.0,691.0,FR,Soudal Quick-Step,https://www.procyclingstats.com/rider/paul-magnier,53.15384615384615,Excellent
+G. THOMAS,Ineos Grenadiers,Leaders,13,True,0.5910897435897434,MAS Enric,27.0,613.0,ES,Movistar Team,https://www.procyclingstats.com/rider/enric-mas,47.15384615384615,Good
+F. GROSSSCHARTNER,UAE Team Emirates XRG,Climbers,13,False,0.0,,,0.0,,,,0.0,Unknown
+Q. SIMMONS,Lidl-Trek,All-rounders,13,True,0.575,SKJELMOSE Mattias,32.0,590.0,DK,Lidl - Trek,https://www.procyclingstats.com/rider/mattias-skjelmose-jensen,45.38461538461539,Good
+A. ARANBURU DEVA,Cofidis,Sprinters,13,True,0.527090909090909,VAN DER POEL Mathieu,4.0,1113.0,NL,Alpecin - Deceuninck,https://www.procyclingstats.com/rider/mathieu-van-der-poel,85.61538461538461,Excellent
+T. BENOOT,Team Visma | Lease a Bike,All-rounders,13,True,1.1,BENOOT Tiesj,79.0,370.0,BE,Team Visma | Lease a Bike,https://www.procyclingstats.com/rider/tiesj-benoot,28.46153846153846,Average
+M. WOODS,Israël - Premier Tech,Leaders,13,False,0.0,,,0.0,,,,0.0,Unknown
+L. MEINTJES,Intermarché - Wanty,Leaders,13,True,0.6222727272727272,MENTEN Milan,96.0,333.0,BE,Lotto,https://www.procyclingstats.com/rider/milan-menten,25.615384615384617,Average
+I. IZAGIRRE INSAUSTI,Cofidis,Climbers,13,False,0.0,,,0.0,,,,0.0,Unknown
+G. MARTIN GUYONNET,Groupama - FDJ,Leaders,13,True,1.0,MARTIN Guillaume,48.0,469.0,FR,Groupama - FDJ,https://www.procyclingstats.com/rider/guillaume-martin,36.07692307692308,Good
+L. PITHIE,Red Bull - Bora - Hansgrohe,All-rounders,12,True,0.5183333333333333,LIPOWITZ Florian,26.0,616.0,DE,Red Bull - BORA - hansgrohe,https://www.procyclingstats.com/rider/florian-lipowitz,51.333333333333336,Excellent
+L. BARRE,Intermarché - Wanty,All-rounders,12,True,0.9445714285714285,BARRÉ Louis,100.0,326.0,FR,Intermarché - Wanty,https://www.procyclingstats.com/rider/louis-barre,27.166666666666668,Average
+L. ASKEY,Groupama - FDJ,All-rounders,12,True,1.1,ASKEY Lewis,44.0,496.0,GB,Groupama - FDJ,https://www.procyclingstats.com/rider/lewis-askey,41.333333333333336,Good
+V. ALBANESE,EF Education - Easypost,Sprinters,12,True,0.5689926470588235,ANDRESEN Tobias Lund,34.0,567.0,DK,Team Picnic PostNL,https://www.procyclingstats.com/rider/tobias-lund-andresen,47.25,Good
+A. DEMARE,Arkea-B&B Hotels,Sprinters,12,True,0.5416666666666666,MARTINEZ Lenny,13.0,753.0,FR,Bahrain - Victorious,https://www.procyclingstats.com/rider/lenny-martinez,62.75,Excellent
+A. CAPIOT,Arkea-B&B Hotels,Sprinters,12,True,0.5373296703296703,CORT Magnus,53.0,457.0,DK,Uno-X Mobility,https://www.procyclingstats.com/rider/magnus-cort-nielsen,38.083333333333336,Good
+S. ANIOLKOWSKI,Cofidis,Sprinters,12,True,0.5071464646464646,BAGIOLI Andrea,87.0,355.0,IT,Lidl - Trek,https://www.procyclingstats.com/rider/andrea-bagioli,29.583333333333332,Average
+M. VAN DEN BERG,EF Education - Easypost,Sprinters,12,True,0.5488681318681319,TIBERI Antonio,82.0,366.0,IT,Bahrain - Victorious,https://www.procyclingstats.com/rider/antonio-tiberi,30.5,Good
+N. PRODHOMME,Decathlon AG2R La Mondiale Team,Climbers,12,True,1.1,PRODHOMME Nicolas,50.0,464.0,FR,Decathlon AG2R La Mondiale Team,https://www.procyclingstats.com/rider/nicolas-prodhomme,38.666666666666664,Good
+L. DE PLUS,Ineos Grenadiers,Climbers,12,True,0.501085995085995,POWLESS Neilson,22.0,650.0,US,EF Education - EasyPost,https://www.procyclingstats.com/rider/neilson-powless,54.166666666666664,Excellent
+T. WELLENS,UAE Team Emirates XRG,All-rounders,12,True,0.5333908045977012,POWLESS Neilson,22.0,650.0,US,EF Education - EasyPost,https://www.procyclingstats.com/rider/neilson-powless,54.166666666666664,Excellent
+M. TRENTIN,Tudor Pro Cycling Team,Sprinters,12,True,0.6926923076923077,FRETIN Milan,41.0,522.0,BE,Cofidis,https://www.procyclingstats.com/rider/milan-fretin,43.5,Good
+J. STUYVEN,Lidl-Trek,All-rounders,12,True,0.5313271413828689,CHRISTEN Jan,81.0,368.0,CH,UAE Team Emirates - XRG,https://www.procyclingstats.com/rider/jan-christen,30.666666666666668,Good
+M. SCHMID,Team Jayco AlUla,Climbers,12,True,1.1,SCHMID Mauro,56.0,454.0,CH,Team Jayco AlUla,https://www.procyclingstats.com/rider/mauro-schmid,37.833333333333336,Good
+I. GARCIA CORTINA,Movistar Team,Sprinters,12,True,0.6572727272727272,CORT Magnus,53.0,457.0,DK,Uno-X Mobility,https://www.procyclingstats.com/rider/magnus-cort-nielsen,38.083333333333336,Good
+W. KELDERMAN,Team Visma | Lease a Bike,Climbers,12,True,0.5370935960591132,PEDERSEN Mads,3.0,1632.0,DK,Lidl - Trek,https://www.procyclingstats.com/rider/mads-pedersen,136.0,Excellent
+D. TEUNS,Cofidis,All-rounders,12,True,0.6302941176470588,TEUNISSEN Mike,97.0,332.0,NL,XDS Astana Team,https://www.procyclingstats.com/rider/mike-teunissen,27.666666666666668,Average
+B. COQUARD,Cofidis,Sprinters,12,True,1.1,COQUARD Bryan,92.0,346.0,FR,Cofidis,https://www.procyclingstats.com/rider/bryan-coquard,28.833333333333332,Average
+A. WRIGHT,Bahrain Victorious,All-rounders,12,False,0.0,,,0.0,,,,0.0,Unknown
+C. BOL,XDS Astana Team,Sprinters,12,False,0.0,,,0.0,,,,0.0,Unknown
+S. VELASCO,XDS Astana Team,All-rounders,11,True,1.1,VELASCO Simone,57.0,454.0,IT,XDS Astana Team,https://www.procyclingstats.com/rider/simone-velasco,41.27272727272727,Good
+T. LUND ANDRESEN,Team Picnic PostNL,Sprinters,11,True,1.0745,ANDRESEN Tobias Lund,34.0,567.0,DK,Team Picnic PostNL,https://www.procyclingstats.com/rider/tobias-lund-andresen,51.54545454545455,Excellent
+M. VANSEVENANT,Soudal Quick-Step,Climbers,11,True,0.5183333333333333,VAN WILDER Ilan,80.0,369.0,BE,Soudal Quick-Step,https://www.procyclingstats.com/rider/ilan-van-wilder,33.54545454545455,Good
+M. SCHACHMANN,Soudal Quick-Step,All-rounders,11,True,1.1,SCHACHMANN Maximilian,69.0,397.0,DE,Soudal Quick-Step,https://www.procyclingstats.com/rider/maximilian-schachmann,36.09090909090909,Good
+P. CASTRILLO ZAPATER,Movistar Team,Climbers,11,True,0.575,AULAR Orluis,95.0,334.0,VE,Movistar Team,https://www.procyclingstats.com/rider/orluis-aular,30.363636363636363,Good
+L. VAN EETVELT,Lotto,Climbers,11,True,1.0,VAN EETVELT Lennert,88.0,355.0,BE,Lotto,https://www.procyclingstats.com/rider/lennert-van-eetvelt,32.27272727272727,Good
+J. STAUNE-MITTET,Decathlon AG2R La Mondiale Team,Climbers,11,True,0.5208659768415866,TULETT Ben,59.0,448.0,GB,Team Visma | Lease a Bike,https://www.procyclingstats.com/rider/ben-tulett,40.72727272727273,Good
+B. THOMAS,Cofidis,All-rounders,11,True,0.6135897435897435,MAS Enric,27.0,613.0,ES,Movistar Team,https://www.procyclingstats.com/rider/enric-mas,55.72727272727273,Excellent
+J. JEGAT,TotalEnergies,Leaders,11,True,0.5927201783723521,GATE Aaron,38.0,534.0,NZ,XDS Astana Team,https://www.procyclingstats.com/rider/aaron-gate,48.54545454545455,Good
+A. LEKNESSUND,Uno-X Mobility,Climbers,11,False,0.0,,,0.0,,,,0.0,Unknown
+S. BATTISTELLA,EF Education - Easypost,Sprinters,11,False,0.0,,,0.0,,,,0.0,Unknown
+D. BALLERINI,XDS Astana Team,All-rounders,11,True,0.575,SCARONI Christian,18.0,701.0,IT,XDS Astana Team,https://www.procyclingstats.com/rider/christian-scaroni,63.72727272727273,Excellent
+F. VAN DEN BROEK,Team Picnic PostNL,All-rounders,11,True,0.5455714285714285,ROMEO Iván,83.0,365.0,ES,Movistar Team,https://www.procyclingstats.com/rider/ivan-romeo,33.18181818181818,Good
+H. PAGE,Intermarché - Wanty,Sprinters,11,True,0.5207575757575758,GEE Derek,14.0,731.0,CA,Israel - Premier Tech,https://www.procyclingstats.com/rider/derek-gee,66.45454545454545,Excellent
+G. BENNETT,Israël - Premier Tech,Climbers,11,True,0.5623076923076924,BENOOT Tiesj,79.0,370.0,BE,Team Visma | Lease a Bike,https://www.procyclingstats.com/rider/tiesj-benoot,33.63636363636363,Good
+A. LAURANCE,Ineos Grenadiers,All-rounders,11,True,0.5495,ARENSMAN Thymen,58.0,454.0,NL,INEOS Grenadiers,https://www.procyclingstats.com/rider/thymen-arensman,41.27272727272727,Good
+M. SOBRERO,Red Bull - Bora - Hansgrohe,All-rounders,11,True,0.6998351648351648,STORER Michael,21.0,687.0,AU,Tudor Pro Cycling Team,https://www.procyclingstats.com/rider/michael-storer,62.45454545454545,Excellent
+B. ARMIRAIL,Decathlon AG2R La Mondiale Team,All-rounders,11,False,0.0,,,0.0,,,,0.0,Unknown
+V. CAMPENAERTS,Team Visma | Lease a Bike,All-rounders,11,False,0.0,,,0.0,,,,0.0,Unknown
+C. BERTHET,Decathlon AG2R La Mondiale Team,Climbers,11,True,1.1,BERTHET Clément,94.0,339.0,FR,Decathlon AG2R La Mondiale Team,https://www.procyclingstats.com/rider/clement-berthet,30.818181818181817,Good
+J. HAIG,Bahrain Victorious,Climbers,11,False,0.0,,,0.0,,,,0.0,Unknown
+S. WÆRENSKJOLD,Uno-X Mobility,All-rounders,11,True,1.1,WÆRENSKJOLD Søren,86.0,358.0,NO,Uno-X Mobility,https://www.procyclingstats.com/rider/soren-waerenskjold,32.54545454545455,Good
+T. TRÆEN,Bahrain Victorious,Climbers,11,False,0.0,,,0.0,,,,0.0,Unknown
+M. SOLER,UAE Team Emirates XRG,Climbers,11,True,0.6598041958041958,STORER Michael,21.0,687.0,AU,Tudor Pro Cycling Team,https://www.procyclingstats.com/rider/michael-storer,62.45454545454545,Excellent
+S. CRAS,TotalEnergies,Leaders,11,True,0.5511013824884792,CARUSO Damiano,84.0,363.0,IT,Bahrain - Victorious,https://www.procyclingstats.com/rider/damiano-caruso,33.0,Good
+C. HARPER,Team Jayco AlUla,Climbers,11,False,0.0,,,0.0,,,,0.0,Unknown
+C. CHAMPOUSSIN,XDS Astana Team,Climbers,11,True,1.1,CHAMPOUSSIN Clément,35.0,564.0,FR,XDS Astana Team,https://www.procyclingstats.com/rider/clement-champoussin,51.27272727272727,Excellent
+R. CAVAGNA,Groupama - FDJ,All-rounders,11,True,0.5337487684729063,VAN WILDER Ilan,80.0,369.0,BE,Soudal Quick-Step,https://www.procyclingstats.com/rider/ilan-van-wilder,33.54545454545455,Good
+K. ASGREEN,EF Education - Easypost,All-rounders,11,True,0.6018369453044374,ANDRESEN Tobias Lund,34.0,567.0,DK,Team Picnic PostNL,https://www.procyclingstats.com/rider/tobias-lund-andresen,51.54545454545455,Excellent
+K. NEILANDS,Israël - Premier Tech,All-rounders,11,True,0.5697252747252748,MILAN Jonathan,19.0,694.0,IT,Lidl - Trek,https://www.procyclingstats.com/rider/jonathan-milan,63.09090909090909,Excellent
+G. ZIMMERMANN,Intermarché - Wanty,Climbers,11,True,0.575,GIRMAY Biniam,49.0,468.0,ER,Intermarché - Wanty,https://www.procyclingstats.com/rider/biniam-girmay,42.54545454545455,Good
+V. MADOUAS,Groupama - FDJ,All-rounders,11,True,0.5177142857142857,MAS Enric,27.0,613.0,ES,Movistar Team,https://www.procyclingstats.com/rider/enric-mas,55.72727272727273,Excellent
+A. BETTIOL,XDS Astana Team,All-rounders,11,True,0.5573684210526316,BAGIOLI Andrea,87.0,355.0,IT,Lidl - Trek,https://www.procyclingstats.com/rider/andrea-bagioli,32.27272727272727,Good
+D. VAN POPPEL,Red Bull - Bora - Hansgrohe,Sprinters,11,True,0.9,VAN WILDER Ilan,80.0,369.0,BE,Soudal Quick-Step,https://www.procyclingstats.com/rider/ilan-van-wilder,33.54545454545455,Good
+E. BUCHMANN,Cofidis,Leaders,11,True,0.5839393939393939,SCHACHMANN Maximilian,69.0,397.0,DE,Soudal Quick-Step,https://www.procyclingstats.com/rider/maximilian-schachmann,36.09090909090909,Good
+H. TEJADA CANACUE,XDS Astana Team,Climbers,11,True,0.5446153846153846,KANTER Max,68.0,403.0,DE,XDS Astana Team,https://www.procyclingstats.com/rider/max-kanter,36.63636363636363,Good
+A. PARET PEINTRE,Decathlon AG2R La Mondiale Team,All-rounders,11,True,0.5507692307692308,MENTEN Milan,96.0,333.0,BE,Lotto,https://www.procyclingstats.com/rider/milan-menten,30.272727272727273,Good
+F. DVERSNES,Uno-X Mobility,All-rounders,10,True,0.5640054347826087,PEDERSEN Mads,3.0,1632.0,DK,Lidl - Trek,https://www.procyclingstats.com/rider/mads-pedersen,163.2,Excellent
+S. EDVARDSEN-FREDHEIM,Uno-X Mobility,Sprinters,10,False,0.0,,,0.0,,,,0.0,Unknown
+A. BRUNEL,TotalEnergies,All-rounders,10,True,0.6181106321839079,BERNAL Egan,67.0,405.0,CO,INEOS Grenadiers,https://www.procyclingstats.com/rider/egan-bernal,40.5,Good
+M. CATTANEO,Soudal Quick-Step,All-rounders,10,True,0.5535353535353534,SCHACHMANN Maximilian,69.0,397.0,DE,Soudal Quick-Step,https://www.procyclingstats.com/rider/maximilian-schachmann,39.7,Good
+P. SANCHEZ MAYO,Movistar Team,All-rounders,10,True,0.729090909090909,MAS Enric,27.0,613.0,ES,Movistar Team,https://www.procyclingstats.com/rider/enric-mas,61.3,Excellent
+I. ROMEO ABAD,Movistar Team,All-rounders,10,True,0.532136752136752,AULAR Orluis,95.0,334.0,VE,Movistar Team,https://www.procyclingstats.com/rider/orluis-aular,33.4,Good
+D. HOOLE,Lidl-Trek,All-rounders,10,True,0.5163506493506493,ONLEY Oscar,9.0,880.0,GB,Team Picnic PostNL,https://www.procyclingstats.com/rider/oscar-onley,88.0,Excellent
+S. CONSONNI,Lidl-Trek,Sprinters,10,True,0.5267487684729063,JORGENSON Matteo,24.0,633.0,US,Team Visma | Lease a Bike,https://www.procyclingstats.com/rider/matteo-jorgenson,63.3,Excellent
+P. BLACKMORE,Israël - Premier Tech,Climbers,10,True,0.5189265054528212,BILBAO Pello,40.0,524.0,ES,Bahrain - Victorious,https://www.procyclingstats.com/rider/pello-bilbao,52.4,Excellent
+A. MARIT,Intermarché - Wanty,All-rounders,10,True,0.6441065830721002,MARTIN Guillaume,48.0,469.0,FR,Groupama - FDJ,https://www.procyclingstats.com/rider/guillaume-martin,46.9,Good
+J. RUTSCH,Intermarché - Wanty,All-rounders,10,True,0.5434265734265734,HIRSCHI Marc,98.0,332.0,CH,Tudor Pro Cycling Team,https://www.procyclingstats.com/rider/marc-hirschi,33.2,Good
+P. PENHOET,Groupama - FDJ,Sprinters,10,True,0.5442788461538461,BENOOT Tiesj,79.0,370.0,BE,Team Visma | Lease a Bike,https://www.procyclingstats.com/rider/tiesj-benoot,37.0,Good
+A. BAUDIN,EF Education - Easypost,Climbers,10,False,0.0,,,0.0,,,,0.0,Unknown
+E. COSTIOU,Arkea-B&B Hotels,Climbers,10,True,0.5205454545454544,COVI Alessandro,85.0,360.0,IT,UAE Team Emirates - XRG,https://www.procyclingstats.com/rider/alessandro-covi,36.0,Good
+C. VENTURINI,Arkea-B&B Hotels,Sprinters,10,True,0.5178535353535353,VAUQUELIN Kévin,8.0,939.0,FR,Arkéa - B&B Hotels,https://www.procyclingstats.com/rider/kevin-vauquelin,93.9,Excellent
+T. GUERNALEC,Arkea-B&B Hotels,All-rounders,10,True,0.5898621553884711,BERNAL Egan,67.0,405.0,CO,INEOS Grenadiers,https://www.procyclingstats.com/rider/egan-bernal,40.5,Good
+E. JEANNIERE,TotalEnergies,Sprinters,10,True,1.0107070707070707,JEANNIÈRE Emilien,51.0,463.0,FR,Team TotalEnergies,https://www.procyclingstats.com/rider/emilien-jeanniere,46.3,Good
+D. VAN GESTEL,Soudal Quick-Step,All-rounders,10,True,0.6594871794871794,GEE Derek,14.0,731.0,CA,Israel - Premier Tech,https://www.procyclingstats.com/rider/derek-gee,73.1,Excellent
+J. KULSET,Uno-X Mobility,Climbers,10,True,0.5913357843137254,TULETT Ben,59.0,448.0,GB,Team Visma | Lease a Bike,https://www.procyclingstats.com/rider/ben-tulett,44.8,Good
+I. SCHELLING,XDS Astana Team,All-rounders,10,False,0.0,,,0.0,,,,0.0,Unknown
+R. GARCIA PIERNA,Arkea-B&B Hotels,All-rounders,10,True,0.5881845238095237,BERNAL Egan,67.0,405.0,CO,INEOS Grenadiers,https://www.procyclingstats.com/rider/egan-bernal,40.5,Good
+G. VERMEERSCH,Alpecin - Deceuninck,All-rounders,10,True,0.851826923076923,VERMEERSCH Florian,90.0,350.0,BE,UAE Team Emirates - XRG,https://www.procyclingstats.com/rider/florian-vermeersch,35.0,Good
+R. ADRIA OLIVERAS,Red Bull - Bora - Hansgrohe,All-rounders,10,True,0.5183333333333333,ROGLIČ Primož,39.0,533.0,SI,Red Bull - BORA - hansgrohe,https://www.procyclingstats.com/rider/primoz-roglic,53.3,Excellent
+C. SWIFT,Ineos Grenadiers,Sprinters,10,False,0.0,,,0.0,,,,0.0,Unknown
+A. TURGIS,TotalEnergies,All-rounders,10,True,0.5052620967741935,TIBERI Antonio,82.0,366.0,IT,Bahrain - Victorious,https://www.procyclingstats.com/rider/antonio-tiberi,36.6,Good
+J. ABRAHAMSEN,Uno-X Mobility,All-rounders,10,True,0.502979797979798,ANDRESEN Tobias Lund,34.0,567.0,DK,Team Picnic PostNL,https://www.procyclingstats.com/rider/tobias-lund-andresen,56.7,Excellent
+W. BARGUIL,Team Picnic PostNL,Climbers,10,True,0.6359090909090909,BAGIOLI Andrea,87.0,355.0,IT,Lidl - Trek,https://www.procyclingstats.com/rider/andrea-bagioli,35.5,Good
+D. VAN BAARLE,Team Visma | Lease a Bike,All-rounders,10,True,0.5034025974025973,AULAR Orluis,95.0,334.0,VE,Movistar Team,https://www.procyclingstats.com/rider/orluis-aular,33.4,Good
+Q. PACHER,Groupama - FDJ,All-rounders,10,False,0.0,,,0.0,,,,0.0,Unknown
+N. POLITT,UAE Team Emirates XRG,All-rounders,10,True,0.5203763440860215,LIPOWITZ Florian,26.0,616.0,DE,Red Bull - BORA - hansgrohe,https://www.procyclingstats.com/rider/florian-lipowitz,61.6,Excellent
+B. COSNEFROY,Decathlon AG2R La Mondiale Team,All-rounders,10,True,0.5081372549019607,ONLEY Oscar,9.0,880.0,GB,Team Picnic PostNL,https://www.procyclingstats.com/rider/oscar-onley,88.0,Excellent
+M. MAYRHOFER,Tudor Pro Cycling Team,All-rounders,9,True,0.5222105263157895,STORER Michael,21.0,687.0,AU,Tudor Pro Cycling Team,https://www.procyclingstats.com/rider/michael-storer,76.33333333333333,Excellent
+F. DOUBEY,TotalEnergies,Climbers,9,False,0.0,,,0.0,,,,0.0,Unknown
+A. DELETTRE,TotalEnergies,All-rounders,9,True,0.5362121212121211,TULETT Ben,59.0,448.0,GB,Team Visma | Lease a Bike,https://www.procyclingstats.com/rider/ben-tulett,49.77777777777778,Good
+V. PARET PEINTRE,Soudal Quick-Step,Climbers,9,True,0.5434265734265734,MENTEN Milan,96.0,333.0,BE,Lotto,https://www.procyclingstats.com/rider/milan-menten,37.0,Good
+W. BARTA,Movistar Team,All-rounders,9,True,0.5387142857142857,BARRÉ Louis,100.0,326.0,FR,Intermarché - Wanty,https://www.procyclingstats.com/rider/louis-barre,36.22222222222222,Good
+A. SEGAERT,Lotto,All-rounders,9,True,0.5145454545454545,GATE Aaron,38.0,534.0,NZ,XDS Astana Team,https://www.procyclingstats.com/rider/aaron-gate,59.333333333333336,Excellent
+E. SEPULVEDA,Lotto,Climbers,9,False,0.0,,,0.0,,,,0.0,Unknown
+E. THEUNS,Lidl-Trek,All-rounders,9,True,0.6050877192982456,TEUNISSEN Mike,97.0,332.0,NL,XDS Astana Team,https://www.procyclingstats.com/rider/mike-teunissen,36.888888888888886,Good
+T. VAN DER HOORN,Intermarché - Wanty,All-rounders,9,True,0.9,VAN DER POEL Mathieu,4.0,1113.0,NL,Alpecin - Deceuninck,https://www.procyclingstats.com/rider/mathieu-van-der-poel,123.66666666666667,Excellent
+B. TRONCHON,Decathlon AG2R La Mondiale Team,All-rounders,9,True,1.1,TRONCHON Bastien,73.0,386.0,FR,Decathlon AG2R La Mondiale Team,https://www.procyclingstats.com/rider/bastien-tronchon,42.888888888888886,Good
+S. DE PESTEL,Decathlon AG2R La Mondiale Team,All-rounders,9,True,0.5446153846153846,BERTHET Clément,94.0,339.0,FR,Decathlon AG2R La Mondiale Team,https://www.procyclingstats.com/rider/clement-berthet,37.666666666666664,Good
+S. CARR,Cofidis,All-rounders,9,True,0.7105454545454545,COQUARD Bryan,92.0,346.0,FR,Cofidis,https://www.procyclingstats.com/rider/bryan-coquard,38.44444444444444,Good
+D. TOUZE,Cofidis,All-rounders,9,False,0.0,,,0.0,,,,0.0,Unknown
+R. STANNARD,Bahrain Victorious,All-rounders,9,True,0.5690950226244345,GANNA Filippo,12.0,788.0,IT,INEOS Grenadiers,https://www.procyclingstats.com/rider/filippo-ganna,87.55555555555556,Excellent
+M. LE BERRE,Arkea-B&B Hotels,All-rounders,9,True,0.601496212121212,BERTHET Clément,94.0,339.0,FR,Decathlon AG2R La Mondiale Team,https://www.procyclingstats.com/rider/clement-berthet,37.666666666666664,Good
+M. HOELGAARD,Uno-X Mobility,All-rounders,9,True,0.566300982635617,VINGEGAARD Jonas,33.0,573.0,DK,Team Visma | Lease a Bike,https://www.procyclingstats.com/rider/jonas-vingegaard,63.666666666666664,Excellent
+L. ROTA,Intermarché - Wanty,All-rounders,9,False,0.0,,,0.0,,,,0.0,Unknown
+L. REX,Intermarché - Wanty,All-rounders,9,False,0.0,,,0.0,,,,0.0,Unknown
+F. SENECHAL,Arkea-B&B Hotels,All-rounders,9,True,0.5138095238095237,BERNAL Egan,67.0,405.0,CO,INEOS Grenadiers,https://www.procyclingstats.com/rider/egan-bernal,45.0,Good
+B. VAN MOER,Lotto,All-rounders,9,True,0.5327142857142857,STORER Michael,21.0,687.0,AU,Tudor Pro Cycling Team,https://www.procyclingstats.com/rider/michael-storer,76.33333333333333,Excellent
+H. SWEENY,EF Education - Easypost,All-rounders,9,False,0.0,,,0.0,,,,0.0,Unknown
+X. MEURISSE,Alpecin - Deceuninck,Climbers,9,True,0.6114285714285714,TEUNISSEN Mike,97.0,332.0,NL,XDS Astana Team,https://www.procyclingstats.com/rider/mike-teunissen,36.888888888888886,Good
+C. RUSSO,Groupama - FDJ,All-rounders,9,True,0.6327272727272727,CARUSO Damiano,84.0,363.0,IT,Bahrain - Victorious,https://www.procyclingstats.com/rider/damiano-caruso,40.333333333333336,Good
+T. SKUJINS,Lidl-Trek,All-rounders,9,True,0.575,SKJELMOSE Mattias,32.0,590.0,DK,Lidl - Trek,https://www.procyclingstats.com/rider/mattias-skjelmose-jensen,65.55555555555556,Excellent
+C. SCOTSON,Decathlon AG2R La Mondiale Team,All-rounders,9,True,0.5583870967741935,SCARONI Christian,18.0,701.0,IT,XDS Astana Team,https://www.procyclingstats.com/rider/christian-scaroni,77.88888888888889,Excellent
+B. LEMMEN,Team Visma | Lease a Bike,Climbers,9,False,0.0,,,0.0,,,,0.0,Unknown
+M. HALLER,Tudor Pro Cycling Team,All-rounders,9,True,0.5257912087912088,GALL Felix,64.0,413.0,AT,Decathlon AG2R La Mondiale Team,https://www.procyclingstats.com/rider/felix-gall,45.888888888888886,Good
+R. TILLER,Uno-X Mobility,All-rounders,9,True,0.5654166666666666,TIBERI Antonio,82.0,366.0,IT,Bahrain - Victorious,https://www.procyclingstats.com/rider/antonio-tiberi,40.666666666666664,Good
+P. LATOUR,TotalEnergies,Climbers,9,True,0.5176883116883116,AULAR Orluis,95.0,334.0,VE,Movistar Team,https://www.procyclingstats.com/rider/orluis-aular,37.111111111111114,Good
+L. MEZGEC,Team Jayco AlUla,Sprinters,9,False,0.0,,,0.0,,,,0.0,Unknown
+G. MÜHLBERGER,Movistar Team,All-rounders,9,True,0.5437142857142857,MERLIER Tim,11.0,799.0,BE,Soudal Quick-Step,https://www.procyclingstats.com/rider/tim-merlier,88.77777777777777,Excellent
+F. VERMEERSCH,UAE Team Emirates XRG,All-rounders,9,True,1.1,VERMEERSCH Florian,90.0,350.0,BE,UAE Team Emirates - XRG,https://www.procyclingstats.com/rider/florian-vermeersch,38.888888888888886,Good
+M. TEUNISSEN,XDS Astana Team,Sprinters,9,True,1.1,TEUNISSEN Mike,97.0,332.0,NL,XDS Astana Team,https://www.procyclingstats.com/rider/mike-teunissen,36.888888888888886,Good
+Y. FEDOROV,XDS Astana Team,All-rounders,9,True,0.575,FORTUNATO Lorenzo,25.0,624.0,IT,XDS Astana Team,https://www.procyclingstats.com/rider/lorenzo-fortunato,69.33333333333333,Excellent
+O. NAESEN,Decathlon AG2R La Mondiale Team,All-rounders,9,True,0.6214705882352941,ANDRESEN Tobias Lund,34.0,567.0,DK,Team Picnic PostNL,https://www.procyclingstats.com/rider/tobias-lund-andresen,63.0,Excellent
+D. NOVAK,UAE Team Emirates XRG,All-rounders,8,True,0.532136752136752,COVI Alessandro,85.0,360.0,IT,UAE Team Emirates - XRG,https://www.procyclingstats.com/rider/alessandro-covi,45.0,Good
+L. WARBASSE,Tudor Pro Cycling Team,All-rounders,8,False,0.0,,,0.0,,,,0.0,Unknown
+K. BOUWMAN,Team Jayco AlUla,Climbers,8,False,0.0,,,0.0,,,,0.0,Unknown
+M. VAN DIJKE,Red Bull - Bora - Hansgrohe,All-rounders,8,True,0.9,VAN WILDER Ilan,80.0,369.0,BE,Soudal Quick-Step,https://www.procyclingstats.com/rider/ilan-van-wilder,46.125,Good
+A. LIVYNS,Lotto,All-rounders,8,False,0.0,,,0.0,,,,0.0,Unknown
+B. SWIFT,Ineos Grenadiers,All-rounders,8,False,0.0,,,0.0,,,,0.0,Unknown
+C. BARTHE,Groupama - FDJ,Sprinters,8,True,0.7040559440559441,BERTHET Clément,94.0,339.0,FR,Decathlon AG2R La Mondiale Team,https://www.procyclingstats.com/rider/clement-berthet,42.375,Good
+T. BAYER,Alpecin - Deceuninck,All-rounders,8,True,0.5369999999999999,BARRÉ Louis,100.0,326.0,FR,Intermarché - Wanty,https://www.procyclingstats.com/rider/louis-barre,40.75,Good
+V. BRAET,Intermarché - Wanty,All-rounders,8,True,0.5718311403508771,BERTHET Clément,94.0,339.0,FR,Decathlon AG2R La Mondiale Team,https://www.procyclingstats.com/rider/clement-berthet,42.375,Good
+O. RIESEBEEK,Alpecin - Deceuninck,All-rounders,8,False,0.0,,,0.0,,,,0.0,Unknown
+A. PEDRERO,Movistar Team,Climbers,8,True,0.6106604747162022,PEDERSEN Mads,3.0,1632.0,DK,Lidl - Trek,https://www.procyclingstats.com/rider/mads-pedersen,204.0,Excellent
+B. JUNGELS,Ineos Grenadiers,All-rounders,8,False,0.0,,,0.0,,,,0.0,Unknown
+G. WILSLY,Lotto,Climbers,8,False,0.0,,,0.0,,,,0.0,Unknown
+M. BURGAUDEAU,TotalEnergies,All-rounders,8,False,0.0,,,0.0,,,,0.0,Unknown
+K. VERMAERKE,Team Picnic PostNL,All-rounders,8,True,0.5595782935599868,VERMEERSCH Florian,90.0,350.0,BE,UAE Team Emirates - XRG,https://www.procyclingstats.com/rider/florian-vermeersch,43.75,Good
+N. DOS SANTOS SIMOES OLIVEIRA,Movistar Team,All-rounders,8,True,0.5077938596491228,ALMEIDA João,2.0,1634.0,PT,UAE Team Emirates - XRG,https://www.procyclingstats.com/rider/joao-almeida,204.25,Excellent
+S. DILLIER,Alpecin - Deceuninck,All-rounders,8,True,0.575,PHILIPSEN Jasper,30.0,606.0,BE,Alpecin - Deceuninck,https://www.procyclingstats.com/rider/jasper-philipsen,75.75,Excellent
+D. VAN BEKKUM,XDS Astana Team,All-rounders,7,False,0.0,,,0.0,,,,0.0,Unknown
+A. JOHANNESSEN,Uno-X Mobility,All-rounders,7,True,0.5643401983218915,ANDRESEN Tobias Lund,34.0,567.0,DK,Team Picnic PostNL,https://www.procyclingstats.com/rider/tobias-lund-andresen,81.0,Excellent
+F. LIENHARD,Tudor Pro Cycling Team,All-rounders,7,True,0.62,RENARD Alexis,75.0,378.0,FR,Cofidis,https://www.procyclingstats.com/rider/alexis-renard,54.0,Excellent
+N. MÄRKL,Team Picnic PostNL,All-rounders,7,False,0.0,,,0.0,,,,0.0,Unknown
+J. LECERF,Soudal Quick-Step,Climbers,7,False,0.0,,,0.0,,,,0.0,Unknown
+O. VERGAERDE,Lidl-Trek,All-rounders,7,False,0.0,,,0.0,,,,0.0,Unknown
+R. VAN SINTMAARTENSDIJK,Intermarché - Wanty,All-rounders,7,True,0.9,VAN DER POEL Mathieu,4.0,1113.0,NL,Alpecin - Deceuninck,https://www.procyclingstats.com/rider/mathieu-van-der-poel,159.0,Excellent
+E. VERSTRYNGE,Alpecin - Deceuninck,All-rounders,7,False,0.0,,,0.0,,,,0.0,Unknown
+M. VERCHER,TotalEnergies,All-rounders,7,True,0.5385714285714285,VERMEERSCH Florian,90.0,350.0,BE,UAE Team Emirates - XRG,https://www.procyclingstats.com/rider/florian-vermeersch,50.0,Good
+T. GACHIGNARD,TotalEnergies,All-rounders,7,True,0.5136128251663642,GANNA Filippo,12.0,788.0,IT,INEOS Grenadiers,https://www.procyclingstats.com/rider/filippo-ganna,112.57142857142857,Excellent
+S. FLYNN,Team Picnic PostNL,All-rounders,7,False,0.0,,,0.0,,,,0.0,Unknown
+J. ROMO OLIVER,Movistar Team,All-rounders,7,True,0.5641538461538462,MERLIER Tim,11.0,799.0,BE,Soudal Quick-Step,https://www.procyclingstats.com/rider/tim-merlier,114.14285714285714,Excellent
+L. VERVAEKE,Soudal Quick-Step,Climbers,7,True,0.5514285714285714,EVENEPOEL Remco,15.0,728.0,BE,Soudal Quick-Step,https://www.procyclingstats.com/rider/remco-evenepoel,104.0,Excellent
+J. BERNARD,Lidl-Trek,All-rounders,7,True,0.6856923076923077,BERNAL Egan,67.0,405.0,CO,INEOS Grenadiers,https://www.procyclingstats.com/rider/egan-bernal,57.857142857142854,Excellent
+A. CHARMIG,XDS Astana Team,Climbers,7,True,0.7316666666666666,SCARONI Christian,18.0,701.0,IT,XDS Astana Team,https://www.procyclingstats.com/rider/christian-scaroni,100.14285714285714,Excellent
+J. JENSEN,Team Jayco AlUla,All-rounders,7,True,0.6005764411027568,TEUNISSEN Mike,97.0,332.0,NL,XDS Astana Team,https://www.procyclingstats.com/rider/mike-teunissen,47.42857142857143,Good
+L. DURBRIDGE,Team Jayco AlUla,All-rounders,7,False,0.0,,,0.0,,,,0.0,Unknown
+M. LOUVEL,Israël - Premier Tech,All-rounders,7,False,0.0,,,0.0,,,,0.0,Unknown
+P. EENKHOORN,Soudal Quick-Step,All-rounders,7,True,0.5303535353535352,EVENEPOEL Remco,15.0,728.0,BE,Soudal Quick-Step,https://www.procyclingstats.com/rider/remco-evenepoel,104.0,Excellent
+J. DE BUYST,Lotto,All-rounders,7,False,0.0,,,0.0,,,,0.0,Unknown
+G. BOIVIN,Israël - Premier Tech,All-rounders,7,True,0.5693809523809523,VINE Jay,55.0,454.0,AU,UAE Team Emirates - XRG,https://www.procyclingstats.com/rider/jay-vine,64.85714285714286,Excellent
+A. RENARD,Cofidis,All-rounders,7,True,1.1,RENARD Alexis,75.0,378.0,FR,Cofidis,https://www.procyclingstats.com/rider/alexis-renard,54.0,Excellent
+G. MOSCON,Red Bull - Bora - Hansgrohe,All-rounders,7,True,0.5616083916083916,SCARONI Christian,18.0,701.0,IT,XDS Astana Team,https://www.procyclingstats.com/rider/christian-scaroni,100.14285714285714,Excellent
+P. GAMPER,Team Jayco AlUla,All-rounders,6,True,0.5455714285714285,GATE Aaron,38.0,534.0,NZ,XDS Astana Team,https://www.procyclingstats.com/rider/aaron-gate,89.0,Excellent
+C. BRAZ AFONSO,Groupama - FDJ,Climbers,6,False,0.0,,,0.0,,,,0.0,Unknown
+R. FROIDEVAUX,Tudor Pro Cycling Team,All-rounders,6,False,0.0,,,0.0,,,,0.0,Unknown
+B. VAN LERBERGHE,Soudal Quick-Step,All-rounders,6,True,0.575,MERLIER Tim,11.0,799.0,BE,Soudal Quick-Step,https://www.procyclingstats.com/rider/tim-merlier,133.16666666666666,Excellent
+M. MIHKELS,EF Education - Easypost,All-rounders,6,True,0.575,HEALY Ben,54.0,457.0,IE,EF Education - EasyPost,https://www.procyclingstats.com/rider/ben-healy,76.16666666666667,Excellent
+J. DRIZNERS,Lotto,All-rounders,6,False,0.0,,,0.0,,,,0.0,Unknown
+C. BEULLENS,Lotto,All-rounders,6,False,0.0,,,0.0,,,,0.0,Unknown
+N. EEKHOFF,Team Picnic PostNL,All-rounders,6,False,0.0,,,0.0,,,,0.0,Unknown
+J. RICKAERT,Alpecin - Deceuninck,All-rounders,6,True,0.503095238095238,KANTER Max,68.0,403.0,DE,XDS Astana Team,https://www.procyclingstats.com/rider/max-kanter,67.16666666666667,Excellent
+T. NABERMAN,Team Picnic PostNL,All-rounders,5,True,0.5333908045977012,BERNAL Egan,67.0,405.0,CO,INEOS Grenadiers,https://www.procyclingstats.com/rider/egan-bernal,81.0,Excellent
+N. RAISBERG,Israël - Premier Tech,All-rounders,5,True,0.5222072072072071,TIBERI Antonio,82.0,366.0,IT,Bahrain - Victorious,https://www.procyclingstats.com/rider/antonio-tiberi,73.2,Excellent
+P. CÔTÉ,Israël - Premier Tech,All-rounders,5,False,0.0,,,0.0,,,,0.0,Unknown
+P. OURSELIN,Cofidis,All-rounders,5,True,0.7316666666666666,FRETIN Milan,41.0,522.0,BE,Cofidis,https://www.procyclingstats.com/rider/milan-fretin,104.4,Excellent
+F. GRELLIER,TotalEnergies,All-rounders,5,True,0.597719298245614,MERLIER Tim,11.0,799.0,BE,Soudal Quick-Step,https://www.procyclingstats.com/rider/tim-merlier,159.8,Excellent
+M. SCHWARZMANN,Israël - Premier Tech,All-rounders,5,True,0.7239999999999999,SCHACHMANN Maximilian,69.0,397.0,DE,Soudal Quick-Step,https://www.procyclingstats.com/rider/maximilian-schachmann,79.4,Excellent
+M. PAASSCHENS,Bahrain Victorious,All-rounders,5,False,0.0,,,0.0,,,,0.0,Unknown
+S. GRIGNARD,Lotto,Climbers,5,True,0.62,RENARD Alexis,75.0,378.0,FR,Cofidis,https://www.procyclingstats.com/rider/alexis-renard,75.6,Excellent
+K. GRADEK,Bahrain Victorious,All-rounders,5,True,0.5348571428571428,GATE Aaron,38.0,534.0,NZ,XDS Astana Team,https://www.procyclingstats.com/rider/aaron-gate,106.8,Excellent
+E. REINDERS,Team Jayco AlUla,All-rounders,5,True,0.515,FRETIN Milan,41.0,522.0,BE,Cofidis,https://www.procyclingstats.com/rider/milan-fretin,104.4,Excellent
+A. DELAPLACE,Arkea-B&B Hotels,All-rounders,5,False,0.0,,,0.0,,,,0.0,Unknown

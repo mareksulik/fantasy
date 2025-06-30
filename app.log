@@ -1,0 +1,43 @@
+🚀 Starting Fantasy TdF Helper...
+Loaded 261 riders
+ * Serving Flask app 'app'
+ * Debug mode: on
+[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8085
+ * Running on http://10.1.10.36:8085
+[33mPress CTRL+C to quit[0m
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 484-617-884
+127.0.0.1 - - [30/Jun/2025 16:08:49] "GET /riders HTTP/1.1" 200 -
+ * Detected change in '/Users/mareksulik/Documents/GitHub/fantasy/simple-pcs-script.py', reloading
+🚀 Starting Fantasy TdF Helper...
+Loaded 261 riders
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 484-617-884
+ * Detected change in '/Users/mareksulik/Documents/GitHub/fantasy/simple-pcs-script.py', reloading
+🚀 Starting Fantasy TdF Helper...
+Loaded 261 riders
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 484-617-884
+ * Detected change in '/Users/mareksulik/Documents/GitHub/fantasy/simple-pcs-script.py', reloading
+🚀 Starting Fantasy TdF Helper...
+Loaded 261 riders
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 484-617-884
+ * Detected change in '/Users/mareksulik/Documents/GitHub/fantasy/simple-pcs-script.py', reloading
+🚀 Starting Fantasy TdF Helper...
+Loaded 261 riders
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 484-617-884
+ * Detected change in '/Users/mareksulik/Documents/GitHub/fantasy/simple-pcs-script.py', reloading
+🚀 Starting Fantasy TdF Helper...
+Loaded 261 riders
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger PIN: 484-617-884
