@@ -112,8 +112,9 @@
                 {% for rider in riders[:15] %}
                 <div class="rider-row d-flex justify-content-between align-items-center mb-2 p-2 border rounded">
                     <div class="flex-grow-1">
-                        <div class="fw-bold">{{ rider.fantasy_name }}</div>
-                        <small class="text-muted">{{ rider.team }}</small>
+                        <div class="fw-bold">{{ get_flag_emoji(rider.pcs_nationality) }} {{ rider.fantasy_name }}</div>
+                        <small class="text-muted">{{ rider.team }}</small><br>
+                        <span class="badge badge-sm {{ get_category_badge_class(rider.category) }}">{{ rider.category }}</span>
                     </div>
                     <div class="text-center me-2">
                         <div class="small fw-bold {{ get_value_class(rider.value_category) }}">
@@ -122,10 +123,9 @@
                         <small class="text-muted">P/C</small>
                     </div>
                     <div class="text-center me-2">
-                        <div class="small fw-bold">{{ rider.price }}</div>
-                        <small class="text-muted">cr</small>
+                        <span class="badge text-dark fw-bold" style="background: #e9ecef;">{{ rider.price }}⭐</span>
                     </div>
-                    <button class="btn btn-outline-primary btn-sm" onclick="addToTeam('{{ rider.fantasy_name }}', {{ rider.price }}, {{ rider.pcs_points_2025 or 0 }}, '{{ rider.category }}')">
+                    <button class="btn btn-outline-primary btn-sm" onclick="addToTeam('{{ rider.fantasy_name }}', {{ rider.price }}, {{ rider.pcs_points_2025 or 0 }}, '{{ rider.category }}', '{{ rider.pcs_nationality or '' }}', '{{ rider.team }}')">
                         <i class="fas fa-plus"></i>
                     </button>
                 </div>
@@ -172,7 +172,15 @@ function optimizeTeam() {
         .then(data => {
             modal.hide();
             if (data.success) {
-                currentTeam = data.team;
+                // Ensure each rider has all required fields
+                currentTeam = data.team.map(rider => ({
+                    fantasy_name: rider.fantasy_name,
+                    price: rider.price,
+                    pcs_points_2025: rider.pcs_points_2025 || 0,
+                    category: rider.category,
+                    nationality: rider.pcs_nationality || '',
+                    team: rider.team || ''
+                }));
                 maxBudget = budget;
                 updateTeamDisplay();
                 displayTeamStats(data.stats);
@@ -186,7 +194,30 @@ function optimizeTeam() {
         });
 }
 
-function addToTeam(name, price, points, category) {
+function getCategoryBadgeClass(category) {
+    const classes = {
+        'Leaders': 'category-badge-leaders',
+        'Sprinters': 'category-badge-sprinters', 
+        'Climbers': 'category-badge-climbers',
+        'All-rounders': 'category-badge-all-rounders'
+    };
+    return classes[category] || 'bg-secondary';
+}
+
+function getFlagEmoji(countryCode) {
+    if (!countryCode) return '🏳️';
+    const flagMap = {
+        'SI': '🇸🇮', 'DK': '🇩🇰', 'IT': '🇮🇹', 'BE': '🇧🇪', 'NL': '🇳🇱', 'GB': '🇬🇧',
+        'PT': '🇵🇹', 'AU': '🇦🇺', 'ES': '🇪🇸', 'DE': '🇩🇪', 'FR': '🇫🇷', 'US': '🇺🇸',
+        'EC': '🇪🇨', 'ER': '🇪🇷', 'AT': '🇦🇹', 'CO': '🇨🇴', 'IE': '🇮🇪', 'NO': '🇳🇴',
+        'CH': '🇨🇭', 'RU': '🇷🇺', 'CA': '🇨🇦', 'KZ': '🇰🇿', 'NZ': '🇳🇿', 'CZ': '🇨🇿',
+        'LU': '🇱🇺', 'EE': '🇪🇪', 'LV': '🇱🇻', 'VE': '🇻🇪', 'SK': '🇸🇰', 'MX': '🇲🇽',
+        'ZA': '🇿🇦', 'PL': '🇵🇱', 'AR': '🇦🇷'
+    };
+    return flagMap[countryCode] || '🏳️';
+}
+
+function addToTeam(name, price, points, category, nationality, team) {
     const totalCost = currentTeam.reduce((sum, rider) => sum + rider.price, 0);
     
     if (totalCost + price > maxBudget) {
@@ -204,11 +235,20 @@ function addToTeam(name, price, points, category) {
         return;
     }
     
+    // Check team limit - maximum 3 riders from same team
+    const teamCount = currentTeam.filter(rider => rider.team === team).length;
+    if (teamCount >= 3) {
+        alert(`Cannot add ${name}. Maximum 3 riders from same team (${team}) allowed.`);
+        return;
+    }
+    
     currentTeam.push({
         fantasy_name: name,
         price: price,
         pcs_points_2025: points,
-        category: category
+        category: category,
+        nationality: nationality,
+        team: team
     });
     
     updateTeamDisplay();
@@ -236,11 +276,12 @@ function updateTeamDisplay() {
                 <div class="card-body p-2">
                     <div class="d-flex justify-content-between align-items-start">
                         <div class="flex-grow-1">
-                            <div class="fw-bold small">${rider.fantasy_name}</div>
-                            <span class="badge badge-sm bg-primary">${rider.category}</span>
+                            <div class="fw-bold small">${getFlagEmoji(rider.nationality)} ${rider.fantasy_name}</div>
+                            <div class="small text-muted">${rider.team}</div>
+                            <span class="badge badge-sm ${getCategoryBadgeClass(rider.category)}">${rider.category}</span>
                         </div>
                         <div class="text-end">
-                            <div class="fw-bold">${rider.price} cr</div>
+                            <span class="badge text-dark fw-bold" style="background: #e9ecef;">${rider.price}⭐</span>
                             <button class="btn btn-outline-danger btn-sm" onclick="removeFromTeam('${rider.fantasy_name}')">
                                 <i class="fas fa-times"></i>
                             </button>

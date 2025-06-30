@@ -19,6 +19,7 @@ def get_value_class(category):
     """Returns CSS class for value category"""
     classes = {
         'Excellent': 'value-excellent',
+        'Great': 'value-great',
         'Good': 'value-good', 
         'Average': 'value-average',
         'Poor': 'value-poor',
@@ -36,17 +37,45 @@ def get_category_class(category):
     }
     return classes.get(category, '')
 
+def get_category_badge_class(category):
+    """Returns Bootstrap badge class for rider category"""
+    classes = {
+        'Leaders': 'category-badge-leaders',
+        'Sprinters': 'category-badge-sprinters', 
+        'Climbers': 'category-badge-climbers',
+        'All-rounders': 'category-badge-all-rounders'
+    }
+    return classes.get(category, 'bg-secondary')
+
 def format_number(number):
     """Formats number"""
     if number is None:
         return '0'
     return f"{number:,.0f}"
 
+def get_flag_emoji(country_code):
+    """Converts country code to flag emoji"""
+    if not country_code:
+        return '🏳️'
+    
+    flag_map = {
+        'SI': '🇸🇮', 'DK': '🇩🇰', 'IT': '🇮🇹', 'BE': '🇧🇪', 'NL': '🇳🇱', 'GB': '🇬🇧',
+        'PT': '🇵🇹', 'AU': '🇦🇺', 'ES': '🇪🇸', 'DE': '🇩🇪', 'FR': '🇫🇷', 'US': '🇺🇸',
+        'EC': '🇪🇨', 'ER': '🇪🇷', 'AT': '🇦🇹', 'CO': '🇨🇴', 'IE': '🇮🇪', 'NO': '🇳🇴',
+        'CH': '🇨🇭', 'RU': '🇷🇺', 'CA': '🇨🇦', 'KZ': '🇰🇿', 'NZ': '🇳🇿', 'CZ': '🇨🇿',
+        'LU': '🇱🇺', 'EE': '🇪🇪', 'LV': '🇱🇻', 'VE': '🇻🇪', 'SK': '🇸🇰', 'MX': '🇲🇽',
+        'ZA': '🇿🇦', 'PL': '🇵🇱', 'AR': '🇦🇷'
+    }
+    
+    return flag_map.get(country_code.upper(), '🏳️')
+
 # Register helper functions for templates
 app.jinja_env.globals.update(
     get_value_class=get_value_class,
     get_category_class=get_category_class,
-    format_number=format_number
+    get_category_badge_class=get_category_badge_class,
+    format_number=format_number,
+    get_flag_emoji=get_flag_emoji
 )
 
 def load_riders_data():
@@ -69,8 +98,8 @@ def load_riders_data():
 
 @app.route('/')
 def index():
-    """Main page"""
-    return render_template('index.html')
+    """Home page redirects to riders"""
+    return riders()
 
 @app.route('/riders')
 def riders():
@@ -79,6 +108,7 @@ def riders():
     
     # Filtering
     category_filter = request.args.get('category', 'all')
+    team_filter = request.args.get('team', 'all')
     min_price = request.args.get('min_price', type=int)
     max_price = request.args.get('max_price', type=int)
     sort_by = request.args.get('sort', 'points_per_credit')
@@ -88,6 +118,9 @@ def riders():
     
     if category_filter != 'all':
         filtered_data = [r for r in filtered_data if r['category'].lower() == category_filter.lower()]
+    
+    if team_filter != 'all':
+        filtered_data = [r for r in filtered_data if r['team'] == team_filter]
     
     if min_price is not None:
         filtered_data = [r for r in filtered_data if r['price'] >= min_price]
@@ -111,10 +144,12 @@ def riders():
                          filtered_count=len(filtered_data),
                          current_filters={
                              'category': category_filter,
+                             'team': team_filter,
                              'min_price': min_price,
                              'max_price': max_price,
                              'sort': sort_by
-                         })
+                         },
+                         all_teams=sorted(list(set(r['team'] for r in data))))
 
 @app.route('/api/riders')
 def api_riders():
@@ -203,18 +238,29 @@ def api_optimize_team():
                                      rider.get('pcs_points_2025', 0) / 100 * 0.3)
         sorted_riders = sorted(matched_riders, key=lambda x: x.get('balanced_score', 0), reverse=True)
     
-    # Greedy selection s budget constraint
+    # Greedy selection with budget and team constraints
     selected_team = []
     total_cost = 0
+    team_counts = {}  # Track riders per team
     
     for rider in sorted_riders:
-        if total_cost + rider['price'] <= budget:
-            selected_team.append(rider)
-            total_cost += rider['price']
+        # Check budget constraint
+        if total_cost + rider['price'] > budget:
+            continue
             
-            # Limit to 8 riders (standard fantasy team)
-            if len(selected_team) >= 8:
-                break
+        # Check team limit (max 3 from same team)
+        rider_team = rider.get('team', '')
+        if team_counts.get(rider_team, 0) >= 3:
+            continue
+            
+        # Add rider to team
+        selected_team.append(rider)
+        total_cost += rider['price']
+        team_counts[rider_team] = team_counts.get(rider_team, 0) + 1
+        
+        # Limit to 8 riders (standard fantasy team)
+        if len(selected_team) >= 8:
+            break
     
     total_points = sum(r.get('pcs_points_2025', 0) for r in selected_team)
     avg_points_per_credit = total_points / total_cost if total_cost > 0 else 0

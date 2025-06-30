@@ -144,140 +144,316 @@ class FantasyPCSIntegrator:
         return best_match, best_similarity
         
     def create_manual_mappings(self):
-        """Vytvorí manuálne mapovanie pre problematické prípady"""
+        """Kompletné manuálne mapovanie overené rider po rider"""
         return {
-            # Fantasy name -> PCS search terms
-            'T. POGAČAR': ['POGAČAR Tadej', 'POGACAR Tadej'],
-            'J. VINGEGAARD HANSEN': ['VINGEGAARD Jonas', 'VINGEGAARD HANSEN Jonas'],
-            'R. EVENEPOEL': ['EVENEPOEL Remco'],
-            'P. ROGLIC': ['ROGLIČ Primož', 'ROGLIC Primoz'],
-            'W. VAN AERT': ['VAN AERT Wout'],
-            'M. VAN DER POEL': ['VAN DER POEL Mathieu'],
-            'E. MAS NICOLAU': ['MAS Enric'],
-            'C. RODRIGUEZ': ['RODRÍGUEZ Carlos', 'RODRIGUEZ Carlos'],
-            'A. KRISTOFF': ['KRISTOFF Alexander'],
-            'P. BAUHAUS': ['BAUHAUS Phil'],
-            'P. SIVAKOV': ['SIVAKOV Pavel'],
-            'A. LUTSENKO': ['LUTSENKO Alexey'],
-            'L. PLAPP': ['PLAPP Luke'],
-            'L. KÄMNA': ['KÄMNA Lennard'],
-            'S. BISSEGGER': ['BISSEGGER Stefan'],
-            'F. GROSSSCHARTNER': ['GROSSSCHARTNER Felix'],
-            'O. VERGAERDE': ['VERGAERDE Otto'],
-            'C. BOL': ['BOL Cees'],
-            'A. WRIGHT': ['WRIGHT Alfred', 'WRIGHT Alex'],
-            'C. RODRIGUEZ': ['RODRÍGUEZ Carlos', 'RODRIGUEZ Carlos'],
-            'B. O\'CONNOR': ['O\'CONNOR Ben', 'OCONNOR Ben'],
-            'M. MOHORIC': ['MOHORIČ Matej', 'MOHORIC Matej'],
-            'A. DAINESE': ['DAINESE Alberto'],
-            'A. KRISTOFF': ['KRISTOFF Alexander'],
-            'P. BAUHAUS': ['BAUHAUS Phil'],
-            'E. DUNBAR': ['DUNBAR Eddie'],
-            'P. SIVAKOV': ['SIVAKOV Pavel'],
-            'A. LUTSENKO': ['LUTSENKO Alexey'],
-            'P. BITTNER': ['BITTNER Pavel'],
-            'M. WOODS': ['WOODS Michael'],
-            'I. IZAGIRRE INSAUSTI': ['IZAGIRRE Ion', 'IZAGUIRRE Ion'],
-            'G. MARTIN GUYONNET': ['MARTIN Guillaume'],
-            'L. VAN EETVELT': ['VAN EETVELT Lennert'],
-            'A. LEKNESSUND': ['LEKNESSUND Andreas'],
-            'S. BATTISTELLA': ['BATTISTELLA Samuele'],
-            'B. ARMIRAIL': ['ARMIRAIL Bruno'],
-            'V. CAMPENAERTS': ['CAMPENAERTS Victor'],
-            'J. HAIG': ['HAIG Jack'],
-            'T. TRÆEN': ['TRÆEN Tobias'],
-            'C. HARPER': ['HARPER Chris'],
-            'D. VAN POPPEL': ['VAN POPPEL Danny'],
-            'S. EDVARDSEN-FREDHEIM': ['EDVARDSEN-FREDHEIM Søren'],
-            'A. BAUDIN': ['BAUDIN Alex'],
-            'I. SCHELLING': ['SCHELLING Ide'],
-            'C. SWIFT': ['SWIFT Connor'],
-            'Q. PACHER': ['PACHER Quentin'],
-            'F. DOUBEY': ['DOUBEY Fabien'],
-            'E. SEPULVEDA': ['SEPÚLVEDA Eduardo'],
-            'T. VAN DER HOORN': ['VAN DER HOORN Taco'],
-            'D. TOUZE': ['TOUZÉ Damien'],
-            'L. ROTA': ['ROTA Lorenzo'],
-            'L. REX': ['REX Laurenz'],
-            'H. SWEENY': ['SWEENY Harrison'],
-            'B. LEMMEN': ['LEMMEN Bart'],
-            'L. MEZGEC': ['MEZGEC Luka'],
-            'L. WARBASSE': ['WARBASSE Larry'],
-            'K. BOUWMAN': ['BOUWMAN Koen'],
-            'M. VAN DIJKE': ['VAN DIJKE Mick'],
-            'A. LIVYNS': ['LIVYNS Arjen'],
-            'B. SWIFT': ['SWIFT Ben'],
-            'O. RIESEBEEK': ['RIESEBEEK Oscar'],
-            'B. JUNGELS': ['JUNGELS Bob'],
-            'G. WILSLY': ['WILSLY Georg'],
-            'M. BURGAUDEAU': ['BURGAUDEAU Mathieu'],
-            'N. MÄRKL': ['MÄRKL Niklas'],
-            'J. LECERF': ['LECERF Julien'],
-            'R. VAN SINTMAARTENSDIJK': ['VAN SINTMAARTENSDIJK Robbe'],
-            'E. VERSTRYNGE': ['VERSTRYNGE Edward'],
-            'S. FLYNN': ['FLYNN Sean'],
-            'L. DURBRIDGE': ['DURBRIDGE Luke'],
-            'M. LOUVEL': ['LOUVEL Mathis'],
-            'J. DE BUYST': ['DE BUYST Jasper'],
-            'C. BRAZ AFONSO': ['BRAZ AFONSO Cristian'],
-            'R. FROIDEVAUX': ['FROIDEVAUX Romain'],
-            'J. DRIZNERS': ['DRIZNERS Jarrad'],
-            'C. BEULLENS': ['BEULLENS Cédric'],
-            'N. EEKHOFF': ['EEKHOFF Nils'],
-            'P. CÔTÉ': ['CÔTÉ Pierre-André'],
-            'M. PAASSCHENS': ['PAASSCHENS Mike'],
-            'A. DELAPLACE': ['DELAPLACE Anthony']
+            # Leaders (27-11 credits)
+            'T. POGAČAR': 'POGAČAR Tadej',
+            'J. VINGEGAARD HANSEN': 'VINGEGAARD Jonas', 
+            'R. EVENEPOEL': 'EVENEPOEL Remco',
+            'P. ROGLIC': 'ROGLIČ Primož',
+            'A. YATES': 'YATES Adam',
+            'R. CARAPAZ': 'CARAPAZ Richard',
+            'F. LIPOWITZ': 'LIPOWITZ Florian',
+            'E. MAS NICOLAU': 'MAS Enric',
+            'C. RODRIGUEZ': 'RODRÍGUEZ Carlos',
+            'A. VLASOV': 'VLASOV Aleksandr',
+            'S. BUITRAGO SANCHEZ': 'BUITRAGO Santiago',
+            'M. JENSEN': 'SKJELMOSE Mattias',
+            'B. O\'CONNOR': 'O\'CONNOR Ben',
+            'E. ONLEY': 'ONLEY Oscar',
+            'F. GALL': 'GALL Felix',
+            'T. JOHANNESSEN': 'JOHANNESSEN Tobias Halland',
+            'A. LUTSENKO': 'LUTSENKO Alexey',
+            'G. THOMAS': 'THOMAS Geraint',
+            'M. WOODS': 'WOODS Michael',
+            'L. MEINTJES': 'MEINTJES Louis',
+            'G. MARTIN GUYONNET': 'MARTIN Guillaume',
+            'J. JEGAT': 'JEGAT Jordan',
+            'S. CRAS': 'CRAS Steff',
+            'E. BUCHMANN': 'BUCHMANN Emanuel',
+            
+            # Sprinters (22-8 credits)
+            'J. MILAN': 'MILAN Jonathan',
+            'T. MERLIER': 'MERLIER Tim',
+            'J. PHILIPSEN': 'PHILIPSEN Jasper',
+            'B. GIRMAY': 'GIRMAY Biniam',
+            'K. GROVES': 'GROVES Kaden',
+            'D. GROENEWEGEN': 'GROENEWEGEN Dylan',
+            'F. GAVIRIA RENDON': 'GAVIRIA Fernando',
+            'A. DE LIE': 'DE LIE Arnaud',
+            'J. MEEUS': 'MEEUS Jordi',
+            'A. DAINESE': 'DAINESE Alberto',
+            'T. STEWART': 'STEWART Jake',
+            'P. ACKERMANN': 'ACKERMANN Pascal',
+            'A. KRISTOFF': 'KRISTOFF Alexander',
+            'P. BAUHAUS': 'BAUHAUS Phil',
+            'M. FRETIN': 'FRETIN Milan',
+            'P. BITTNER': 'BITTNER Pavel',
+            'J. BERCKMOES': 'BERCKMOES Jenno',
+            'A. ARANBURU DEVA': 'ARANBURU Alex',
+            'V. ALBANESE': 'ALBANESE Vincenzo',
+            'A. DEMARE': 'DÉMARE Arnaud',
+            'A. CAPIOT': 'CAPIOT Amaury',
+            'S. ANIOLKOWSKI': 'ANIOŁKOWSKI Stanisław',
+            'M. VAN DEN BERG': 'VAN DEN BERG Marijn',
+            'M. TRENTIN': 'TRENTIN Matteo',
+            'I. GARCIA CORTINA': 'GARCÍA CORTINA Iván',
+            'B. COQUARD': 'COQUARD Bryan',
+            'C. BOL': 'BOL Cees',
+            'T. LUND ANDRESEN': 'ANDRESEN Tobias Lund',
+            'S. BATTISTELLA': 'BATTISTELLA Samuele',
+            'H. PAGE': 'PAGE Hugo',
+            'S. CONSONNI': 'CONSONNI Simone',
+            'P. PENHOET': 'PENHOËT Paul',
+            'E. JEANNIERE': 'JEANNIÈRE Emilien',
+            'C. VENTURINI': 'VENTURINI Clément',
+            'L. MEZGEC': 'MEZGEC Luka',
+            'M. TEUNISSEN': 'TEUNISSEN Mike',
+            'C. BARTHE': 'BARTHE Cyril',
+            'D. VAN POPPEL': 'VAN POPPEL Danny',
+            'S. EDVARDSEN-FREDHEIM': 'FREDHEIM Stian',
+            
+            # Climbers (20-5 credits)
+            'J. ALMEIDA': 'ALMEIDA João',
+            'M. JORGENSON': 'JORGENSON Matteo',
+            'S. YATES': 'YATES Simon',
+            'J. HINDLEY': 'HINDLEY Jai',
+            'L. MARTINEZ': 'MARTINEZ Lenny',
+            'T. ARENSMAN': 'ARENSMAN Thymen',
+            'E. RUBIO REYES': 'RUBIO Einer',
+            'P. SIVAKOV': 'SIVAKOV Pavel',
+            'M. STORER': 'STORER Michael',
+            'L. KÄMNA': 'KÄMNA Lennard',
+            'S. HIGUITA GARCIA': 'HIGUITA Sergio',
+            'C. RODRIGUEZ MARTIN': 'RODRÍGUEZ Cristián',
+            'I. VAN WILDER': 'VAN WILDER Ilan',
+            'F. GROSSSCHARTNER': 'GROßSCHARTNER Felix',
+            'I. IZAGIRRE INSAUSTI': 'IZAGIRRE Ion',
+            'N. PRODHOMME': 'PRODHOMME Nicolas',
+            'L. DE PLUS': 'DE PLUS Laurens',
+            'M. SCHMID': 'SCHMID Mauro',
+            'W. KELDERMAN': 'KELDERMAN Wilco',
+            'P. CASTRILLO ZAPATER': 'CASTRILLO Pablo',
+            'L. VAN EETVELT': 'VAN EETVELT Lennert',
+            'J. STAUNE-MITTET': 'STAUNE-MITTET Johannes',
+            'A. LEKNESSUND': 'LEKNESSUND Andreas',
+            'G. BENNETT': 'BENNETT George',
+            'C. BERTHET': 'BERTHET Clément',
+            'J. HAIG': 'HAIG Jack',
+            'T. TRÆEN': 'TRÆEN Torstein',
+            'M. SOLER': 'SOLER Marc',
+            'C. HARPER': 'HARPER Chris',
+            'C. CHAMPOUSSIN': 'CHAMPOUSSIN Clément',
+            'G. ZIMMERMANN': 'ZIMMERMANN Georg',
+            'H. TEJADA CANACUE': 'TEJADA Harold',
+            'M. VANSEVENANT': 'VANSEVENANT Mauri',
+            'P. BLACKMORE': 'BLACKMORE Joseph',
+            'A. BAUDIN': 'BAUDIN Alex',
+            'E. COSTIOU': 'COSTIOU Ewen',
+            'J. KULSET': 'KULSET Johannes',
+            'E. SEPULVEDA': 'SEPÚLVEDA Eduardo',
+            'B. LEMMEN': 'LEMMEN Bart',
+            'K. BOUWMAN': 'BOUWMAN Koen',
+            'A. PEDRERO': 'PEDRERO Antonio',
+            'G. WILSLY': None,
+            'F. DOUBEY': 'DOUBEY Fabien',
+            'V. PARET PEINTRE': 'PARET-PEINTRE Valentin',
+            'X. MEURISSE': 'MEURISSE Xandro',
+            'P. LATOUR': 'LATOUR Pierre',
+            'A. CHARMIG': 'CHARMIG Anthon',
+            'C. BRAZ AFONSO': 'BRAZ AFONSO Clément',
+            'L. VERVAEKE': 'VERVAEKE Louis',
+            'S. GRIGNARD': 'GRIGNARD Sébastien',
+            'J. LECERF': 'LECERF Junior',
+            
+            # All-rounders (22-5 credits)
+            'M. VAN DER POEL': 'VAN DER POEL Mathieu',
+            'W. VAN AERT': 'VAN AERT Wout',
+            'F. GANNA': 'GANNA Filippo',
+            'M. MOHORIC': 'MOHORIČ Matej',
+            'B. HEALY': 'HEALY Ben',
+            'N. POWLESS': 'POWLESS Neilson',
+            'E. AFFINI': 'AFFINI Edoardo',
+            'F. FISHER - BLACK': 'FISHER-BLACK Finn',
+            'T. NYS': 'NYS Thibau',
+            'R. GREGOIRE': 'GRÉGOIRE Romain',
+            'M. CORT NIELSEN': 'CORT Magnus',
+            'J. NARVAEZ PRADO': 'NARVÁEZ Jhonatan',
+            'M. HIRSCHI': 'HIRSCHI Marc',
+            'L. PLAPP': 'PLAPP Luke',
+            'S. WATSON': 'WATSON Samuel',
+            'M. SHEFFIELD': 'SHEFFIELD Magnus',
+            'T. FOSS': 'FOSS Tobias',
+            'S. BISSEGGER': 'BISSEGGER Stefan',
+            'Q. SIMMONS': 'SIMMONS Quinn',
+            'T. BENOOT': 'BENOOT Tiesj',
+            'L. PITHIE': 'PITHIE Laurence',
+            'L. BARRE': 'BARRÉ Louis',
+            'L. ASKEY': 'ASKEY Lewis',
+            'T. WELLENS': 'WELLENS Tim',
+            'J. STUYVEN': 'STUYVEN Jasper',
+            'D. TEUNS': 'TEUNS Dylan',
+            'A. WRIGHT': 'WRIGHT Fred',
+            'S. VELASCO': 'VELASCO Simone',
+            'M. SCHACHMANN': 'SCHACHMANN Maximilian',
+            'B. THOMAS': 'THOMAS Benjamin',
+            'D. BALLERINI': 'BALLERINI Davide',
+            'F. VAN DEN BROEK': 'VAN DEN BROEK Frank',
+            'A. LAURANCE': 'LAURANCE Axel',
+            'M. SOBRERO': 'SOBRERO Matteo',
+            'B. ARMIRAIL': 'ARMIRAIL Bruno',
+            'V. CAMPENAERTS': 'CAMPENAERTS Victor',
+            'S. WÆRENSKJOLD': 'WÆRENSKJOLD Søren',
+            'R. CAVAGNA': 'CAVAGNA Rémi',
+            'K. ASGREEN': 'ASGREEN Kasper',
+            'K. NEILANDS': 'NEILANDS Krists',
+            'V. MADOUAS': 'MADOUAS Valentin',
+            'A. BETTIOL': 'BETTIOL Alberto',
+            'A. PARET PEINTRE': 'PARET-PEINTRE Aurélien',
+            'F. DVERSNES': 'DVERSNES Fredrik',
+            'A. BRUNEL': 'BRUNEL Alexys',
+            'M. CATTANEO': 'CATTANEO Mattia',
+            'P. SANCHEZ MAYO': 'SÁNCHEZ Pelayo',
+            'I. ROMEO ABAD': 'ROMEO Iván',
+            'D. HOOLE': 'HOOLE Daan',
+            'A. MARIT': 'MARIT Arne',
+            'J. RUTSCH': 'RUTSCH Jonas',
+            'T. GUERNALEC': 'GUERNALEC Thibault',
+            'D. VAN GESTEL': 'VAN GESTEL Dries',
+            'I. SCHELLING': 'SCHELLING Ide',
+            'R. GARCIA PIERNA': 'GARCÍA PIERNA Raúl',
+            'G. VERMEERSCH': 'VERMEERSCH Gianni',
+            'R. ADRIA OLIVERAS': 'OLIVEIRA Rui',
+            'C. SWIFT': 'SWIFT Ben',
+            'A. TURGIS': 'TURGIS Anthony',
+            'J. ABRAHAMSEN': 'ABRAHAMSEN Jonas',
+            'W. BARGUIL': 'BARGUIL Warren',
+            'D. VAN BAARLE': 'VAN BAARLE Dylan',
+            'Q. PACHER': 'PACHER Quentin',
+            'N. POLITT': 'POLITT Nils',
+            'B. COSNEFROY': 'COSNEFROY Benoît',
+            'M. MAYRHOFER': 'MAYRHOFER Marius',
+            'A. DELETTRE': 'DELETTRE Alexandre',
+            'W. BARTA': 'BARTA Will',
+            'A. SEGAERT': 'SEGAERT Alec',
+            'E. THEUNS': 'THEUNS Edward',
+            'T. VAN DER HOORN': 'VAN DER HOORN Taco',
+            'B. TRONCHON': 'TRONCHON Bastien',
+            'S. DE PESTEL': 'DE PESTEL Sander',
+            'S. CARR': 'CARR Simon',
+            'D. TOUZE': 'TOUZÉ Damien',
+            'R. STANNARD': 'STANNARD Robert',
+            'M. LE BERRE': 'LE BERRE Mathis',
+            'M. HOELGAARD': 'HOELGAARD Markus',
+            'L. ROTA': 'ROTA Lorenzo',
+            'L. REX': 'REX Laurenz',
+            'F. SENECHAL': 'SÉNÉCHAL Florian',
+            'B. VAN MOER': 'VAN MOER Brent',
+            'H. SWEENY': 'SWEENY Harry',
+            'C. RUSSO': 'RUSSO Clément',
+            'T. SKUJINS': 'SKUJIŅŠ Toms',
+            'C. SCOTSON': 'SCOTSON Callum',
+            'M. HALLER': 'HALLER Marco',
+            'R. TILLER': 'TILLER Rasmus',
+            'G. MÜHLBERGER': 'MÜHLBERGER Gregor',
+            'F. VERMEERSCH': 'VERMEERSCH Florian',
+            'Y. FEDOROV': 'FEDOROV Yevgeniy',
+            'O. NAESEN': 'NAESEN Oliver',
+            'D. NOVAK': 'NOVAK Domen',
+            'L. WARBASSE': 'WARBASSE Larry',
+            'M. VAN DIJKE': 'VAN DIJKE Mick',
+            'A. LIVYNS': 'LIVYNS Arjen',
+            'B. SWIFT': 'SWIFT Ben',
+            'T. BAYER': 'BAYER Tobias',
+            'V. BRAET': 'BRAET Vito',
+            'O. RIESEBEEK': 'RIESEBEEK Oscar',
+            'B. JUNGELS': 'JUNGELS Bob',
+            'M. BURGAUDEAU': 'BURGAUDEAU Mathieu',
+            'K. VERMAERKE': 'VERMAERKE Kevin',
+            'N. DOS SANTOS SIMOES OLIVEIRA': 'OLIVEIRA Nelson',
+            'S. DILLIER': 'DILLIER Silvan',
+            'D. VAN BEKKUM': 'VAN BEKKUM Darren',
+            'A. JOHANNESSEN': 'JOHANNESSEN Anders Halland',
+            'F. LIENHARD': 'LIENHARD Fabian',
+            'N. MÄRKL': 'MÄRKL Niklas',
+            'R. VAN SINTMAARTENSDIJK': 'VAN SINTMAARTENSDIJK Roel',
+            'E. VERSTRYNGE': 'VERSTRYNGE Emiel',
+            'M. VERCHER': 'VERCHER Mattéo',
+            'T. GACHIGNARD': 'GACHIGNARD Thomas',
+            'S. FLYNN': 'FLYNN Sean',
+            'J. ROMO OLIVER': 'ROMO Javier',
+            'J. BERNARD': 'BERNARD Julien',
+            'J. JENSEN': 'PLOWRIGHT Jensen',
+            'L. DURBRIDGE': 'DURBRIDGE Luke',
+            'M. LOUVEL': 'LOUVEL Matis',
+            'P. EENKHOORN': 'EENKHOORN Pascal',
+            'J. DE BUYST': 'DE BUYST Jasper',
+            'G. BOIVIN': 'BOIVIN Guillaume',
+            'A. RENARD': 'RENARD Alexis',
+            'G. MOSCON': 'MOSCON Gianni',
+            'P. GAMPER': 'GAMPER Patrick',
+            'R. FROIDEVAUX': 'FROIDEVAUX Robin',
+            'B. VAN LERBERGHE': 'VAN LERBERGHE Bert',
+            'M. MIHKELS': 'MIHKELS Madis',
+            'J. DRIZNERS': 'DRIZNERS Jarrad',
+            'C. BEULLENS': 'BEULLENS Cedric',
+            'N. EEKHOFF': 'EEKHOFF Nils',
+            'J. RICKAERT': 'RICKAERT Jonas',
+            'T. NABERMAN': 'NABERMAN Tim',
+            'N. RAISBERG': 'RAISBERG Nadav',
+            'P. CÔTÉ': 'CÔTÉ Pier-André',
+            'P. OURSELIN': 'OURSELIN Paul',
+            'F. GRELLIER': 'GRELLIER Fabien',
+            'M. SCHWARZMANN': 'SCHWARZMANN Michael',
+            'M. PAASSCHENS': 'PAASSCHENS Mathijs',
+            'K. GRADEK': 'GRADEK Kamil',
+            'E. REINDERS': 'REINDERS Elmar',
+            'A. DELAPLACE': 'DELAPLACE Anthony'
         }
     
     def find_pcs_match_advanced(self, fantasy_rider):
-        """Rozšírené vyhľadanie s manuálnymi mapovaniami"""
+        """Presné manuálne mapovanie - každý rider overený ručne"""
         manual_mappings = self.create_manual_mappings()
         
-        # Najprv skús manuálne mapovanie
+        # Manuálne mapovanie
         if fantasy_rider['fantasy_name'] in manual_mappings:
-            best_match = None
-            best_team_sim = 0
+            target_name = manual_mappings[fantasy_rider['fantasy_name']]
             
-            for search_name in manual_mappings[fantasy_rider['fantasy_name']]:
-                for pcs_rider in self.pcs_riders:
-                    pcs_name = pcs_rider['name'].upper()
-                    search_upper = search_name.upper()
-                    
-                    # Bidirectional string matching
-                    name_match = (search_upper in pcs_name or 
-                                pcs_name in search_upper or
-                                self.similarity(search_name, pcs_rider['name']) > 0.8)
-                    
-                    if name_match:
-                        team_sim = self.team_similarity(fantasy_rider['team'], pcs_rider.get('team', ''))
-                        
-                        # Ak sa našlo meno, ulož najlepší team match
-                        if team_sim > best_team_sim:
-                            best_match = pcs_rider
-                            best_team_sim = team_sim
-                            
-                        # Ak je tím dobrý, vráť hneď
-                        if team_sim > 0.3:
-                            print(f"✅ Manuálne mapovanie: {fantasy_rider['fantasy_name']} -> {pcs_rider['name']} (team: {team_sim:.2f})")
-                            return pcs_rider, 1.0
+            # Ak je None, rider neexistuje v PCS
+            if target_name is None:
+                print(f"❌ Rider {fantasy_rider['fantasy_name']} nie je v PCS databáze")
+                return None, 0.0
             
-            # Ak sa našlo meno ale tím je slabý, stále vráť najlepší match
-            if best_match:
-                print(f"⚠️  Manuálne mapovanie: {fantasy_rider['fantasy_name']} -> {best_match['name']} (slabý team match: {best_team_sim:.2f})")
-                return best_match, 0.9
+            # Nájdi presne tohoto ridera
+            for pcs_rider in self.pcs_riders:
+                if pcs_rider['name'] == target_name:
+                    print(f"✅ Presné mapovanie: {fantasy_rider['fantasy_name']} -> {pcs_rider['name']}")
+                    return pcs_rider, 1.0
             
-            # Ak sa nenašlo ani meno
-            print(f"❌ Manuálne mapovanie pre {fantasy_rider['fantasy_name']} nenašlo žiadny PCS profil")
+            # Ak sa nenašiel v databáze
+            print(f"❌ Rider {target_name} nie je v PCS databáze (možno je mimo top 1500)")
             return None, 0.0
         
-        # Ak manuálne mapovanie nefunguje, použij štandardný algoritmus
+        # Ak nie je v manuálnom mapovaní, použij štandardný algoritmus
         return self.find_pcs_match(fantasy_rider)
         
     def get_season_ranking_page(self, offset=0):
         """Získa stránku s rankingom"""
-        url = f"{self.base_url}/rankings/me/season-individual"
-        if offset > 0:
-            url += f"?offset={offset}"
+        # Use the CORRECT URL format with all parameters
+        params = {
+            'p': 'season-individual',
+            's': '',
+            'date': '2025-06-30',
+            'nation': '',
+            'age': '',
+            'page': 'smallerorequal',
+            'team': '',
+            'teamlevel': '',
+            'offset': str(offset),
+            'filter': 'Filter'
+        }
+        
+        url = f"{self.base_url}/rankings.php?" + '&'.join([f"{k}={v}" for k, v in params.items()])
             
         try:
             response = requests.get(url, headers=self.headers)
@@ -471,12 +647,14 @@ class FantasyPCSIntegrator:
                 # Points per credit ratio
                 rider['points_per_credit'] = rider['pcs_points_2025'] / rider['price']
                 
-                # Value category
+                # Value category - 5-tier system: Excellent/Great/Good/Average/Poor
                 if rider['points_per_credit'] > 50:
                     rider['value_category'] = 'Excellent'
-                elif rider['points_per_credit'] > 30:
+                elif rider['points_per_credit'] > 35:
+                    rider['value_category'] = 'Great'
+                elif rider['points_per_credit'] > 20:
                     rider['value_category'] = 'Good'
-                elif rider['points_per_credit'] > 15:
+                elif rider['points_per_credit'] > 10:
                     rider['value_category'] = 'Average'
                 else:
                     rider['value_category'] = 'Poor'

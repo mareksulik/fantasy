@@ -42,7 +42,7 @@
                     <tr>
                         <th>Metric</th>
                         {% for rider in riders %}
-                        <th class="text-center">{{ rider.fantasy_name }}</th>
+                        <th class="text-center">{{ get_flag_emoji(rider.pcs_nationality) }} {{ rider.fantasy_name }}</th>
                         {% endfor %}
                     </tr>
                 </thead>
@@ -57,14 +57,16 @@
                         <td class="fw-bold">Category</td>
                         {% for rider in riders %}
                         <td class="text-center">
-                            <span class="badge bg-primary">{{ rider.category }}</span>
+                            <span class="badge {{ get_category_badge_class(rider.category) }}">{{ rider.category }}</span>
                         </td>
                         {% endfor %}
                     </tr>
                     <tr>
                         <td class="fw-bold">Price</td>
                         {% for rider in riders %}
-                        <td class="text-center fw-bold">{{ rider.price }} credits</td>
+                        <td class="text-center">
+                            <span class="badge text-dark fs-5 fw-bold" style="background: #e9ecef;">{{ rider.price }}⭐</span>
+                        </td>
                         {% endfor %}
                     </tr>
                     <tr>
@@ -85,7 +87,7 @@
                         <td class="fw-bold">Value Rating</td>
                         {% for rider in riders %}
                         <td class="text-center">
-                            <span class="badge bg-{{ 'success' if rider.value_category == 'Excellent' else 'warning' if rider.value_category == 'Good' else 'secondary' }}">
+                            <span class="badge {{ get_value_class(rider.value_category) }}">
                                 {{ rider.value_category }}
                             </span>
                         </td>
@@ -147,12 +149,12 @@
                 </div>
                 
                 <div class="mb-3">
-                    <span class="badge bg-primary">{{ rider.category }}</span>
-                    <span class="badge bg-{{ 'success' if rider.value_category == 'Excellent' else 'warning' if rider.value_category == 'Good' else 'secondary' }}">
+                    <span class="badge {{ get_category_badge_class(rider.category) }}">{{ rider.category }}</span>
+                    <span class="badge {{ get_value_class(rider.value_category) }}">
                         {{ rider.value_category }}
                     </span>
                     {% if rider.pcs_rank and rider.pcs_rank <= 50 %}
-                    <span class="badge bg-warning text-dark">
+                    <span class="badge text-dark" style="background: #e9ecef;">
                         <i class="fas fa-trophy"></i> #{{ rider.pcs_rank }} PCS
                     </span>
                     {% endif %}
@@ -160,7 +162,7 @@
                 
                 <div class="d-grid gap-2">
                     {% if rider.pcs_url %}
-                    <a href="{{ rider.pcs_url }}" target="_blank" class="btn btn-outline-info btn-sm">
+                    <a href="{{ rider.pcs_url }}" target="_blank" class="btn btn-outline-secondary btn-sm">
                         <i class="fas fa-external-link-alt"></i> View on PCS
                     </a>
                     {% endif %}
