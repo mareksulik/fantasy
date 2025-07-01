@@ -221,8 +221,37 @@ def api_optimize_team():
     budget = request.args.get('budget', default=100, type=int)
     strategy = request.args.get('strategy', default='value')  # value, points, balanced
     
+    # Get existing team for incremental optimization
+    current_team_json = request.args.get('current_team', '[]')
+    try:
+        current_team = json.loads(current_team_json)
+    except:
+        current_team = []
+    
+    # Category limits for fantasy team composition (max per category)
+    category_limits = {
+        'Leaders': 3,
+        'All-rounders': 4, 
+        'Climbers': 3,
+        'Sprinters': 3
+    }
+    
     data = load_riders_data()
     matched_riders = [r for r in data if r['pcs_match_found']]
+    
+    # Calculate current team composition
+    current_cost = sum(r.get('price', 0) for r in current_team)
+    current_team_counts = {}  # Track riders per professional team
+    current_category_counts = {}  # Track riders per category
+    
+    for rider in current_team:
+        # Professional team counts
+        rider_team = rider.get('team', '')
+        current_team_counts[rider_team] = current_team_counts.get(rider_team, 0) + 1
+        
+        # Category counts
+        category = rider.get('category', '')
+        current_category_counts[category] = current_category_counts.get(category, 0) + 1
     
     # Simple greedy optimization
     if strategy == 'value':
@@ -238,29 +267,170 @@ def api_optimize_team():
                                      rider.get('pcs_points_2025', 0) / 100 * 0.3)
         sorted_riders = sorted(matched_riders, key=lambda x: x.get('balanced_score', 0), reverse=True)
     
-    # Greedy selection with budget and team constraints
-    selected_team = []
-    total_cost = 0
-    team_counts = {}  # Track riders per team
+    # Start with current team
+    selected_team = current_team.copy()
+    total_cost = current_cost
+    team_counts = current_team_counts.copy()
+    category_counts = current_category_counts.copy()
+    
+    # Get current team member names to avoid duplicates
+    current_names = set(r.get('fantasy_name', '') for r in current_team)
+    
+    # Group riders by category for better distribution
+    riders_by_category = {
+        'Leaders': [],
+        'All-rounders': [],
+        'Climbers': [],
+        'Sprinters': []
+    }
     
     for rider in sorted_riders:
-        # Check budget constraint
-        if total_cost + rider['price'] > budget:
-            continue
-            
-        # Check team limit (max 3 from same team)
+        category = rider.get('category', '')
+        if category in riders_by_category and rider.get('fantasy_name', '') not in current_names:
+            riders_by_category[category].append(rider)
+    
+    # Calculate how many slots we need to fill per category
+    slots_needed = {
+        'Leaders': max(0, min(3, 8 - len(selected_team)) - category_counts.get('Leaders', 0)),
+        'All-rounders': max(0, min(4, 8 - len(selected_team)) - category_counts.get('All-rounders', 0)),
+        'Climbers': max(0, min(3, 8 - len(selected_team)) - category_counts.get('Climbers', 0)),
+        'Sprinters': max(0, min(3, 8 - len(selected_team)) - category_counts.get('Sprinters', 0))
+    }
+    
+    # SIMPLE AGGRESSIVE APPROACH: Fill exactly 8 riders
+    print(f"Starting with {len(selected_team)} riders, need {8 - len(selected_team)} more")
+    
+    # Create one big list of ALL eligible riders
+    all_candidates = []
+    for rider in matched_riders:
+        rider_name = rider.get('fantasy_name', '')
         rider_team = rider.get('team', '')
+        rider_category = rider.get('category', '')
+        rider_price = rider.get('price', 0)
+        
+        # Skip if already selected
+        if rider_name in current_names:
+            continue
+        
+        # Check basic constraints
+        if total_cost + rider_price > budget:
+            continue
         if team_counts.get(rider_team, 0) >= 3:
             continue
+        if category_counts.get(rider_category, 0) >= category_limits.get(rider_category, 0):
+            continue
             
-        # Add rider to team
-        selected_team.append(rider)
-        total_cost += rider['price']
-        team_counts[rider_team] = team_counts.get(rider_team, 0) + 1
-        
-        # Limit to 8 riders (standard fantasy team)
+        all_candidates.append(rider)
+    
+    print(f"Found {len(all_candidates)} eligible candidates")
+    
+    # Sort by strategy
+    if strategy == 'value':
+        all_candidates.sort(key=lambda x: x.get('points_per_credit', 0), reverse=True)
+    elif strategy == 'points':
+        all_candidates.sort(key=lambda x: x.get('pcs_points_2025', 0), reverse=True)
+    else:
+        for rider in all_candidates:
+            rider['balanced_score'] = (rider.get('points_per_credit', 0) * 0.7 + 
+                                     rider.get('pcs_points_2025', 0) / 100 * 0.3)
+        all_candidates.sort(key=lambda x: x.get('balanced_score', 0), reverse=True)
+    
+    # Add riders one by one until we have 8
+    for rider in all_candidates:
         if len(selected_team) >= 8:
             break
+            
+        rider_name = rider.get('fantasy_name', '')
+        rider_team = rider.get('team', '')
+        rider_category = rider.get('category', '')
+        rider_price = rider.get('price', 0)
+        
+        # Double-check constraints (they might have changed)
+        if (rider_name not in current_names and
+            total_cost + rider_price <= budget and
+            team_counts.get(rider_team, 0) < 3 and
+            category_counts.get(rider_category, 0) < category_limits.get(rider_category, 0)):
+            
+            selected_team.append(rider)
+            total_cost += rider_price
+            team_counts[rider_team] = team_counts.get(rider_team, 0) + 1
+            category_counts[rider_category] = category_counts.get(rider_category, 0) + 1
+            current_names.add(rider_name)
+            print(f"Added: {rider_name} ({rider_category}, {rider_price} credits) - Team now: {len(selected_team)}/8")
+    
+    print(f"Final team size: {len(selected_team)}/8")
+    
+    # Final desperate attempt - find ANY rider that fits
+    if len(selected_team) < 8:
+        print(f"DESPERATE ATTEMPT: Need {8 - len(selected_team)} more riders")
+        # Get ALL riders from all categories, not just organized ones
+        all_riders = []
+        for rider in matched_riders:
+            rider_name = rider.get('fantasy_name', '')
+            rider_team = rider.get('team', '')
+            rider_category = rider.get('category', '')
+            rider_price = rider.get('price', 0)
+            
+            # Skip if already selected
+            if rider_name in current_names:
+                continue
+                
+            # Check basic constraints
+            if total_cost + rider_price > budget:
+                continue
+            if team_counts.get(rider_team, 0) >= 3:
+                continue
+            if category_counts.get(rider_category, 0) >= category_limits.get(rider_category, 0):
+                continue
+                
+            all_riders.append(rider)
+        
+        # Sort by price (cheapest first) to maximize chances
+        all_riders.sort(key=lambda x: x.get('price', 999))
+        
+        print(f"Found {len(all_riders)} potential riders to fill remaining slots")
+        
+        # Add as many as we can
+        for rider in all_riders:
+            if len(selected_team) >= 8:
+                break
+                
+            rider_category = rider.get('category', '')
+            
+            # Double check constraints
+            if (category_counts.get(rider_category, 0) < category_limits.get(rider_category, 0) and
+                total_cost + rider['price'] <= budget and
+                team_counts.get(rider.get('team', ''), 0) < 3):
+                
+                selected_team.append(rider)
+                total_cost += rider['price']
+                team_counts[rider.get('team', '')] = team_counts.get(rider.get('team', ''), 0) + 1
+                category_counts[rider_category] = category_counts.get(rider_category, 0) + 1
+                current_names.add(rider.get('fantasy_name', ''))
+                print(f"DESPERATE: Added {rider.get('fantasy_name', '')} ({rider_category}, {rider['price']} credits)")
+    
+    # Debug logging
+    if len(selected_team) < 8:
+        print(f"WARNING: Only selected {len(selected_team)} riders")
+        print(f"Budget used: {total_cost}/{budget}")
+        print(f"Category counts: {category_counts}")
+        print(f"Category limits: {category_limits}")
+        
+        # Show what slots are still available
+        for cat, limit in category_limits.items():
+            current = category_counts.get(cat, 0)
+            if current < limit:
+                print(f"  {cat}: {current}/{limit} (can add {limit - current} more)")
+                # Find cheapest rider in this category
+                cat_riders = [r for r in matched_riders if r.get('category') == cat 
+                             and r.get('fantasy_name', '') not in current_names
+                             and total_cost + r.get('price', 0) <= budget
+                             and team_counts.get(r.get('team', ''), 0) < 3]
+                if cat_riders:
+                    cheapest = min(cat_riders, key=lambda x: x.get('price', 999))
+                    print(f"    Cheapest available: {cheapest.get('fantasy_name', '')} ({cheapest.get('price', 0)} credits)")
+                else:
+                    print(f"    No valid riders available in {cat}")
     
     total_points = sum(r.get('pcs_points_2025', 0) for r in selected_team)
     avg_points_per_credit = total_points / total_cost if total_cost > 0 else 0
@@ -273,7 +443,8 @@ def api_optimize_team():
             'remaining_budget': budget - total_cost,
             'total_points': total_points,
             'avg_points_per_credit': avg_points_per_credit,
-            'team_size': len(selected_team)
+            'team_size': len(selected_team),
+            'category_composition': category_counts
         }
     })
 

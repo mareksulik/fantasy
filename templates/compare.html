@@ -78,8 +78,10 @@
                     <tr>
                         <td class="fw-bold">Points/Credit Ratio</td>
                         {% for rider in riders %}
-                        <td class="text-center {{ get_value_class(rider.value_category) }}">
-                            {{ "%.1f"|format(rider.points_per_credit or 0) }}
+                        <td class="text-center">
+                            <span class="{{ get_value_class(rider.value_category) }}">
+                                {{ "%.1f"|format(rider.points_per_credit or 0) }}
+                            </span>
                         </td>
                         {% endfor %}
                     </tr>

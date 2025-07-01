@@ -10,39 +10,13 @@
     </div>
 </div>
 
-<!-- Strategy Selection -->
-<div class="card mb-4">
-    <div class="card-header">
-        <h6 class="mb-0"><i class="fas fa-cog"></i> Build Strategy</h6>
-    </div>
-    <div class="card-body">
-        <div class="row g-3">
-            <div class="col-md-4">
-                <label for="budget" class="form-label">Budget</label>
-                <input type="number" class="form-control" id="budget" value="100" min="50" max="100">
-            </div>
-            <div class="col-md-4">
-                <label for="strategy" class="form-label">Strategy</label>
-                <select class="form-select" id="strategy">
-                    <option value="value">Best Value (Points/Credit)</option>
-                    <option value="points">Highest Points</option>
-                    <option value="balanced">Balanced Approach</option>
-                </select>
-            </div>
-            <div class="col-md-4 d-flex align-items-end">
-                <button class="btn btn-primary w-100" onclick="optimizeTeam()">
-                    <i class="fas fa-magic"></i> Optimize Team
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <!-- Current Team -->
-<div id="currentTeam" class="card mb-4" style="display: none;">
+<div id="currentTeam" class="card mb-4">
     <div class="card-header d-flex justify-content-between align-items-center">
         <h6 class="mb-0"><i class="fas fa-users"></i> Your Team</h6>
         <div>
+            <span id="teamSize" class="badge bg-secondary me-2">0/8 riders</span>
             <span id="teamCost" class="badge bg-primary me-2">0 credits</span>
             <span id="teamPoints" class="badge bg-success">0 points</span>
         </div>
@@ -90,7 +64,7 @@
                 <i class="fas fa-trash"></i> Clear Team
             </button>
             <button class="btn btn-success" onclick="exportTeam()">
-                <i class="fas fa-download"></i> Export Team
+                <i class="fas fa-image"></i> Export Team as Image
             </button>
         </div>
     </div>
@@ -105,16 +79,28 @@
                 <h6 class="mb-0">
                     <i class="fas fa-{{ 'crown' if category == 'Leaders' else 'rocket' if category == 'Sprinters' else 'mountain' if category == 'Climbers' else 'star' }}"></i>
                     {{ category }}
+                    <span class="badge bg-info ms-2" id="{{ category.lower().replace(' ', '-') }}-count">
+                        0/{{ 3 if category == 'Leaders' or category == 'Climbers' or category == 'Sprinters' else 4 }}
+                    </span>
                 </h6>
                 <span class="badge bg-secondary">{{ riders|length }} riders</span>
             </div>
             <div class="card-body" style="max-height: 400px; overflow-y: auto;">
-                {% for rider in riders[:15] %}
+                {% for rider in riders %}
                 <div class="rider-row d-flex justify-content-between align-items-center mb-2 p-2 border rounded">
                     <div class="flex-grow-1">
                         <div class="fw-bold">{{ get_flag_emoji(rider.pcs_nationality) }} {{ rider.fantasy_name }}</div>
                         <small class="text-muted">{{ rider.team }}</small><br>
                         <span class="badge badge-sm {{ get_category_badge_class(rider.category) }}">{{ rider.category }}</span>
+                        {% if rider.pcs_rank and rider.pcs_rank <= 50 %}
+                        <span class="badge text-dark" style="background: #e9ecef;">
+                            <i class="fas fa-trophy"></i> #{{ rider.pcs_rank }} PCS
+                        </span>
+                        {% endif %}
+                    </div>
+                    <div class="text-center me-2">
+                        <div class="small fw-bold">{{ format_number(rider.pcs_points_2025 or 0) }}</div>
+                        <small class="text-muted">PCS Points</small>
                     </div>
                     <div class="text-center me-2">
                         <div class="small fw-bold {{ get_value_class(rider.value_category) }}">
@@ -125,33 +111,17 @@
                     <div class="text-center me-2">
                         <span class="badge text-dark fw-bold" style="background: #e9ecef;">{{ rider.price }}⭐</span>
                     </div>
-                    <button class="btn btn-outline-primary btn-sm" onclick="addToTeam('{{ rider.fantasy_name }}', {{ rider.price }}, {{ rider.pcs_points_2025 or 0 }}, '{{ rider.category }}', '{{ rider.pcs_nationality or '' }}', '{{ rider.team }}')">
+                    <button class="btn btn-outline-primary btn-sm" onclick="addToTeam('{{ rider.fantasy_name }}', {{ rider.price }}, {{ rider.pcs_points_2025 or 0 }}, '{{ rider.category }}', '{{ rider.pcs_nationality or '' }}', '{{ rider.team }}', {{ rider.points_per_credit or 0 }}, {{ rider.pcs_rank or 0 }})">
                         <i class="fas fa-plus"></i>
                     </button>
                 </div>
                 {% endfor %}
-                {% if riders|length > 15 %}
-                <div class="text-center">
-                    <small class="text-muted">... and {{ riders|length - 15 }} more riders</small>
-                </div>
-                {% endif %}
             </div>
         </div>
     </div>
     {% endfor %}
 </div>
 
-<!-- Loading Modal -->
-<div class="modal fade" id="loadingModal" tabindex="-1">
-    <div class="modal-dialog modal-sm modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-body text-center py-4">
-                <div class="spinner-border text-primary mb-3" role="status"></div>
-                <div>Optimizing your team...</div>
-            </div>
-        </div>
-    </div>
-</div>
 {% endblock %}
 
 {% block scripts %}
@@ -159,40 +129,6 @@
 let currentTeam = [];
 let maxBudget = 100;
 
-function optimizeTeam() {
-    const budget = parseInt(document.getElementById('budget').value);
-    const strategy = document.getElementById('strategy').value;
-    
-    // Show loading modal
-    const modal = new bootstrap.Modal(document.getElementById('loadingModal'));
-    modal.show();
-    
-    fetch(`/api/optimize-team?budget=${budget}&strategy=${strategy}`)
-        .then(response => response.json())
-        .then(data => {
-            modal.hide();
-            if (data.success) {
-                // Ensure each rider has all required fields
-                currentTeam = data.team.map(rider => ({
-                    fantasy_name: rider.fantasy_name,
-                    price: rider.price,
-                    pcs_points_2025: rider.pcs_points_2025 || 0,
-                    category: rider.category,
-                    nationality: rider.pcs_nationality || '',
-                    team: rider.team || ''
-                }));
-                maxBudget = budget;
-                updateTeamDisplay();
-                displayTeamStats(data.stats);
-            } else {
-                alert('Error optimizing team: ' + data.message);
-            }
-        })
-        .catch(error => {
-            modal.hide();
-            alert('Error: ' + error.message);
-        });
-}
 
 function getCategoryBadgeClass(category) {
     const classes = {
@@ -217,8 +153,16 @@ function getFlagEmoji(countryCode) {
     return flagMap[countryCode] || '🏳️';
 }
 
-function addToTeam(name, price, points, category, nationality, team) {
+function addToTeam(name, price, points, category, nationality, team, pointsPerCredit, pcsRank) {
     const totalCost = currentTeam.reduce((sum, rider) => sum + rider.price, 0);
+    
+    // Category limits
+    const categoryLimits = {
+        'Leaders': 3,
+        'All-rounders': 4,
+        'Climbers': 3,
+        'Sprinters': 3
+    };
     
     if (totalCost + price > maxBudget) {
         alert(`Adding ${name} would exceed your budget of ${maxBudget} credits.`);
@@ -242,13 +186,23 @@ function addToTeam(name, price, points, category, nationality, team) {
         return;
     }
     
+    // Check category limit
+    const categoryCount = currentTeam.filter(rider => rider.category === category).length;
+    const categoryLimit = categoryLimits[category] || 0;
+    if (categoryCount >= categoryLimit) {
+        alert(`Cannot add ${name}. Maximum ${categoryLimit} ${category} allowed.`);
+        return;
+    }
+    
     currentTeam.push({
         fantasy_name: name,
         price: price,
         pcs_points_2025: points,
         category: category,
         nationality: nationality,
-        team: team
+        team: team,
+        points_per_credit: pointsPerCredit || 0,
+        pcs_rank: pcsRank || 0
     });
     
     updateTeamDisplay();
@@ -263,40 +217,81 @@ function updateTeamDisplay() {
     const teamDiv = document.getElementById('currentTeam');
     const membersDiv = document.getElementById('teamMembers');
     
+    // Update category counts
+    const categoryCounts = {
+        'Leaders': 0,
+        'All-rounders': 0,
+        'Climbers': 0,
+        'Sprinters': 0
+    };
+    
+    currentTeam.forEach(rider => {
+        if (categoryCounts.hasOwnProperty(rider.category)) {
+            categoryCounts[rider.category]++;
+        }
+    });
+    
+    // Update category count badges
+    document.getElementById('leaders-count').textContent = `${categoryCounts['Leaders']}/3`;
+    document.getElementById('all-rounders-count').textContent = `${categoryCounts['All-rounders']}/4`;
+    document.getElementById('climbers-count').textContent = `${categoryCounts['Climbers']}/3`;
+    document.getElementById('sprinters-count').textContent = `${categoryCounts['Sprinters']}/3`;
+    
     if (currentTeam.length === 0) {
-        teamDiv.style.display = 'none';
-        return;
-    }
-    
-    teamDiv.style.display = 'block';
-    
-    membersDiv.innerHTML = currentTeam.map(rider => `
-        <div class="col-md-6 col-lg-4 mb-2">
-            <div class="card card-sm">
-                <div class="card-body p-2">
-                    <div class="d-flex justify-content-between align-items-start">
-                        <div class="flex-grow-1">
-                            <div class="fw-bold small">${getFlagEmoji(rider.nationality)} ${rider.fantasy_name}</div>
-                            <div class="small text-muted">${rider.team}</div>
-                            <span class="badge badge-sm ${getCategoryBadgeClass(rider.category)}">${rider.category}</span>
-                        </div>
-                        <div class="text-end">
-                            <span class="badge text-dark fw-bold" style="background: #e9ecef;">${rider.price}⭐</span>
-                            <button class="btn btn-outline-danger btn-sm" onclick="removeFromTeam('${rider.fantasy_name}')">
-                                <i class="fas fa-times"></i>
-                            </button>
+        // Show empty team message
+        membersDiv.innerHTML = `
+            <div class="col-12">
+                <div class="text-center py-4 text-muted">
+                    <i class="fas fa-users fa-3x mb-3"></i>
+                    <h5>No riders selected</h5>
+                    <p>Add riders to your team by clicking the <i class="fas fa-plus"></i> button next to riders below.</p>
+                </div>
+            </div>
+        `;
+        // Still update category counts even if team is empty
+        document.getElementById('leaders-count').textContent = '0/3';
+        document.getElementById('all-rounders-count').textContent = '0/4';
+        document.getElementById('climbers-count').textContent = '0/3';
+        document.getElementById('sprinters-count').textContent = '0/3';
+        // Don't return, continue to update stats
+    } else {
+        // Show team members
+        membersDiv.innerHTML = currentTeam.map(rider => `
+            <div class="col-md-6 col-lg-4 mb-2">
+                <div class="card card-sm">
+                    <div class="card-body p-2">
+                        <div class="d-flex justify-content-between align-items-start">
+                            <div class="flex-grow-1">
+                                <div class="fw-bold small">${getFlagEmoji(rider.nationality)} ${rider.fantasy_name}</div>
+                                <div class="small text-muted">${rider.team}</div>
+                                <div class="small">
+                                    <span class="badge badge-sm ${getCategoryBadgeClass(rider.category)}">${rider.category}</span>
+                                    <span class="text-muted ms-1">${Math.round(rider.pcs_points_2025 || 0).toLocaleString()} pts</span>
+                                    <span class="text-muted ms-1">P/C: ${(rider.points_per_credit || 0).toFixed(1)}</span>
+                                    ${rider.pcs_rank && rider.pcs_rank <= 50 ? `<span class="text-muted ms-1">#${rider.pcs_rank} PCS</span>` : ''}
+                                </div>
+                            </div>
+                            <div class="text-end">
+                                <div><span class="badge text-dark fw-bold" style="background: #e9ecef;">${rider.price}⭐</span></div>
+                                <button class="btn btn-outline-danger btn-sm mt-1" onclick="removeFromTeam('${rider.fantasy_name}')">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    `).join('');
+        `).join('');
+    }
+    
+    teamDiv.style.display = 'block';
     
     // Update stats
     const totalCost = currentTeam.reduce((sum, rider) => sum + rider.price, 0);
     const totalPoints = currentTeam.reduce((sum, rider) => sum + rider.pcs_points_2025, 0);
     const avgEfficiency = totalCost > 0 ? totalPoints / totalCost : 0;
     
+    document.getElementById('teamSize').textContent = `${currentTeam.length}/8 riders`;
     document.getElementById('teamCost').textContent = `${totalCost} credits`;
     document.getElementById('teamPoints').textContent = `${Math.round(totalPoints)} points`;
     document.getElementById('totalCost').textContent = totalCost;
@@ -306,6 +301,7 @@ function updateTeamDisplay() {
 }
 
 function displayTeamStats(stats) {
+    document.getElementById('teamSize').textContent = `${stats.team_size}/8 riders`;
     document.getElementById('teamCost').textContent = `${stats.total_cost} credits`;
     document.getElementById('teamPoints').textContent = `${Math.round(stats.total_points)} points`;
     document.getElementById('totalCost').textContent = stats.total_cost;
@@ -327,23 +323,113 @@ function exportTeam() {
         return;
     }
     
-    const teamData = {
-        team: currentTeam,
-        stats: {
-            total_cost: currentTeam.reduce((sum, rider) => sum + rider.price, 0),
-            total_points: currentTeam.reduce((sum, rider) => sum + rider.pcs_points_2025, 0),
-            team_size: currentTeam.length
-        },
-        created: new Date().toISOString()
-    };
+    // Create a canvas to draw the team
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
     
-    const blob = new Blob([JSON.stringify(teamData, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'fantasy_tdf_team.json';
-    a.click();
-    URL.revokeObjectURL(url);
+    // Calculate canvas height based on team size
+    const headerHeight = 120;
+    const riderHeight = 60;
+    const footerHeight = 60;
+    canvas.width = 800;
+    canvas.height = headerHeight + (currentTeam.length * riderHeight) + footerHeight;
+    
+    // Background
+    ctx.fillStyle = '#f8f9fa';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    // Title
+    ctx.fillStyle = '#212529';
+    ctx.font = 'bold 24px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText('Tour de France 2025 Fantasy Team', canvas.width / 2, 40);
+    
+    // Team stats
+    const totalCost = currentTeam.reduce((sum, rider) => sum + rider.price, 0);
+    const totalPoints = currentTeam.reduce((sum, rider) => sum + rider.pcs_points_2025, 0);
+    
+    ctx.font = '16px Arial';
+    ctx.fillText(`${currentTeam.length}/8 riders • ${totalCost}/100 credits • ${Math.round(totalPoints).toLocaleString()} points`, canvas.width / 2, 70);
+    
+    // Category counts
+    const categoryCounts = {
+        'Leaders': 0, 'All-rounders': 0, 'Climbers': 0, 'Sprinters': 0
+    };
+    currentTeam.forEach(rider => {
+        if (categoryCounts.hasOwnProperty(rider.category)) {
+            categoryCounts[rider.category]++;
+        }
+    });
+    
+    ctx.font = '14px Arial';
+    ctx.fillText(`Leaders: ${categoryCounts['Leaders']}/3 • All-rounders: ${categoryCounts['All-rounders']}/4 • Climbers: ${categoryCounts['Climbers']}/3 • Sprinters: ${categoryCounts['Sprinters']}/3`, canvas.width / 2, 95);
+    
+    // Draw riders
+    let y = headerHeight + 10;
+    currentTeam.forEach((rider, index) => {
+        const x = 50;
+        
+        // Rider background
+        ctx.fillStyle = '#ffffff';
+        ctx.fillRect(x, y, canvas.width - 100, 50);
+        ctx.strokeStyle = '#dee2e6';
+        ctx.strokeRect(x, y, canvas.width - 100, 50);
+        
+        // Rider info
+        ctx.fillStyle = '#212529';
+        ctx.font = 'bold 16px Arial';
+        ctx.textAlign = 'left';
+        
+        // Get flag emoji
+        const flagEmojis = {
+            'SI': '🇸🇮', 'DK': '🇩🇰', 'IT': '🇮🇹', 'BE': '🇧🇪', 'NL': '🇳🇱', 'GB': '🇬🇧',
+            'PT': '🇵🇹', 'AU': '🇦🇺', 'ES': '🇪🇸', 'DE': '🇩🇪', 'FR': '🇫🇷', 'US': '🇺🇸',
+            'EC': '🇪🇨', 'ER': '🇪🇷', 'AT': '🇦🇹', 'CO': '🇨🇴', 'IE': '🇮🇪', 'NO': '🇳🇴',
+            'CH': '🇨🇭', 'RU': '🇷🇺', 'CA': '🇨🇦', 'KZ': '🇰🇿', 'NZ': '🇳🇿', 'CZ': '🇨🇿',
+            'LU': '🇱🇺', 'EE': '🇪🇪', 'LV': '🇱🇻', 'VE': '🇻🇪', 'SK': '🇸🇰', 'MX': '🇲🇽',
+            'ZA': '🇿🇦', 'PL': '🇵🇱', 'AR': '🇦🇷'
+        };
+        const flag = flagEmojis[rider.nationality] || '🏳️';
+        
+        ctx.fillText(`${flag} ${rider.fantasy_name}`, x + 10, y + 20);
+        
+        ctx.font = '12px Arial';
+        ctx.fillStyle = '#6c757d';
+        ctx.fillText(`${rider.team} • ${rider.category}`, x + 10, y + 35);
+        
+        // Points and price
+        ctx.fillStyle = '#212529';
+        ctx.font = '14px Arial';
+        ctx.textAlign = 'right';
+        ctx.fillText(`${Math.round(rider.pcs_points_2025 || 0).toLocaleString()} pts • ${rider.price}⭐`, canvas.width - 60, y + 20);
+        
+        ctx.fillStyle = '#6c757d';
+        ctx.font = '12px Arial';
+        ctx.fillText(`P/C: ${(rider.points_per_credit || 0).toFixed(1)}`, canvas.width - 60, y + 35);
+        
+        y += riderHeight;
+    });
+    
+    // Footer
+    ctx.fillStyle = '#6c757d';
+    ctx.font = '12px Arial';
+    ctx.textAlign = 'center';
+    ctx.fillText(`Generated by Fantasy TdF Helper • ${new Date().toLocaleDateString()}`, canvas.width / 2, canvas.height - 20);
+    
+    // Download the image
+    canvas.toBlob(function(blob) {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'fantasy_tdf_team.png';
+        a.click();
+        URL.revokeObjectURL(url);
+    });
 }
+
+// Initialize category counts on page load
+document.addEventListener('DOMContentLoaded', function() {
+    updateTeamDisplay();
+});
 </script>
 {% endblock %}

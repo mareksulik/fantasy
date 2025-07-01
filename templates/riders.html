@@ -5,9 +5,21 @@
 {% block content %}
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2><i class="fas fa-users"></i> Tour de France 2025 Riders</h2>
-    <span class="badge bg-primary fs-6">
-        {{ filtered_count }} / {{ total_count }} riders
-    </span>
+    <div class="d-flex align-items-center gap-3">
+        <div class="btn-group" role="group">
+            <input type="radio" class="btn-check" name="viewMode" id="cardView" autocomplete="off" checked>
+            <label class="btn btn-outline-secondary btn-sm" for="cardView">
+                <i class="fas fa-th"></i> Cards
+            </label>
+            <input type="radio" class="btn-check" name="viewMode" id="tableView" autocomplete="off">
+            <label class="btn btn-outline-secondary btn-sm" for="tableView">
+                <i class="fas fa-list"></i> Table
+            </label>
+        </div>
+        <span class="badge bg-primary fs-6">
+            {{ filtered_count }} / {{ total_count }} riders
+        </span>
+    </div>
 </div>
 
 <!-- Filtre -->
@@ -82,8 +94,9 @@
     </div>
 </div>
 
-<!-- Zoznam jazdcov -->
-<div class="row">
+<!-- Card View -->
+<div id="cardView-content">
+    <div class="row">
     {% for rider in riders %}
     <div class="col-lg-6 col-xl-4 mb-3">
         <div class="card rider-card {{ get_category_class(rider.category) }} h-100">
@@ -141,6 +154,79 @@
         </div>
     </div>
     {% endfor %}
+    </div>
+</div>
+
+<!-- Table View -->
+<div id="tableView-content" class="table-responsive" style="display: none;">
+    <table class="table table-hover table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>Rider</th>
+                <th>Team</th>
+                <th>Category</th>
+                <th class="text-center">PCS Points</th>
+                <th class="text-center">P/C Ratio</th>
+                <th class="text-center">Value</th>
+                <th class="text-center">Price</th>
+                <th class="text-center">PCS Rank</th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rider in riders %}
+            <tr class="rider-row">
+                <td>
+                    <div class="fw-bold">{{ get_flag_emoji(rider.pcs_nationality) }} {{ rider.fantasy_name }}</div>
+                </td>
+                <td>
+                    <small class="text-muted">{{ rider.team }}</small>
+                </td>
+                <td>
+                    <span class="badge {{ get_category_badge_class(rider.category) }}">{{ rider.category }}</span>
+                </td>
+                <td class="text-center">
+                    <div class="fw-bold">{{ format_number(rider.pcs_points_2025 or 0) }}</div>
+                </td>
+                <td class="text-center">
+                    <span class="{{ get_value_class(rider.value_category) }}">
+                        {{ "%.1f"|format(rider.points_per_credit or 0) }}
+                    </span>
+                </td>
+                <td class="text-center">
+                    <span class="badge {{ get_value_class(rider.value_category) }}">
+                        {{ rider.value_category }}
+                    </span>
+                </td>
+                <td class="text-center">
+                    <span class="badge text-dark fw-bold" style="background: #e9ecef;">{{ rider.price }}⭐</span>
+                </td>
+                <td class="text-center">
+                    {% if rider.pcs_rank and rider.pcs_rank <= 50 %}
+                        <span class="badge text-dark" style="background: #e9ecef;">
+                            <i class="fas fa-trophy"></i> #{{ rider.pcs_rank }}
+                        </span>
+                    {% else %}
+                        <small class="text-muted">-</small>
+                    {% endif %}
+                </td>
+                <td class="text-center">
+                    <div class="btn-group btn-group-sm" role="group">
+                        <button type="button" class="btn btn-outline-secondary" 
+                                onclick="addToCompare('{{ rider.fantasy_name }}')" title="Add to Compare">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        {% if rider.pcs_url %}
+                        <a href="{{ rider.pcs_url }}" target="_blank" class="btn btn-outline-secondary" title="View on PCS">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                        {% endif %}
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
 
 {% if not riders %}
@@ -227,6 +313,38 @@ function clearCompare() {
     compareList = [];
     updateComparePanel();
 }
+
+// View mode switching
+document.addEventListener('DOMContentLoaded', function() {
+    const cardViewRadio = document.getElementById('cardView');
+    const tableViewRadio = document.getElementById('tableView');
+    const cardViewContent = document.getElementById('cardView-content');
+    const tableViewContent = document.getElementById('tableView-content');
+    
+    // Load saved preference or default to card view
+    const savedView = localStorage.getItem('ridersViewMode') || 'card';
+    if (savedView === 'table') {
+        tableViewRadio.checked = true;
+        cardViewContent.style.display = 'none';
+        tableViewContent.style.display = 'block';
+    }
+    
+    cardViewRadio.addEventListener('change', function() {
+        if (this.checked) {
+            cardViewContent.style.display = 'block';
+            tableViewContent.style.display = 'none';
+            localStorage.setItem('ridersViewMode', 'card');
+        }
+    });
+    
+    tableViewRadio.addEventListener('change', function() {
+        if (this.checked) {
+            cardViewContent.style.display = 'none';
+            tableViewContent.style.display = 'block';
+            localStorage.setItem('ridersViewMode', 'table');
+        }
+    });
+});
 
 // JavaScript helper functions for interactivity
 // (CSS triedy sa riešia cez Flask template funkcie)
