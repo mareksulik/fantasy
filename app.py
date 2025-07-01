@@ -483,4 +483,7 @@ def stats():
 if __name__ == '__main__':
     print("🚀 Starting Fantasy TdF Helper...")
     load_riders_data()
-    app.run(debug=True, host='0.0.0.0', port=8085)
+    # Use environment port for production, fallback to 8085 for local
+    import os
+    port = int(os.environ.get('PORT', 8085))
+    app.run(debug=False, host='0.0.0.0', port=port)

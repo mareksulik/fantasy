@@ -116,3 +116,80 @@ Category limits: {'Leaders': 3, 'All-rounders': 4, 'Climbers': 3, 'Sprinters': 3
 127.0.0.1 - - [01/Jul/2025 11:38:00] "GET /team-builder HTTP/1.1" 200 -
 127.0.0.1 - - [01/Jul/2025 11:38:56] "GET /team-builder HTTP/1.1" 200 -
 127.0.0.1 - - [01/Jul/2025 11:40:02] "GET /team-builder HTTP/1.1" 200 -
+127.0.0.1 - - [01/Jul/2025 11:42:33] "GET /team-builder HTTP/1.1" 200 -
+127.0.0.1 - - [01/Jul/2025 11:42:35] "GET /riders HTTP/1.1" 200 -
+127.0.0.1 - - [01/Jul/2025 11:42:37] "GET /team-builder HTTP/1.1" 200 -
+127.0.0.1 - - [01/Jul/2025 11:42:38] "GET /compare HTTP/1.1" 200 -
+127.0.0.1 - - [01/Jul/2025 11:42:42] "GET /compare?riders=T.+POGAČAR HTTP/1.1" 200 -
+127.0.0.1 - - [01/Jul/2025 11:42:45] "GET /compare?riders=T.+POGAČAR&riders=T.+MERLIER HTTP/1.1" 200 -
+127.0.0.1 - - [01/Jul/2025 11:42:52] "GET / HTTP/1.1" 200 -
+ * Detected change in '/Users/mareksulik/Documents/GitHub/fantasy/app.py', reloading
+🚀 Starting Fantasy TdF Helper...
+Loaded 261 riders
+Starting with 0 riders, need 8 more
+Found 261 eligible candidates
+Added: T. POGAČAR (Leaders, 27 credits) - Team now: 1/8
+Added: J. ALMEIDA (Climbers, 20 credits) - Team now: 2/8
+Added: J. ROMO OLIVER (All-rounders, 7 credits) - Team now: 3/8
+Added: K. VAUQUELIN (Leaders, 15 credits) - Team now: 4/8
+Added: E. ONLEY (Leaders, 16 credits) - Team now: 5/8
+Added: A. RENARD (All-rounders, 7 credits) - Team now: 6/8
+Added: A. JOHANNESSEN (All-rounders, 7 credits) - Team now: 7/8
+Final team size: 7/8
+DESPERATE ATTEMPT: Need 1 more riders
+Found 0 potential riders to fill remaining slots
+WARNING: Only selected 7 riders
+Budget used: 99/100
+Category counts: {'Leaders': 3, 'Climbers': 1, 'All-rounders': 3}
+Category limits: {'Leaders': 3, 'All-rounders': 4, 'Climbers': 3, 'Sprinters': 3}
+  All-rounders: 3/4 (can add 1 more)
+    No valid riders available in All-rounders
+  Climbers: 1/3 (can add 2 more)
+    No valid riders available in Climbers
+  Sprinters: 0/3 (can add 3 more)
+    No valid riders available in Sprinters
+Starting with 0 riders, need 8 more
+Found 261 eligible candidates
+Added: T. POGAČAR (Leaders, 27 credits) - Team now: 1/8
+Added: J. ALMEIDA (Climbers, 20 credits) - Team now: 2/8
+Added: J. ROMO OLIVER (All-rounders, 7 credits) - Team now: 3/8
+Added: K. VAUQUELIN (Leaders, 15 credits) - Team now: 4/8
+Added: E. ONLEY (Leaders, 16 credits) - Team now: 5/8
+Added: A. RENARD (All-rounders, 7 credits) - Team now: 6/8
+Added: A. JOHANNESSEN (All-rounders, 7 credits) - Team now: 7/8
+Final team size: 7/8
+DESPERATE ATTEMPT: Need 1 more riders
+Found 0 potential riders to fill remaining slots
+WARNING: Only selected 7 riders
+Budget used: 99/100
+Category counts: {'Leaders': 3, 'Climbers': 1, 'All-rounders': 3}
+Category limits: {'Leaders': 3, 'All-rounders': 4, 'Climbers': 3, 'Sprinters': 3}
+  All-rounders: 3/4 (can add 1 more)
+    No valid riders available in All-rounders
+  Climbers: 1/3 (can add 2 more)
+    No valid riders available in Climbers
+  Sprinters: 0/3 (can add 3 more)
+    No valid riders available in Sprinters
+Starting with 0 riders, need 8 more
+Found 261 eligible candidates
+Added: T. POGAČAR (Leaders, 27 credits) - Team now: 1/8
+Added: J. ALMEIDA (Climbers, 20 credits) - Team now: 2/8
+Added: J. ROMO OLIVER (All-rounders, 7 credits) - Team now: 3/8
+Added: K. VAUQUELIN (Leaders, 15 credits) - Team now: 4/8
+Added: E. ONLEY (Leaders, 16 credits) - Team now: 5/8
+Added: A. RENARD (All-rounders, 7 credits) - Team now: 6/8
+Added: A. JOHANNESSEN (All-rounders, 7 credits) - Team now: 7/8
+Final team size: 7/8
+DESPERATE ATTEMPT: Need 1 more riders
+Found 0 potential riders to fill remaining slots
+WARNING: Only selected 7 riders
+Budget used: 99/100
+Category counts: {'Leaders': 3, 'Climbers': 1, 'All-rounders': 3}
+Category limits: {'Leaders': 3, 'All-rounders': 4, 'Climbers': 3, 'Sprinters': 3}
+  All-rounders: 3/4 (can add 1 more)
+    No valid riders available in All-rounders
+  Climbers: 1/3 (can add 2 more)
+    No valid riders available in Climbers
+  Sprinters: 0/3 (can add 3 more)
+    No valid riders available in Sprinters
+ * Restarting with stat

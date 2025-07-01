@@ -1,0 +1,16 @@
+name: fantasy-tdf-helper
+services:
+- name: web
+  source_dir: /
+  github:
+    repo: mareksulik/fantasy
+    branch: main
+    deploy_on_push: true
+  run_command: python app.py
+  environment_slug: python
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  http_port: 8085
+  routes:
+  - path: /
+static_sites: []
