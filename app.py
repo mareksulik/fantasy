@@ -6,7 +6,6 @@ Web application for Tour de France fantasy rider selection assistance
 
 from flask import Flask, render_template, request, jsonify
 import json
-import pandas as pd
 from datetime import datetime
 
 app = Flask(__name__)
