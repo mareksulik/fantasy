@@ -200,21 +200,61 @@ def team_builder():
     """Page for team building"""
     data = load_riders_data()
     
-    # Split riders by categories
-    categories = {
-        'Leaders': [r for r in data if r['category'] == 'Leaders'],
-        'Sprinters': [r for r in data if r['category'] == 'Sprinters'], 
-        'Climbers': [r for r in data if r['category'] == 'Climbers'],
-        'All-rounders': [r for r in data if r['category'] == 'All-rounders']
-    }
+    # Get filter parameters
+    categories_filter = request.args.getlist('category')
+    teams_filter = request.args.getlist('team')
+    min_price = request.args.get('min_price', type=int)
+    max_price = request.args.get('max_price', type=int)
+    sort_by = request.args.get('sort', 'points_per_credit')
     
-    # Sort each category by points/credit ratio
-    for category in categories:
-        categories[category].sort(key=lambda x: x.get('points_per_credit', 0), reverse=True)
+    # Apply filters
+    filtered_data = data.copy()
+    
+    # Category filter
+    if categories_filter:
+        filtered_data = [r for r in filtered_data if r['category'].lower().replace('-', '') in [c.lower().replace('-', '') for c in categories_filter]]
+    
+    # Team filter
+    if teams_filter:
+        filtered_data = [r for r in filtered_data if r['team'] in teams_filter]
+    
+    # Price filters
+    if min_price is not None:
+        filtered_data = [r for r in filtered_data if r['price'] >= min_price]
+    if max_price is not None:
+        filtered_data = [r for r in filtered_data if r['price'] <= max_price]
+    
+    # Sort
+    if sort_by == 'points_per_credit':
+        filtered_data.sort(key=lambda x: x.get('points_per_credit', 0), reverse=True)
+    elif sort_by == 'pcs_points':
+        filtered_data.sort(key=lambda x: x.get('pcs_points_2025', 0), reverse=True)
+    elif sort_by == 'price':
+        filtered_data.sort(key=lambda x: x.get('price', 0))
+    elif sort_by == 'name':
+        filtered_data.sort(key=lambda x: x.get('fantasy_name', ''))
+    
+    # Split filtered riders by categories
+    categories = {
+        'Leaders': [r for r in filtered_data if r['category'] == 'Leaders'],
+        'Sprinters': [r for r in filtered_data if r['category'] == 'Sprinters'], 
+        'Climbers': [r for r in filtered_data if r['category'] == 'Climbers'],
+        'All-rounders': [r for r in filtered_data if r['category'] == 'All-rounders']
+    }
     
     return render_template('team_builder.html', 
                          categories=categories,
-                         total_riders=len(data))
+                         riders=filtered_data,
+                         total_riders=len(data),
+                         filtered_count=len(filtered_data),
+                         current_filters={
+                             'categories': categories_filter,
+                             'teams': teams_filter,
+                             'min_price': min_price,
+                             'max_price': max_price,
+                             'sort': sort_by
+                         },
+                         all_teams=sorted(list(set(r['team'] for r in data))))
 
 @app.route('/api/optimize-team')
 def api_optimize_team():

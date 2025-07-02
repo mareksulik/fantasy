@@ -7,6 +7,7 @@ Web application to help users select better riders for Tour de France fantasy le
 - ✅ Fantasy rider data scraped (261 riders in `all_tour_de_france_riders.csv`)
 - ✅ PCS scraper with advanced name matching (`simple-pcs-script.py`)
 - ✅ 100% data integration - all 261 riders matched with PCS data
+- ✅ Updated to final TdF 2025 roster - 183 riders (`update_tdf_roster.py`)
 - ✅ Flask web application with rider listing and filtering
 - ✅ Rider comparison tool implemented
 - ✅ Team builder with budget optimization and team constraints
@@ -57,6 +58,9 @@ pip install requests beautifulsoup4 pandas flask
 # Run PCS data collection (REQUIRED FIRST)
 python simple-pcs-script.py
 
+# Update to final TdF 2025 roster (183 riders)
+python update_tdf_roster.py
+
 # Start web application (use nohup for background)
 source venv/bin/activate && nohup python app.py > app.log 2>&1 &
 # Then visit: http://localhost:8085
@@ -65,11 +69,14 @@ source venv/bin/activate && nohup python app.py > app.log 2>&1 &
 ## File Structure
 ```
 /fantasy/
-├── all_tour_de_france_riders.csv    # Fantasy rider data
-├── simple-pcs-script.py             # PCS scraper
-├── fantasy_scraper.js               # Original fantasy scraper
+├── all_tour_de_france_riders.csv    # Fantasy rider data (261 riders)
+├── combined_riders_data.json        # Integrated dataset (183 riders)
+├── pcs_riders_data.csv              # PCS rankings data
+├── simple-pcs-script.py             # PCS data scraper
+├── manual_mapping_complete.py       # Name mapping database
+├── update_tdf_roster.py             # Update to final TdF 2025 roster
+├── fantasy_scraper.js               # Original fantasy website scraper
 ├── app.py                           # Flask web application
-├── combined_riders_data.json        # Integrated dataset
 └── templates/                       # HTML templates
     ├── base.html                    # Base template with navigation
     ├── index.html                   # Home page

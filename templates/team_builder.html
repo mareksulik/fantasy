@@ -5,11 +5,15 @@
 {% block content %}
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2><i class="fas fa-users-cog"></i> Team Builder</h2>
-    <div class="badge bg-info fs-6">
-        Budget: 120 credits
+    <div class="d-flex align-items-center gap-3">
+        <div class="badge bg-info fs-6">
+            Budget: 120 credits
+        </div>
+        <span class="badge bg-primary fs-6">
+            {{ filtered_count }} / {{ total_riders }} riders
+        </span>
     </div>
 </div>
-
 
 <!-- Current Team -->
 <div id="currentTeam" class="card mb-4">
@@ -70,57 +74,200 @@
     </div>
 </div>
 
-<!-- Manual Team Building by Category -->
-<div class="row">
-    {% for category, riders in categories.items() %}
-    <div class="col-lg-6 mb-4">
-        <div class="card h-100">
-            <div class="card-header d-flex justify-content-between align-items-center">
-                <h6 class="mb-0">
-                    <i class="fas fa-{{ 'crown' if category == 'Leaders' else 'rocket' if category == 'Sprinters' else 'mountain' if category == 'Climbers' else 'star' }}"></i>
-                    {{ category }}
-                    <span class="badge bg-info ms-2" id="{{ category.lower().replace(' ', '-') }}-count">
-                        0/{{ 3 if category == 'Leaders' or category == 'Climbers' or category == 'Sprinters' else 4 }}
-                    </span>
-                </h6>
-                <span class="badge bg-secondary">{{ riders|length }} riders</span>
+<!-- Filters -->
+<div class="card mb-4">
+    <div class="card-header">
+        <h6 class="mb-0"><i class="fas fa-filter"></i> Filters and Sorting</h6>
+    </div>
+    <div class="card-body">
+        <form method="GET" class="row g-3 small">
+            <div class="col-md-2">
+                <label for="category" class="form-label">Category</label>
+                <div class="dropdown">
+                    <button class="custom-dropdown-btn w-100" type="button" id="categoryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="categoryText">All categories</span>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu p-2" style="min-width: 200px;">
+                        <div class="form-check">
+                            <input class="form-check-input category-check" type="checkbox" value="leaders" id="cat-leaders" {% if 'leaders' in current_filters.categories %}checked{% endif %}>
+                            <label class="form-check-label" for="cat-leaders">Leaders</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input category-check" type="checkbox" value="sprinters" id="cat-sprinters" {% if 'sprinters' in current_filters.categories %}checked{% endif %}>
+                            <label class="form-check-label" for="cat-sprinters">Sprinters</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input category-check" type="checkbox" value="climbers" id="cat-climbers" {% if 'climbers' in current_filters.categories %}checked{% endif %}>
+                            <label class="form-check-label" for="cat-climbers">Climbers</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input category-check" type="checkbox" value="all-rounders" id="cat-all-rounders" {% if 'all-rounders' in current_filters.categories %}checked{% endif %}>
+                            <label class="form-check-label" for="cat-all-rounders">All-rounders</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hidden inputs for form submission -->
+                <div id="categoryInputs">
+                    {% for cat in current_filters.categories %}
+                    <input type="hidden" name="category" value="{{ cat }}">
+                    {% endfor %}
+                </div>
             </div>
-            <div class="card-body" style="max-height: 400px; overflow-y: auto;">
-                {% for rider in riders %}
-                <div class="rider-row d-flex justify-content-between align-items-center mb-2 p-2 border rounded">
-                    <div class="flex-grow-1">
-                        <div class="fw-bold">{{ get_flag_emoji(rider.pcs_nationality) }} {{ rider.fantasy_name }}</div>
-                        <small class="text-muted">{{ rider.team }}</small><br>
-                        <span class="badge badge-sm {{ get_category_badge_class(rider.category) }}">{{ rider.category }}</span>
-                        {% if rider.pcs_rank and rider.pcs_rank <= 50 %}
+            
+            <div class="col-md-3">
+                <label for="team" class="form-label">Team</label>
+                <div class="dropdown">
+                    <button class="custom-dropdown-btn w-100" type="button" id="teamDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="teamText">All teams</span>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu p-2" style="min-width: 300px;">
+                        <div class="mb-2">
+                            <input type="text" class="form-control form-control-sm" id="teamSearch" placeholder="Search teams...">
+                        </div>
+                        <div id="teamCheckboxes">
+                            {% for team in all_teams %}
+                            <div class="form-check">
+                                <input class="form-check-input team-check" type="checkbox" value="{{ team }}" id="team-{{ loop.index }}" {% if team in current_filters.teams %}checked{% endif %}>
+                                <label class="form-check-label" for="team-{{ loop.index }}">{{ team }}</label>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <!-- Hidden inputs for form submission -->
+                <div id="teamInputs">
+                    {% for team in current_filters.teams %}
+                    <input type="hidden" name="team" value="{{ team }}">
+                    {% endfor %}
+                </div>
+            </div>
+            
+            <div class="col-md-1">
+                <label for="min_price" class="form-label">Min. price</label>
+                <input type="number" class="form-control form-control-sm" id="min_price" name="min_price" 
+                       value="{{ current_filters.min_price or '' }}" min="5" max="27">
+            </div>
+            
+            <div class="col-md-1">
+                <label for="max_price" class="form-label">Max. price</label>
+                <input type="number" class="form-control form-control-sm" id="max_price" name="max_price" 
+                       value="{{ current_filters.max_price or '' }}" min="5" max="27">
+            </div>
+            
+            <div class="col-md-2">
+                <label for="sort" class="form-label">Sort by</label>
+                <select class="form-select form-select-sm" id="sort" name="sort">
+                    <option value="points_per_credit" {% if current_filters.sort == 'points_per_credit' %}selected{% endif %}>
+                        Points/Credit (best)
+                    </option>
+                    <option value="pcs_points" {% if current_filters.sort == 'pcs_points' %}selected{% endif %}>
+                        PCS Points (highest)
+                    </option>
+                    <option value="price" {% if current_filters.sort == 'price' %}selected{% endif %}>
+                        Price (lowest)
+                    </option>
+                    <option value="name" {% if current_filters.sort == 'name' %}selected{% endif %}>
+                        Name (A-Z)
+                    </option>
+                </select>
+            </div>
+            
+            <div class="col-md-2 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary btn-sm me-2">
+                    <i class="fas fa-search"></i> Filter
+                </button>
+                <a href="{{ url_for('team_builder') }}" class="btn btn-outline-secondary btn-sm">
+                    <i class="fas fa-times"></i>
+                </a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Table View (default) -->
+<div class="table-responsive">
+    <table class="table table-hover table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th class="sortable" onclick="sortTable(0)">Rider <i class="fas fa-sort"></i></th>
+                <th class="sortable" onclick="sortTable(1)">Team <i class="fas fa-sort"></i></th>
+                <th class="sortable" onclick="sortTable(2)">Category <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(3)">PCS Points <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(4)">P/C Ratio <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(5)">Value <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(6)">Price <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(7)">PCS Rank <i class="fas fa-sort"></i></th>
+                <th class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for rider in riders %}
+            <tr class="rider-row">
+                <td>
+                    <div class="fw-bold">{{ get_flag_emoji(rider.pcs_nationality) }} {{ rider.fantasy_name }}</div>
+                </td>
+                <td>
+                    <small class="text-muted">{{ rider.team }}</small>
+                </td>
+                <td>
+                    <span class="badge {{ get_category_badge_class(rider.category) }}">{{ rider.category }}</span>
+                </td>
+                <td class="text-center">
+                    <div class="fw-bold">{{ format_number(rider.pcs_points_2025 or 0) }}</div>
+                </td>
+                <td class="text-center">
+                    <span class="{{ get_value_class(rider.value_category) }}">
+                        {{ "%.1f"|format(rider.points_per_credit or 0) }}
+                    </span>
+                </td>
+                <td class="text-center">
+                    <span class="badge {{ get_value_class(rider.value_category) }}">
+                        {{ rider.value_category }}
+                    </span>
+                </td>
+                <td class="text-center">
+                    <span class="badge text-dark fw-bold" style="background: #e9ecef;">{{ rider.price }}⭐</span>
+                </td>
+                <td class="text-center">
+                    {% if rider.pcs_rank and rider.pcs_rank <= 50 %}
                         <span class="badge text-dark" style="background: #e9ecef;">
-                            <i class="fas fa-trophy"></i> #{{ rider.pcs_rank }} PCS
+                            <i class="fas fa-trophy"></i> #{{ rider.pcs_rank }}
                         </span>
+                    {% else %}
+                        <small class="text-muted">-</small>
+                    {% endif %}
+                </td>
+                <td class="text-center">
+                    <div class="btn-group btn-group-sm" role="group">
+                        <button type="button" class="btn btn-outline-primary" 
+                                onclick="addToTeam('{{ rider.fantasy_name }}', {{ rider.price }}, {{ rider.pcs_points_2025 or 0 }}, '{{ rider.category }}', '{{ rider.pcs_nationality or '' }}', '{{ rider.team }}', {{ rider.points_per_credit or 0 }}, {{ rider.pcs_rank or 0 }})" title="Add to Team">
+                            <i class="fas fa-plus"></i>
+                        </button>
+                        {% if rider.pcs_url %}
+                        <a href="{{ rider.pcs_url }}" target="_blank" class="btn btn-outline-secondary" title="View on PCS">
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
                         {% endif %}
                     </div>
-                    <div class="text-center me-2">
-                        <div class="small fw-bold">{{ format_number(rider.pcs_points_2025 or 0) }}</div>
-                        <small class="text-muted">PCS Points</small>
-                    </div>
-                    <div class="text-center me-2">
-                        <div class="small fw-bold {{ get_value_class(rider.value_category) }}">
-                            {{ "%.1f"|format(rider.points_per_credit or 0) }}
-                        </div>
-                        <small class="text-muted">P/C</small>
-                    </div>
-                    <div class="text-center me-2">
-                        <span class="badge text-dark fw-bold" style="background: #e9ecef;">{{ rider.price }}⭐</span>
-                    </div>
-                    <button class="btn btn-outline-primary btn-sm" onclick="addToTeam('{{ rider.fantasy_name }}', {{ rider.price }}, {{ rider.pcs_points_2025 or 0 }}, '{{ rider.category }}', '{{ rider.pcs_nationality or '' }}', '{{ rider.team }}', {{ rider.points_per_credit or 0 }}, {{ rider.pcs_rank or 0 }})">
-                        <i class="fas fa-plus"></i>
-                    </button>
-                </div>
-                {% endfor %}
-            </div>
-        </div>
-    </div>
-    {% endfor %}
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
 </div>
+
+{% if not riders %}
+<div class="text-center py-5">
+    <i class="fas fa-search fa-3x text-muted mb-3"></i>
+    <h4 class="text-muted">No riders match the filters</h4>
+    <p class="text-muted">Try changing the filters or reset them.</p>
+    <a href="{{ url_for('team_builder') }}" class="btn btn-primary">
+        <i class="fas fa-refresh"></i> Reset filters
+    </a>
+</div>
+{% endif %}
 
 {% endblock %}
 
@@ -128,6 +275,25 @@
 <script>
 let currentTeam = [];
 let maxBudget = 120;
+
+// Load team from localStorage on page load
+function loadTeamFromStorage() {
+    const savedTeam = localStorage.getItem('fantasyTeam');
+    if (savedTeam) {
+        try {
+            currentTeam = JSON.parse(savedTeam);
+            updateTeamDisplay();
+        } catch (e) {
+            console.error('Error loading team from storage:', e);
+            currentTeam = [];
+        }
+    }
+}
+
+// Save team to localStorage
+function saveTeamToStorage() {
+    localStorage.setItem('fantasyTeam', JSON.stringify(currentTeam));
+}
 
 
 function getCategoryBadgeClass(category) {
@@ -159,7 +325,7 @@ function addToTeam(name, price, points, category, nationality, team, pointsPerCr
     // Category limits
     const categoryLimits = {
         'Leaders': 3,
-        'All-rounders': 4,
+        'All-rounders': 5,
         'Climbers': 3,
         'Sprinters': 3
     };
@@ -205,11 +371,13 @@ function addToTeam(name, price, points, category, nationality, team, pointsPerCr
         pcs_rank: pcsRank || 0
     });
     
+    saveTeamToStorage();
     updateTeamDisplay();
 }
 
 function removeFromTeam(name) {
     currentTeam = currentTeam.filter(rider => rider.fantasy_name !== name);
+    saveTeamToStorage();
     updateTeamDisplay();
 }
 
@@ -231,11 +399,16 @@ function updateTeamDisplay() {
         }
     });
     
-    // Update category count badges
-    document.getElementById('leaders-count').textContent = `${categoryCounts['Leaders']}/3`;
-    document.getElementById('all-rounders-count').textContent = `${categoryCounts['All-rounders']}/4`;
-    document.getElementById('climbers-count').textContent = `${categoryCounts['Climbers']}/3`;
-    document.getElementById('sprinters-count').textContent = `${categoryCounts['Sprinters']}/3`;
+    // Update category count badges (if they exist)
+    const leadersCount = document.getElementById('leaders-count');
+    const allRoundersCount = document.getElementById('all-rounders-count');
+    const climbersCount = document.getElementById('climbers-count');
+    const sprintersCount = document.getElementById('sprinters-count');
+    
+    if (leadersCount) leadersCount.textContent = `${categoryCounts['Leaders']}/3`;
+    if (allRoundersCount) allRoundersCount.textContent = `${categoryCounts['All-rounders']}/5`;
+    if (climbersCount) climbersCount.textContent = `${categoryCounts['Climbers']}/3`;
+    if (sprintersCount) sprintersCount.textContent = `${categoryCounts['Sprinters']}/3`;
     
     if (currentTeam.length === 0) {
         // Show empty team message
@@ -249,10 +422,10 @@ function updateTeamDisplay() {
             </div>
         `;
         // Still update category counts even if team is empty
-        document.getElementById('leaders-count').textContent = '0/3';
-        document.getElementById('all-rounders-count').textContent = '0/4';
-        document.getElementById('climbers-count').textContent = '0/3';
-        document.getElementById('sprinters-count').textContent = '0/3';
+        if (leadersCount) leadersCount.textContent = '0/3';
+        if (allRoundersCount) allRoundersCount.textContent = '0/5';
+        if (climbersCount) climbersCount.textContent = '0/3';
+        if (sprintersCount) sprintersCount.textContent = '0/3';
         // Don't return, continue to update stats
     } else {
         // Show team members
@@ -313,6 +486,7 @@ function displayTeamStats(stats) {
 function clearTeam() {
     if (confirm('Are you sure you want to clear your team?')) {
         currentTeam = [];
+        saveTeamToStorage();
         updateTeamDisplay();
     }
 }
@@ -427,9 +601,371 @@ function exportTeam() {
     });
 }
 
-// Initialize category counts on page load
+// Initialize team on page load
 document.addEventListener('DOMContentLoaded', function() {
+    loadTeamFromStorage();
     updateTeamDisplay();
+});
+
+// Table sorting functionality
+let sortOrder = {}; // Track sort order for each column
+
+function sortTable(columnIndex) {
+    const table = document.querySelector('.table-responsive table');
+    const tbody = table.querySelector('tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    
+    // Toggle sort order
+    if (!sortOrder[columnIndex]) {
+        sortOrder[columnIndex] = 'asc';
+    } else {
+        sortOrder[columnIndex] = sortOrder[columnIndex] === 'asc' ? 'desc' : 'asc';
+    }
+    
+    // Update sort icons
+    const headers = table.querySelectorAll('th.sortable');
+    headers.forEach((header, index) => {
+        const icon = header.querySelector('i');
+        if (index === columnIndex) {
+            icon.className = sortOrder[columnIndex] === 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down';
+        } else {
+            icon.className = 'fas fa-sort';
+        }
+    });
+    
+    // Sort rows
+    rows.sort((a, b) => {
+        let aValue, bValue;
+        
+        switch(columnIndex) {
+            case 0: // Rider name - sort by surname
+                aValue = a.cells[0].textContent.trim();
+                bValue = b.cells[0].textContent.trim();
+                // Extract surname - first word that is all uppercase after initial
+                const extractSurname = (name) => {
+                    const cleaned = name.replace(/[^\w\s.-]/g, '').trim();
+                    const parts = cleaned.split(' ');
+                    // Find first word that is all uppercase (not just initial)
+                    for (let i = 1; i < parts.length; i++) {
+                        if (parts[i].length > 1 && parts[i] === parts[i].toUpperCase()) {
+                            return parts[i];
+                        }
+                    }
+                    // Fallback to last word if no uppercase found
+                    return parts[parts.length - 1];
+                };
+                aValue = extractSurname(aValue);
+                bValue = extractSurname(bValue);
+                break;
+            case 1: // Team
+                aValue = a.cells[1].textContent.trim();
+                bValue = b.cells[1].textContent.trim();
+                break;
+            case 2: // Category
+                aValue = a.cells[2].textContent.trim();
+                bValue = b.cells[2].textContent.trim();
+                break;
+            case 3: // PCS Points
+                aValue = parseInt(a.cells[3].textContent.replace(/,/g, '') || '0');
+                bValue = parseInt(b.cells[3].textContent.replace(/,/g, '') || '0');
+                break;
+            case 4: // P/C Ratio
+                aValue = parseFloat(a.cells[4].textContent || '0');
+                bValue = parseFloat(b.cells[4].textContent || '0');
+                break;
+            case 5: // Value category
+                const valueOrder = {'Excellent': 5, 'Great': 4, 'Good': 3, 'Average': 2, 'Poor': 1};
+                aValue = valueOrder[a.cells[5].textContent.trim()] || 0;
+                bValue = valueOrder[b.cells[5].textContent.trim()] || 0;
+                break;
+            case 6: // Price
+                aValue = parseInt(a.cells[6].textContent.match(/\d+/) || '0');
+                bValue = parseInt(b.cells[6].textContent.match(/\d+/) || '0');
+                break;
+            case 7: // PCS Rank
+                const aRank = a.cells[7].textContent.match(/#(\d+)/);
+                const bRank = b.cells[7].textContent.match(/#(\d+)/);
+                aValue = aRank ? parseInt(aRank[1]) : 9999;
+                bValue = bRank ? parseInt(bRank[1]) : 9999;
+                break;
+        }
+        
+        if (columnIndex <= 2) { // Text columns
+            if (sortOrder[columnIndex] === 'asc') {
+                return aValue.localeCompare(bValue);
+            } else {
+                return bValue.localeCompare(aValue);
+            }
+        } else { // Numeric columns
+            if (sortOrder[columnIndex] === 'asc') {
+                return aValue - bValue;
+            } else {
+                return bValue - aValue;
+            }
+        }
+    });
+    
+    // Reorder rows in table
+    rows.forEach(row => tbody.appendChild(row));
+}
+</script>
+
+<style>
+/* Dropdown styling */
+.dropdown-menu {
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding: 0.75rem 0;
+}
+
+.dropdown-menu .form-check {
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+    display: flex;
+    align-items: center;
+    min-height: 2.5rem;
+}
+
+.dropdown-menu .form-check:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdown-menu .form-check-input {
+    cursor: pointer;
+    margin-top: 0;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+}
+
+.dropdown-menu .form-check-label {
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #495057;
+    line-height: 1.25;
+    margin-bottom: 0;
+    flex: 1;
+}
+
+#teamSearch {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+}
+
+#teamSearch:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Custom dropdown button styling */
+.custom-dropdown-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.custom-dropdown-btn:hover {
+    border-color: #86b7fe;
+}
+
+.custom-dropdown-btn:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.custom-dropdown-btn span {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 0.5rem;
+}
+
+.custom-dropdown-btn .dropdown-arrow {
+    font-size: 0.75rem;
+    color: #6c757d;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Custom scrollbar for team dropdown */
+#teamCheckboxes {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#teamCheckboxes::-webkit-scrollbar {
+    width: 6px;
+}
+
+#teamCheckboxes::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+#teamCheckboxes::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+#teamCheckboxes::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+
+.sortable {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.sortable i {
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+/* Fix table header hover - IMPORTANT */
+.table-dark thead th.sortable:hover {
+    background-color: rgba(108, 117, 125, 0.8) !important;
+    color: #ffffff !important;
+    border-color: #495057 !important;
+}
+
+.table-dark thead th.sortable:hover * {
+    color: #ffffff !important;
+}
+
+/* Alternative more specific selector */
+table.table.table-hover.table-striped thead.table-dark th.sortable:hover {
+    background-color: rgba(108, 117, 125, 0.8) !important;
+    color: #ffffff !important;
+}
+</style>
+
+<script>
+// Multi-select dropdown functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Prevent dropdown from closing when clicking inside
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        menu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+    
+    // Category checkboxes
+    const categoryChecks = document.querySelectorAll('.category-check');
+    const categoryText = document.getElementById('categoryText');
+    const categoryInputs = document.getElementById('categoryInputs');
+    
+    function updateCategoryDisplay() {
+        const checked = Array.from(categoryChecks).filter(cb => cb.checked);
+        categoryInputs.innerHTML = '';
+        
+        if (checked.length === 0) {
+            categoryText.textContent = 'All categories';
+        } else if (checked.length === 4) {
+            categoryText.textContent = 'All categories';
+        } else {
+            categoryText.textContent = checked.map(cb => cb.parentElement.querySelector('label').textContent).join(', ');
+        }
+        
+        // Update hidden inputs
+        checked.forEach(cb => {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'category';
+            input.value = cb.value;
+            categoryInputs.appendChild(input);
+        });
+    }
+    
+    categoryChecks.forEach(cb => {
+        cb.addEventListener('change', updateCategoryDisplay);
+    });
+    
+    // Team checkboxes
+    const teamChecks = document.querySelectorAll('.team-check');
+    const teamText = document.getElementById('teamText');
+    const teamInputs = document.getElementById('teamInputs');
+    const teamSearch = document.getElementById('teamSearch');
+    
+    function updateTeamDisplay() {
+        const checked = Array.from(teamChecks).filter(cb => cb.checked);
+        teamInputs.innerHTML = '';
+        
+        if (checked.length === 0) {
+            teamText.textContent = 'All teams';
+        } else if (checked.length === 1) {
+            teamText.textContent = checked[0].parentElement.querySelector('label').textContent;
+        } else {
+            teamText.textContent = `${checked.length} teams selected`;
+        }
+        
+        // Update hidden inputs
+        checked.forEach(cb => {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'team';
+            input.value = cb.value;
+            teamInputs.appendChild(input);
+        });
+    }
+    
+    teamChecks.forEach(cb => {
+        cb.addEventListener('change', updateTeamDisplay);
+    });
+    
+    // Team search functionality
+    teamSearch.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        const teamCheckboxes = document.querySelectorAll('#teamCheckboxes .form-check');
+        
+        teamCheckboxes.forEach(checkbox => {
+            const label = checkbox.querySelector('label').textContent.toLowerCase();
+            if (label.includes(searchTerm)) {
+                checkbox.style.display = '';
+            } else {
+                checkbox.style.display = 'none';
+            }
+        });
+    });
+    
+    // Initialize displays
+    updateCategoryDisplay();
+    updateTeamDisplay();
+    
+    // Handle dropdown arrow rotation
+    document.addEventListener('show.bs.dropdown', function (e) {
+        const arrow = e.target.querySelector('.dropdown-arrow');
+        if (arrow) {
+            arrow.style.transform = 'rotate(180deg)';
+        }
+    });
+    
+    document.addEventListener('hide.bs.dropdown', function (e) {
+        const arrow = e.target.querySelector('.dropdown-arrow');
+        if (arrow) {
+            arrow.style.transform = 'rotate(0deg)';
+        }
+    });
 });
 </script>
 {% endblock %}
