@@ -6,7 +6,7 @@
 <div class="d-flex justify-content-between align-items-center mb-4">
     <h2><i class="fas fa-users-cog"></i> Team Builder</h2>
     <div class="badge bg-info fs-6">
-        Budget: 100 credits
+        Budget: 120 credits
     </div>
 </div>
 
@@ -34,7 +34,7 @@
                                 <small class="text-muted">Total Cost</small>
                             </div>
                             <div class="col-6">
-                                <div id="remainingBudget" class="fw-bold text-success">100</div>
+                                <div id="remainingBudget" class="fw-bold text-success">120</div>
                                 <small class="text-muted">Remaining</small>
                             </div>
                         </div>
@@ -127,7 +127,7 @@
 {% block scripts %}
 <script>
 let currentTeam = [];
-let maxBudget = 100;
+let maxBudget = 120;
 
 
 function getCategoryBadgeClass(category) {
@@ -349,7 +349,7 @@ function exportTeam() {
     const totalPoints = currentTeam.reduce((sum, rider) => sum + rider.pcs_points_2025, 0);
     
     ctx.font = '16px Arial';
-    ctx.fillText(`${currentTeam.length}/8 riders • ${totalCost}/100 credits • ${Math.round(totalPoints).toLocaleString()} points`, canvas.width / 2, 70);
+    ctx.fillText(`${currentTeam.length}/8 riders • ${totalCost}/120 credits • ${Math.round(totalPoints).toLocaleString()} points`, canvas.width / 2, 70);
     
     // Category counts
     const categoryCounts = {

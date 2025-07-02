@@ -23,7 +23,7 @@ A comprehensive web application to help users select better riders for the Tour 
 
 ### 🏆 Team Builder
 - Intelligent team optimization with multiple strategies
-- Budget constraint enforcement (100 credits max)
+- Budget constraint enforcement (120 credits max)
 - Team limit rules (max 3 riders per team, exactly 8 riders total)
 - Manual team building with real-time validation
 - Team export functionality
@@ -140,7 +140,7 @@ All 261 riders have been successfully matched between these sources, providing c
 
 Fantasy TdF has specific constraints that the application enforces:
 
-- **Budget**: Maximum 100 credits total
+- **Budget**: Maximum 120 credits total
 - **Team Size**: Exactly 8 riders required
 - **Team Limit**: Maximum 3 riders from any single professional team
 - **Categories**: Riders from Leaders, Sprinters, Climbers, and All-rounders

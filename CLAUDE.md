@@ -38,7 +38,7 @@ Web application to help users select better riders for Tour de France fantasy le
 1. ✅ Rider data integration (fantasy + PCS) - 100% match rate
 2. ✅ Filtering/sorting by category, team, price, points
 3. ✅ Rider comparison tool with side-by-side stats
-4. ✅ Team builder with 100-credit budget constraint and team limits
+4. ✅ Team builder with 120-credit budget constraint and team limits
 5. ✅ Value analysis with 5-tier rating system
 6. ✅ Statistics dashboard with charts and insights
 7. ✅ Responsive UI with Bootstrap styling

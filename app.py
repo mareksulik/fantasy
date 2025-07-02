@@ -217,7 +217,7 @@ def team_builder():
 @app.route('/api/optimize-team')
 def api_optimize_team():
     """API endpoint for team optimization"""
-    budget = request.args.get('budget', default=100, type=int)
+    budget = request.args.get('budget', default=120, type=int)
     strategy = request.args.get('strategy', default='value')  # value, points, balanced
     
     # Get existing team for incremental optimization
