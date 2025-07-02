@@ -106,8 +106,8 @@ def riders():
     data = load_riders_data()
     
     # Filtering
-    category_filter = request.args.get('category', 'all')
-    team_filter = request.args.get('team', 'all')
+    category_filters = request.args.getlist('category')
+    team_filters = request.args.getlist('team')
     min_price = request.args.get('min_price', type=int)
     max_price = request.args.get('max_price', type=int)
     sort_by = request.args.get('sort', 'points_per_credit')
@@ -115,11 +115,13 @@ def riders():
     # Filter data
     filtered_data = data.copy()
     
-    if category_filter != 'all':
-        filtered_data = [r for r in filtered_data if r['category'].lower() == category_filter.lower()]
+    # Filter by categories (if any selected)
+    if category_filters:
+        filtered_data = [r for r in filtered_data if r['category'].lower() in [c.lower() for c in category_filters]]
     
-    if team_filter != 'all':
-        filtered_data = [r for r in filtered_data if r['team'] == team_filter]
+    # Filter by teams (if any selected)  
+    if team_filters:
+        filtered_data = [r for r in filtered_data if r['team'] in team_filters]
     
     if min_price is not None:
         filtered_data = [r for r in filtered_data if r['price'] >= min_price]
@@ -142,8 +144,8 @@ def riders():
                          total_count=len(data),
                          filtered_count=len(filtered_data),
                          current_filters={
-                             'category': category_filter,
-                             'team': team_filter,
+                             'categories': category_filters,
+                             'teams': team_filters,
                              'min_price': min_price,
                              'max_price': max_price,
                              'sort': sort_by

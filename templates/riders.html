@@ -31,25 +31,65 @@
         <form method="GET" class="row g-3 small">
             <div class="col-md-2">
                 <label for="category" class="form-label">Category</label>
-                <select class="form-select form-select-sm" id="category" name="category">
-                    <option value="all" {% if current_filters.category == 'all' %}selected{% endif %}>All</option>
-                    <option value="leaders" {% if current_filters.category == 'leaders' %}selected{% endif %}>Leaders</option>
-                    <option value="sprinters" {% if current_filters.category == 'sprinters' %}selected{% endif %}>Sprinters</option>
-                    <option value="climbers" {% if current_filters.category == 'climbers' %}selected{% endif %}>Climbers</option>
-                    <option value="all-rounders" {% if current_filters.category == 'all-rounders' %}selected{% endif %}>All-rounders</option>
-                </select>
+                <div class="dropdown">
+                    <button class="custom-dropdown-btn w-100" type="button" id="categoryDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="categoryText">All categories</span>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu p-2" style="min-width: 200px;">
+                        <div class="form-check">
+                            <input class="form-check-input category-check" type="checkbox" value="leaders" id="cat-leaders" {% if 'leaders' in current_filters.categories %}checked{% endif %}>
+                            <label class="form-check-label" for="cat-leaders">Leaders</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input category-check" type="checkbox" value="sprinters" id="cat-sprinters" {% if 'sprinters' in current_filters.categories %}checked{% endif %}>
+                            <label class="form-check-label" for="cat-sprinters">Sprinters</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input category-check" type="checkbox" value="climbers" id="cat-climbers" {% if 'climbers' in current_filters.categories %}checked{% endif %}>
+                            <label class="form-check-label" for="cat-climbers">Climbers</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input category-check" type="checkbox" value="all-rounders" id="cat-all-rounders" {% if 'all-rounders' in current_filters.categories %}checked{% endif %}>
+                            <label class="form-check-label" for="cat-all-rounders">All-rounders</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hidden inputs for form submission -->
+                <div id="categoryInputs">
+                    {% for cat in current_filters.categories %}
+                    <input type="hidden" name="category" value="{{ cat }}">
+                    {% endfor %}
+                </div>
             </div>
             
             <div class="col-md-3">
                 <label for="team" class="form-label">Team</label>
-                <select class="form-select form-select-sm" id="team" name="team">
-                    <option value="all" {% if current_filters.team == 'all' %}selected{% endif %}>All teams</option>
-                    {% for team in all_teams %}
-                    <option value="{{ team }}" {% if current_filters.team == team %}selected{% endif %}>
-                        {{ team }}
-                    </option>
+                <div class="dropdown">
+                    <button class="custom-dropdown-btn w-100" type="button" id="teamDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="teamText">All teams</span>
+                        <i class="fas fa-chevron-down dropdown-arrow"></i>
+                    </button>
+                    <div class="dropdown-menu p-2" style="min-width: 300px;">
+                        <div class="mb-2">
+                            <input type="text" class="form-control form-control-sm" id="teamSearch" placeholder="Search teams...">
+                        </div>
+                        <div id="teamCheckboxes">
+                            {% for team in all_teams %}
+                            <div class="form-check">
+                                <input class="form-check-input team-check" type="checkbox" value="{{ team }}" id="team-{{ loop.index }}" {% if team in current_filters.teams %}checked{% endif %}>
+                                <label class="form-check-label" for="team-{{ loop.index }}">{{ team }}</label>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <!-- Hidden inputs for form submission -->
+                <div id="teamInputs">
+                    {% for team in current_filters.teams %}
+                    <input type="hidden" name="team" value="{{ team }}">
                     {% endfor %}
-                </select>
+                </div>
             </div>
             
             <div class="col-md-1">
@@ -162,14 +202,14 @@
     <table class="table table-hover table-striped">
         <thead class="table-dark">
             <tr>
-                <th>Rider</th>
-                <th>Team</th>
-                <th>Category</th>
-                <th class="text-center">PCS Points</th>
-                <th class="text-center">P/C Ratio</th>
-                <th class="text-center">Value</th>
-                <th class="text-center">Price</th>
-                <th class="text-center">PCS Rank</th>
+                <th class="sortable" onclick="sortTable(0)">Rider <i class="fas fa-sort"></i></th>
+                <th class="sortable" onclick="sortTable(1)">Team <i class="fas fa-sort"></i></th>
+                <th class="sortable" onclick="sortTable(2)">Category <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(3)">PCS Points <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(4)">P/C Ratio <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(5)">Value <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(6)">Price <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(7)">PCS Rank <i class="fas fa-sort"></i></th>
                 <th class="text-center">Actions</th>
             </tr>
         </thead>
@@ -348,5 +388,366 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // JavaScript helper functions for interactivity
 // (CSS triedy sa riešia cez Flask template funkcie)
+
+// Table sorting functionality
+let sortOrder = {}; // Track sort order for each column
+
+function sortTable(columnIndex) {
+    const table = document.querySelector('#tableView-content table');
+    const tbody = table.querySelector('tbody');
+    const rows = Array.from(tbody.querySelectorAll('tr'));
+    
+    // Toggle sort order
+    if (!sortOrder[columnIndex]) {
+        sortOrder[columnIndex] = 'asc';
+    } else {
+        sortOrder[columnIndex] = sortOrder[columnIndex] === 'asc' ? 'desc' : 'asc';
+    }
+    
+    // Update sort icons
+    const headers = table.querySelectorAll('th.sortable');
+    headers.forEach((header, index) => {
+        const icon = header.querySelector('i');
+        if (index === columnIndex) {
+            icon.className = sortOrder[columnIndex] === 'asc' ? 'fas fa-sort-up' : 'fas fa-sort-down';
+        } else {
+            icon.className = 'fas fa-sort';
+        }
+    });
+    
+    // Sort rows
+    rows.sort((a, b) => {
+        let aValue, bValue;
+        
+        switch(columnIndex) {
+            case 0: // Rider name - sort by surname
+                aValue = a.cells[0].textContent.trim();
+                bValue = b.cells[0].textContent.trim();
+                // Extract surname - first word that is all uppercase after initial
+                const extractSurname = (name) => {
+                    const cleaned = name.replace(/[^\w\s.-]/g, '').trim();
+                    const parts = cleaned.split(' ');
+                    // Find first word that is all uppercase (not just initial)
+                    for (let i = 1; i < parts.length; i++) {
+                        if (parts[i].length > 1 && parts[i] === parts[i].toUpperCase()) {
+                            return parts[i];
+                        }
+                    }
+                    // Fallback to last word if no uppercase found
+                    return parts[parts.length - 1];
+                };
+                aValue = extractSurname(aValue);
+                bValue = extractSurname(bValue);
+                break;
+            case 1: // Team
+                aValue = a.cells[1].textContent.trim();
+                bValue = b.cells[1].textContent.trim();
+                break;
+            case 2: // Category
+                aValue = a.cells[2].textContent.trim();
+                bValue = b.cells[2].textContent.trim();
+                break;
+            case 3: // PCS Points
+                aValue = parseInt(a.cells[3].textContent.replace(/,/g, '') || '0');
+                bValue = parseInt(b.cells[3].textContent.replace(/,/g, '') || '0');
+                break;
+            case 4: // P/C Ratio
+                aValue = parseFloat(a.cells[4].textContent || '0');
+                bValue = parseFloat(b.cells[4].textContent || '0');
+                break;
+            case 5: // Value category
+                const valueOrder = {'Excellent': 5, 'Great': 4, 'Good': 3, 'Average': 2, 'Poor': 1};
+                aValue = valueOrder[a.cells[5].textContent.trim()] || 0;
+                bValue = valueOrder[b.cells[5].textContent.trim()] || 0;
+                break;
+            case 6: // Price
+                aValue = parseInt(a.cells[6].textContent.match(/\d+/) || '0');
+                bValue = parseInt(b.cells[6].textContent.match(/\d+/) || '0');
+                break;
+            case 7: // PCS Rank
+                const aRank = a.cells[7].textContent.match(/#(\d+)/);
+                const bRank = b.cells[7].textContent.match(/#(\d+)/);
+                aValue = aRank ? parseInt(aRank[1]) : 9999;
+                bValue = bRank ? parseInt(bRank[1]) : 9999;
+                break;
+        }
+        
+        if (columnIndex <= 2) { // Text columns
+            if (sortOrder[columnIndex] === 'asc') {
+                return aValue.localeCompare(bValue);
+            } else {
+                return bValue.localeCompare(aValue);
+            }
+        } else { // Numeric columns
+            if (sortOrder[columnIndex] === 'asc') {
+                return aValue - bValue;
+            } else {
+                return bValue - aValue;
+            }
+        }
+    });
+    
+    // Reorder rows in table
+    rows.forEach(row => tbody.appendChild(row));
+}
+</script>
+
+<style>
+.sortable {
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+
+.sortable i {
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+/* Fix table header hover - IMPORTANT */
+.table-dark thead th.sortable:hover {
+    background-color: rgba(108, 117, 125, 0.8) !important;
+    color: #ffffff !important;
+    border-color: #495057 !important;
+}
+
+.table-dark thead th.sortable:hover * {
+    color: #ffffff !important;
+}
+
+/* Alternative more specific selector */
+table.table.table-hover.table-striped thead.table-dark th.sortable:hover {
+    background-color: rgba(108, 117, 125, 0.8) !important;
+    color: #ffffff !important;
+}
+
+/* Dropdown styling */
+.dropdown-menu {
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    border: 1px solid #dee2e6;
+    border-radius: 0.375rem;
+    padding: 0.75rem 0;
+}
+
+.dropdown-menu .form-check {
+    padding: 0.75rem 1.5rem;
+    margin: 0;
+    cursor: pointer;
+    transition: background-color 0.15s ease-in-out;
+    display: flex;
+    align-items: center;
+    min-height: 2.5rem;
+}
+
+.dropdown-menu .form-check:hover {
+    background-color: #f8f9fa;
+}
+
+.dropdown-menu .form-check-input {
+    cursor: pointer;
+    margin-top: 0;
+    margin-right: 0.5rem;
+    flex-shrink: 0;
+    width: 1rem;
+    height: 1rem;
+}
+
+.dropdown-menu .form-check-label {
+    cursor: pointer;
+    font-size: 0.875rem;
+    color: #495057;
+    line-height: 1.25;
+    margin-bottom: 0;
+    flex: 1;
+}
+
+#teamSearch {
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    margin: 0 0.5rem 0.5rem 0.5rem;
+}
+
+#teamSearch:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Custom dropdown button styling */
+.custom-dropdown-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    text-align: left;
+    cursor: pointer;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.custom-dropdown-btn:hover {
+    border-color: #86b7fe;
+}
+
+.custom-dropdown-btn:focus {
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.custom-dropdown-btn span {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 0.5rem;
+}
+
+.custom-dropdown-btn .dropdown-arrow {
+    font-size: 0.75rem;
+    color: #6c757d;
+    transition: transform 0.2s ease-in-out;
+}
+
+/* Custom scrollbar for team dropdown */
+#teamCheckboxes {
+    max-height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#teamCheckboxes::-webkit-scrollbar {
+    width: 6px;
+}
+
+#teamCheckboxes::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 3px;
+}
+
+#teamCheckboxes::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 3px;
+}
+
+#teamCheckboxes::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}
+</style>
+
+<script>
+// Multi-select dropdown functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Prevent dropdown from closing when clicking inside
+    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+        menu.addEventListener('click', function(e) {
+            e.stopPropagation();
+        });
+    });
+    
+    // Category checkboxes
+    const categoryChecks = document.querySelectorAll('.category-check');
+    const categoryText = document.getElementById('categoryText');
+    const categoryInputs = document.getElementById('categoryInputs');
+    
+    function updateCategoryDisplay() {
+        const checked = Array.from(categoryChecks).filter(cb => cb.checked);
+        categoryInputs.innerHTML = '';
+        
+        if (checked.length === 0) {
+            categoryText.textContent = 'All categories';
+        } else if (checked.length === 4) {
+            categoryText.textContent = 'All categories';
+        } else {
+            categoryText.textContent = checked.map(cb => cb.parentElement.querySelector('label').textContent).join(', ');
+        }
+        
+        // Update hidden inputs
+        checked.forEach(cb => {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'category';
+            input.value = cb.value;
+            categoryInputs.appendChild(input);
+        });
+    }
+    
+    categoryChecks.forEach(cb => {
+        cb.addEventListener('change', updateCategoryDisplay);
+    });
+    
+    // Team checkboxes
+    const teamChecks = document.querySelectorAll('.team-check');
+    const teamText = document.getElementById('teamText');
+    const teamInputs = document.getElementById('teamInputs');
+    const teamSearch = document.getElementById('teamSearch');
+    
+    function updateTeamDisplay() {
+        const checked = Array.from(teamChecks).filter(cb => cb.checked);
+        teamInputs.innerHTML = '';
+        
+        if (checked.length === 0) {
+            teamText.textContent = 'All teams';
+        } else if (checked.length === 1) {
+            teamText.textContent = checked[0].parentElement.querySelector('label').textContent;
+        } else {
+            teamText.textContent = `${checked.length} teams selected`;
+        }
+        
+        // Update hidden inputs
+        checked.forEach(cb => {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = 'team';
+            input.value = cb.value;
+            teamInputs.appendChild(input);
+        });
+    }
+    
+    teamChecks.forEach(cb => {
+        cb.addEventListener('change', updateTeamDisplay);
+    });
+    
+    // Team search functionality
+    teamSearch.addEventListener('input', function() {
+        const searchTerm = this.value.toLowerCase();
+        const teamCheckboxes = document.querySelectorAll('#teamCheckboxes .form-check');
+        
+        teamCheckboxes.forEach(checkbox => {
+            const label = checkbox.querySelector('label').textContent.toLowerCase();
+            if (label.includes(searchTerm)) {
+                checkbox.style.display = '';
+            } else {
+                checkbox.style.display = 'none';
+            }
+        });
+    });
+    
+    // Initialize displays
+    updateCategoryDisplay();
+    updateTeamDisplay();
+    
+    // Handle dropdown arrow rotation
+    document.addEventListener('show.bs.dropdown', function (e) {
+        const arrow = e.target.querySelector('.dropdown-arrow');
+        if (arrow) {
+            arrow.style.transform = 'rotate(180deg)';
+        }
+    });
+    
+    document.addEventListener('hide.bs.dropdown', function (e) {
+        const arrow = e.target.querySelector('.dropdown-arrow');
+        if (arrow) {
+            arrow.style.transform = 'rotate(0deg)';
+        }
+    });
+});
 </script>
 {% endblock %}

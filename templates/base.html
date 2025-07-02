@@ -103,6 +103,20 @@
         .navbar-brand i {
             color: #ffc107;
         }
+        
+        /* Fix for table row hover */
+        .table-hover tbody tr:hover {
+            --bs-table-accent-bg: rgba(0, 0, 0, 0.075);
+            color: inherit;
+        }
+        
+        /* Ensure text remains readable on hover */
+        .table-hover tbody tr:hover td,
+        .table-hover tbody tr:hover th {
+            color: inherit;
+        }
+        
+        /* Moved table header hover CSS to riders.html for better specificity */
     </style>
 </head>
 <body>
