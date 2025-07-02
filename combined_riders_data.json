@@ -1,11 +1,11 @@
 {
   "integration_info": {
     "type": "Fantasy TdF + PCS Data Integration",
-    "fantasy_riders_count": 181,
+    "fantasy_riders_count": 179,
     "pcs_riders_count": 1500,
-    "matched_riders": 181,
-    "last_update": "2025-07-02T13:52:03.446475",
-    "notes": "Fixed 13 incorrect PCS URLs from CSV data"
+    "matched_riders": 179,
+    "last_update": "2025-07-02T14:12:51.765234",
+    "notes": "Removed 2 duplicate riders"
   },
   "riders": [
     {
@@ -1886,23 +1886,6 @@
       "value_tier": "Excellent"
     },
     {
-      "fantasy_name": "M. VAN DEN BERG",
-      "team": "Team Picnic PostNL",
-      "category": "Sprinters",
-      "price": 12,
-      "pcs_match_found": true,
-      "match_similarity": 1.0,
-      "pcs_name": "VAN DEN BERG Marijn",
-      "pcs_rank": 89,
-      "pcs_points_2025": 352.0,
-      "pcs_nationality": "NL",
-      "pcs_team": "EF Education - EasyPost",
-      "pcs_url": "https://www.procyclingstats.com/rider/marijn-van-den-berg",
-      "points_per_credit": 29.333333333333332,
-      "value_category": "Good",
-      "value_tier": "Great"
-    },
-    {
       "fantasy_name": "T. NABERMAN",
       "team": "Team Picnic PostNL",
       "category": "All-rounders",
@@ -3012,23 +2995,6 @@
       "points_per_credit": 14.727272727272727,
       "value_category": "Average",
       "value_tier": "Average"
-    },
-    {
-      "fantasy_name": "T. JOHANNESSEN",
-      "team": "Uno-X Mobility",
-      "category": "Leaders",
-      "price": 15,
-      "pcs_match_found": true,
-      "match_similarity": 1.0,
-      "pcs_name": "JOHANNESSEN Tobias Halland",
-      "pcs_rank": 101,
-      "pcs_points_2025": 323.0,
-      "pcs_nationality": "NO",
-      "pcs_team": "Uno-X Mobility",
-      "pcs_url": "https://www.procyclingstats.com/rider/tobias-halland-johannessen",
-      "points_per_credit": 21.533333333333335,
-      "value_category": "Good",
-      "value_tier": "Great"
     },
     {
       "fantasy_name": "T. JOHANNESSEN",
