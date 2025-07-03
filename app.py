@@ -80,19 +80,19 @@ app.jinja_env.globals.update(
 def load_riders_data():
     """Loads combined rider data"""
     global riders_data
-    if riders_data is None:
-        try:
-            with open('combined_riders_data.json', 'r', encoding='utf-8') as f:
-                data = json.load(f)
-                riders_data = data['riders']
-                print(f"Loaded {len(riders_data)} riders")
-        except FileNotFoundError:
-            print("❌ File combined_riders_data.json not found!")
-            print("Run first: python simple-pcs-script.py")
-            riders_data = []
-        except Exception as e:
-            print(f"❌ Error loading data: {e}")
-            riders_data = []
+    # Force reload data every time in development
+    try:
+        with open('combined_riders_data.json', 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            riders_data = data['riders']
+            print(f"Loaded {len(riders_data)} riders")
+    except FileNotFoundError:
+        print("❌ File combined_riders_data.json not found!")
+        print("Run first: python simple-pcs-script.py")
+        riders_data = []
+    except Exception as e:
+        print(f"❌ Error loading data: {e}")
+        riders_data = []
     return riders_data
 
 @app.route('/')
@@ -526,5 +526,5 @@ if __name__ == '__main__':
     load_riders_data()
     # Use environment port for production, fallback to 8085 for local
     import os
-    port = int(os.environ.get('PORT', 8085))
+    port = int(os.environ.get('PORT', 8086))
     app.run(debug=False, host='0.0.0.0', port=port)

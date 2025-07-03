@@ -3,7 +3,7 @@
 Update TdF 2025 Roster - Consolidated Script
 
 This script updates the combined_riders_data.json file to include only the
-final 183 riders who are starting in Tour de France 2025.
+final 184 riders who are starting in Tour de France 2025.
 
 It combines functionality from multiple update scripts to ensure all riders
 are properly matched and included.
@@ -105,14 +105,15 @@ FINAL_RIDERS = [
     ("LE BERRE Mathis", "Arkéa - B&B Hotels"),
     ("VENTURINI Clément", "Arkéa - B&B Hotels"),
     
-    # INEOS Grenadiers (7 riders)
-    ("KWIATKOWSKI Michał", "INEOS Grenadiers"),
+    # INEOS Grenadiers (8 riders)
     ("RODRÍGUEZ Carlos", "INEOS Grenadiers"),
     ("GANNA Filippo", "INEOS Grenadiers"),
     ("THOMAS Geraint", "INEOS Grenadiers"),
     ("ARENSMAN Thymen", "INEOS Grenadiers"),
-    ("DE PLUS Laurens", "INEOS Grenadiers"),
     ("FOSS Tobias", "INEOS Grenadiers"),
+    ("LAURANCE Axel", "INEOS Grenadiers"),
+    ("SWIFT Connor", "INEOS Grenadiers"),
+    ("WATSON Samuel", "INEOS Grenadiers"),
     
     # Intermarché - Wanty (8 riders)
     ("GIRMAY Biniam", "Intermarché - Wanty"),
