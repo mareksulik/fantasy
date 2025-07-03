@@ -63,7 +63,10 @@ python update_tdf_roster.py
 
 # Start web application (use nohup for background)
 source venv/bin/activate && nohup python app.py > app.log 2>&1 &
-# Then visit: http://localhost:8085
+# Then visit: http://localhost:8086
+
+# Or use restart script:
+./restart_server.sh
 ```
 
 ## File Structure

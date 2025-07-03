@@ -7,6 +7,4 @@ Loaded 184 riders
  * Running on http://127.0.0.1:8086
  * Running on http://10.1.10.196:8086
 [33mPress CTRL+C to quit[0m
-127.0.0.1 - - [03/Jul/2025 11:42:20] "GET / HTTP/1.1" 200 -
-127.0.0.1 - - [03/Jul/2025 11:42:21] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-127.0.0.1 - - [03/Jul/2025 11:42:41] "GET /?team=INEOS+Grenadiers&min_price=&max_price=&sort=points_per_credit HTTP/1.1" 200 -
+127.0.0.1 - - [03/Jul/2025 11:48:06] "GET / HTTP/1.1" 200 -
