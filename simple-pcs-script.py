@@ -443,7 +443,7 @@ class FantasyPCSIntegrator:
         params = {
             'p': 'season-individual',
             's': '',
-            'date': '2025-06-30',
+            'date': datetime.now().strftime('%Y-%m-%d'),
             'nation': '',
             'age': '',
             'page': 'smallerorequal',

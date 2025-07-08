@@ -6,11 +6,189 @@ Web application for Tour de France fantasy rider selection assistance
 
 from flask import Flask, render_template, request, jsonify
 import json
+import threading
+import schedule
+import time
+from datetime import datetime
+import requests
+from bs4 import BeautifulSoup
+import logging
 
 app = Flask(__name__)
 
 # Global variable for cached data
 riders_data = None
+last_update_info = None
+
+# Set up logging for PCS updates
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+
+class PCSUpdater:
+    """Handles PCS points updates"""
+    def __init__(self):
+        self.base_url = "https://www.procyclingstats.com"
+        self.headers = {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+        }
+        
+    def get_season_ranking_page(self, offset=0):
+        """Get PCS ranking page for 2025 season"""
+        params = {'offset': str(offset)}
+        url = f"{self.base_url}/rankings/season-individual?" + '&'.join([f"{k}={v}" for k, v in params.items() if v])
+        
+        try:
+            response = requests.get(url, headers=self.headers)
+            response.raise_for_status()
+            return response.text
+        except Exception as e:
+            logging.error(f"Error fetching PCS page: {e}")
+            return None
+    
+    def parse_ranking_table(self, html):
+        """Parse HTML and extract rider data"""
+        soup = BeautifulSoup(html, 'html.parser')
+        table = soup.find('table', class_='basic') or soup.find('table')
+        
+        if not table:
+            return []
+            
+        riders_on_page = []
+        rows = table.find_all('tr')[1:]  # Skip header
+        
+        for row in rows:
+            cols = row.find_all('td')
+            if len(cols) >= 6:
+                try:
+                    rank = cols[0].text.strip()
+                    rider_link = cols[3].find('a')
+                    rider_name = rider_link.text.strip() if rider_link else cols[3].text.strip()
+                    points = cols[5].text.strip()
+                    
+                    riders_on_page.append({
+                        'rank': int(rank) if rank.isdigit() else rank,
+                        'name': rider_name,
+                        'points': float(points) if points.replace('.', '').isdigit() else 0
+                    })
+                except Exception as e:
+                    logging.warning(f"Error parsing row: {e}")
+                    
+        return riders_on_page
+    
+    def fetch_pcs_rankings(self, limit=2000):
+        """Fetch PCS rankings"""
+        pcs_riders = []
+        offset = 0
+        page_size = 100
+        
+        while len(pcs_riders) < limit:
+            html = self.get_season_ranking_page(offset)
+            if not html:
+                break
+                
+            riders_on_page = self.parse_ranking_table(html)
+            if not riders_on_page:
+                break
+                
+            pcs_riders.extend(riders_on_page)
+            
+            if len(pcs_riders) >= limit:
+                pcs_riders = pcs_riders[:limit]
+                break
+                
+            time.sleep(1)  # Rate limiting
+            offset += page_size
+            
+        return pcs_riders
+    
+    def update_points(self):
+        """Update PCS points for all riders"""
+        global last_update_info
+        
+        try:
+            # Load current data
+            with open('combined_riders_data.json', 'r', encoding='utf-8') as f:
+                data = json.load(f)
+            
+            # Fetch latest PCS rankings
+            logging.info("Fetching PCS rankings...")
+            pcs_riders = self.fetch_pcs_rankings(2000)
+            
+            if not pcs_riders:
+                logging.error("No PCS data fetched")
+                return False
+            
+            # Create lookup dictionary
+            pcs_dict = {rider['name']: rider for rider in pcs_riders}
+            
+            # Update riders
+            updated_count = 0
+            for rider in data['riders']:
+                if rider['pcs_match_found'] and rider['pcs_name'] in pcs_dict:
+                    new_points = pcs_dict[rider['pcs_name']]['points']
+                    old_points = rider.get('pcs_points_2025', 0)
+                    
+                    if new_points != old_points:
+                        rider['pcs_points_2025'] = new_points
+                        rider['pcs_rank'] = pcs_dict[rider['pcs_name']]['rank']
+                        
+                        # Recalculate value metrics
+                        if rider['price'] > 0:
+                            rider['points_per_credit'] = new_points / rider['price']
+                            
+                            # Update value category
+                            if rider['points_per_credit'] > 50:
+                                rider['value_category'] = 'Excellent'
+                            elif rider['points_per_credit'] > 35:
+                                rider['value_category'] = 'Great'
+                            elif rider['points_per_credit'] > 20:
+                                rider['value_category'] = 'Good'
+                            elif rider['points_per_credit'] > 10:
+                                rider['value_category'] = 'Average'
+                            else:
+                                rider['value_category'] = 'Poor'
+                        
+                        updated_count += 1
+            
+            # Update metadata
+            data['integration_info']['last_update'] = datetime.now().isoformat()
+            data['integration_info']['last_points_update'] = datetime.now().isoformat()
+            
+            # Save updated data
+            with open('combined_riders_data.json', 'w', encoding='utf-8') as f:
+                json.dump(data, f, ensure_ascii=False, indent=2)
+            
+            # Update global info
+            last_update_info = {
+                'time': datetime.now().strftime('%Y-%m-%d %H:%M:%S'),
+                'updated_riders': updated_count,
+                'total_riders': len(data['riders'])
+            }
+            
+            logging.info(f"Update complete: {updated_count} riders updated")
+            return True
+            
+        except Exception as e:
+            logging.error(f"Error updating PCS points: {e}")
+            return False
+
+# Create updater instance
+pcs_updater = PCSUpdater()
+
+def run_scheduled_updates():
+    """Background thread for scheduled updates"""
+    while True:
+        schedule.run_pending()
+        time.sleep(60)  # Check every minute
+
+# Schedule daily update at 2 AM
+schedule.every().day.at("02:00").do(pcs_updater.update_points)
+
+# Start background thread for scheduled updates
+update_thread = threading.Thread(target=run_scheduled_updates, daemon=True)
+update_thread.start()
 
 # Helper functions for Jinja2 templates
 def get_value_class(category):
@@ -519,6 +697,47 @@ def stats():
     return render_template('stats.html', 
                          stats=stats,
                          category_stats=category_stats)
+
+@app.route('/api/update-pcs-points', methods=['POST'])
+def api_update_pcs_points():
+    """API endpoint to manually trigger PCS points update"""
+    try:
+        # Run update in background thread to avoid blocking
+        update_thread = threading.Thread(target=pcs_updater.update_points)
+        update_thread.start()
+        
+        return jsonify({
+            'success': True,
+            'message': 'PCS points update started. Check status for progress.'
+        })
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': str(e)
+        }), 500
+
+@app.route('/api/update-status')
+def api_update_status():
+    """API endpoint to check last update status"""
+    global last_update_info
+    
+    # Also get last update from file
+    try:
+        with open('combined_riders_data.json', 'r', encoding='utf-8') as f:
+            data = json.load(f)
+            file_update_time = data['integration_info'].get('last_points_update', 'Never')
+    except:
+        file_update_time = 'Unknown'
+    
+    return jsonify({
+        'success': True,
+        'last_update': last_update_info if last_update_info else {
+            'time': file_update_time,
+            'updated_riders': 0,
+            'total_riders': 0
+        },
+        'next_scheduled_update': '02:00 AM daily'
+    })
 
 if __name__ == '__main__':
     print("🚀 Starting Fantasy TdF Helper...")

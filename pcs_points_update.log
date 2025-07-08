@@ -1,0 +1,296 @@
+2025-07-08 12:25:10,604 - INFO - === PCS Points Update Started ===
+2025-07-08 12:25:10,604 - INFO - Loaded 184 riders from combined_riders_data.json
+2025-07-08 12:25:10,604 - INFO - Fetching top 2000 riders from ProCyclingStats...
+2025-07-08 12:25:10,604 - INFO - Fetching riders 1 - 100...
+2025-07-08 12:25:12,044 - INFO - Fetching riders 101 - 200...
+2025-07-08 12:25:13,384 - INFO - Fetching riders 201 - 300...
+2025-07-08 12:25:14,758 - INFO - Fetching riders 301 - 400...
+2025-07-08 12:25:16,114 - INFO - Fetching riders 401 - 500...
+2025-07-08 12:25:17,468 - INFO - Fetching riders 501 - 600...
+2025-07-08 12:25:18,815 - INFO - Fetching riders 601 - 700...
+2025-07-08 12:25:20,070 - INFO - Fetching riders 701 - 800...
+2025-07-08 12:25:21,394 - INFO - Fetching riders 801 - 900...
+2025-07-08 12:25:22,730 - INFO - Fetching riders 901 - 1000...
+2025-07-08 12:25:24,096 - INFO - Fetching riders 1001 - 1100...
+2025-07-08 12:25:26,047 - INFO - Fetching riders 1101 - 1200...
+2025-07-08 12:25:27,320 - INFO - Fetching riders 1201 - 1300...
+2025-07-08 12:25:28,612 - INFO - Fetching riders 1301 - 1400...
+2025-07-08 12:25:29,917 - INFO - Fetching riders 1401 - 1500...
+2025-07-08 12:25:31,251 - INFO - Fetching riders 1501 - 1600...
+2025-07-08 12:25:32,561 - INFO - Fetching riders 1601 - 1700...
+2025-07-08 12:25:33,844 - INFO - Fetching riders 1701 - 1800...
+2025-07-08 12:25:35,139 - INFO - Fetching riders 1801 - 1900...
+2025-07-08 12:25:36,917 - INFO - Fetching riders 1901 - 2000...
+2025-07-08 12:25:37,197 - INFO - Total riders fetched: 2000
+2025-07-08 12:25:37,197 - INFO - Updating rider points...
+2025-07-08 12:25:37,197 - INFO - Updated T. POGAČAR: 2300.0 -> 4588.0 points
+2025-07-08 12:25:37,197 - INFO - Updated J. ALMEIDA: 1634.0 -> 1100.0 points
+2025-07-08 12:25:37,197 - INFO - Updated M. VAN DER POEL: 1113.0 -> 1612.0 points
+2025-07-08 12:25:37,197 - INFO - Updated K. VAUQUELIN: 939.0 -> 689.0 points
+2025-07-08 12:25:37,197 - INFO - Updated E. ONLEY: 880.0 -> 938.0 points
+2025-07-08 12:25:37,197 - INFO - Updated W. VAN AERT: 859.0 -> 1428.0 points
+2025-07-08 12:25:37,197 - INFO - Updated T. MERLIER: 799.0 -> 1485.0 points
+2025-07-08 12:25:37,197 - INFO - Updated F. GANNA: 788.0 -> 684.0 points
+2025-07-08 12:25:37,197 - INFO - Updated L. MARTINEZ: 753.0 -> 834.0 points
+2025-07-08 12:25:37,197 - INFO - Updated R. EVENEPOEL: 728.0 -> 2889.0 points
+2025-07-08 12:25:37,197 - INFO - Updated J. MILAN: 694.0 -> 1281.0 points
+2025-07-08 12:25:37,197 - INFO - Updated M. STORER: 687.0 -> 673.0 points
+2025-07-08 12:25:37,197 - INFO - Updated N. POWLESS: 650.0 -> 578.0 points
+2025-07-08 12:25:37,197 - INFO - Updated M. JORGENSON: 633.0 -> 1466.0 points
+2025-07-08 12:25:37,197 - INFO - Updated S. YATES: 636.0 -> 714.0 points
+2025-07-08 12:25:37,197 - INFO - Updated F. LIPOWITZ: 616.0 -> 676.0 points
+2025-07-08 12:25:37,197 - INFO - Updated E. MAS NICOLAU: 613.0 -> 1283.0 points
+2025-07-08 12:25:37,197 - INFO - Updated J. PHILIPSEN: 606.0 -> 2355.0 points
+2025-07-08 12:25:37,197 - INFO - Updated R. GREGOIRE: 598.0 -> 835.0 points
+2025-07-08 12:25:37,197 - INFO - Updated M. JENSEN: 590.0 -> 1156.0 points
+2025-07-08 12:25:37,197 - INFO - Updated J. VINGEGAARD HANSEN: 573.0 -> 1702.0 points
+2025-07-08 12:25:37,197 - INFO - Updated T. LUND ANDRESEN: 567.0 -> 400.0 points
+2025-07-08 12:25:37,197 - INFO - Updated C. CHAMPOUSSIN: 564.0 -> 492.0 points
+2025-07-08 12:25:37,197 - INFO - Updated P. ROGLIC: 533.0 -> 1513.0 points
+2025-07-08 12:25:37,198 - INFO - Updated S. BUITRAGO SANCHEZ: 501.0 -> 763.0 points
+2025-07-08 12:25:37,198 - INFO - Updated L. ASKEY: 496.0 -> 154.0 points
+2025-07-08 12:25:37,198 - INFO - Updated S. WATSON: 470.0 -> 260.0 points
+2025-07-08 12:25:37,198 - INFO - Updated A. ARANBURU DEVA: 469.0 -> 883.0 points
+2025-07-08 12:25:37,198 - INFO - Updated G. MARTIN GUYONNET: 469.0 -> 633.0 points
+2025-07-08 12:25:37,198 - INFO - Updated B. GIRMAY: 468.0 -> 1666.0 points
+2025-07-08 12:25:37,198 - INFO - Updated E. JEANNIERE: 463.0 -> 800.0 points
+2025-07-08 12:25:37,198 - INFO - Updated M. CORT NIELSEN: 457.0 -> 831.0 points
+2025-07-08 12:25:37,198 - INFO - Updated B. HEALY: 457.0 -> 600.0 points
+2025-07-08 12:25:37,198 - INFO - Updated M. SCHMID: 454.0 -> 417.0 points
+2025-07-08 12:25:37,198 - INFO - Updated S. VELASCO: 454.0 -> 377.0 points
+2025-07-08 12:25:37,198 - INFO - Updated T. ARENSMAN: 454.0 -> 560.0 points
+2025-07-08 12:25:37,198 - INFO - Updated J. MEEUS: 432.0 -> 723.0 points
+2025-07-08 12:25:37,198 - INFO - Updated A. YATES: 419.0 -> 1342.0 points
+2025-07-08 12:25:37,198 - INFO - Updated F. GALL: 413.0 -> 557.0 points
+2025-07-08 12:25:37,198 - INFO - Updated M. SCHACHMANN: 397.0 -> 434.0 points
+2025-07-08 12:25:37,198 - INFO - Updated J. NARVAEZ PRADO: 389.0 -> 844.0 points
+2025-07-08 12:25:37,198 - INFO - Updated K. GROVES: 389.0 -> 745.0 points
+2025-07-08 12:25:37,198 - INFO - Updated B. TRONCHON: 386.0 -> 229.0 points
+2025-07-08 12:25:37,198 - INFO - Updated A. RENARD: 378.0 -> 173.0 points
+2025-07-08 12:25:37,198 - INFO - Updated T. NYS: 374.0 -> 647.0 points
+2025-07-08 12:25:37,198 - INFO - Updated T. BENOOT: 370.0 -> 564.0 points
+2025-07-08 12:25:37,198 - INFO - Updated I. VAN WILDER: 369.0 -> 687.0 points
+2025-07-08 12:25:37,198 - INFO - Updated I. ROMEO ABAD: 365.0 -> 177.0 points
+2025-07-08 12:25:37,198 - INFO - Updated S. WÆRENSKJOLD: 358.0 -> 678.0 points
+2025-07-08 12:25:37,198 - INFO - Updated L. VAN EETVELT: 355.0 -> 1071.0 points
+2025-07-08 12:25:37,198 - INFO - Updated M. VAN DEN BERG: 352.0 -> 646.0 points
+2025-07-08 12:25:37,198 - INFO - Updated M. VAN DEN BERG: 352.0 -> 646.0 points
+2025-07-08 12:25:37,198 - INFO - Updated B. COQUARD: 346.0 -> 429.0 points
+2025-07-08 12:25:37,198 - INFO - Updated C. BERTHET: 339.0 -> 335.0 points
+2025-07-08 12:25:37,198 - INFO - Updated M. TEUNISSEN: 332.0 -> 438.0 points
+2025-07-08 12:25:37,198 - INFO - Updated M. HIRSCHI: 332.0 -> 2041.0 points
+2025-07-08 12:25:37,198 - INFO - Updated D. GROENEWEGEN: 326.0 -> 826.0 points
+2025-07-08 12:25:37,198 - INFO - Updated L. BARRE: 326.0 -> 188.0 points
+2025-07-08 12:25:37,198 - INFO - Updated T. JOHANNESSEN: 323.0 -> 569.0 points
+2025-07-08 12:25:37,198 - INFO - Updated T. WELLENS: 316.0 -> 1007.0 points
+2025-07-08 12:25:37,198 - INFO - Updated E. RUBIO REYES: 311.0 -> 480.0 points
+2025-07-08 12:25:37,198 - INFO - Updated B. O'CONNOR: 310.0 -> 1695.0 points
+2025-07-08 12:25:37,198 - INFO - Updated A. WRIGHT: 306.0 -> 297.0 points
+2025-07-08 12:25:37,198 - INFO - Updated P. CASTRILLO ZAPATER: 301.0 -> 418.0 points
+2025-07-08 12:25:37,198 - INFO - Updated A. DEMARE: 286.0 -> 344.0 points
+2025-07-08 12:25:37,198 - INFO - Updated C. RODRIGUEZ MARTIN: 282.0 -> 452.0 points
+2025-07-08 12:25:37,198 - INFO - Updated A. JOHANNESSEN: 282.0 -> 32.0 points
+2025-07-08 12:25:37,198 - INFO - Updated A. LAURANCE: 275.0 -> 435.0 points
+2025-07-08 12:25:37,198 - INFO - Updated S. EDVARDSEN-FREDHEIM: 274.0 -> 106.0 points
+2025-07-08 12:25:37,198 - INFO - Updated L. REX: 274.0 -> 355.0 points
+2025-07-08 12:25:37,198 - INFO - Updated C. RODRIGUEZ: 273.0 -> 1279.0 points
+2025-07-08 12:25:37,198 - INFO - Updated L. PLAPP: 265.0 -> 334.0 points
+2025-07-08 12:25:37,198 - INFO - Updated D. VAN POPPEL: 262.0 -> 494.0 points
+2025-07-08 12:25:37,198 - INFO - Updated P. BAUHAUS: 261.0 -> 502.0 points
+2025-07-08 12:25:37,198 - INFO - Updated A. PARET PEINTRE: 254.0 -> 526.0 points
+2025-07-08 12:25:37,198 - INFO - Updated C. VENTURINI: 253.0 -> 455.0 points
+2025-07-08 12:25:37,198 - INFO - Updated G. ZIMMERMANN: 249.0 -> 386.0 points
+2025-07-08 12:25:37,198 - INFO - Updated J. JEGAT: 248.0 -> 466.0 points
+2025-07-08 12:25:37,198 - INFO - Updated J. STUYVEN: 239.0 -> 549.0 points
+2025-07-08 12:25:37,198 - INFO - Updated J. ALAPHILIPPE: 235.0 -> 909.0 points
+2025-07-08 12:25:37,198 - INFO - Updated Y. FEDOROV: 233.0 -> 249.0 points
+2025-07-08 12:25:37,198 - INFO - Updated P. SIVAKOV: 231.0 -> 694.0 points
+2025-07-08 12:25:37,199 - INFO - Updated M. SOLER: 228.0 -> 500.0 points
+2025-07-08 12:25:37,199 - INFO - Updated P. BITTNER: 228.0 -> 447.0 points
+2025-07-08 12:25:37,199 - INFO - Updated M. HOELGAARD: 226.0 -> 345.0 points
+2025-07-08 12:25:37,199 - INFO - Updated A. DELETTRE: 225.0 -> 473.0 points
+2025-07-08 12:25:37,199 - INFO - Updated A. DAINESE: 223.0 -> 258.0 points
+2025-07-08 12:25:37,199 - INFO - Updated G. VERMEERSCH: 215.0 -> 396.0 points
+2025-07-08 12:25:37,199 - INFO - Updated C. BOL: 214.0 -> 181.0 points
+2025-07-08 12:25:37,199 - INFO - Updated S. BISSEGGER: 209.0 -> 360.0 points
+2025-07-08 12:25:37,199 - INFO - Updated J. BERCKMOES: 207.0 -> 695.0 points
+2025-07-08 12:25:37,199 - INFO - Updated V. PARET PEINTRE: 204.0 -> 458.0 points
+2025-07-08 12:25:37,199 - INFO - Updated A. DE LIE: 200.0 -> 1406.0 points
+2025-07-08 12:25:37,199 - INFO - Updated T. STEWART: 200.0 -> 155.0 points
+2025-07-08 12:25:37,199 - INFO - Updated L. PITHIE: 197.0 -> 723.0 points
+2025-07-08 12:25:37,199 - INFO - Updated I. GARCIA CORTINA: 194.0 -> 189.0 points
+2025-07-08 12:25:37,199 - INFO - Updated S. CRAS: 194.0 -> 246.0 points
+2025-07-08 12:25:37,199 - INFO - Updated B. THOMAS: 193.0 -> 136.0 points
+2025-07-08 12:25:37,199 - INFO - Updated A. TURGIS: 189.0 -> 271.0 points
+2025-07-08 12:25:37,199 - INFO - Updated V. ALBANESE: 188.0 -> 631.0 points
+2025-07-08 12:25:37,199 - INFO - Updated D. BALLERINI: 180.0 -> 147.0 points
+2025-07-08 12:25:37,199 - INFO - Updated E. THEUNS: 179.0 -> 113.0 points
+2025-07-08 12:25:37,199 - INFO - Updated P. BLACKMORE: 178.0 -> 642.0 points
+2025-07-08 12:25:37,199 - INFO - Updated V. MADOUAS: 177.0 -> 780.0 points
+2025-07-08 12:25:37,199 - INFO - Updated M. VERCHER: 173.0 -> 153.0 points
+2025-07-08 12:25:37,199 - INFO - Updated B. VAN MOER: 170.0 -> 222.0 points
+2025-07-08 12:25:37,199 - INFO - Updated Q. SIMMONS: 168.0 -> 269.0 points
+2025-07-08 12:25:37,199 - INFO - Updated M. TRENTIN: 166.0 -> 731.0 points
+2025-07-08 12:25:37,199 - INFO - Updated A. LEKNESSUND: 162.0 -> 216.0 points
+2025-07-08 12:25:37,199 - INFO - Updated P. PENHOET: 158.0 -> 433.0 points
+2025-07-08 12:25:37,199 - INFO - Updated T. FOSS: 157.0 -> 300.0 points
+2025-07-08 12:25:37,199 - INFO - Updated D. TEUNS: 156.0 -> 346.0 points
+2025-07-08 12:25:37,199 - INFO - Updated T. SKUJINS: 141.0 -> 867.0 points
+2025-07-08 12:25:37,199 - INFO - Updated W. BARGUIL: 140.0 -> 306.0 points
+2025-07-08 12:25:37,199 - INFO - Updated M. CATTANEO: 139.0 -> 200.0 points
+2025-07-08 12:25:37,199 - INFO - Updated K. ASGREEN: 138.0 -> 272.0 points
+2025-07-08 12:25:37,199 - INFO - Updated A. CAPIOT: 137.0 -> 315.0 points
+2025-07-08 12:25:37,199 - INFO - Updated R. GARCIA PIERNA: 137.0 -> 203.0 points
+2025-07-08 12:25:37,199 - INFO - Updated E. BUCHMANN: 136.0 -> 173.0 points
+2025-07-08 12:25:37,199 - INFO - Updated J. RUTSCH: 134.0 -> 157.0 points
+2025-07-08 12:25:37,199 - INFO - Updated P. ACKERMANN: 132.0 -> 503.0 points
+2025-07-08 12:25:37,199 - INFO - Updated M. WOODS: 131.0 -> 397.0 points
+2025-07-08 12:25:37,199 - INFO - Updated M. MOHORIC: 126.0 -> 637.0 points
+2025-07-08 12:25:37,199 - INFO - Updated A. LUTSENKO: 120.0 -> 343.0 points
+2025-07-08 12:25:37,199 - INFO - Updated W. BARTA: 115.0 -> 191.0 points
+2025-07-08 12:25:37,199 - INFO - Updated E. COSTIOU: 115.0 -> 320.0 points
+2025-07-08 12:25:37,199 - INFO - Updated H. PAGE: 110.0 -> 262.0 points
+2025-07-08 12:25:37,199 - INFO - Updated M. HALLER: 108.0 -> 224.0 points
+2025-07-08 12:25:37,199 - INFO - Updated Q. PACHER: 107.0 -> 419.0 points
+2025-07-08 12:25:37,199 - INFO - Updated M. VAN DIJKE: 107.0 -> 145.0 points
+2025-07-08 12:25:37,199 - INFO - Updated A. VLASOV: 102.0 -> 1181.0 points
+2025-07-08 12:25:37,199 - INFO - Updated V. BRAET: 101.0 -> 294.0 points
+2025-07-08 12:25:37,199 - INFO - Updated M. MAYRHOFER: 100.0 -> 212.0 points
+2025-07-08 12:25:37,199 - INFO - Updated E. AFFINI: 98.0 -> 362.0 points
+2025-07-08 12:25:37,199 - INFO - Updated A. BAUDIN: 93.0 -> 694.0 points
+2025-07-08 12:25:37,199 - INFO - Updated C. RUSSO: 91.0 -> 119.0 points
+2025-07-08 12:25:37,199 - INFO - Updated J. HAIG: 90.0 -> 234.0 points
+2025-07-08 12:25:37,199 - INFO - Updated O. NAESEN: 90.0 -> 404.0 points
+2025-07-08 12:25:37,199 - INFO - Updated C. SWIFT: 87.0 -> 78.0 points
+2025-07-08 12:25:37,199 - INFO - Updated F. LIENHARD: 80.0 -> 121.0 points
+2025-07-08 12:25:37,199 - INFO - Updated D. TOUZE: 79.0 -> 163.0 points
+2025-07-08 12:25:37,199 - INFO - Updated T. GACHIGNARD: 74.0 -> 241.0 points
+2025-07-08 12:25:37,199 - INFO - Updated C. SCOTSON: 72.0 -> 152.0 points
+2025-07-08 12:25:37,199 - INFO - Updated B. ARMIRAIL: 70.0 -> 207.0 points
+2025-07-08 12:25:37,200 - INFO - Updated M. LOUVEL: 67.0 -> 108.0 points
+2025-07-08 12:25:37,200 - INFO - Updated J. ABRAHAMSEN: 67.0 -> 684.0 points
+2025-07-08 12:25:37,200 - INFO - Updated M. VALGREN: 65.0 -> 238.0 points
+2025-07-08 12:25:37,200 - INFO - Updated S. KUSS: 65.0 -> 479.0 points
+2025-07-08 12:25:37,200 - INFO - Updated S. HIGUITA GARCIA: 64.0 -> 363.0 points
+2025-07-08 12:25:37,200 - INFO - Updated E. DUNBAR: 62.0 -> 376.0 points
+2025-07-08 12:25:37,200 - INFO - Updated G. MÜHLBERGER: 61.0 -> 190.0 points
+2025-07-08 12:25:37,200 - INFO - Updated I. IZAGIRRE INSAUSTI: 59.0 -> 457.0 points
+2025-07-08 12:25:37,200 - INFO - Updated E. VERSTRYNGE: 59.0 -> 26.0 points
+2025-07-08 12:25:37,200 - INFO - Updated M. BURGAUDEAU: 58.0 -> 372.0 points
+2025-07-08 12:25:37,200 - INFO - Updated H. SWEENY: 55.0 -> 135.0 points
+2025-07-08 12:25:37,200 - INFO - Updated E. SEPULVEDA: 53.0 -> 154.0 points
+2025-07-08 12:25:37,200 - INFO - Updated S. CONSONNI: 52.0 -> 284.0 points
+2025-07-08 12:25:37,200 - INFO - Updated N. POLITT: 52.0 -> 651.0 points
+2025-07-08 12:25:37,200 - INFO - Updated X. MEURISSE: 51.0 -> 330.0 points
+2025-07-08 12:25:37,200 - INFO - Updated P. EENKHOORN: 50.0 -> 160.0 points
+2025-07-08 12:25:37,200 - INFO - Updated V. CAMPENAERTS: 50.0 -> 330.0 points
+2025-07-08 12:25:37,200 - INFO - Updated C. BARTHE: 50.0 -> 47.0 points
+2025-07-08 12:25:37,200 - INFO - Updated S. FLYNN: 47.0 -> 185.0 points
+2025-07-08 12:25:37,200 - INFO - Updated G. MOSCON: 46.0 -> 58.0 points
+2025-07-08 12:25:37,200 - INFO - Updated E. REINDERS: 42.0 -> 76.0 points
+2025-07-08 12:25:37,200 - INFO - Updated N. MÄRKL: 42.0 -> 74.0 points
+2025-07-08 12:25:37,200 - INFO - Updated R. STANNARD: 35.0 -> 73.0 points
+2025-07-08 12:25:37,200 - INFO - Updated S. GRIGNARD: 35.0 -> 74.0 points
+2025-07-08 12:25:37,200 - INFO - Updated K. GRADEK: 35.0 -> 42.0 points
+2025-07-08 12:25:37,200 - INFO - Updated M. LE BERRE: 35.0 -> 108.0 points
+2025-07-08 12:25:37,200 - INFO - Updated L. DURBRIDGE: 30.0 -> 66.0 points
+2025-07-08 12:25:37,200 - INFO - Updated J. RICKAERT: 30.0 -> 23.0 points
+2025-07-08 12:25:37,200 - INFO - Updated N. DOS SANTOS SIMOES OLIVEIRA: 29.0 -> 221.0 points
+2025-07-08 12:25:37,200 - INFO - Updated G. THOMAS: 27.0 -> 454.0 points
+2025-07-08 12:25:37,200 - INFO - Updated K. NEILANDS: 27.0 -> 191.0 points
+2025-07-08 12:25:37,200 - INFO - Updated R. VAN SINTMAARTENSDIJK: 25.0 -> 116.0 points
+2025-07-08 12:25:37,200 - INFO - Updated J. DE BUYST: 23.0 -> 59.0 points
+2025-07-08 12:25:37,200 - INFO - Updated S. DILLIER: 20.0 -> 65.0 points
+2025-07-08 12:25:37,200 - INFO - Updated B. VAN LERBERGHE: 20.0 -> 50.0 points
+2025-07-08 12:25:37,200 - INFO - Updated G. BOIVIN: 20.0 -> 60.0 points
+2025-07-08 12:25:37,200 - INFO - Updated L. MEZGEC: 16.0 -> 129.0 points
+2025-07-08 12:25:37,200 - INFO - Updated J. DRIZNERS: 15.0 -> 49.0 points
+2025-07-08 12:25:37,200 - INFO - Updated T. NABERMAN: 5.0 -> 30.0 points
+2025-07-08 12:25:37,200 - INFO - Updated 183 riders, 1 unchanged
+2025-07-08 12:25:37,202 - INFO - Successfully saved updated data to combined_riders_data.json
+2025-07-08 12:25:37,202 - INFO - === Update Complete: 183 riders updated, 1 unchanged ===
+2025-07-08 12:30:31,966 - INFO - === PCS Points Update Started ===
+2025-07-08 12:30:31,967 - INFO - Loaded 184 riders from combined_riders_data.json
+2025-07-08 12:30:31,967 - INFO - Fetching top 2000 riders from ProCyclingStats...
+2025-07-08 12:30:31,967 - INFO - Fetching riders 1 - 100...
+2025-07-08 12:30:33,169 - INFO - Fetching riders 101 - 200...
+2025-07-08 12:30:34,425 - INFO - Fetching riders 201 - 300...
+2025-07-08 12:30:35,772 - INFO - Fetching riders 301 - 400...
+2025-07-08 12:30:37,028 - INFO - Fetching riders 401 - 500...
+2025-07-08 12:30:38,224 - INFO - Fetching riders 501 - 600...
+2025-07-08 12:30:39,425 - INFO - Fetching riders 601 - 700...
+2025-07-08 12:30:40,598 - INFO - Fetching riders 701 - 800...
+2025-07-08 12:30:41,853 - INFO - Fetching riders 801 - 900...
+2025-07-08 12:30:43,116 - INFO - Fetching riders 901 - 1000...
+2025-07-08 12:30:44,388 - INFO - Fetching riders 1001 - 1100...
+2025-07-08 12:30:45,709 - INFO - Fetching riders 1101 - 1200...
+2025-07-08 12:30:46,973 - INFO - Fetching riders 1201 - 1300...
+2025-07-08 12:30:48,234 - INFO - Fetching riders 1301 - 1400...
+2025-07-08 12:30:49,457 - INFO - Fetching riders 1401 - 1500...
+2025-07-08 12:30:50,732 - INFO - Fetching riders 1501 - 1600...
+2025-07-08 12:30:52,026 - INFO - Fetching riders 1601 - 1700...
+2025-07-08 12:30:53,284 - INFO - Fetching riders 1701 - 1800...
+2025-07-08 12:30:54,549 - INFO - Fetching riders 1801 - 1900...
+2025-07-08 12:30:55,813 - INFO - Fetching riders 1901 - 2000...
+2025-07-08 12:30:56,060 - INFO - Total riders fetched: 2000
+2025-07-08 12:30:56,060 - INFO - Updating rider points...
+2025-07-08 12:30:56,060 - INFO - Updated T. POGAČAR: 4588.0 -> 2370.0 points
+2025-07-08 12:30:56,061 - INFO - Updated J. ALMEIDA: 1100.0 -> 1635.0 points
+2025-07-08 12:30:56,061 - INFO - Updated M. VAN DER POEL: 1612.0 -> 1213.0 points
+2025-07-08 12:30:56,061 - INFO - Updated K. VAUQUELIN: 689.0 -> 957.0 points
+2025-07-08 12:30:56,061 - INFO - Updated E. ONLEY: 938.0 -> 906.0 points
+2025-07-08 12:30:56,061 - INFO - Updated W. VAN AERT: 1428.0 -> 859.0 points
+2025-07-08 12:30:56,061 - INFO - Updated T. MERLIER: 1485.0 -> 899.0 points
+2025-07-08 12:30:56,061 - INFO - Updated F. GANNA: 684.0 -> 788.0 points
+2025-07-08 12:30:56,061 - INFO - Updated L. MARTINEZ: 834.0 -> 753.0 points
+2025-07-08 12:30:56,061 - INFO - Updated R. EVENEPOEL: 2889.0 -> 728.0 points
+2025-07-08 12:30:56,061 - INFO - Updated J. MILAN: 1281.0 -> 764.0 points
+2025-07-08 12:30:56,061 - INFO - Updated M. STORER: 673.0 -> 687.0 points
+2025-07-08 12:30:56,061 - INFO - Updated N. POWLESS: 578.0 -> 650.0 points
+2025-07-08 12:30:56,061 - INFO - Updated M. JORGENSON: 1466.0 -> 651.0 points
+2025-07-08 12:30:56,061 - INFO - Updated S. YATES: 714.0 -> 636.0 points
+2025-07-08 12:30:56,061 - INFO - Updated F. LIPOWITZ: 676.0 -> 616.0 points
+2025-07-08 12:30:56,061 - INFO - Updated E. MAS NICOLAU: 1283.0 -> 619.0 points
+2025-07-08 12:30:56,061 - INFO - Updated J. PHILIPSEN: 2355.0 -> 706.0 points
+2025-07-08 12:30:56,061 - INFO - Updated R. GREGOIRE: 835.0 -> 638.0 points
+2025-07-08 12:30:56,061 - INFO - Updated M. JENSEN: 1156.0 -> 590.0 points
+2025-07-08 12:30:56,061 - INFO - Updated J. VINGEGAARD HANSEN: 1702.0 -> 623.0 points
+2025-07-08 12:30:56,061 - INFO - Updated T. LUND ANDRESEN: 400.0 -> 575.0 points
+2025-07-08 12:30:56,061 - INFO - Updated C. CHAMPOUSSIN: 492.0 -> 564.0 points
+2025-07-08 12:30:56,061 - INFO - Updated P. ROGLIC: 1513.0 -> 533.0 points
+2025-07-08 12:30:56,061 - INFO - Updated S. BUITRAGO SANCHEZ: 763.0 -> 505.0 points
+2025-07-08 12:30:56,061 - INFO - Updated L. ASKEY: 154.0 -> 496.0 points
+2025-07-08 12:30:56,061 - INFO - Updated S. WATSON: 260.0 -> 480.0 points
+2025-07-08 12:30:56,061 - INFO - Updated A. ARANBURU DEVA: 883.0 -> 469.0 points
+2025-07-08 12:30:56,061 - INFO - Updated G. MARTIN GUYONNET: 633.0 -> 469.0 points
+2025-07-08 12:30:56,061 - INFO - Updated B. GIRMAY: 1666.0 -> 564.0 points
+2025-07-08 12:30:56,061 - INFO - Updated E. JEANNIERE: 800.0 -> 463.0 points
+2025-07-08 12:30:56,061 - INFO - Updated M. CORT NIELSEN: 831.0 -> 457.0 points
+2025-07-08 12:30:56,061 - INFO - Updated B. HEALY: 600.0 -> 457.0 points
+2025-07-08 12:30:56,061 - INFO - Updated M. SCHMID: 417.0 -> 454.0 points
+2025-07-08 12:30:56,061 - INFO - Updated S. VELASCO: 377.0 -> 468.0 points
+2025-07-08 12:30:56,061 - INFO - Updated T. ARENSMAN: 560.0 -> 454.0 points
+2025-07-08 12:30:56,061 - INFO - Updated J. MEEUS: 723.0 -> 432.0 points
+2025-07-08 12:30:56,061 - INFO - Updated A. YATES: 1342.0 -> 419.0 points
+2025-07-08 12:30:56,061 - INFO - Updated F. GALL: 557.0 -> 413.0 points
+2025-07-08 12:30:56,061 - INFO - Updated M. SCHACHMANN: 434.0 -> 397.0 points
+2025-07-08 12:30:56,061 - INFO - Updated J. NARVAEZ PRADO: 844.0 -> 389.0 points
+2025-07-08 12:30:56,061 - INFO - Updated K. GROVES: 745.0 -> 411.0 points
+2025-07-08 12:30:56,061 - INFO - Updated B. TRONCHON: 229.0 -> 392.0 points
+2025-07-08 12:30:56,061 - INFO - Updated A. RENARD: 173.0 -> 378.0 points
+2025-07-08 12:30:56,061 - INFO - Updated T. NYS: 647.0 -> 374.0 points
+2025-07-08 12:30:56,061 - INFO - Updated T. BENOOT: 564.0 -> 370.0 points
+2025-07-08 12:30:56,061 - INFO - Updated I. VAN WILDER: 687.0 -> 369.0 points
+2025-07-08 12:30:56,061 - INFO - Updated I. ROMEO ABAD: 177.0 -> 365.0 points
+2025-07-08 12:30:56,061 - INFO - Updated S. WÆRENSKJOLD: 678.0 -> 448.0 points
+2025-07-08 12:30:56,061 - INFO - Updated L. VAN EETVELT: 1071.0 -> 355.0 points
+2025-07-08 12:30:56,061 - INFO - Updated M. VAN DEN BERG: 646.0 -> 352.0 points
+2025-07-08 12:30:56,061 - INFO - Updated M. VAN DEN BERG: 646.0 -> 352.0 points
+2025-07-08 12:30:56,061 - INFO - Updated B. COQUARD: 429.0 -> 346.0 points
+2025-07-08 12:30:56,061 - INFO - Updated C. BERTHET: 335.0 -> 339.0 points
+2025-07-08 12:30:56,061 - INFO - Updated M. TEUNISSEN: 438.0 -> 340.0 points
+2025-07-08 12:30:56,062 - INFO - Updated M. HIRSCHI: 2041.0 -> 334.0 points
+2025-07-08 12:30:56,062 - INFO - Updated D. GROENEWEGEN: 826.0 -> 330.0 points
+2025-07-08 12:30:56,062 - INFO - Updated 57 riders, 0 unchanged
+2025-07-08 12:30:56,064 - INFO - Successfully saved updated data to combined_riders_data.json
+2025-07-08 12:30:56,064 - INFO - === Update Complete: 57 riders updated, 0 unchanged ===

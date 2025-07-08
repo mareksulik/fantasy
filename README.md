@@ -5,9 +5,9 @@ A comprehensive web application to help users select better riders for the Tour 
 ## Features
 
 ### 🚴‍♂️ Rider Database
-- Complete database of 261 Tour de France riders
+- Complete database of 184 Tour de France 2025 riders
 - 100% integration with ProCyclingStats (PCS) data
-- Real-time 2025 season points and rankings
+- Automatic daily updates of PCS points and rankings
 - 5-tier value rating system (Excellent/Great/Good/Average/Poor)
 
 ### 🔍 Advanced Filtering
@@ -36,10 +36,11 @@ A comprehensive web application to help users select better riders for the Tour 
 
 ## Technology Stack
 
-- **Backend**: Python Flask
+- **Backend**: Python Flask with automatic scheduling
 - **Data Processing**: pandas, requests, BeautifulSoup
 - **Frontend**: Bootstrap 5, Chart.js
 - **Data Sources**: Fantasy TdF + ProCyclingStats
+- **Auto-Updates**: Built-in daily PCS points refresh
 
 ## Quick Start
 
@@ -64,7 +65,7 @@ source venv/bin/activate  # On macOS/Linux
 
 3. Install dependencies:
 ```bash
-pip install requests beautifulsoup4 pandas flask
+pip install -r requirements.txt
 ```
 
 4. Run the application:
@@ -74,7 +75,7 @@ source venv/bin/activate && nohup python app.py > app.log 2>&1 &
 
 5. Open your browser and visit:
 ```
-http://localhost:8085
+http://localhost:8086
 ```
 
 ## Usage
@@ -104,16 +105,22 @@ http://localhost:8085
 2. View category breakdowns, price distributions, and performance insights
 3. Use charts to understand value distribution across riders
 
+### Automatic Updates
+The application automatically updates PCS points daily at 2 AM. You can also:
+- **Manual Update**: POST request to `/api/update-pcs-points`
+- **Check Status**: GET request to `/api/update-status` to see last update time
+
 ## File Structure
 
 ```
 /fantasy/
-├── app.py                           # Main Flask application
+├── app.py                           # Main Flask application with auto-updates
+├── requirements.txt                 # Python dependencies
 ├── simple-pcs-script.py             # PCS data scraper
 ├── all_tour_de_france_riders.csv    # Original fantasy rider data
 ├── pcs_riders_data.csv              # PCS data for all riders
-├── combined_riders_data.json        # Integrated dataset
-├── combined_riders_data.csv         # Integrated dataset (CSV)
+├── combined_riders_data.json        # Integrated dataset (184 riders)
+├── update_tdf_roster.py             # TdF 2025 roster update script
 ├── templates/                       # HTML templates
 │   ├── base.html                    # Base template with navigation
 │   ├── index.html                   # Home page
@@ -134,7 +141,7 @@ The application integrates two main data sources:
 1. **Fantasy Data**: Rider names, teams, categories, and prices from the official fantasy league
 2. **PCS Data**: Real performance data including 2025 season points, rankings, and detailed statistics
 
-All 261 riders have been successfully matched between these sources, providing complete and accurate data for analysis.
+All 184 riders have been successfully matched between these sources, providing complete and accurate data for analysis. The application automatically updates PCS points daily at 2 AM.
 
 ## Team Building Rules
 

@@ -255,6 +255,8 @@ NEW_RIDERS_NOT_IN_ORIGINAL_DATA = [
 
 def normalize_name(name):
     """Normalize rider names for matching"""
+    if not name:
+        return ""
     return re.sub(r'[^\w\s]', '', name.upper().strip())
 
 

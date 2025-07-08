@@ -6,8 +6,8 @@ Web application to help users select better riders for Tour de France fantasy le
 ## Current Status
 - ✅ Fantasy rider data scraped (261 riders in `all_tour_de_france_riders.csv`)
 - ✅ PCS scraper with advanced name matching (`simple-pcs-script.py`)
-- ✅ 100% data integration - all 261 riders matched with PCS data
-- ✅ Updated to final TdF 2025 roster - 183 riders (`update_tdf_roster.py`)
+- ✅ 100% data integration - all riders matched with PCS data
+- ✅ Updated to final TdF 2025 roster - 184 riders (`update_tdf_roster.py`)
 - ✅ Flask web application with rider listing and filtering
 - ✅ Rider comparison tool implemented
 - ✅ Team builder with budget optimization and team constraints
@@ -15,6 +15,7 @@ Web application to help users select better riders for Tour de France fantasy le
 - ✅ All text converted to English
 - ✅ 5-tier value system (Excellent/Great/Good/Average/Poor)
 - ✅ Team filtering functionality
+- ✅ Automatic daily PCS points updates at 2 AM
 - ✅ Complete functional web application ready
 
 ## Data Sources
@@ -44,6 +45,7 @@ Web application to help users select better riders for Tour de France fantasy le
 6. ✅ Statistics dashboard with charts and insights
 7. ✅ Responsive UI with Bootstrap styling
 8. ✅ Team optimization algorithms (value/points/balanced strategies)
+9. ✅ Automatic daily PCS points updates (2 AM) with API endpoints
 
 ## Development Commands
 ```bash
@@ -53,33 +55,35 @@ source venv/bin/activate  # macOS/Linux
 # venv\Scripts\activate   # Windows
 
 # Install dependencies
-pip install requests beautifulsoup4 pandas flask
+pip install -r requirements.txt
 
 # Run PCS data collection (REQUIRED FIRST)
 python simple-pcs-script.py
 
-# Update to final TdF 2025 roster (183 riders)
+# Update to final TdF 2025 roster (184 riders)
 python update_tdf_roster.py
 
 # Start web application (use nohup for background)
 source venv/bin/activate && nohup python app.py > app.log 2>&1 &
 # Then visit: http://localhost:8086
 
-# Or use restart script:
-./restart_server.sh
+# API endpoints for manual updates:
+# POST /api/update-pcs-points - manually trigger PCS update
+# GET /api/update-status - check last update time
 ```
 
 ## File Structure
 ```
 /fantasy/
 ├── all_tour_de_france_riders.csv    # Fantasy rider data (261 riders)
-├── combined_riders_data.json        # Integrated dataset (183 riders)
+├── combined_riders_data.json        # Integrated dataset (184 riders)
 ├── pcs_riders_data.csv              # PCS rankings data
 ├── simple-pcs-script.py             # PCS data scraper
 ├── manual_mapping_complete.py       # Name mapping database
 ├── update_tdf_roster.py             # Update to final TdF 2025 roster
 ├── fantasy_scraper.js               # Original fantasy website scraper
-├── app.py                           # Flask web application
+├── app.py                           # Flask web application with auto-updates
+├── requirements.txt                 # Python dependencies
 └── templates/                       # HTML templates
     ├── base.html                    # Base template with navigation
     ├── index.html                   # Home page
