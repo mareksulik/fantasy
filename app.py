@@ -285,12 +285,17 @@ def riders():
     # Filtering
     category_filters = request.args.getlist('category')
     team_filters = request.args.getlist('team')
+    rider_filters = request.args.getlist('rider')
     min_price = request.args.get('min_price', type=int)
     max_price = request.args.get('max_price', type=int)
     sort_by = request.args.get('sort', 'points_per_credit')
     
     # Filter data
     filtered_data = data.copy()
+    
+    # Rider filter (if specific riders selected)
+    if rider_filters:
+        filtered_data = [r for r in filtered_data if r['fantasy_name'] in rider_filters]
     
     # Filter by categories (if any selected)
     if category_filters:
@@ -318,11 +323,13 @@ def riders():
     
     return render_template('riders.html', 
                          riders=filtered_data,
+                         all_riders=data,
                          total_count=len(data),
                          filtered_count=len(filtered_data),
                          current_filters={
                              'categories': category_filters,
                              'teams': team_filters,
+                             'riders': rider_filters,
                              'min_price': min_price,
                              'max_price': max_price,
                              'sort': sort_by
@@ -380,12 +387,17 @@ def team_builder():
     # Get filter parameters
     categories_filter = request.args.getlist('category')
     teams_filter = request.args.getlist('team')
+    rider_filters = request.args.getlist('rider')
     min_price = request.args.get('min_price', type=int)
     max_price = request.args.get('max_price', type=int)
     sort_by = request.args.get('sort', 'points_per_credit')
     
     # Apply filters
     filtered_data = data.copy()
+    
+    # Rider filter (if specific riders selected)
+    if rider_filters:
+        filtered_data = [r for r in filtered_data if r['fantasy_name'] in rider_filters]
     
     # Category filter
     if categories_filter:
@@ -427,6 +439,7 @@ def team_builder():
                          current_filters={
                              'categories': categories_filter,
                              'teams': teams_filter,
+                             'riders': rider_filters,
                              'min_price': min_price,
                              'max_price': max_price,
                              'sort': sort_by
