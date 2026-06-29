@@ -1,6 +1,9 @@
-// 1. Najprv definujeme všetky potrebné funkcie
+// Fantasy Tour de France rider scraper
+// Run in the browser console on https://fantasybytissot.letour.fr (riders list page).
+// Paginates through every page, de-duplicates, and downloads all_tour_de_france_riders.csv
+// (columns: Meno jazdca, Tím, Kategória, Cena).
 
-// Funkcia na extrahovanie dát z aktuálnej stránky
+// Extract riders visible on the current page.
 function extractRidersData() {
     let riders = [];
     document.querySelectorAll('sportif-item').forEach(item => {
@@ -10,7 +13,6 @@ function extractRidersData() {
             category: item.querySelector('.position')?.textContent?.trim(),
             price: item.querySelector('.valeur-sportif-nb')?.textContent?.trim()
         };
-        // Pridáme len ak máme všetky údaje
         if (rider.name && rider.team && rider.category && rider.price) {
             riders.push(rider);
         }
@@ -18,54 +20,56 @@ function extractRidersData() {
     return riders;
 }
 
-// Funkcia na konverziu do CSV
 function convertToCSV(riders) {
-    // Hlavička
     let csv = 'Meno jazdca,Tím,Kategória,Cena\n';
-    
-    // Dáta
     riders.forEach(rider => {
         csv += `"${rider.name}","${rider.team}","${rider.category}","${rider.price}"\n`;
     });
-    
     return csv;
 }
 
-// Funkcia na získanie všetkých jazdcov zo všetkých stránok
+// Walk every page until the "next" button is gone/disabled, or no new rider appears.
 async function getAllRiders() {
-    let allRiders = [];
-    let nextButton = document.querySelector('.mat-mdc-paginator-navigation-next');
-    let currentPage = 1;
-    let totalPages = Math.ceil(261 / 10); // 261 jazdcov, 10 na stránku
-    
-    // Získať dáta z prvej stránky
-    allRiders = allRiders.concat(extractRidersData());
-    console.log(`Stránka ${currentPage}/${totalPages} - Získaných: ${allRiders.length} jazdcov`);
-    
-    // Prejsť všetky ostatné stránky
-    while (nextButton && !nextButton.disabled && currentPage < totalPages) {
+    let byName = new Map();
+    let page = 1;
+    const maxPages = 100; // safety cap; real lists are < 40 pages
+
+    const addCurrentPage = () => {
+        let before = byName.size;
+        extractRidersData().forEach(r => byName.set(`${r.name}|${r.team}`, r));
+        return byName.size - before;
+    };
+
+    addCurrentPage();
+    console.log(`Page ${page} - total unique riders: ${byName.size}`);
+
+    while (page < maxPages) {
+        let nextButton = document.querySelector('.mat-mdc-paginator-navigation-next');
+        if (!nextButton || nextButton.disabled) break;
+
         nextButton.click();
-        
-        // Počkať na načítanie novej stránky
-        await new Promise(resolve => setTimeout(resolve, 1000));
-        
-        currentPage++;
-        allRiders = allRiders.concat(extractRidersData());
-        console.log(`Stránka ${currentPage}/${totalPages} - Získaných: ${allRiders.length} jazdcov`);
-        
-        // Znovu nájsť tlačidlo (môže sa obnoviť v DOM)
-        nextButton = document.querySelector('.mat-mdc-paginator-navigation-next');
+        await new Promise(resolve => setTimeout(resolve, 1200)); // wait for re-render
+
+        page++;
+        let added = addCurrentPage();
+        console.log(`Page ${page} - total unique riders: ${byName.size} (+${added})`);
+
+        // Stop if a page produced nothing new twice in a row (end of list / stuck paginator).
+        if (added === 0) break;
     }
-    
-    return allRiders;
+
+    return Array.from(byName.values());
 }
 
-// 2. Teraz spustíme získavanie všetkých dát
 getAllRiders().then(riders => {
-    console.log(`Celkovo získaných: ${riders.length} jazdcov`);
+    if (riders.length === 0) {
+        console.error('No riders found. The page DOM selectors may have changed for 2026 — ' +
+            'inspect a rider card and update extractRidersData() selectors.');
+        return;
+    }
+    console.log(`Collected ${riders.length} riders.`);
     console.table(riders);
-    
-    // Export do CSV
+
     let csv = convertToCSV(riders);
     let blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
     let link = document.createElement('a');

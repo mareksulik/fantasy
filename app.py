@@ -13,11 +13,13 @@ from datetime import datetime
 import requests
 from bs4 import BeautifulSoup
 import logging
+import value_utils as V
 
 app = Flask(__name__)
 
 # Global variable for cached data
 riders_data = None
+vuelta_riders_data = None
 last_update_info = None
 
 # Set up logging for PCS updates
@@ -133,25 +135,13 @@ class PCSUpdater:
                     if new_points != old_points:
                         rider['pcs_points_2025'] = new_points
                         rider['pcs_rank'] = pcs_dict[rider['pcs_name']]['rank']
-                        
-                        # Recalculate value metrics
-                        if rider['price'] > 0:
-                            rider['points_per_credit'] = new_points / rider['price']
-                            
-                            # Update value category
-                            if rider['points_per_credit'] > 50:
-                                rider['value_category'] = 'Excellent'
-                            elif rider['points_per_credit'] > 35:
-                                rider['value_category'] = 'Great'
-                            elif rider['points_per_credit'] > 20:
-                                rider['value_category'] = 'Good'
-                            elif rider['points_per_credit'] > 10:
-                                rider['value_category'] = 'Average'
-                            else:
-                                rider['value_category'] = 'Poor'
-                        
                         updated_count += 1
-            
+
+            # Recompute the value model across the whole field (per-category
+            # tiers need every rider). Blends stored 12-month points with the
+            # refreshed YTD; logic shared with the scraper via value_utils.
+            V.recompute_value(data['riders'])
+
             # Update metadata
             data['integration_info']['last_update'] = datetime.now().isoformat()
             data['integration_info']['last_points_update'] = datetime.now().isoformat()
@@ -254,23 +244,53 @@ app.jinja_env.globals.update(
     get_flag_emoji=get_flag_emoji
 )
 
-def load_riders_data():
-    """Loads combined rider data"""
-    global riders_data
-    # Force reload data every time in development
-    try:
-        with open('combined_riders_data.json', 'r', encoding='utf-8') as f:
-            data = json.load(f)
-            riders_data = data['riders']
-            print(f"Loaded {len(riders_data)} riders")
-    except FileNotFoundError:
-        print("❌ File combined_riders_data.json not found!")
-        print("Run first: python simple-pcs-script.py")
-        riders_data = []
-    except Exception as e:
-        print(f"❌ Error loading data: {e}")
-        riders_data = []
-    return riders_data
+def load_riders_data(race_type='tdf'):
+    """Loads combined rider data for specified race"""
+    global riders_data, vuelta_riders_data
+    
+    if race_type == 'vuelta':
+        # Force reload Vuelta data
+        try:
+            with open('combined_vuelta_data.json', 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                vuelta_riders_data = data['riders']
+                print(f"Loaded {len(vuelta_riders_data)} Vuelta riders")
+            return vuelta_riders_data
+        except FileNotFoundError:
+            print("❌ File combined_vuelta_data.json not found!")
+            print("Run first: python update_vuelta_roster.py")
+            return []
+        except Exception as e:
+            print(f"❌ Error loading Vuelta data: {e}")
+            return []
+    elif race_type == 'tdf2025':
+        # Historical Tour de France 2025 final roster
+        try:
+            with open('combined_riders_data_backup.json', 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                print(f"Loaded {len(data['riders'])} TdF 2025 riders")
+                return data['riders']
+        except FileNotFoundError:
+            print("❌ File combined_riders_data_backup.json not found!")
+            return []
+        except Exception as e:
+            print(f"❌ Error loading TdF 2025 data: {e}")
+            return []
+    else:
+        # Default TdF 2026 data
+        try:
+            with open('combined_riders_data.json', 'r', encoding='utf-8') as f:
+                data = json.load(f)
+                riders_data = data['riders']
+                print(f"Loaded {len(riders_data)} TdF riders")
+            return riders_data
+        except FileNotFoundError:
+            print("❌ File combined_riders_data.json not found!")
+            print("Run first: python simple-pcs-script.py")
+            return []
+        except Exception as e:
+            print(f"❌ Error loading TdF data: {e}")
+            return []
 
 @app.route('/')
 def index():
@@ -280,7 +300,9 @@ def index():
 @app.route('/riders')
 def riders():
     """Page with list of all riders"""
-    data = load_riders_data()
+    # Get race type from URL parameter
+    race_type = request.args.get('race', 'tdf')
+    data = load_riders_data(race_type)
     
     # Filtering
     category_filters = request.args.getlist('category')
@@ -332,24 +354,29 @@ def riders():
                              'riders': rider_filters,
                              'min_price': min_price,
                              'max_price': max_price,
-                             'sort': sort_by
+                             'sort': sort_by,
+                             'race': race_type
                          },
-                         all_teams=sorted(list(set(r['team'] for r in data))))
+                         all_teams=sorted(list(set(r['team'] for r in data))),
+                         race_type=race_type)
 
 @app.route('/api/riders')
 def api_riders():
     """API endpoint for getting rider data"""
-    data = load_riders_data()
+    race_type = request.args.get('race', 'tdf')
+    data = load_riders_data(race_type)
     return jsonify({
         'success': True,
         'count': len(data),
-        'riders': data
+        'riders': data,
+        'race': race_type
     })
 
 @app.route('/api/rider/<rider_name>')
 def api_rider_detail(rider_name):
     """API endpoint for rider detail"""
-    data = load_riders_data()
+    race_type = request.args.get('race', 'tdf')
+    data = load_riders_data(race_type)
     rider = next((r for r in data if r['fantasy_name'] == rider_name), None)
     
     if rider:
@@ -367,7 +394,8 @@ def api_rider_detail(rider_name):
 def compare():
     """Page for comparing riders"""
     riders1 = request.args.getlist('riders')
-    data = load_riders_data()
+    race_type = request.args.get('race', 'tdf')
+    data = load_riders_data(race_type)
     
     selected_riders = []
     for rider_name in riders1:
@@ -377,12 +405,14 @@ def compare():
     
     return render_template('compare.html', 
                          riders=selected_riders,
-                         all_riders=data)
+                         all_riders=data,
+                         race_type=race_type)
 
 @app.route('/team-builder')
 def team_builder():
     """Page for team building"""
-    data = load_riders_data()
+    race_type = request.args.get('race', 'tdf')
+    data = load_riders_data(race_type)
     
     # Get filter parameters
     categories_filter = request.args.getlist('category')
@@ -442,15 +472,18 @@ def team_builder():
                              'riders': rider_filters,
                              'min_price': min_price,
                              'max_price': max_price,
-                             'sort': sort_by
+                             'sort': sort_by,
+                             'race': race_type
                          },
-                         all_teams=sorted(list(set(r['team'] for r in data))))
+                         all_teams=sorted(list(set(r['team'] for r in data))),
+                         race_type=race_type)
 
 @app.route('/api/optimize-team')
 def api_optimize_team():
     """API endpoint for team optimization"""
     budget = request.args.get('budget', default=120, type=int)
     strategy = request.args.get('strategy', default='value')  # value, points, balanced
+    race_type = request.args.get('race', 'tdf')
     
     # Get existing team for incremental optimization
     current_team_json = request.args.get('current_team', '[]')
@@ -467,7 +500,7 @@ def api_optimize_team():
         'Sprinters': 3
     }
     
-    data = load_riders_data()
+    data = load_riders_data(race_type)
     matched_riders = [r for r in data if r['pcs_match_found']]
     
     # Calculate current team composition
@@ -682,7 +715,8 @@ def api_optimize_team():
 @app.route('/stats')
 def stats():
     """Statistics page"""
-    data = load_riders_data()
+    race_type = request.args.get('race', 'tdf')
+    data = load_riders_data(race_type)
     matched_riders = [r for r in data if r['pcs_match_found']]
     
     # Basic statistics
@@ -709,7 +743,8 @@ def stats():
     
     return render_template('stats.html', 
                          stats=stats,
-                         category_stats=category_stats)
+                         category_stats=category_stats,
+                         race_type=race_type)
 
 @app.route('/api/update-pcs-points', methods=['POST'])
 def api_update_pcs_points():

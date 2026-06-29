@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Fantasy TdF Helper - PCS Data Integration
-Integruje fantasy dáta s ProCyclingStats dátami pre lepší výber jazdcov
+Fantasy Vuelta Helper - PCS Data Integration
+Integruje Vuelta fantasy dáta s ProCyclingStats dátami pre lepší výber jazdcov
 """
 
 import requests
@@ -13,10 +13,9 @@ import csv
 from datetime import datetime
 from difflib import SequenceMatcher
 import re
-import value_utils as V
 
 class FantasyPCSIntegrator:
-    def __init__(self, fantasy_csv_path='all_tour_de_france_riders.csv'):
+    def __init__(self, fantasy_csv_path='all_vuelta_riders.csv'):
         self.base_url = "https://www.procyclingstats.com"
         self.headers = {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
@@ -24,7 +23,6 @@ class FantasyPCSIntegrator:
         self.fantasy_csv_path = fantasy_csv_path
         self.fantasy_riders = []
         self.pcs_riders = []
-        self.pcs_12m = {}  # pcs_name -> 12-month rolling points
         self.integrated_data = []
         
     def load_fantasy_riders(self):
@@ -146,52 +144,119 @@ class FantasyPCSIntegrator:
         return best_match, best_similarity
         
     def create_manual_mappings(self):
-        """Kompletné manuálne mapovanie overené rider po rider"""
+        """Manuálne mapovanie pre VŠETKÝCH 45 nezhodujúcich sa Vuelta jazdcov"""
         return {
-            # Leaders (27-11 credits)
-            'T. POGAČAR': 'POGAČAR Tadej',
-            'J. VINGEGAARD HANSEN': 'VINGEGAARD Jonas', 
-            'R. EVENEPOEL': 'EVENEPOEL Remco',
-            'P. ROGLIC': 'ROGLIČ Primož',
-            'A. YATES': 'YATES Adam',
-            'R. CARAPAZ': 'CARAPAZ Richard',
-            'F. LIPOWITZ': 'LIPOWITZ Florian',
-            'E. MAS NICOLAU': 'MAS Enric',
-            'C. RODRIGUEZ': 'RODRÍGUEZ Carlos',
-            'A. VLASOV': 'VLASOV Aleksandr',
-            'S. BUITRAGO SANCHEZ': 'BUITRAGO Santiago',
-            'M. JENSEN': 'SKJELMOSE Mattias',
-            'B. O\'CONNOR': 'O\'CONNOR Ben',
-            'E. ONLEY': 'ONLEY Oscar',
-            'F. GALL': 'GALL Felix',
-            'T. JOHANNESSEN': 'JOHANNESSEN Tobias Halland',
-            'A. LUTSENKO': 'LUTSENKO Alexey',
-            'G. THOMAS': 'THOMAS Geraint',
-            'M. WOODS': 'WOODS Michael',
-            'L. MEINTJES': 'MEINTJES Louis',
-            'G. MARTIN GUYONNET': 'MARTIN Guillaume',
-            'J. JEGAT': 'JEGAT Jordan',
-            'S. CRAS': 'CRAS Steff',
-            'E. BUCHMANN': 'BUCHMANN Emanuel',
+            # === 45 MANUÁLNE NÁJDENÝCH JAZDCOV ===
+            'M. POOLE': 'POOLE Max',
+            'J. CHAVES RUBIO': 'CHAVES Esteban',
+            'A. AUGUST': 'AUGUST Andrew',
+            'G. SILVA COUSSAN': 'SILVA Guillermo Thomas',
+            'A. FAGUNDEZ LIMA': 'FAGÚNDEZ Eric Antonio',
+            'J. DIAZ GALLEGO': 'DÍAZ José Manuel',
+            'T. GRUEL': 'GRUEL Thibaud',
+            'J. CEPEDA': 'CEPEDA Jefferson Alveiro',
+            'G. MARTINEZ HUERTAS': 'MARTINEZ Juan Guillermo',
+            'M. HEßMANN': 'HESSMANN Michel',
+            'S. CHUMIL GONZALEZ': 'CHUMIL Sergio Geovani',
+            'B. RIVERA VARGAS': 'RIVERA Brandon Smith',
+            'H. LOPEZ GRANIZO': 'LÓPEZ Harold Martín',
+            'I. ALVES OLIVEIRA': 'OLIVEIRA Ivo',
+            'F. BARCELO ARAGON': 'BARCELÓ Fernando',
+            'A. BALDERSTONE ROUMENS': 'BALDERSTONE Abel',
+            'K. BONNEU': 'BONNEU Kamiel',
+            'S. DEHAIRS': 'DEHAIRS Simon',
+            'G. GLIVAR': 'GLIVAR Gal',
+            'M. APARICIO MUÑOZ': 'APARICIO Mario',
+            'J. BIERMANS': 'BIERMANS Jenthe',
+            'A. GHEBREIGZABHIER': 'GHEBREIGZABHIER Amanuel',
+            'B. ROLLAND': 'ROLLAND Brieuc',
+            'L. NERURKAR': 'NERURKAR Lukas',
+            'X. AZPARREN IRURZUN': 'AZPARREN Xabier Mikel',
+            'M. VAN DER MEULEN': 'VAN DER MEULEN Max',
+            'N. BURATTI': 'BURATTI Nicolò',
+            'J. LABROSSE': 'LABROSSE Jordan',
+            'L. SLOCK': 'SLOCK Liam',
+            'B. KOERDT': 'KOERDT Bjorn',
+            'A. FOLDAGER': 'FOLDAGER Anders',
+            'L. VAN BOVEN': 'VAN BOVEN Luca',
+            'H. DE LA CALLE ARANGO': 'DE LA CALLE Hugo',
+            'D. GONZALEZ LOPEZ': 'GONZÁLEZ David',
+            'A. ANGULO SAMPEDRO': 'ANGULO Antonio',
+            'A. OKAMIKA BENGOETXEA': 'OKAMIKA Ander',
+            'L. CRAPS': 'CRAPS Lars',
+            'J. GUARDEÑO ROMA': 'GUARDEÑO Jaume',
+            'J. FAURA ASENSIO': 'FAURA José Luis',
+            'V. GUERNALEC': 'GUERNALEC Victor',
+            'N. VINOKUROV': 'VINOKUROV Nicolas',
+            'J. NICOLAU BELTRAN': 'NICOLAU Joel',
+            'R. DEBRUYNE': 'DEBRUYNE Ramses',
+            'L. LOZOUET': 'LOZOUET Léandre',
             
-            # Sprinters (22-8 credits)
-            'J. MILAN': 'MILAN Jonathan',
-            'T. MERLIER': 'MERLIER Tim',
-            'J. PHILIPSEN': 'PHILIPSEN Jasper',
-            'B. GIRMAY': 'GIRMAY Biniam',
-            'K. GROVES': 'GROVES Kaden',
-            'D. GROENEWEGEN': 'GROENEWEGEN Dylan',
-            'F. GAVIRIA RENDON': 'GAVIRIA Fernando',
-            'A. DE LIE': 'DE LIE Arnaud',
-            'J. MEEUS': 'MEEUS Jordi',
-            'A. DAINESE': 'DAINESE Alberto',
-            'T. STEWART': 'STEWART Jake',
-            'P. ACKERMANN': 'ACKERMANN Pascal',
-            'A. KRISTOFF': 'KRISTOFF Alexander',
-            'P. BAUHAUS': 'BAUHAUS Phil',
-            'M. FRETIN': 'FRETIN Milan',
-            'P. BITTNER': 'BITTNER Pavel',
-            'J. BERCKMOES': 'BERCKMOES Jenno',
+            # === ZACHOVANÉ MAPOVANIE Z PÔVODNÝCH JAZDCOV ===
+            'S. ROESEMS': 'ROESEMS Siebe',
+            'L. BISIAUX': 'BISIAUX Léo',
+            
+            # === SHARED WITH TDF (keeping existing mappings) ===
+            'E. DUNBAR': 'DUNBAR Eddie',
+            'B. COQUARD': 'COQUARD Bryan',
+            'C. HARPER': 'HARPER Chris',
+            'H. TEJADA CANACUE': 'TEJADA Harold',
+            'M. SOLER': 'SOLER Marc',
+            'R. GARCIA PIERNA': 'GARCÍA PIERNA Raúl',
+            'J. STAUNE-MITTET': 'STAUNE-MITTET Johannes',
+            'M. SHEFFIELD': 'SHEFFIELD Magnus',
+            'S. CARR': 'CARR Simon',
+            'C. RODRIGUEZ MARTIN': 'RODRÍGUEZ Cristián',
+            'L. MEINTJES': 'MEINTJES Louis',
+            'B. ARMIRAIL': 'ARMIRAIL Bruno',
+            'L. KÄMNA': 'KÄMNA Lennard',
+            'M. MIHKELS': 'MIHKELS Madis',
+            'J. LECERF': 'LECERF Junior',
+            'B. JUNGELS': 'JUNGELS Bob',
+            'A. MARIT': 'MARIT Arne',
+            'C. BERTHET': 'BERTHET Clément',
+            'F. FISHER - BLACK': 'FISHER-BLACK Finn',
+            'S. HIGUITA GARCIA': 'HIGUITA Sergio',
+            'E. BUCHMANN': 'BUCHMANN Emanuel',
+            'J. ROMO OLIVER': 'ROMO Javier',
+            'R. CAVAGNA': 'CAVAGNA Rémi',
+            'D. HOOLE': 'HOOLE Daan',
+            'G. BENNETT': 'BENNETT George',
+            'M. VANSEVENANT': 'VANSEVENANT Mauri',
+            'V. CAMPENAERTS': 'CAMPENAERTS Victor',
+            'W. KELDERMAN': 'KELDERMAN Wilco',
+            'C. BRAZ AFONSO': 'BRAZ AFONSO Clément',
+            'F. GROSSSCHARTNER': 'GROßSCHARTNER Felix',
+            'S. ANIOLKOWSKI': 'ANIOŁKOWSKI Stanisław',
+            'T. TRÆEN': 'TRÆEN Torstein',
+            'J. HAIG': 'HAIG Jack',
+            'M. SOBRERO': 'SOBRERO Matteo',
+            'L. VERVAEKE': 'VERVAEKE Louis',
+            'I. GARCIA CORTINA': 'GARCÍA CORTINA Iván',
+            'J. BERNARD': 'BERNARD Julien',
+            'D. VAN BAARLE': 'VAN BAARLE Dylan',
+            'A. SEGAERT': 'SEGAERT Alec',
+            'J. DE BUYST': 'DE BUYST Jasper',
+            'D. NOVAK': 'NOVAK Domen',
+            'A. LIVYNS': 'LIVYNS Arjen',
+            'K. BOUWMAN': 'BOUWMAN Koen',
+            'E. SEPULVEDA': 'SEPÚLVEDA Eduardo',
+            'J. JENSEN': 'PLOWRIGHT Jensen',
+            'T. BAYER': 'BAYER Tobias',
+            'P. CÔTÉ': 'CÔTÉ Pier-André',
+            'J. RICKAERT': 'RICKAERT Jonas',
+            'S. DE PESTEL': 'DE PESTEL Sander',
+            'M. PAASSCHENS': 'PAASSCHENS Mathijs',
+            'P. GAMPER': 'GAMPER Patrick',
+            'P. OURSELIN': 'OURSELIN Paul',
+            'N. RAISBERG': 'RAISBERG Nadav',
+            
+            # === MISSING VUELTA-SPECIFIC MAPPINGS ===
+            'M. PEDERSEN': 'PEDERSEN Mads',
+            'S. KRAGH ANDERSEN': 'KRAGH ANDERSEN Søren',
+            'S. ROESEMS': 'ROESEMS Siebe',
+            
+            # === EXISTING TDF MAPPINGS (keeping all) ===
             'A. ARANBURU DEVA': 'ARANBURU Alex',
             'V. ALBANESE': 'ALBANESE Vincenzo',
             'A. DEMARE': 'DÉMARE Arnaud',
@@ -410,22 +475,7 @@ class FantasyPCSIntegrator:
             'M. PAASSCHENS': 'PAASSCHENS Mathijs',
             'K. GRADEK': 'GRADEK Kamil',
             'E. REINDERS': 'REINDERS Elmar',
-            'A. DELAPLACE': 'DELAPLACE Anthony',
-
-            # --- TdF 2026 additions / fixes (fantasy names now drop diacritics;
-            #     these were mis-resolved by the fuzzy fallback) ---
-            'T. POGACAR': 'POGAČAR Tadej',
-            'J. AYUSO PESQUERA': 'AYUSO Juan',
-            'E. BERNAL GOMEZ': 'BERNAL Egan',
-            'P. BILBAO LOPEZ DE ARMENTIA': 'BILBAO Pello',
-            'M. LANDA MEANA': 'LANDA Mikel',
-            'C. VERONA QUINTANILLA': 'VERONA Carlos',
-            'M. VAN GILS': 'VAN GILS Maxim',
-            'J. VAN DEN BERG': 'VAN DEN BERG Julius',
-            'S. KRAGH ANDERSEN': 'KRAGH ANDERSEN Søren',
-            'D. MARTINEZ POVEDA': 'MARTÍNEZ Daniel Felipe',
-            'D. GEE': 'GEE-WEST Derek',
-            'P. ALLEGAERT': 'ALLEGAERT Piet',  # outside PCS top 1500 -> 0 pts
+            'A. DELAPLACE': 'DELAPLACE Anthony'
         }
     
     def find_pcs_match_advanced(self, fantasy_rider):
@@ -578,39 +628,7 @@ class FantasyPCSIntegrator:
             
         print(f"\nCelkovo získaných jazdcov: {len(self.pcs_riders)}")
         return self.pcs_riders
-
-    def scrape_pcs_12m(self, limit=1500):
-        """Scrape the rolling PCS Ranking (p=me) = 12-month points.
-        Different table layout than the season ranking: name=col[4], points=col[6]."""
-        print(f"\nSťahujem 12-mesačný PCS ranking (top {limit})...")
-        for offset in range(0, limit, 100):
-            params = {
-                'p': 'me', 's': '', 'date': datetime.now().strftime('%Y-%m-%d'),
-                'nation': '', 'age': '', 'page': 'smallerorequal', 'team': '',
-                'teamlevel': '', 'offset': str(offset), 'filter': 'Filter'
-            }
-            url = f"{self.base_url}/rankings.php?" + '&'.join([f"{k}={v}" for k, v in params.items()])
-            try:
-                resp = requests.get(url, headers=self.headers)
-                resp.raise_for_status()
-            except requests.RequestException as e:
-                print(f"Chyba pri 12m rankingu: {e}")
-                break
-            soup = BeautifulSoup(resp.text, 'html.parser')
-            table = soup.find('table', class_='basic') or soup.find('table')
-            rows = table.find_all('tr')[1:] if table else []
-            if not rows:
-                break
-            for row in rows:
-                cols = row.find_all('td')
-                if len(cols) >= 7:
-                    name = cols[4].get_text(' ', strip=True)
-                    pts = cols[6].text.strip()
-                    self.pcs_12m[name] = float(pts) if pts.replace('.', '').isdigit() else 0.0
-            time.sleep(1)
-        print(f"Získaných {len(self.pcs_12m)} jazdcov v 12-mesačnom rankingu")
-        return self.pcs_12m
-
+        
     def integrate_data(self):
         """Integruje fantasy a PCS dáta"""
         print("\nIntegruje fantasy a PCS dáta...")
@@ -635,7 +653,6 @@ class FantasyPCSIntegrator:
                     'pcs_name': pcs_match['name'],
                     'pcs_rank': pcs_match['rank'],
                     'pcs_points_2025': pcs_match['points'],
-                    'pcs_points_12m': self.pcs_12m.get(pcs_match['name'], 0.0),
                     'pcs_nationality': pcs_match['nationality'],
                     'pcs_team': pcs_match['team'],
                     'pcs_url': pcs_match['rider_url']
@@ -646,7 +663,6 @@ class FantasyPCSIntegrator:
                     'pcs_name': None,
                     'pcs_rank': None,
                     'pcs_points_2025': 0,
-                    'pcs_points_12m': 0,
                     'pcs_nationality': None,
                     'pcs_team': None,
                     'pcs_url': None
@@ -664,7 +680,7 @@ class FantasyPCSIntegrator:
         
         return self.integrated_data
         
-    def save_integrated_data(self, csv_filename='combined_riders_data.csv', json_filename='combined_riders_data.json'):
+    def save_integrated_data(self, csv_filename='combined_vuelta_data.csv', json_filename='combined_vuelta_data.json'):
         """Uloží integrované dáta do CSV a JSON súborov"""
         if not self.integrated_data:
             print("Žiadne integrované dáta na uloženie")
@@ -678,11 +694,12 @@ class FantasyPCSIntegrator:
         # JSON export
         data = {
             'integration_info': {
-                'type': 'Fantasy TdF + PCS Data Integration',
+                'type': 'Fantasy Vuelta + PCS Data Integration',
                 'fantasy_riders_count': len(self.fantasy_riders),
                 'pcs_riders_count': len(self.pcs_riders),
                 'matched_riders': len([r for r in self.integrated_data if r['pcs_match_found']]),
-                'last_update': datetime.now().isoformat()
+                'last_update': datetime.now().isoformat(),
+                'race_type': 'vuelta'
             },
             'riders': self.integrated_data
         }
@@ -692,16 +709,32 @@ class FantasyPCSIntegrator:
         print(f"Integrované dáta uložené do {json_filename}")
         
     def calculate_value_metrics(self):
-        """Compute value_points (12m+YTD blend), points_per_credit and the
-        per-category value tiers. Logic lives in value_utils (single source of
-        truth, shared with app.py)."""
-        V.recompute_value(self.integrated_data)
+        """Vypočíta value metriky pre fantasy"""
+        for rider in self.integrated_data:
+            if rider['pcs_match_found'] and rider['price'] > 0:
+                # Points per credit ratio
+                rider['points_per_credit'] = rider['pcs_points_2025'] / rider['price']
+                
+                # Value category - 5-tier system: Excellent/Great/Good/Average/Poor
+                if rider['points_per_credit'] > 50:
+                    rider['value_category'] = 'Excellent'
+                elif rider['points_per_credit'] > 35:
+                    rider['value_category'] = 'Great'
+                elif rider['points_per_credit'] > 20:
+                    rider['value_category'] = 'Good'
+                elif rider['points_per_credit'] > 10:
+                    rider['value_category'] = 'Average'
+                else:
+                    rider['value_category'] = 'Poor'
+            else:
+                rider['points_per_credit'] = 0
+                rider['value_category'] = 'Unknown'
         
     def print_integration_summary(self, n=10):
         """Vypíše súhrn integrácie"""
         matched_riders = [r for r in self.integrated_data if r['pcs_match_found']]
         
-        print(f"\n=== FANTASY TDF HELPER - INTEGRATION SUMMARY ===")
+        print(f"\n=== FANTASY VUELTA HELPER - INTEGRATION SUMMARY ===")
         print(f"Fantasy jazdci: {len(self.fantasy_riders)}")
         print(f"PCS jazdci: {len(self.pcs_riders)}")
         print(f"Úspešne namatchovaných: {len(matched_riders)}")
@@ -719,7 +752,7 @@ class FantasyPCSIntegrator:
             print(f"{rider['fantasy_name']:<20} {rider['category']:<12} {rider['price']:<5} "
                   f"{rider['pcs_points_2025']:<8.0f} {rider['points_per_credit']:<6.1f} {rider['value_category']:<8}")
                   
-    def save_pcs_data(self, csv_filename='pcs_riders_data.csv'):
+    def save_pcs_data(self, csv_filename='pcs_vuelta_riders_data.csv'):
         """Uloží PCS dáta do CSV súboru"""
         if not self.pcs_riders:
             print("Žiadne PCS dáta na uloženie")
@@ -731,21 +764,18 @@ class FantasyPCSIntegrator:
 
     def run_integration(self):
         """Spustí celý proces integrácie"""
-        print("=== FANTASY TDF HELPER - PCS INTEGRATION ===\n")
+        print("=== FANTASY VUELTA HELPER - PCS INTEGRATION ===\n")
         
         # 1. Načítaj fantasy dáta
         if not self.load_fantasy_riders():
             return False
             
-        # 2. Získaj PCS dáta (sezónny ranking = body YTD)
-        self.scrape_pcs_data(limit=1500)  # Ešte viac dát pre lepší matching TdF jazdcov
-
+        # 2. Získaj PCS dáta  
+        self.scrape_pcs_data(limit=5000)  # VŠETCI jazdci pre 100% matching
+        
         # 2.1. Ulož PCS dáta do CSV
         self.save_pcs_data()
-
-        # 2.2. Získaj 12-mesačný rolling ranking (pre value blend, rieši timing bias)
-        self.scrape_pcs_12m(limit=1500)
-
+        
         # 3. Integruj dáta
         self.integrate_data()
         
@@ -793,7 +823,7 @@ def use_procyclingstats_library():
 
 def main():
     """Hlavná funkcia"""
-    print("Fantasy TdF Helper - PCS Data Integration")
+    print("Fantasy Vuelta Helper - PCS Data Integration")
     print("=" * 50)
     
     # Inicializuj integrátor
@@ -804,7 +834,7 @@ def main():
     
     if success:
         print("\n✅ Integrácia úspešne dokončená!")
-        print("📄 Výsledky uložené v combined_riders_data.csv a combined_riders_data.json")
+        print("📄 Výsledky uložené v combined_vuelta_data.csv a combined_vuelta_data.json")
         print("🚀 Môžete teraz spustiť web aplikáciu!")
     else:
         print("\n❌ Integrácia neúspešná")

@@ -70,13 +70,19 @@
                         {% endfor %}
                     </tr>
                     <tr>
-                        <td class="fw-bold">PCS Points 2025</td>
+                        <td class="fw-bold">PCS Points (season)</td>
                         {% for rider in riders %}
                         <td class="text-center">{{ format_number(rider.pcs_points_2025 or 0) }}</td>
                         {% endfor %}
                     </tr>
                     <tr>
-                        <td class="fw-bold">Points/Credit Ratio</td>
+                        <td class="fw-bold">PCS Points (12-month)</td>
+                        {% for rider in riders %}
+                        <td class="text-center">{{ format_number(rider.pcs_points_12m or 0) }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td class="fw-bold" title="Value points (2026 primary + small 12-month helper) per credit">Value / credit</td>
                         {% for rider in riders %}
                         <td class="text-center">
                             <span class="{{ get_value_class(rider.value_category) }}">
@@ -86,7 +92,7 @@
                         {% endfor %}
                     </tr>
                     <tr>
-                        <td class="fw-bold">Value Rating</td>
+                        <td class="fw-bold" title="Tier ranked within the rider's category">Value tier (in category)</td>
                         {% for rider in riders %}
                         <td class="text-center">
                             <span class="badge {{ get_value_class(rider.value_category) }}">
@@ -155,7 +161,7 @@
                     <span class="badge {{ get_value_class(rider.value_category) }}">
                         {{ rider.value_category }}
                     </span>
-                    {% if rider.pcs_rank and rider.pcs_rank <= 50 %}
+                    {% if rider.pcs_rank and rider.pcs_rank <= 100 %}
                     <span class="badge text-dark" style="background: #e9ecef;">
                         <i class="fas fa-trophy"></i> #{{ rider.pcs_rank }} PCS
                     </span>

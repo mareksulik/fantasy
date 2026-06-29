@@ -4,14 +4,14 @@
 
 {% block content %}
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2><i class="fas fa-users"></i> Tour de France 2025 Riders</h2>
+    <h2><i class="fas fa-users"></i> Tour de France 2026 Riders</h2>
     <div class="d-flex align-items-center gap-3">
         <div class="btn-group" role="group">
-            <input type="radio" class="btn-check" name="viewMode" id="cardView" autocomplete="off" checked>
+            <input type="radio" class="btn-check" name="viewMode" id="cardView" autocomplete="off">
             <label class="btn btn-outline-secondary btn-sm" for="cardView">
                 <i class="fas fa-th"></i> Cards
             </label>
-            <input type="radio" class="btn-check" name="viewMode" id="tableView" autocomplete="off">
+            <input type="radio" class="btn-check" name="viewMode" id="tableView" autocomplete="off" checked>
             <label class="btn btn-outline-secondary btn-sm" for="tableView">
                 <i class="fas fa-list"></i> Table
             </label>
@@ -164,7 +164,7 @@
 </div>
 
 <!-- Card View -->
-<div id="cardView-content">
+<div id="cardView-content" style="display: none;">
     <div class="row">
     {% for rider in riders %}
     <div class="col-lg-6 col-xl-4 mb-3">
@@ -179,18 +179,22 @@
                     <i class="fas fa-users"></i> {{ rider.team }}
                 </p>
                 
-                <div class="row text-center small">
-                    <div class="col-4">
+                <div class="row text-center small g-1">
+                    <div class="col-3">
                         <div class="fw-bold">{{ format_number(rider.pcs_points_2025 or 0) }}</div>
-                        <div class="text-muted">PCS Points</div>
+                        <div class="text-muted" title="2026 season-to-date PCS points">2026</div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-3">
+                        <div class="fw-bold text-muted">{{ format_number(rider.pcs_points_12m or 0) }}</div>
+                        <div class="text-muted" title="12-month rolling PCS points (helper)">12m</div>
+                    </div>
+                    <div class="col-3">
                         <div class="fw-bold {{ get_value_class(rider.value_category) }}">
                             {{ "%.1f"|format(rider.points_per_credit or 0) }}
                         </div>
-                        <div class="text-muted">P/C Ratio</div>
+                        <div class="text-muted" title="Value points (2026 primary + small 12m helper) per credit">Value</div>
                     </div>
-                    <div class="col-4">
+                    <div class="col-3">
                         <span class="badge {{ get_value_class(rider.value_category) }}">
                             {{ rider.value_category }}
                         </span>
@@ -199,7 +203,7 @@
                 
                 <div class="mt-2">
                     <span class="badge {{ get_category_badge_class(rider.category) }}">{{ rider.category }}</span>
-                    {% if rider.pcs_rank and rider.pcs_rank <= 50 %}
+                    {% if rider.pcs_rank and rider.pcs_rank <= 100 %}
                     <span class="badge text-dark" style="background: #e9ecef;">
                         <i class="fas fa-trophy"></i> #{{ rider.pcs_rank }} PCS
                     </span>
@@ -227,18 +231,19 @@
 </div>
 
 <!-- Table View -->
-<div id="tableView-content" class="table-responsive" style="display: none;">
+<div id="tableView-content" class="table-responsive">
     <table class="table table-hover table-striped">
         <thead class="table-dark">
             <tr>
                 <th class="sortable" onclick="sortTable(0)">Rider <i class="fas fa-sort"></i></th>
                 <th class="sortable" onclick="sortTable(1)">Team <i class="fas fa-sort"></i></th>
                 <th class="sortable" onclick="sortTable(2)">Category <i class="fas fa-sort"></i></th>
-                <th class="text-center sortable" onclick="sortTable(3)">PCS Points <i class="fas fa-sort"></i></th>
-                <th class="text-center sortable" onclick="sortTable(4)">P/C Ratio <i class="fas fa-sort"></i></th>
-                <th class="text-center sortable" onclick="sortTable(5)">Value <i class="fas fa-sort"></i></th>
-                <th class="text-center sortable" onclick="sortTable(6)">Price <i class="fas fa-sort"></i></th>
-                <th class="text-center sortable" onclick="sortTable(7)">PCS Rank <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(3)" title="2026 season-to-date PCS points (primary value driver)">PCS 2026 <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(4)" title="12-month rolling PCS points (secondary helper)">PCS 12m <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(5)" title="Value points (2026 primary + small 12m helper) per credit">Value <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(6)" title="Tier ranked across the whole field">Tier <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(7)">Price <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(8)">PCS Rank <i class="fas fa-sort"></i></th>
                 <th class="text-center">Actions</th>
             </tr>
         </thead>
@@ -258,6 +263,9 @@
                     <div class="fw-bold">{{ format_number(rider.pcs_points_2025 or 0) }}</div>
                 </td>
                 <td class="text-center">
+                    <div class="text-muted">{{ format_number(rider.pcs_points_12m or 0) }}</div>
+                </td>
+                <td class="text-center">
                     <span class="{{ get_value_class(rider.value_category) }}">
                         {{ "%.1f"|format(rider.points_per_credit or 0) }}
                     </span>
@@ -271,7 +279,7 @@
                     <span class="badge text-dark fw-bold" style="background: #e9ecef;">{{ rider.price }}⭐</span>
                 </td>
                 <td class="text-center">
-                    {% if rider.pcs_rank and rider.pcs_rank <= 50 %}
+                    {% if rider.pcs_rank and rider.pcs_rank <= 100 %}
                         <span class="badge text-dark" style="background: #e9ecef;">
                             <i class="fas fa-trophy"></i> #{{ rider.pcs_rank }}
                         </span>
@@ -327,6 +335,21 @@
                 </button>
             </div>
         </div>
+    </div>
+</div>
+
+<div class="alert alert-light border small d-flex align-items-start gap-2 mt-4" role="note">
+    <i class="fas fa-circle-info mt-1 text-primary"></i>
+    <div>
+        <strong>How "Value" is scored:</strong>
+        Value is driven primarily by <strong>2026 season points</strong>, with a small
+        <strong>12-month helper</strong> (×0.2) so a thin 2026 sample isn't the whole story — a strong year ago
+        only nudges, it doesn't decide. Divided by price.
+        The <strong>Excellent → Poor</strong> tier is ranked <em>across the whole field</em>: PCS points already
+        count every way a rider scores (GC, stage wins, breakaways, one-day races), so a GC leader and a sprinter
+        are compared on total output — and a genuinely strong rider is never buried in "Poor".
+        <strong>Sprinters</strong> get a small upward tier nudge only (their <em>Value</em> number is unchanged),
+        because PCS points under-reward the bunch-sprint stage wins that score big in the fantasy game.
     </div>
 </div>
 {% endblock %}
@@ -390,9 +413,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const cardViewContent = document.getElementById('cardView-content');
     const tableViewContent = document.getElementById('tableView-content');
     
-    // Load saved preference or default to card view
-    const savedView = localStorage.getItem('ridersViewMode') || 'card';
-    if (savedView === 'table') {
+    // Load saved preference or default to table view
+    const savedView = localStorage.getItem('ridersViewMode') || 'table';
+    if (savedView === 'card') {
+        cardViewRadio.checked = true;
+        cardViewContent.style.display = 'block';
+        tableViewContent.style.display = 'none';
+    } else {
         tableViewRadio.checked = true;
         cardViewContent.style.display = 'none';
         tableViewContent.style.display = 'block';
@@ -476,26 +503,30 @@ function sortTable(columnIndex) {
                 aValue = a.cells[2].textContent.trim();
                 bValue = b.cells[2].textContent.trim();
                 break;
-            case 3: // PCS Points
+            case 3: // PCS 2026 points
                 aValue = parseInt(a.cells[3].textContent.replace(/,/g, '') || '0');
                 bValue = parseInt(b.cells[3].textContent.replace(/,/g, '') || '0');
                 break;
-            case 4: // P/C Ratio
-                aValue = parseFloat(a.cells[4].textContent || '0');
-                bValue = parseFloat(b.cells[4].textContent || '0');
+            case 4: // PCS 12-month points
+                aValue = parseInt(a.cells[4].textContent.replace(/,/g, '') || '0');
+                bValue = parseInt(b.cells[4].textContent.replace(/,/g, '') || '0');
                 break;
-            case 5: // Value category
+            case 5: // Value
+                aValue = parseFloat(a.cells[5].textContent || '0');
+                bValue = parseFloat(b.cells[5].textContent || '0');
+                break;
+            case 6: // Value tier
                 const valueOrder = {'Excellent': 5, 'Great': 4, 'Good': 3, 'Average': 2, 'Poor': 1};
-                aValue = valueOrder[a.cells[5].textContent.trim()] || 0;
-                bValue = valueOrder[b.cells[5].textContent.trim()] || 0;
+                aValue = valueOrder[a.cells[6].textContent.trim()] || 0;
+                bValue = valueOrder[b.cells[6].textContent.trim()] || 0;
                 break;
-            case 6: // Price
-                aValue = parseInt(a.cells[6].textContent.match(/\d+/) || '0');
-                bValue = parseInt(b.cells[6].textContent.match(/\d+/) || '0');
+            case 7: // Price
+                aValue = parseInt(a.cells[7].textContent.match(/\d+/) || '0');
+                bValue = parseInt(b.cells[7].textContent.match(/\d+/) || '0');
                 break;
-            case 7: // PCS Rank
-                const aRank = a.cells[7].textContent.match(/#(\d+)/);
-                const bRank = b.cells[7].textContent.match(/#(\d+)/);
+            case 8: // PCS Rank
+                const aRank = a.cells[8].textContent.match(/#(\d+)/);
+                const bRank = b.cells[8].textContent.match(/#(\d+)/);
                 aValue = aRank ? parseInt(aRank[1]) : 9999;
                 bValue = bRank ? parseInt(bRank[1]) : 9999;
                 break;

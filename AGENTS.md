@@ -1,16 +1,13 @@
-# Fantasy TdF Helper - Claude Context
+# Fantasy TdF Helper - Codex Context
 
 ## Project Overview
 Web application to help users select better riders for Tour de France fantasy league (https://fantasybytissot.letour.fr).
 
-## Current Status (TdF 2026)
-- ✅ Updated to **Tour de France 2026** — 197 selectable riders, 23 teams
-- ✅ Fantasy rider data scraped via `fantasy_scraper.js` (now count-agnostic pagination) → `all_tour_de_france_riders.csv`
-- ✅ PCS scraper with advanced name matching (`simple-pcs-script.py`); live 2026-season points
-- ✅ Data integration: 194/197 matched (157 manual map + 37 fuzzy, all verified); 3 unmatched domestiques outside PCS top-1500 (Allegaert, Riesebeek, Eekhoff → 0 pts)
-- Note: source startlist `doc.pdf` is a *provisional* 129-rider list; the fantasy CSV (197) is the authoritative selectable universe, so no hard-filter is applied
-- JSON key `pcs_points_2025` retained as the "current-season points" field (referenced ~12× in app.py + templates — do not rename)
-- ✅ **Value model in `value_utils.py`** (single source, imported by scraper + app.py): `value_points = 0.8·2026 season pts + 0.2·12-month pts` (2026 primary, 12m small helper); `points_per_credit = value_points/price`; `value_category` = **global** percentile tiers across the whole field (PCS pts already aggregate GC+stages+one-day, so categories aren't siloed; gives absolute anchor so a decent rider isn't "Poor" for being the weakest leader). Fields added: `pcs_points_12m`, `value_points`. 12-month ranking scraped from PCS `p=me` (cols name=4/team=5/pts=6), cached in `pcs_riders_12m.csv`. riders table = 2 PCS columns (2026, 12m); PCS-rank badge for top 100.
+## Current Status
+- ✅ Fantasy rider data scraped (261 riders in `all_tour_de_france_riders.csv`)
+- ✅ PCS scraper with advanced name matching (`simple-pcs-script.py`)
+- ✅ 100% data integration - all riders matched with PCS data
+- ✅ Updated to final TdF 2025 roster - 184 riders (`update_tdf_roster.py`)
 - ✅ Flask web application with rider listing and filtering
 - ✅ Rider comparison tool implemented
 - ✅ Team builder with budget optimization and team constraints
