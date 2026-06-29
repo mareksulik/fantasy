@@ -5,6 +5,7 @@ Web application for Tour de France fantasy rider selection assistance
 """
 
 from flask import Flask, render_template, request, jsonify
+import os
 import json
 import threading
 import schedule
@@ -14,6 +15,10 @@ import requests
 from bs4 import BeautifulSoup
 import logging
 import value_utils as V
+
+# Resolve the app's own directory so relative data/template paths work regardless
+# of the working directory (critical on serverless hosts like Vercel where CWD differs).
+os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 app = Flask(__name__)
 
@@ -173,12 +178,13 @@ def run_scheduled_updates():
         schedule.run_pending()
         time.sleep(60)  # Check every minute
 
-# Schedule daily update at 2 AM
-schedule.every().day.at("02:00").do(pcs_updater.update_points)
-
-# Start background thread for scheduled updates
-update_thread = threading.Thread(target=run_scheduled_updates, daemon=True)
-update_thread.start()
+# Schedule daily PCS update at 2 AM — only on a long-lived server. Skipped on Vercel
+# (serverless has no background threads and a read-only filesystem; refresh the data
+# by running the scrapers locally and pushing, which auto-redeploys).
+if not os.environ.get('VERCEL'):
+    schedule.every().day.at("02:00").do(pcs_updater.update_points)
+    update_thread = threading.Thread(target=run_scheduled_updates, daemon=True)
+    update_thread.start()
 
 # Helper functions for Jinja2 templates
 def get_value_class(category):
