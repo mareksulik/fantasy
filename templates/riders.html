@@ -92,7 +92,7 @@
                 </div>
             </div>
             
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <label for="team" class="form-label">Team</label>
                 <div class="dropdown">
                     <button class="custom-dropdown-btn w-100" type="button" id="teamDropdown" data-bs-toggle="dropdown" aria-expanded="false">
@@ -203,6 +203,11 @@
                 
                 <div class="mt-2">
                     <span class="badge {{ get_category_badge_class(rider.category) }}">{{ rider.category }}</span>
+                    {% if rider.wins_2026 %}
+                    <span class="badge bg-warning text-dark" title="2026 victories">
+                        <i class="fas fa-flag-checkered"></i> {{ rider.wins_2026 }} win{{ 's' if rider.wins_2026 > 1 else '' }} '26
+                    </span>
+                    {% endif %}
                     {% if rider.pcs_rank and rider.pcs_rank <= 100 %}
                     <span class="badge text-dark" style="background: #e9ecef;">
                         <i class="fas fa-trophy"></i> #{{ rider.pcs_rank }} PCS
@@ -240,10 +245,11 @@
                 <th class="sortable" onclick="sortTable(2)">Category <i class="fas fa-sort"></i></th>
                 <th class="text-center sortable" onclick="sortTable(3)" title="2026 season-to-date PCS points (primary value driver)">PCS 2026 <i class="fas fa-sort"></i></th>
                 <th class="text-center sortable" onclick="sortTable(4)" title="12-month rolling PCS points (secondary helper)">PCS 12m <i class="fas fa-sort"></i></th>
-                <th class="text-center sortable" onclick="sortTable(5)" title="Value points (2026 primary + small 12m helper) per credit">Value <i class="fas fa-sort"></i></th>
-                <th class="text-center sortable" onclick="sortTable(6)" title="Tier ranked across the whole field">Tier <i class="fas fa-sort"></i></th>
-                <th class="text-center sortable" onclick="sortTable(7)">Price <i class="fas fa-sort"></i></th>
-                <th class="text-center sortable" onclick="sortTable(8)">PCS Rank <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(5)" title="Number of victories in 2026 — drives the stage-win tier boost">Wins '26 <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(6)" title="Value points (2026 primary + small 12m helper) per credit">Value <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(7)" title="Tier ranked across the whole field, with a stage-win boost">Tier <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(8)">Price <i class="fas fa-sort"></i></th>
+                <th class="text-center sortable" onclick="sortTable(9)">PCS Rank <i class="fas fa-sort"></i></th>
                 <th class="text-center">Actions</th>
             </tr>
         </thead>
@@ -254,7 +260,7 @@
                     <div class="fw-bold">{{ get_flag_emoji(rider.pcs_nationality) }} {{ rider.fantasy_name }}</div>
                 </td>
                 <td>
-                    <small class="text-muted">{{ rider.team }}</small>
+                    <span class="text-muted">{{ rider.team }}</span>
                 </td>
                 <td>
                     <span class="badge {{ get_category_badge_class(rider.category) }}">{{ rider.category }}</span>
@@ -264,6 +270,9 @@
                 </td>
                 <td class="text-center">
                     <div class="text-muted">{{ format_number(rider.pcs_points_12m or 0) }}</div>
+                </td>
+                <td class="text-center">
+                    {% if rider.wins_2026 %}<span class="fw-bold">{{ rider.wins_2026 }}</span>{% else %}<span class="text-muted">0</span>{% endif %}
                 </td>
                 <td class="text-center">
                     <span class="{{ get_value_class(rider.value_category) }}">
@@ -284,7 +293,7 @@
                             <i class="fas fa-trophy"></i> #{{ rider.pcs_rank }}
                         </span>
                     {% else %}
-                        <small class="text-muted">-</small>
+                        <span class="text-muted">-</span>
                     {% endif %}
                 </td>
                 <td class="text-center">
@@ -348,8 +357,10 @@
         The <strong>Excellent → Poor</strong> tier is ranked <em>across the whole field</em>: PCS points already
         count every way a rider scores (GC, stage wins, breakaways, one-day races), so a GC leader and a sprinter
         are compared on total output — and a genuinely strong rider is never buried in "Poor".
-        <strong>Sprinters</strong> get a small upward tier nudge only (their <em>Value</em> number is unchanged),
-        because PCS points under-reward the bunch-sprint stage wins that score big in the fantasy game.
+        Riders with <strong>2026 wins</strong> (the <em>Wins '26</em> column) get a <strong>win premium</strong>
+        folded into their <em>Value</em> and tier — <strong>+5% per win, up to +30%</strong> (6 wins) — because PCS
+        points under-reward the stage/race wins that score big in the fantasy game. This lifts sprinters and
+        breakaway stage-hunters (e.g. Cort) on the same honest basis; riders with no 2026 win are untouched.
     </div>
 </div>
 {% endblock %}
@@ -511,22 +522,26 @@ function sortTable(columnIndex) {
                 aValue = parseInt(a.cells[4].textContent.replace(/,/g, '') || '0');
                 bValue = parseInt(b.cells[4].textContent.replace(/,/g, '') || '0');
                 break;
-            case 5: // Value
-                aValue = parseFloat(a.cells[5].textContent || '0');
-                bValue = parseFloat(b.cells[5].textContent || '0');
+            case 5: // Wins 2026
+                aValue = parseInt(a.cells[5].textContent.replace(/[^0-9]/g, '') || '0');
+                bValue = parseInt(b.cells[5].textContent.replace(/[^0-9]/g, '') || '0');
                 break;
-            case 6: // Value tier
+            case 6: // Value
+                aValue = parseFloat(a.cells[6].textContent || '0');
+                bValue = parseFloat(b.cells[6].textContent || '0');
+                break;
+            case 7: // Value tier
                 const valueOrder = {'Excellent': 5, 'Great': 4, 'Good': 3, 'Average': 2, 'Poor': 1};
-                aValue = valueOrder[a.cells[6].textContent.trim()] || 0;
-                bValue = valueOrder[b.cells[6].textContent.trim()] || 0;
+                aValue = valueOrder[a.cells[7].textContent.trim()] || 0;
+                bValue = valueOrder[b.cells[7].textContent.trim()] || 0;
                 break;
-            case 7: // Price
-                aValue = parseInt(a.cells[7].textContent.match(/\d+/) || '0');
-                bValue = parseInt(b.cells[7].textContent.match(/\d+/) || '0');
+            case 8: // Price
+                aValue = parseInt(a.cells[8].textContent.match(/\d+/) || '0');
+                bValue = parseInt(b.cells[8].textContent.match(/\d+/) || '0');
                 break;
-            case 8: // PCS Rank
-                const aRank = a.cells[8].textContent.match(/#(\d+)/);
-                const bRank = b.cells[8].textContent.match(/#(\d+)/);
+            case 9: // PCS Rank
+                const aRank = a.cells[9].textContent.match(/#(\d+)/);
+                const bRank = b.cells[9].textContent.match(/#(\d+)/);
                 aValue = aRank ? parseInt(aRank[1]) : 9999;
                 bValue = bRank ? parseInt(bRank[1]) : 9999;
                 break;

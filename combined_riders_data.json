@@ -21,10 +21,11 @@
       "pcs_nationality": "SI",
       "pcs_team": "UAE Team Emirates - XRG",
       "pcs_url": "https://www.procyclingstats.com/rider/tadej-pogacar",
-      "points_per_credit": 98.04444444444444,
+      "points_per_credit": 127.45777777777778,
       "value_category": "Excellent",
       "pcs_points_12m": 4744.0,
-      "value_points": 2647.2
+      "value_points": 2647.2,
+      "wins_2026": 15
     },
     {
       "fantasy_name": "J. VINGEGAARD HANSEN",
@@ -39,10 +40,11 @@
       "pcs_nationality": "DK",
       "pcs_team": "Team Visma | Lease a Bike",
       "pcs_url": "https://www.procyclingstats.com/rider/jonas-vingegaard",
-      "points_per_credit": 81.00833333333334,
+      "points_per_credit": 105.31083333333335,
       "value_category": "Excellent",
       "pcs_points_12m": 3405.0,
-      "value_points": 1944.2
+      "value_points": 1944.2,
+      "wins_2026": 14
     },
     {
       "fantasy_name": "T. MERLIER",
@@ -57,10 +59,11 @@
       "pcs_nationality": "BE",
       "pcs_team": "Soudal Quick-Step",
       "pcs_url": "https://www.procyclingstats.com/rider/tim-merlier",
-      "points_per_credit": 22.09565217391304,
+      "points_per_credit": 28.724347826086955,
       "value_category": "Good",
       "pcs_points_12m": 889.0,
-      "value_points": 508.2
+      "value_points": 508.2,
+      "wins_2026": 7
     },
     {
       "fantasy_name": "J. PHILIPSEN",
@@ -75,10 +78,11 @@
       "pcs_nationality": "BE",
       "pcs_team": "Alpecin - Premier Tech",
       "pcs_url": "https://www.procyclingstats.com/rider/jasper-philipsen",
-      "points_per_credit": 54.290909090909096,
+      "points_per_credit": 70.57818181818183,
       "value_category": "Excellent",
       "pcs_points_12m": 1752.0,
-      "value_points": 1194.4
+      "value_points": 1194.4,
+      "wins_2026": 6
     },
     {
       "fantasy_name": "M. VAN DER POEL",
@@ -93,10 +97,11 @@
       "pcs_nationality": "NL",
       "pcs_team": "Alpecin - Premier Tech",
       "pcs_url": "https://www.procyclingstats.com/rider/mathieu-van-der-poel",
-      "points_per_credit": 49.845454545454544,
-      "value_category": "Great",
+      "points_per_credit": 59.81454545454545,
+      "value_category": "Excellent",
       "pcs_points_12m": 1503.0,
-      "value_points": 1096.6
+      "value_points": 1096.6,
+      "wins_2026": 4
     },
     {
       "fantasy_name": "F. LIPOWITZ",
@@ -111,10 +116,11 @@
       "pcs_nationality": "DE",
       "pcs_team": "Red Bull - BORA - hansgrohe",
       "pcs_url": "https://www.procyclingstats.com/rider/florian-lipowitz",
-      "points_per_credit": 55.67,
+      "points_per_credit": 69.5875,
       "value_category": "Excellent",
       "pcs_points_12m": 1559.0,
-      "value_points": 1113.4
+      "value_points": 1113.4,
+      "wins_2026": 5
     },
     {
       "fantasy_name": "R. EVENEPOEL",
@@ -129,10 +135,11 @@
       "pcs_nationality": "BE",
       "pcs_team": "Red Bull - BORA - hansgrohe",
       "pcs_url": "https://www.procyclingstats.com/rider/remco-evenepoel",
-      "points_per_credit": 73.46000000000001,
+      "points_per_credit": 95.49800000000002,
       "value_category": "Excellent",
       "pcs_points_12m": 2426.0,
-      "value_points": 1469.2
+      "value_points": 1469.2,
+      "wins_2026": 8
     },
     {
       "fantasy_name": "J. AYUSO PESQUERA",
@@ -147,10 +154,11 @@
       "pcs_nationality": "ES",
       "pcs_team": "Lidl - Trek",
       "pcs_url": "https://www.procyclingstats.com/rider/juan-ayuso-pesquera",
-      "points_per_credit": 27.25,
+      "points_per_credit": 29.975,
       "value_category": "Good",
       "pcs_points_12m": 885.0,
-      "value_points": 545.0
+      "value_points": 545.0,
+      "wins_2026": 2
     },
     {
       "fantasy_name": "A. YATES",
@@ -165,10 +173,11 @@
       "pcs_nationality": "GB",
       "pcs_team": "UAE Team Emirates - XRG",
       "pcs_url": "https://www.procyclingstats.com/rider/adam-yates",
-      "points_per_credit": 25.021052631578947,
+      "points_per_credit": 27.523157894736844,
       "value_category": "Good",
       "pcs_points_12m": 817.0,
-      "value_points": 475.4
+      "value_points": 475.4,
+      "wins_2026": 2
     },
     {
       "fantasy_name": "B. GIRMAY",
@@ -183,10 +192,11 @@
       "pcs_nationality": "ER",
       "pcs_team": "NSN Cycling Team",
       "pcs_url": "https://www.procyclingstats.com/rider/biniam-girmay",
-      "points_per_credit": 26.147368421052633,
+      "points_per_credit": 31.376842105263158,
       "value_category": "Good",
       "pcs_points_12m": 816.0,
-      "value_points": 496.8
+      "value_points": 496.8,
+      "wins_2026": 4
     },
     {
       "fantasy_name": "R. CARAPAZ",
@@ -204,7 +214,8 @@
       "points_per_credit": 21.50526315789474,
       "value_category": "Average",
       "pcs_points_12m": 547.0,
-      "value_points": 408.6
+      "value_points": 408.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "F. GANNA",
@@ -219,10 +230,11 @@
       "pcs_nationality": "IT",
       "pcs_team": "Netcompany INEOS",
       "pcs_url": "https://www.procyclingstats.com/rider/filippo-ganna",
-      "points_per_credit": 27.08888888888889,
+      "points_per_credit": 33.861111111111114,
       "value_category": "Good",
       "pcs_points_12m": 622.0,
-      "value_points": 487.6
+      "value_points": 487.6,
+      "wins_2026": 5
     },
     {
       "fantasy_name": "E. ONLEY",
@@ -237,10 +249,11 @@
       "pcs_nationality": "GB",
       "pcs_team": "Netcompany INEOS",
       "pcs_url": "https://www.procyclingstats.com/rider/oscar-onley",
-      "points_per_credit": 19.27777777777778,
+      "points_per_credit": 20.241666666666667,
       "value_category": "Average",
       "pcs_points_12m": 939.0,
-      "value_points": 347.0
+      "value_points": 347.0,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "M. PEDERSEN",
@@ -256,9 +269,10 @@
       "pcs_team": "Lidl - Trek",
       "pcs_url": "https://www.procyclingstats.com/rider/mads-pedersen",
       "points_per_credit": 33.900000000000006,
-      "value_category": "Great",
+      "value_category": "Good",
       "pcs_points_12m": 1091.0,
-      "value_points": 610.2
+      "value_points": 610.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. JORGENSON",
@@ -273,10 +287,11 @@
       "pcs_nationality": "US",
       "pcs_team": "Team Visma | Lease a Bike",
       "pcs_url": "https://www.procyclingstats.com/rider/matteo-jorgenson",
-      "points_per_credit": 38.266666666666666,
+      "points_per_credit": 40.18,
       "value_category": "Great",
       "pcs_points_12m": 1084.0,
-      "value_points": 688.8
+      "value_points": 688.8,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "T. PIDCOCK",
@@ -291,10 +306,11 @@
       "pcs_nationality": "GB",
       "pcs_team": "Pinarello Q36.5 Pro Cycling Team",
       "pcs_url": "https://www.procyclingstats.com/rider/tom-pidcock",
-      "points_per_credit": 58.8111111111111,
+      "points_per_credit": 70.57333333333332,
       "value_category": "Excellent",
       "pcs_points_12m": 1709.0,
-      "value_points": 1058.6
+      "value_points": 1058.6,
+      "wins_2026": 4
     },
     {
       "fantasy_name": "S. BUITRAGO SANCHEZ",
@@ -309,10 +325,11 @@
       "pcs_nationality": "CO",
       "pcs_team": "Bahrain - Victorious",
       "pcs_url": "https://www.procyclingstats.com/rider/santiago-buitrago-sanchez",
-      "points_per_credit": 23.141176470588235,
+      "points_per_credit": 24.298235294117646,
       "value_category": "Good",
       "pcs_points_12m": 575.0,
-      "value_points": 393.4
+      "value_points": 393.4,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "T. ARENSMAN",
@@ -330,7 +347,8 @@
       "points_per_credit": 41.6,
       "value_category": "Great",
       "pcs_points_12m": 1132.0,
-      "value_points": 707.2
+      "value_points": 707.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "J. MEEUS",
@@ -345,10 +363,11 @@
       "pcs_nationality": "BE",
       "pcs_team": "Red Bull - BORA - hansgrohe",
       "pcs_url": "https://www.procyclingstats.com/rider/jordi-meeus",
-      "points_per_credit": 40.83529411764706,
-      "value_category": "Excellent",
+      "points_per_credit": 49.00235294117647,
+      "value_category": "Great",
       "pcs_points_12m": 1039.0,
-      "value_points": 694.2
+      "value_points": 694.2,
+      "wins_2026": 4
     },
     {
       "fantasy_name": "T. JOHANNESSEN",
@@ -366,7 +385,8 @@
       "points_per_credit": 55.870588235294115,
       "value_category": "Excellent",
       "pcs_points_12m": 1281.0,
-      "value_points": 949.8
+      "value_points": 949.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. SKJELMOSE",
@@ -384,7 +404,8 @@
       "points_per_credit": 42.705882352941174,
       "value_category": "Great",
       "pcs_points_12m": 1138.0,
-      "value_points": 726.0
+      "value_points": 726.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "D. PIGANZOLI",
@@ -399,10 +420,11 @@
       "pcs_nationality": "IT",
       "pcs_team": "Team Visma | Lease a Bike",
       "pcs_url": "https://www.procyclingstats.com/rider/davide-piganzoli",
-      "points_per_credit": 31.1125,
+      "points_per_credit": 35.779374999999995,
       "value_category": "Good",
       "pcs_points_12m": 653.0,
-      "value_points": 497.8
+      "value_points": 497.8,
+      "wins_2026": 3
     },
     {
       "fantasy_name": "D. GEE",
@@ -417,10 +439,11 @@
       "pcs_nationality": "CA",
       "pcs_team": "Lidl - Trek",
       "pcs_url": "https://www.procyclingstats.com/rider/derek-gee",
-      "points_per_credit": 31.0,
+      "points_per_credit": 32.550000000000004,
       "value_category": "Good",
       "pcs_points_12m": 496.0,
-      "value_points": 496.0
+      "value_points": 496.0,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "A. DE LIE",
@@ -435,10 +458,11 @@
       "pcs_nationality": "BE",
       "pcs_team": "Lotto Intermarché",
       "pcs_url": "https://www.procyclingstats.com/rider/arnaud-de-lie",
-      "points_per_credit": 42.1875,
-      "value_category": "Excellent",
+      "points_per_credit": 46.40625000000001,
+      "value_category": "Great",
       "pcs_points_12m": 1803.0,
-      "value_points": 675.0
+      "value_points": 675.0,
+      "wins_2026": 2
     },
     {
       "fantasy_name": "J. TARLING",
@@ -453,10 +477,11 @@
       "pcs_nationality": "GB",
       "pcs_team": "Netcompany INEOS",
       "pcs_url": "https://www.procyclingstats.com/rider/joshua-tarling",
-      "points_per_credit": 7.8125,
+      "points_per_credit": 8.203125,
       "value_category": "Poor",
       "pcs_points_12m": 201.0,
-      "value_points": 125.0
+      "value_points": 125.0,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "B. MCNULTY",
@@ -474,7 +499,8 @@
       "points_per_credit": 28.3875,
       "value_category": "Good",
       "pcs_points_12m": 1199.0,
-      "value_points": 454.2
+      "value_points": 454.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "S. KUSS",
@@ -489,10 +515,11 @@
       "pcs_nationality": "US",
       "pcs_team": "Team Visma | Lease a Bike",
       "pcs_url": "https://www.procyclingstats.com/rider/sepp-kuss",
-      "points_per_credit": 22.525,
-      "value_category": "Average",
+      "points_per_credit": 23.65125,
+      "value_category": "Good",
       "pcs_points_12m": 730.0,
-      "value_points": 360.4
+      "value_points": 360.4,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "C. RODRIGUEZ",
@@ -507,10 +534,11 @@
       "pcs_nationality": "ES",
       "pcs_team": "Netcompany INEOS",
       "pcs_url": "https://www.procyclingstats.com/rider/carlos-rodriguez-cano",
-      "points_per_credit": 14.1125,
+      "points_per_credit": 14.818125000000002,
       "value_category": "Average",
       "pcs_points_12m": 237.0,
-      "value_points": 225.8
+      "value_points": 225.8,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "E. BERNAL GOMEZ",
@@ -525,10 +553,11 @@
       "pcs_nationality": "CO",
       "pcs_team": "Netcompany INEOS",
       "pcs_url": "https://www.procyclingstats.com/rider/egan-bernal",
-      "points_per_credit": 35.6375,
+      "points_per_credit": 37.419375,
       "value_category": "Good",
       "pcs_points_12m": 919.0,
-      "value_points": 570.2
+      "value_points": 570.2,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "D. MARTINEZ POVEDA",
@@ -546,7 +575,8 @@
       "points_per_credit": 21.4375,
       "value_category": "Average",
       "pcs_points_12m": 347.0,
-      "value_points": 343.0
+      "value_points": 343.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. STORER",
@@ -564,7 +594,8 @@
       "points_per_credit": 33.375,
       "value_category": "Good",
       "pcs_points_12m": 898.0,
-      "value_points": 534.0
+      "value_points": 534.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "J. HINDLEY",
@@ -582,7 +613,8 @@
       "points_per_credit": 36.375,
       "value_category": "Good",
       "pcs_points_12m": 942.0,
-      "value_points": 582.0
+      "value_points": 582.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. MOHORIC",
@@ -600,7 +632,8 @@
       "points_per_credit": 12.5125,
       "value_category": "Average",
       "pcs_points_12m": 333.0,
-      "value_points": 200.2
+      "value_points": 200.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "B. O'CONNOR",
@@ -618,7 +651,8 @@
       "points_per_credit": 24.1875,
       "value_category": "Good",
       "pcs_points_12m": 679.0,
-      "value_points": 387.0
+      "value_points": 387.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "B. TULETT",
@@ -633,10 +667,11 @@
       "pcs_nationality": "GB",
       "pcs_team": "Team Visma | Lease a Bike",
       "pcs_url": "https://www.procyclingstats.com/rider/ben-tulett",
-      "points_per_credit": 28.240000000000002,
+      "points_per_credit": 29.652000000000005,
       "value_category": "Good",
       "pcs_points_12m": 614.0,
-      "value_points": 423.6
+      "value_points": 423.6,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "J. NARVAEZ PRADO",
@@ -651,10 +686,11 @@
       "pcs_nationality": "EC",
       "pcs_team": "UAE Team Emirates - XRG",
       "pcs_url": "https://www.procyclingstats.com/rider/jhonatan-narvaez",
-      "points_per_credit": 32.093333333333334,
-      "value_category": "Good",
+      "points_per_credit": 38.512,
+      "value_category": "Great",
       "pcs_points_12m": 971.0,
-      "value_points": 481.4
+      "value_points": 481.4,
+      "wins_2026": 4
     },
     {
       "fantasy_name": "K. VAUQUELIN",
@@ -669,10 +705,11 @@
       "pcs_nationality": "FR",
       "pcs_team": "Netcompany INEOS",
       "pcs_url": "https://www.procyclingstats.com/rider/kevin-vauquelin",
-      "points_per_credit": 36.76,
-      "value_category": "Good",
+      "points_per_credit": 38.598,
+      "value_category": "Great",
       "pcs_points_12m": 865.0,
-      "value_points": 551.4
+      "value_points": 551.4,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "T. STEWART",
@@ -690,7 +727,8 @@
       "points_per_credit": 2.2266666666666666,
       "value_category": "Poor",
       "pcs_points_12m": 95.0,
-      "value_points": 33.4
+      "value_points": 33.4,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "P. ACKERMANN",
@@ -708,7 +746,8 @@
       "points_per_credit": 12.72,
       "value_category": "Average",
       "pcs_points_12m": 266.0,
-      "value_points": 190.8
+      "value_points": 190.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "B. HEALY",
@@ -726,7 +765,8 @@
       "points_per_credit": 20.533333333333335,
       "value_category": "Average",
       "pcs_points_12m": 908.0,
-      "value_points": 308.0
+      "value_points": 308.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "L. MARTINEZ",
@@ -741,10 +781,11 @@
       "pcs_nationality": "FR",
       "pcs_team": "Bahrain - Victorious",
       "pcs_url": "https://www.procyclingstats.com/rider/lenny-martinez",
-      "points_per_credit": 60.919999999999995,
+      "points_per_credit": 70.05799999999999,
       "value_category": "Excellent",
       "pcs_points_12m": 1157.0,
-      "value_points": 913.8
+      "value_points": 913.8,
+      "wins_2026": 3
     },
     {
       "fantasy_name": "M. MATTHEWS",
@@ -759,10 +800,11 @@
       "pcs_nationality": "AU",
       "pcs_team": "Team Jayco AlUla",
       "pcs_url": "https://www.procyclingstats.com/rider/michael-matthews",
-      "points_per_credit": 11.04,
-      "value_category": "Average",
+      "points_per_credit": 11.591999999999999,
+      "value_category": "Poor",
       "pcs_points_12m": 392.0,
-      "value_points": 165.6
+      "value_points": 165.6,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "Q. SIMMONS",
@@ -777,10 +819,11 @@
       "pcs_nationality": "US",
       "pcs_team": "Lidl - Trek",
       "pcs_url": "https://www.procyclingstats.com/rider/quinn-simmons",
-      "points_per_credit": 16.253333333333334,
+      "points_per_credit": 17.878666666666668,
       "value_category": "Average",
       "pcs_points_12m": 519.0,
-      "value_points": 243.8
+      "value_points": 243.8,
+      "wins_2026": 2
     },
     {
       "fantasy_name": "G. CICCONE",
@@ -795,10 +838,11 @@
       "pcs_nationality": "IT",
       "pcs_team": "Lidl - Trek",
       "pcs_url": "https://www.procyclingstats.com/rider/giulio-ciccone",
-      "points_per_credit": 38.4,
+      "points_per_credit": 42.24,
       "value_category": "Great",
       "pcs_points_12m": 1124.0,
-      "value_points": 576.0
+      "value_points": 576.0,
+      "wins_2026": 2
     },
     {
       "fantasy_name": "J. ALAPHILIPPE",
@@ -816,7 +860,8 @@
       "points_per_credit": 11.066666666666666,
       "value_category": "Poor",
       "pcs_points_12m": 602.0,
-      "value_points": 166.0
+      "value_points": 166.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "W. KELDERMAN",
@@ -831,10 +876,11 @@
       "pcs_nationality": "NL",
       "pcs_team": "Team Visma | Lease a Bike",
       "pcs_url": "https://www.procyclingstats.com/rider/wilco-kelderman",
-      "points_per_credit": 8.293333333333333,
+      "points_per_credit": 8.708,
       "value_category": "Poor",
       "pcs_points_12m": 174.0,
-      "value_points": 124.4
+      "value_points": 124.4,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "P. BAUHAUS",
@@ -850,9 +896,10 @@
       "pcs_team": "Bahrain - Victorious",
       "pcs_url": "https://www.procyclingstats.com/rider/phil-bauhaus",
       "points_per_credit": 8.92,
-      "value_category": "Average",
+      "value_category": "Poor",
       "pcs_points_12m": 241.0,
-      "value_points": 133.8
+      "value_points": 133.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. LANDA MEANA",
@@ -870,7 +917,8 @@
       "points_per_credit": 4.493333333333334,
       "value_category": "Poor",
       "pcs_points_12m": 177.0,
-      "value_points": 67.4
+      "value_points": 67.4,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "E. AFFINI",
@@ -885,10 +933,11 @@
       "pcs_nationality": "IT",
       "pcs_team": "Team Visma | Lease a Bike",
       "pcs_url": "https://www.procyclingstats.com/rider/edoardo-affini",
-      "points_per_credit": 4.571428571428571,
+      "points_per_credit": 4.8,
       "value_category": "Poor",
       "pcs_points_12m": 128.0,
-      "value_points": 64.0
+      "value_points": 64.0,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "V. PARET PEINTRE",
@@ -906,7 +955,8 @@
       "points_per_credit": 26.042857142857144,
       "value_category": "Good",
       "pcs_points_12m": 495.0,
-      "value_points": 364.6
+      "value_points": 364.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "F. FISHER - BLACK",
@@ -921,10 +971,11 @@
       "pcs_nationality": "NZ",
       "pcs_team": "Red Bull - BORA - hansgrohe",
       "pcs_url": "https://www.procyclingstats.com/rider/finn-fisher-black",
-      "points_per_credit": 13.485714285714286,
+      "points_per_credit": 14.16,
       "value_category": "Average",
       "pcs_points_12m": 228.0,
-      "value_points": 188.8
+      "value_points": 188.8,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "E. RUBIO REYES",
@@ -942,7 +993,8 @@
       "points_per_credit": 8.8,
       "value_category": "Poor",
       "pcs_points_12m": 204.0,
-      "value_points": 123.2
+      "value_points": 123.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. FRETIN",
@@ -957,10 +1009,11 @@
       "pcs_nationality": "BE",
       "pcs_team": "Cofidis",
       "pcs_url": "https://www.procyclingstats.com/rider/milan-fretin",
-      "points_per_credit": 21.285714285714285,
-      "value_category": "Good",
+      "points_per_credit": 22.35,
+      "value_category": "Average",
       "pcs_points_12m": 382.0,
-      "value_points": 298.0
+      "value_points": 298.0,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "J. JEGAT",
@@ -975,10 +1028,11 @@
       "pcs_nationality": "FR",
       "pcs_team": "TotalEnergies",
       "pcs_url": "https://www.procyclingstats.com/rider/jordan-jegat",
-      "points_per_credit": 22.728571428571428,
-      "value_category": "Average",
+      "points_per_credit": 23.865,
+      "value_category": "Good",
       "pcs_points_12m": 627.0,
-      "value_points": 318.2
+      "value_points": 318.2,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "F. GAVIRIA RENDON",
@@ -996,7 +1050,8 @@
       "points_per_credit": 15.257142857142856,
       "value_category": "Average",
       "pcs_points_12m": 256.0,
-      "value_points": 213.6
+      "value_points": 213.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "R. GREGOIRE",
@@ -1011,10 +1066,11 @@
       "pcs_nationality": "FR",
       "pcs_team": "Groupama - FDJ United",
       "pcs_url": "https://www.procyclingstats.com/rider/romain-gregoire",
-      "points_per_credit": 62.92857142857143,
+      "points_per_credit": 72.36785714285713,
       "value_category": "Excellent",
       "pcs_points_12m": 1289.0,
-      "value_points": 881.0
+      "value_points": 881.0,
+      "wins_2026": 3
     },
     {
       "fantasy_name": "D. GODON",
@@ -1029,10 +1085,11 @@
       "pcs_nationality": "FR",
       "pcs_team": "Netcompany INEOS",
       "pcs_url": "https://www.procyclingstats.com/rider/dorian-godon",
-      "points_per_credit": 44.67142857142857,
-      "value_category": "Great",
+      "points_per_credit": 58.072857142857146,
+      "value_category": "Excellent",
       "pcs_points_12m": 991.0,
-      "value_points": 625.4
+      "value_points": 625.4,
+      "wins_2026": 7
     },
     {
       "fantasy_name": "M. SCHMID",
@@ -1047,10 +1104,11 @@
       "pcs_nationality": "CH",
       "pcs_team": "Team Jayco AlUla",
       "pcs_url": "https://www.procyclingstats.com/rider/mauro-schmid",
-      "points_per_credit": 79.41428571428571,
+      "points_per_credit": 99.26785714285714,
       "value_category": "Excellent",
       "pcs_points_12m": 1307.0,
-      "value_points": 1111.8
+      "value_points": 1111.8,
+      "wins_2026": 5
     },
     {
       "fantasy_name": "M. CORT NIELSEN",
@@ -1065,10 +1123,11 @@
       "pcs_nationality": "DK",
       "pcs_team": "Uno-X Mobility",
       "pcs_url": "https://www.procyclingstats.com/rider/magnus-cort-nielsen",
-      "points_per_credit": 11.714285714285714,
-      "value_category": "Poor",
+      "points_per_credit": 12.885714285714286,
+      "value_category": "Average",
       "pcs_points_12m": 184.0,
-      "value_points": 164.0
+      "value_points": 164.0,
+      "wins_2026": 2
     },
     {
       "fantasy_name": "P. BILBAO LOPEZ DE ARMENTIA",
@@ -1086,7 +1145,8 @@
       "points_per_credit": 34.128571428571426,
       "value_category": "Good",
       "pcs_points_12m": 713.0,
-      "value_points": 477.8
+      "value_points": 477.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "S. HIGUITA GARCIA",
@@ -1104,7 +1164,8 @@
       "points_per_credit": 26.646153846153844,
       "value_category": "Good",
       "pcs_points_12m": 544.0,
-      "value_points": 346.4
+      "value_points": 346.4,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "P. BITTNER",
@@ -1120,9 +1181,10 @@
       "pcs_team": "Team Picnic PostNL",
       "pcs_url": "https://www.procyclingstats.com/rider/pavel-bittner",
       "points_per_credit": 27.353846153846156,
-      "value_category": "Great",
+      "value_category": "Good",
       "pcs_points_12m": 786.0,
-      "value_points": 355.6
+      "value_points": 355.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "L. PLAPP",
@@ -1140,7 +1202,8 @@
       "points_per_credit": 44.63076923076923,
       "value_category": "Great",
       "pcs_points_12m": 781.0,
-      "value_points": 580.2
+      "value_points": 580.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "J. BERCKMOES",
@@ -1156,9 +1219,10 @@
       "pcs_team": "Lotto Intermarché",
       "pcs_url": "https://www.procyclingstats.com/rider/jenno-berckmoes",
       "points_per_credit": 30.676923076923078,
-      "value_category": "Great",
+      "value_category": "Good",
       "pcs_points_12m": 490.0,
-      "value_points": 398.8
+      "value_points": 398.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "L. KÄMNA",
@@ -1176,7 +1240,8 @@
       "points_per_credit": 3.4615384615384617,
       "value_category": "Poor",
       "pcs_points_12m": 69.0,
-      "value_points": 45.0
+      "value_points": 45.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "S. WATSON",
@@ -1191,10 +1256,11 @@
       "pcs_nationality": "GB",
       "pcs_team": "Netcompany INEOS",
       "pcs_url": "https://www.procyclingstats.com/rider/samuel-watson",
-      "points_per_credit": 14.753846153846155,
+      "points_per_credit": 16.22923076923077,
       "value_category": "Average",
       "pcs_points_12m": 327.0,
-      "value_points": 191.8
+      "value_points": 191.8,
+      "wins_2026": 2
     },
     {
       "fantasy_name": "L. ASKEY",
@@ -1212,7 +1278,8 @@
       "points_per_credit": 27.6,
       "value_category": "Good",
       "pcs_points_12m": 390.0,
-      "value_points": 358.8
+      "value_points": 358.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "C. RODRIGUEZ MARTIN",
@@ -1230,7 +1297,8 @@
       "points_per_credit": 22.076923076923077,
       "value_category": "Average",
       "pcs_points_12m": 375.0,
-      "value_points": 287.0
+      "value_points": 287.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "I. VAN WILDER",
@@ -1248,7 +1316,8 @@
       "points_per_credit": 22.446153846153848,
       "value_category": "Average",
       "pcs_points_12m": 531.0,
-      "value_points": 291.8
+      "value_points": 291.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "P. SIVAKOV",
@@ -1266,7 +1335,8 @@
       "points_per_credit": 10.476923076923075,
       "value_category": "Poor",
       "pcs_points_12m": 493.0,
-      "value_points": 136.2
+      "value_points": 136.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "A. ARANBURU DEVA",
@@ -1281,10 +1351,11 @@
       "pcs_nationality": "ES",
       "pcs_team": "Cofidis",
       "pcs_url": "https://www.procyclingstats.com/rider/alex-aranburu",
-      "points_per_credit": 44.46153846153846,
-      "value_category": "Excellent",
+      "points_per_credit": 51.130769230769225,
+      "value_category": "Great",
       "pcs_points_12m": 770.0,
-      "value_points": 578.0
+      "value_points": 578.0,
+      "wins_2026": 3
     },
     {
       "fantasy_name": "D. GAUDU",
@@ -1302,7 +1373,8 @@
       "points_per_credit": 7.723076923076923,
       "value_category": "Poor",
       "pcs_points_12m": 218.0,
-      "value_points": 100.4
+      "value_points": 100.4,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "G. MARTIN GUYONNET",
@@ -1320,7 +1392,8 @@
       "points_per_credit": 19.523076923076925,
       "value_category": "Average",
       "pcs_points_12m": 369.0,
-      "value_points": 253.8
+      "value_points": 253.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "H. TEJADA CANACUE",
@@ -1335,10 +1408,11 @@
       "pcs_nationality": "CO",
       "pcs_team": "XDS Astana Team",
       "pcs_url": "https://www.procyclingstats.com/rider/harold-tejada",
-      "points_per_credit": 32.76923076923077,
+      "points_per_credit": 34.40769230769231,
       "value_category": "Good",
       "pcs_points_12m": 650.0,
-      "value_points": 426.0
+      "value_points": 426.0,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "L. VAN EETVELT",
@@ -1356,7 +1430,8 @@
       "points_per_credit": 17.416666666666668,
       "value_category": "Average",
       "pcs_points_12m": 209.0,
-      "value_points": 209.0
+      "value_points": 209.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "E. JEANNIERE",
@@ -1372,9 +1447,10 @@
       "pcs_team": "TotalEnergies",
       "pcs_url": "https://www.procyclingstats.com/rider/emilien-jeanniere",
       "points_per_credit": 31.166666666666668,
-      "value_category": "Great",
+      "value_category": "Good",
       "pcs_points_12m": 758.0,
-      "value_points": 374.0
+      "value_points": 374.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "D. BALLERINI",
@@ -1389,10 +1465,11 @@
       "pcs_nationality": "IT",
       "pcs_team": "XDS Astana Team",
       "pcs_url": "https://www.procyclingstats.com/rider/davide-ballerini",
-      "points_per_credit": 20.133333333333333,
+      "points_per_credit": 22.14666666666667,
       "value_category": "Average",
       "pcs_points_12m": 424.0,
-      "value_points": 241.6
+      "value_points": 241.6,
+      "wins_2026": 2
     },
     {
       "fantasy_name": "A. KRON",
@@ -1408,9 +1485,10 @@
       "pcs_team": "Uno-X Mobility",
       "pcs_url": "https://www.procyclingstats.com/rider/andreas-kron",
       "points_per_credit": 22.900000000000002,
-      "value_category": "Good",
+      "value_category": "Average",
       "pcs_points_12m": 302.0,
-      "value_points": 274.8
+      "value_points": 274.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "S. BISSEGGER",
@@ -1428,7 +1506,8 @@
       "points_per_credit": 9.916666666666666,
       "value_category": "Poor",
       "pcs_points_12m": 151.0,
-      "value_points": 119.0
+      "value_points": 119.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. VALGREN",
@@ -1443,10 +1522,11 @@
       "pcs_nationality": "DK",
       "pcs_team": "EF Education - EasyPost",
       "pcs_url": "https://www.procyclingstats.com/rider/michael-valgren-andersen",
-      "points_per_credit": 26.983333333333334,
+      "points_per_credit": 29.68166666666667,
       "value_category": "Good",
       "pcs_points_12m": 367.0,
-      "value_points": 323.8
+      "value_points": 323.8,
+      "wins_2026": 2
     },
     {
       "fantasy_name": "N. PRODHOMME",
@@ -1464,7 +1544,8 @@
       "points_per_credit": 10.316666666666666,
       "value_category": "Poor",
       "pcs_points_12m": 355.0,
-      "value_points": 123.8
+      "value_points": 123.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "L. DE PLUS",
@@ -1482,7 +1563,8 @@
       "points_per_credit": 2.6666666666666665,
       "value_category": "Poor",
       "pcs_points_12m": 32.0,
-      "value_points": 32.0
+      "value_points": 32.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "T. WELLENS",
@@ -1497,10 +1579,11 @@
       "pcs_nationality": "BE",
       "pcs_team": "UAE Team Emirates - XRG",
       "pcs_url": "https://www.procyclingstats.com/rider/tim-wellens",
-      "points_per_credit": 18.900000000000002,
+      "points_per_credit": 19.845000000000002,
       "value_category": "Average",
       "pcs_points_12m": 514.0,
-      "value_points": 226.8
+      "value_points": 226.8,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "J. ABRAHAMSEN",
@@ -1518,7 +1601,8 @@
       "points_per_credit": 27.5,
       "value_category": "Good",
       "pcs_points_12m": 582.0,
-      "value_points": 330.0
+      "value_points": 330.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. TRENTIN",
@@ -1534,9 +1618,10 @@
       "pcs_team": "Tudor Pro Cycling Team",
       "pcs_url": "https://www.procyclingstats.com/rider/matteo-trentin",
       "points_per_credit": 30.433333333333334,
-      "value_category": "Great",
+      "value_category": "Good",
       "pcs_points_12m": 642.0,
-      "value_points": 365.2
+      "value_points": 365.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "F. GROSSSCHARTNER",
@@ -1551,10 +1636,11 @@
       "pcs_nationality": "AT",
       "pcs_team": "UAE Team Emirates - XRG",
       "pcs_url": "https://www.procyclingstats.com/rider/felix-grossschartner",
-      "points_per_credit": 21.166666666666668,
+      "points_per_credit": 22.225,
       "value_category": "Average",
       "pcs_points_12m": 398.0,
-      "value_points": 254.0
+      "value_points": 254.0,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "J. STUYVEN",
@@ -1572,7 +1658,8 @@
       "points_per_credit": 49.76666666666667,
       "value_category": "Great",
       "pcs_points_12m": 730.0,
-      "value_points": 597.2
+      "value_points": 597.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. VAN GILS",
@@ -1587,10 +1674,11 @@
       "pcs_nationality": "BE",
       "pcs_team": "Red Bull - BORA - hansgrohe",
       "pcs_url": "https://www.procyclingstats.com/rider/maxim-van-gils",
-      "points_per_credit": 14.266666666666666,
+      "points_per_credit": 15.693333333333333,
       "value_category": "Average",
       "pcs_points_12m": 280.0,
-      "value_points": 171.2
+      "value_points": 171.2,
+      "wins_2026": 2
     },
     {
       "fantasy_name": "M. KWIATKOWSKI",
@@ -1605,10 +1693,11 @@
       "pcs_nationality": "PL",
       "pcs_team": "Netcompany INEOS",
       "pcs_url": "https://www.procyclingstats.com/rider/michal-kwiatkowski",
-      "points_per_credit": 6.416666666666667,
+      "points_per_credit": 7.0583333333333345,
       "value_category": "Poor",
       "pcs_points_12m": 165.0,
-      "value_points": 77.0
+      "value_points": 77.0,
+      "wins_2026": 2
     },
     {
       "fantasy_name": "I. IZAGIRRE INSAUSTI",
@@ -1623,10 +1712,11 @@
       "pcs_nationality": "ES",
       "pcs_team": "Cofidis",
       "pcs_url": "https://www.procyclingstats.com/rider/ion-izagirre",
-      "points_per_credit": 62.699999999999996,
+      "points_per_credit": 65.835,
       "value_category": "Excellent",
       "pcs_points_12m": 934.0,
-      "value_points": 752.4
+      "value_points": 752.4,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "A. WRIGHT",
@@ -1641,10 +1731,11 @@
       "pcs_nationality": "GB",
       "pcs_team": "Pinarello Q36.5 Pro Cycling Team",
       "pcs_url": "https://www.procyclingstats.com/rider/alfred-wright",
-      "points_per_credit": 22.433333333333334,
-      "value_category": "Average",
+      "points_per_credit": 23.555,
+      "value_category": "Good",
       "pcs_points_12m": 546.0,
-      "value_points": 269.2
+      "value_points": 269.2,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "S. VELASCO",
@@ -1662,7 +1753,8 @@
       "points_per_credit": 11.327272727272726,
       "value_category": "Poor",
       "pcs_points_12m": 363.0,
-      "value_points": 124.6
+      "value_points": 124.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. HIRSCHI",
@@ -1680,7 +1772,8 @@
       "points_per_credit": 15.8,
       "value_category": "Average",
       "pcs_points_12m": 473.0,
-      "value_points": 173.8
+      "value_points": 173.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. CATTANEO",
@@ -1695,10 +1788,11 @@
       "pcs_nationality": "IT",
       "pcs_team": "Red Bull - BORA - hansgrohe",
       "pcs_url": "https://www.procyclingstats.com/rider/mattia-cattaneo",
-      "points_per_credit": 6.509090909090909,
+      "points_per_credit": 6.834545454545455,
       "value_category": "Poor",
       "pcs_points_12m": 106.0,
-      "value_points": 71.6
+      "value_points": 71.6,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "M. SCHACHMANN",
@@ -1716,7 +1810,8 @@
       "points_per_credit": 6.454545454545454,
       "value_category": "Poor",
       "pcs_points_12m": 107.0,
-      "value_points": 71.0
+      "value_points": 71.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "I. ROMEO ABAD",
@@ -1731,10 +1826,11 @@
       "pcs_nationality": "ES",
       "pcs_team": "Movistar Team",
       "pcs_url": "https://www.procyclingstats.com/rider/ivan-romeo",
-      "points_per_credit": 37.92727272727273,
-      "value_category": "Good",
+      "points_per_credit": 43.61636363636364,
+      "value_category": "Great",
       "pcs_points_12m": 518.0,
-      "value_points": 417.2
+      "value_points": 417.2,
+      "wins_2026": 3
     },
     {
       "fantasy_name": "P. CASTRILLO ZAPATER",
@@ -1749,10 +1845,11 @@
       "pcs_nationality": "ES",
       "pcs_team": "Movistar Team",
       "pcs_url": "https://www.procyclingstats.com/rider/pablo-castrillo-zapater",
-      "points_per_credit": 15.163636363636364,
+      "points_per_credit": 15.921818181818184,
       "value_category": "Average",
       "pcs_points_12m": 258.0,
-      "value_points": 166.8
+      "value_points": 166.8,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "A. LEKNESSUND",
@@ -1770,7 +1867,8 @@
       "points_per_credit": 39.872727272727275,
       "value_category": "Great",
       "pcs_points_12m": 581.0,
-      "value_points": 438.6
+      "value_points": 438.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "F. VAN DEN BROEK",
@@ -1788,7 +1886,8 @@
       "points_per_credit": 10.654545454545454,
       "value_category": "Poor",
       "pcs_points_12m": 246.0,
-      "value_points": 117.2
+      "value_points": 117.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "V. BRAET",
@@ -1806,7 +1905,8 @@
       "points_per_credit": 14.636363636363637,
       "value_category": "Average",
       "pcs_points_12m": 189.0,
-      "value_points": 161.0
+      "value_points": 161.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "H. PAGE",
@@ -1824,7 +1924,8 @@
       "points_per_credit": 7.5636363636363635,
       "value_category": "Poor",
       "pcs_points_12m": 128.0,
-      "value_points": 83.2
+      "value_points": 83.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "G. BENNETT",
@@ -1839,10 +1940,11 @@
       "pcs_nationality": "NZ",
       "pcs_team": "NSN Cycling Team",
       "pcs_url": "https://www.procyclingstats.com/rider/george-bennett",
-      "points_per_credit": 14.036363636363637,
+      "points_per_credit": 14.73818181818182,
       "value_category": "Average",
       "pcs_points_12m": 164.0,
-      "value_points": 154.4
+      "value_points": 154.4,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "B. ARMIRAIL",
@@ -1857,10 +1959,11 @@
       "pcs_nationality": "FR",
       "pcs_team": "Team Visma | Lease a Bike",
       "pcs_url": "https://www.procyclingstats.com/rider/bruno-armirail",
-      "points_per_credit": 12.47272727272727,
+      "points_per_credit": 13.096363636363636,
       "value_category": "Average",
       "pcs_points_12m": 382.0,
-      "value_points": 137.2
+      "value_points": 137.2,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "V. CAMPENAERTS",
@@ -1878,7 +1981,8 @@
       "points_per_credit": 9.30909090909091,
       "value_category": "Poor",
       "pcs_points_12m": 252.0,
-      "value_points": 102.4
+      "value_points": 102.4,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "C. BERTHET",
@@ -1896,7 +2000,8 @@
       "points_per_credit": 10.4,
       "value_category": "Poor",
       "pcs_points_12m": 200.0,
-      "value_points": 114.4
+      "value_points": 114.4,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "S. WÆRENSKJOLD",
@@ -1914,7 +2019,8 @@
       "points_per_credit": 33.38181818181818,
       "value_category": "Good",
       "pcs_points_12m": 756.0,
-      "value_points": 367.2
+      "value_points": 367.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "K. ASGREEN",
@@ -1932,7 +2038,8 @@
       "points_per_credit": 6.636363636363637,
       "value_category": "Poor",
       "pcs_points_12m": 105.0,
-      "value_points": 73.0
+      "value_points": 73.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "T. BENOOT",
@@ -1950,7 +2057,8 @@
       "points_per_credit": 8.145454545454545,
       "value_category": "Poor",
       "pcs_points_12m": 268.0,
-      "value_points": 89.6
+      "value_points": 89.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "K. NEILANDS",
@@ -1968,7 +2076,8 @@
       "points_per_credit": 10.89090909090909,
       "value_category": "Poor",
       "pcs_points_12m": 175.0,
-      "value_points": 119.8
+      "value_points": 119.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "G. ZIMMERMANN",
@@ -1983,10 +2092,11 @@
       "pcs_nationality": "DE",
       "pcs_team": "Lotto Intermarché",
       "pcs_url": "https://www.procyclingstats.com/rider/georg-zimmermann",
-      "points_per_credit": 27.545454545454547,
+      "points_per_credit": 28.922727272727276,
       "value_category": "Good",
       "pcs_points_12m": 307.0,
-      "value_points": 303.0
+      "value_points": 303.0,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "V. MADOUAS",
@@ -2002,9 +2112,10 @@
       "pcs_team": "Groupama - FDJ United",
       "pcs_url": "https://www.procyclingstats.com/rider/valentin-madouas",
       "points_per_credit": 11.763636363636364,
-      "value_category": "Average",
+      "value_category": "Poor",
       "pcs_points_12m": 315.0,
-      "value_points": 129.4
+      "value_points": 129.4,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "C. BOL",
@@ -2022,7 +2133,8 @@
       "points_per_credit": 12.872727272727273,
       "value_category": "Average",
       "pcs_points_12m": 164.0,
-      "value_points": 141.6
+      "value_points": 141.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "S. KRAGH ANDERSEN",
@@ -2040,7 +2152,8 @@
       "points_per_credit": 15.872727272727273,
       "value_category": "Average",
       "pcs_points_12m": 265.0,
-      "value_points": 174.6
+      "value_points": 174.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "Q. HERMANS",
@@ -2058,7 +2171,8 @@
       "points_per_credit": 27.527272727272727,
       "value_category": "Good",
       "pcs_points_12m": 482.0,
-      "value_points": 302.8
+      "value_points": 302.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "A. PARET PEINTRE",
@@ -2076,7 +2190,8 @@
       "points_per_credit": 9.909090909090908,
       "value_category": "Poor",
       "pcs_points_12m": 337.0,
-      "value_points": 109.0
+      "value_points": 109.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "D. HOOLE",
@@ -2094,7 +2209,8 @@
       "points_per_credit": 11.02,
       "value_category": "Poor",
       "pcs_points_12m": 183.0,
-      "value_points": 110.2
+      "value_points": 110.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "A. BAUDIN",
@@ -2109,10 +2225,11 @@
       "pcs_nationality": "FR",
       "pcs_team": "EF Education - EasyPost",
       "pcs_url": "https://www.procyclingstats.com/rider/alex-baudin",
-      "points_per_credit": 57.239999999999995,
+      "points_per_credit": 60.102,
       "value_category": "Excellent",
       "pcs_points_12m": 702.0,
-      "value_points": 572.4
+      "value_points": 572.4,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "B. THOMAS",
@@ -2130,7 +2247,8 @@
       "points_per_credit": 11.86,
       "value_category": "Average",
       "pcs_points_12m": 257.0,
-      "value_points": 118.6
+      "value_points": 118.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "R. STANNARD",
@@ -2148,7 +2266,8 @@
       "points_per_credit": 6.0,
       "value_category": "Poor",
       "pcs_points_12m": 88.0,
-      "value_points": 60.0
+      "value_points": 60.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "E. COSTIOU",
@@ -2163,10 +2282,11 @@
       "pcs_nationality": "FR",
       "pcs_team": "Groupama - FDJ United",
       "pcs_url": "https://www.procyclingstats.com/rider/ewen-costiou",
-      "points_per_credit": 26.54,
+      "points_per_credit": 29.194000000000003,
       "value_category": "Good",
       "pcs_points_12m": 423.0,
-      "value_points": 265.4
+      "value_points": 265.4,
+      "wins_2026": 2
     },
     {
       "fantasy_name": "T. GUERNALEC",
@@ -2184,7 +2304,8 @@
       "points_per_credit": 2.46,
       "value_category": "Poor",
       "pcs_points_12m": 83.0,
-      "value_points": 24.6
+      "value_points": 24.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "R. GARCIA PIERNA",
@@ -2199,10 +2320,11 @@
       "pcs_nationality": "ES",
       "pcs_team": "Movistar Team",
       "pcs_url": "https://www.procyclingstats.com/rider/raul-garcia-pierna",
-      "points_per_credit": 21.380000000000003,
+      "points_per_credit": 22.449000000000005,
       "value_category": "Average",
       "pcs_points_12m": 325.0,
-      "value_points": 213.8
+      "value_points": 213.8,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "C. SCOTSON",
@@ -2220,7 +2342,8 @@
       "points_per_credit": 6.3,
       "value_category": "Poor",
       "pcs_points_12m": 107.0,
-      "value_points": 63.0
+      "value_points": 63.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "A. TURGIS",
@@ -2238,7 +2361,8 @@
       "points_per_credit": 34.18,
       "value_category": "Good",
       "pcs_points_12m": 461.0,
-      "value_points": 341.8
+      "value_points": 341.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "J. HAIG",
@@ -2256,7 +2380,8 @@
       "points_per_credit": 6.5,
       "value_category": "Poor",
       "pcs_points_12m": 85.0,
-      "value_points": 65.0
+      "value_points": 65.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "T. TRÆEN",
@@ -2274,7 +2399,8 @@
       "points_per_credit": 10.459999999999999,
       "value_category": "Poor",
       "pcs_points_12m": 339.0,
-      "value_points": 104.6
+      "value_points": 104.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. BJERG",
@@ -2292,7 +2418,8 @@
       "points_per_credit": 8.66,
       "value_category": "Poor",
       "pcs_points_12m": 157.0,
-      "value_points": 86.6
+      "value_points": 86.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "S. CRAS",
@@ -2310,7 +2437,8 @@
       "points_per_credit": 5.4799999999999995,
       "value_category": "Poor",
       "pcs_points_12m": 90.0,
-      "value_points": 54.8
+      "value_points": 54.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "C. HARPER",
@@ -2328,7 +2456,8 @@
       "points_per_credit": 29.0,
       "value_category": "Good",
       "pcs_points_12m": 294.0,
-      "value_points": 290.0
+      "value_points": 290.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "C. HAMILTON",
@@ -2346,7 +2475,8 @@
       "points_per_credit": 9.76,
       "value_category": "Poor",
       "pcs_points_12m": 140.0,
-      "value_points": 97.6
+      "value_points": 97.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "J. DEGENKOLB",
@@ -2364,7 +2494,8 @@
       "points_per_credit": 7.3,
       "value_category": "Poor",
       "pcs_points_12m": 73.0,
-      "value_points": 73.0
+      "value_points": 73.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "W. BARGUIL",
@@ -2382,7 +2513,8 @@
       "points_per_credit": 5.2,
       "value_category": "Poor",
       "pcs_points_12m": 128.0,
-      "value_points": 52.0
+      "value_points": 52.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "G. Mühlberger",
@@ -2400,7 +2532,8 @@
       "points_per_credit": 15.780000000000001,
       "value_category": "Average",
       "pcs_points_12m": 297.0,
-      "value_points": 157.8
+      "value_points": 157.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "F. VERMEERSCH",
@@ -2418,7 +2551,8 @@
       "points_per_credit": 39.8,
       "value_category": "Great",
       "pcs_points_12m": 526.0,
-      "value_points": 398.0
+      "value_points": 398.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "D. VAN BAARLE",
@@ -2436,7 +2570,8 @@
       "points_per_credit": 6.58,
       "value_category": "Poor",
       "pcs_points_12m": 137.0,
-      "value_points": 65.8
+      "value_points": 65.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "D. TEUNS",
@@ -2454,7 +2589,8 @@
       "points_per_credit": 9.66,
       "value_category": "Poor",
       "pcs_points_12m": 187.0,
-      "value_points": 96.6
+      "value_points": 96.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "Q. PACHER",
@@ -2472,7 +2608,8 @@
       "points_per_credit": 7.7,
       "value_category": "Poor",
       "pcs_points_12m": 97.0,
-      "value_points": 77.0
+      "value_points": 77.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "N. POLITT",
@@ -2487,10 +2624,11 @@
       "pcs_nationality": "DE",
       "pcs_team": "UAE Team Emirates - XRG",
       "pcs_url": "https://www.procyclingstats.com/rider/nils-politt",
-      "points_per_credit": 22.6,
-      "value_category": "Average",
+      "points_per_credit": 23.730000000000004,
+      "value_category": "Good",
       "pcs_points_12m": 278.0,
-      "value_points": 226.0
+      "value_points": 226.0,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "A. DELETTRE",
@@ -2508,7 +2646,8 @@
       "points_per_credit": 35.955555555555556,
       "value_category": "Good",
       "pcs_points_12m": 606.0,
-      "value_points": 323.6
+      "value_points": 323.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "L. BARRE",
@@ -2526,7 +2665,8 @@
       "points_per_credit": 10.222222222222221,
       "value_category": "Poor",
       "pcs_points_12m": 208.0,
-      "value_points": 92.0
+      "value_points": 92.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "S. DE PESTEL",
@@ -2544,7 +2684,8 @@
       "points_per_credit": 7.666666666666667,
       "value_category": "Poor",
       "pcs_points_12m": 89.0,
-      "value_points": 69.0
+      "value_points": 69.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "S. CARR",
@@ -2562,7 +2703,8 @@
       "points_per_credit": 8.755555555555555,
       "value_category": "Poor",
       "pcs_points_12m": 90.0,
-      "value_points": 78.8
+      "value_points": 78.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. LE BERRE",
@@ -2580,7 +2722,8 @@
       "points_per_credit": 8.333333333333334,
       "value_category": "Poor",
       "pcs_points_12m": 135.0,
-      "value_points": 75.0
+      "value_points": 75.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "E. VERSTRYNGE",
@@ -2598,7 +2741,8 @@
       "points_per_credit": 28.444444444444443,
       "value_category": "Good",
       "pcs_points_12m": 276.0,
-      "value_points": 256.0
+      "value_points": 256.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. VERCHER",
@@ -2616,7 +2760,8 @@
       "points_per_credit": 19.444444444444443,
       "value_category": "Average",
       "pcs_points_12m": 223.0,
-      "value_points": 175.0
+      "value_points": 175.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "B. VAN MOER",
@@ -2634,7 +2779,8 @@
       "points_per_credit": 20.844444444444445,
       "value_category": "Average",
       "pcs_points_12m": 218.0,
-      "value_points": 187.6
+      "value_points": 187.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "S. QUINN",
@@ -2652,7 +2798,8 @@
       "points_per_credit": 3.8000000000000003,
       "value_category": "Poor",
       "pcs_points_12m": 71.0,
-      "value_points": 34.2
+      "value_points": 34.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "X. MEURISSE",
@@ -2670,7 +2817,8 @@
       "points_per_credit": 12.222222222222221,
       "value_category": "Average",
       "pcs_points_12m": 270.0,
-      "value_points": 110.0
+      "value_points": 110.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "G. VERMEERSCH",
@@ -2688,7 +2836,8 @@
       "points_per_credit": 32.733333333333334,
       "value_category": "Good",
       "pcs_points_12m": 345.0,
-      "value_points": 294.6
+      "value_points": 294.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "C. RUSSO",
@@ -2706,7 +2855,8 @@
       "points_per_credit": 8.377777777777778,
       "value_category": "Poor",
       "pcs_points_12m": 141.0,
-      "value_points": 75.4
+      "value_points": 75.4,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "R. ADRIA OLIVERAS",
@@ -2724,7 +2874,8 @@
       "points_per_credit": 9.044444444444444,
       "value_category": "Poor",
       "pcs_points_12m": 143.0,
-      "value_points": 81.4
+      "value_points": 81.4,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "C. PEDERSEN",
@@ -2740,9 +2891,10 @@
       "pcs_team": "Soudal Quick-Step",
       "pcs_url": "https://www.procyclingstats.com/rider/casper-pedersen",
       "points_per_credit": 9.444444444444445,
-      "value_category": "Average",
+      "value_category": "Poor",
       "pcs_points_12m": 89.0,
-      "value_points": 85.0
+      "value_points": 85.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "T. SKUJINS",
@@ -2760,7 +2912,8 @@
       "points_per_credit": 14.91111111111111,
       "value_category": "Average",
       "pcs_points_12m": 459.0,
-      "value_points": 134.2
+      "value_points": 134.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. TEUNISSEN",
@@ -2778,7 +2931,8 @@
       "points_per_credit": 26.333333333333332,
       "value_category": "Good",
       "pcs_points_12m": 373.0,
-      "value_points": 237.0
+      "value_points": 237.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "C. BRAZ AFONSO",
@@ -2793,10 +2947,11 @@
       "pcs_nationality": "FR",
       "pcs_team": "Groupama - FDJ United",
       "pcs_url": "https://www.procyclingstats.com/rider/clement-braz-afonso",
-      "points_per_credit": 25.275,
+      "points_per_credit": 26.53875,
       "value_category": "Good",
       "pcs_points_12m": 239.0,
-      "value_points": 202.2
+      "value_points": 202.2,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "M. MAYRHOFER",
@@ -2814,7 +2969,8 @@
       "points_per_credit": 9.0,
       "value_category": "Poor",
       "pcs_points_12m": 220.0,
-      "value_points": 72.0
+      "value_points": 72.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "N. RAISBERG",
@@ -2829,10 +2985,11 @@
       "pcs_nationality": "IL",
       "pcs_team": "NSN Cycling Team",
       "pcs_url": "https://www.procyclingstats.com/rider/nadav-raisberg",
-      "points_per_credit": 6.875,
+      "points_per_credit": 7.562500000000001,
       "value_category": "Poor",
       "pcs_points_12m": 79.0,
-      "value_points": 55.0
+      "value_points": 55.0,
+      "wins_2026": 2
     },
     {
       "fantasy_name": "A. SKAARSETH",
@@ -2847,10 +3004,11 @@
       "pcs_nationality": "NO",
       "pcs_team": "Uno-X Mobility",
       "pcs_url": "https://www.procyclingstats.com/rider/anders-skaarseth",
-      "points_per_credit": 8.175,
+      "points_per_credit": 8.583750000000002,
       "value_category": "Poor",
       "pcs_points_12m": 87.0,
-      "value_points": 65.4
+      "value_points": 65.4,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "S. OLDANI",
@@ -2868,7 +3026,8 @@
       "points_per_credit": 16.25,
       "value_category": "Average",
       "pcs_points_12m": 158.0,
-      "value_points": 130.0
+      "value_points": 130.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "O. RIESEBEEK",
@@ -2886,7 +3045,8 @@
       "points_per_credit": 0.5,
       "value_category": "Poor",
       "pcs_points_12m": 20.0,
-      "value_points": 4.0
+      "value_points": 4.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "J. TRATNIK",
@@ -2904,7 +3064,8 @@
       "points_per_credit": 6.2,
       "value_category": "Poor",
       "pcs_points_12m": 60.0,
-      "value_points": 49.6
+      "value_points": 49.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. HALLER",
@@ -2922,7 +3083,8 @@
       "points_per_credit": 9.25,
       "value_category": "Poor",
       "pcs_points_12m": 158.0,
-      "value_points": 74.0
+      "value_points": 74.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "J. SHAW",
@@ -2940,7 +3102,8 @@
       "points_per_credit": 5.325,
       "value_category": "Poor",
       "pcs_points_12m": 85.0,
-      "value_points": 42.6
+      "value_points": 42.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "A. CHARMIG",
@@ -2955,10 +3118,11 @@
       "pcs_nationality": "DK",
       "pcs_team": "Uno-X Mobility",
       "pcs_url": "https://www.procyclingstats.com/rider/anthon-charmig",
-      "points_per_credit": 33.15,
+      "points_per_credit": 34.8075,
       "value_category": "Good",
       "pcs_points_12m": 366.0,
-      "value_points": 265.2
+      "value_points": 265.2,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "M. BURGAUDEAU",
@@ -2976,7 +3140,8 @@
       "points_per_credit": 5.65,
       "value_category": "Poor",
       "pcs_points_12m": 86.0,
-      "value_points": 45.2
+      "value_points": 45.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "N. OLIVEIRA",
@@ -2994,7 +3159,8 @@
       "points_per_credit": 9.65,
       "value_category": "Poor",
       "pcs_points_12m": 102.0,
-      "value_points": 77.2
+      "value_points": 77.2,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "P. EENKHOORN",
@@ -3012,7 +3178,8 @@
       "points_per_credit": 9.475,
       "value_category": "Poor",
       "pcs_points_12m": 179.0,
-      "value_points": 75.8
+      "value_points": 75.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "K. GENIETS",
@@ -3030,7 +3197,8 @@
       "points_per_credit": 5.45,
       "value_category": "Poor",
       "pcs_points_12m": 58.0,
-      "value_points": 43.6
+      "value_points": 43.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "J. RICKAERT",
@@ -3048,7 +3216,8 @@
       "points_per_credit": 5.675,
       "value_category": "Poor",
       "pcs_points_12m": 87.0,
-      "value_points": 45.4
+      "value_points": 45.4,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "S. DILLIER",
@@ -3066,7 +3235,8 @@
       "points_per_credit": 5.25,
       "value_category": "Poor",
       "pcs_points_12m": 70.0,
-      "value_points": 42.0
+      "value_points": 42.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "D. NOVAK",
@@ -3084,7 +3254,8 @@
       "points_per_credit": 4.714285714285714,
       "value_category": "Poor",
       "pcs_points_12m": 81.0,
-      "value_points": 33.0
+      "value_points": 33.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "R. VAN SINTMAARTENSDIJK",
@@ -3102,7 +3273,8 @@
       "points_per_credit": 4.428571428571429,
       "value_category": "Poor",
       "pcs_points_12m": 55.0,
-      "value_points": 31.0
+      "value_points": 31.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "T. GACHIGNARD",
@@ -3120,7 +3292,8 @@
       "points_per_credit": 6.371428571428572,
       "value_category": "Poor",
       "pcs_points_12m": 91.0,
-      "value_points": 44.6
+      "value_points": 44.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "S. MONIQUET",
@@ -3138,7 +3311,8 @@
       "points_per_credit": 7.571428571428571,
       "value_category": "Poor",
       "pcs_points_12m": 169.0,
-      "value_points": 53.0
+      "value_points": 53.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "N. DENZ",
@@ -3153,10 +3327,11 @@
       "pcs_nationality": "DE",
       "pcs_team": "Red Bull - BORA - hansgrohe",
       "pcs_url": "https://www.procyclingstats.com/rider/nico-denz",
-      "points_per_credit": 13.742857142857144,
+      "points_per_credit": 14.430000000000001,
       "value_category": "Average",
       "pcs_points_12m": 157.0,
-      "value_points": 96.2
+      "value_points": 96.2,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "L. VERVAEKE",
@@ -3171,10 +3346,11 @@
       "pcs_nationality": "BE",
       "pcs_team": "Soudal Quick-Step",
       "pcs_url": "https://www.procyclingstats.com/rider/louis-vervaeke",
-      "points_per_credit": 9.285714285714286,
+      "points_per_credit": 9.750000000000002,
       "value_category": "Poor",
       "pcs_points_12m": 121.0,
-      "value_points": 65.0
+      "value_points": 65.0,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "J. BERNARD",
@@ -3192,7 +3368,8 @@
       "points_per_credit": 12.428571428571429,
       "value_category": "Average",
       "pcs_points_12m": 151.0,
-      "value_points": 87.0
+      "value_points": 87.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "L. DURBRIDGE",
@@ -3210,7 +3387,8 @@
       "points_per_credit": 5.0,
       "value_category": "Poor",
       "pcs_points_12m": 55.0,
-      "value_points": 35.0
+      "value_points": 35.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. LOUVEL",
@@ -3228,7 +3406,8 @@
       "points_per_credit": 9.200000000000001,
       "value_category": "Poor",
       "pcs_points_12m": 126.0,
-      "value_points": 64.4
+      "value_points": 64.4,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "J. BIERMANS",
@@ -3246,7 +3425,8 @@
       "points_per_credit": 27.2,
       "value_category": "Good",
       "pcs_points_12m": 264.0,
-      "value_points": 190.4
+      "value_points": 190.4,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "P. GAMPER",
@@ -3264,7 +3444,8 @@
       "points_per_credit": 3.9,
       "value_category": "Poor",
       "pcs_points_12m": 57.0,
-      "value_points": 23.4
+      "value_points": 23.4,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "A. JOHANNESSEN",
@@ -3282,7 +3463,8 @@
       "points_per_credit": 18.433333333333334,
       "value_category": "Average",
       "pcs_points_12m": 289.0,
-      "value_points": 110.6
+      "value_points": 110.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "N. MÄRKL",
@@ -3300,7 +3482,8 @@
       "points_per_credit": 7.633333333333333,
       "value_category": "Poor",
       "pcs_points_12m": 69.0,
-      "value_points": 45.8
+      "value_points": 45.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "B. VAN LERBERGHE",
@@ -3318,7 +3501,8 @@
       "points_per_credit": 4.833333333333333,
       "value_category": "Poor",
       "pcs_points_12m": 49.0,
-      "value_points": 29.0
+      "value_points": 29.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "J. VAN DEN BERG",
@@ -3336,7 +3520,8 @@
       "points_per_credit": 9.833333333333334,
       "value_category": "Poor",
       "pcs_points_12m": 59.0,
-      "value_points": 59.0
+      "value_points": 59.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "C. BEULLENS",
@@ -3354,7 +3539,8 @@
       "points_per_credit": 9.666666666666666,
       "value_category": "Poor",
       "pcs_points_12m": 66.0,
-      "value_points": 58.0
+      "value_points": 58.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "C. VERONA QUINTANILLA",
@@ -3372,7 +3558,8 @@
       "points_per_credit": 16.966666666666665,
       "value_category": "Average",
       "pcs_points_12m": 141.0,
-      "value_points": 101.8
+      "value_points": 101.8,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "A. KIRSCH",
@@ -3387,10 +3574,11 @@
       "pcs_nationality": "LU",
       "pcs_team": "Cofidis",
       "pcs_url": "https://www.procyclingstats.com/rider/alex-kirsch",
-      "points_per_credit": 5.3999999999999995,
+      "points_per_credit": 5.67,
       "value_category": "Poor",
       "pcs_points_12m": 34.0,
-      "value_points": 32.4
+      "value_points": 32.4,
+      "wins_2026": 1
     },
     {
       "fantasy_name": "N. EEKHOFF",
@@ -3408,7 +3596,8 @@
       "points_per_credit": 3.1,
       "value_category": "Poor",
       "pcs_points_12m": 93.0,
-      "value_points": 18.6
+      "value_points": 18.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "M. DINHAM",
@@ -3426,7 +3615,8 @@
       "points_per_credit": 7.0,
       "value_category": "Poor",
       "pcs_points_12m": 62.0,
-      "value_points": 42.0
+      "value_points": 42.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "G. BOIVIN",
@@ -3444,7 +3634,8 @@
       "points_per_credit": 4.1000000000000005,
       "value_category": "Poor",
       "pcs_points_12m": 83.0,
-      "value_points": 24.6
+      "value_points": 24.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "P. ALLEGAERT",
@@ -3462,7 +3653,8 @@
       "points_per_credit": 0.8333333333333334,
       "value_category": "Poor",
       "pcs_points_12m": 0.0,
-      "value_points": 5.0
+      "value_points": 5.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "T. MARSMAN",
@@ -3480,7 +3672,8 @@
       "points_per_credit": 7.0,
       "value_category": "Poor",
       "pcs_points_12m": 35.0,
-      "value_points": 35.0
+      "value_points": 35.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "P. CÔTÉ",
@@ -3498,7 +3691,8 @@
       "points_per_credit": 8.32,
       "value_category": "Poor",
       "pcs_points_12m": 76.0,
-      "value_points": 41.6
+      "value_points": 41.6,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "S. GRIGNARD",
@@ -3516,7 +3710,8 @@
       "points_per_credit": 8.6,
       "value_category": "Poor",
       "pcs_points_12m": 75.0,
-      "value_points": 43.0
+      "value_points": 43.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "K. GRADEK",
@@ -3534,7 +3729,8 @@
       "points_per_credit": 6.4,
       "value_category": "Poor",
       "pcs_points_12m": 60.0,
-      "value_points": 32.0
+      "value_points": 32.0,
+      "wins_2026": 0
     },
     {
       "fantasy_name": "N. ARNDT",
@@ -3552,7 +3748,8 @@
       "points_per_credit": 2.0,
       "value_category": "Poor",
       "pcs_points_12m": 0.0,
-      "value_points": 10.0
+      "value_points": 10.0,
+      "wins_2026": 0
     }
   ]
 }

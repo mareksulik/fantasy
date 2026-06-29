@@ -13,6 +13,16 @@
         body {
             font-family: 'IBM Plex Sans', sans-serif;
         }
+        /* Give the content (esp. the wide rider tables) a bit more breathing room */
+        @media (min-width: 1200px) {
+            .container { max-width: 1440px; }
+        }
+        /* One uniform (smaller) font across the rider tables — team, numbers,
+           badges and pills all line up; only the rider name (first cell) keeps
+           its larger size. */
+        .rider-row td { font-size: 0.85rem; vertical-align: middle; }
+        .rider-row td .badge { font-size: 0.85rem; font-weight: 600; }
+        .rider-row td:first-child { font-size: 1rem; }
         .value-excellent { 
             color: #ffffff; 
             background: #198754;
@@ -184,6 +194,16 @@
             </div>
         </div>
     </nav>
+
+    {% if race_type not in ['vuelta', 'tdf2025'] %}
+    <div class="container mt-3">
+        <div class="alert alert-warning alert-dismissible fade show small mb-0" role="alert">
+            <i class="fas fa-triangle-exclamation"></i>
+            <strong>Provisional start list.</strong> Not every 2026 team has locked in its final eight yet, so the roster can still change. It gets refreshed after the official team presentation on Thursday 2 July — keep that in mind while putting your team together.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </div>
+    {% endif %}
 
     <main class="container mt-4">
         {% block content %}{% endblock %}

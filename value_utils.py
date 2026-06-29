@@ -33,12 +33,16 @@ TIER_SHARES = [
 ]
 TIER_ORDER = [name for name, _ in TIER_SHARES]
 
-# Sprinters only: PCS season points undercount a sprinter's fantasy value (Tour
-# stage wins aren't rewarded in PCS the way they are in the game), while the game
-# price already anticipates that output. So lift ONLY the sprinter tier badge by
-# this factor against the same global thresholds. Nothing else changes — no value
-# number anywhere, and no other category's tier. Tune up/down to taste.
-SPRINT_BOOST = 1.4
+# Stage-win premium. PCS season points undercount the fantasy value of winning (a
+# bunch-sprint or breakaway stage win scores big in the game but adds modest PCS
+# points), while the game price already anticipates it. So riders with 2026 wins get
+# a win premium folded into BOTH their Value (points_per_credit) and tier, scaled by
+# their actual win count — covering sprinters AND breakaway stage-hunters (e.g. Cort)
+# on the same honest basis. factor = 1 + WIN_STEP * min(wins, WIN_CAP); 0-win riders
+# untouched. Tiers are then banded against thresholds frozen from the pre-premium
+# distribution, so non-winners keep their exact tier.
+WIN_STEP = 0.05
+WIN_CAP = 6  # +5% per win, capped at +30% for 6+ wins (matches the chosen 1.3 lift)
 
 
 def compute_value_points(points_ytd, points_12m):
@@ -75,12 +79,15 @@ def _band(ppc, thr):
 
 
 def assign_value_categories(riders):
-    """Assign value_category by GLOBAL percentile on points_per_credit.
+    """Set points_per_credit (with the stage-win premium folded in) and value_category.
 
-    Ranked across the WHOLE field, not per category, because PCS points already
-    capture total output across GC, stage wins and one-day races. Sprinters get a
-    final tier-only adjustment (see SPRINT_BOOST). Mutates each rider in place;
-    unmatched / price<=0 riders are marked 'Unknown' and excluded."""
+    value/credit is GLOBAL (ranked across the whole field, not per category, because
+    PCS points already capture GC + stage wins + one-day races). The win premium
+    (1 + WIN_STEP·min(wins, WIN_CAP)) is multiplied into BOTH the Value number and the
+    tier. Tier thresholds are frozen from the PRE-premium distribution at the
+    TIER_SHARES percentile cuts, so 0-win riders keep their exact tier and only winners
+    move up. Idempotent: raw value/credit is recomputed from value_points each call, so
+    the premium never compounds. Mutates in place; unmatched / price<=0 -> 'Unknown'."""
     ranked = []
     for r in riders:
         if r.get("pcs_match_found") and r.get("price", 0) > 0:
@@ -88,32 +95,20 @@ def assign_value_categories(riders):
         else:
             r["value_category"] = "Unknown"
 
-    ranked.sort(key=lambda x: x.get("points_per_credit", 0), reverse=True)
     n = len(ranked)
 
-    # 1) Global percentile tiers for everyone (this fixes all non-sprinter tiers).
-    counts, assigned = {}, 0
-    for name, share in TIER_SHARES[:-1]:
-        counts[name] = round(n * share)
-        assigned += counts[name]
-    counts["Poor"] = max(0, n - assigned)
-    idx = 0
-    for name in TIER_ORDER:
-        for _ in range(counts.get(name, 0)):
-            if idx < n:
-                ranked[idx]["value_category"] = name
-                idx += 1
-    while idx < n:  # rounding leftovers
-        ranked[idx]["value_category"] = "Poor"
-        idx += 1
-
-    # 2) Sprinter-only override against the same global thresholds, using a boosted
-    #    ppc. Touches ONLY sprinter badges — every other rider keeps the tier from
-    #    step 1, and no value number is modified anywhere.
-    thr = _tier_thresholds([r.get("points_per_credit", 0) for r in ranked], n)
+    # Raw (pre-premium) value/credit straight from value_points — canonical, so the
+    # premium can't compound across repeated calls.
     for r in ranked:
-        if r.get("category") == "Sprinters":
-            r["value_category"] = _band(r.get("points_per_credit", 0) * SPRINT_BOOST, thr)
+        r["points_per_credit"] = r.get("value_points", 0) / r["price"]
+    thr = _tier_thresholds(sorted((r["points_per_credit"] for r in ranked), reverse=True), n)
+
+    # Fold the win premium into Value, then band against the frozen thresholds.
+    for r in ranked:
+        wins = r.get("wins_2026", 0) or 0
+        if wins > 0:
+            r["points_per_credit"] *= 1 + WIN_STEP * min(wins, WIN_CAP)
+        r["value_category"] = _band(r["points_per_credit"], thr)
 
 
 def recompute_value(riders):

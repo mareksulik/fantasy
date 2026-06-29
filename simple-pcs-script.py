@@ -691,10 +691,23 @@ class FantasyPCSIntegrator:
             json.dump(data, f, ensure_ascii=False, indent=2)
         print(f"Integrované dáta uložené do {json_filename}")
         
+    def load_wins_2026(self, path='wins_2026.csv'):
+        """Attach 2026 win counts (cached by scrape_wins_2026.py) to integrated
+        riders. Drives the stage-win tier nudge; missing -> 0."""
+        try:
+            with open(path, encoding='utf-8') as f:
+                wins = {row['pcs_name']: int(row['wins_2026']) for row in csv.DictReader(f)}
+        except FileNotFoundError:
+            print("⚠️  wins_2026.csv not found — run scrape_wins_2026.py for the win nudge")
+            wins = {}
+        for r in self.integrated_data:
+            r['wins_2026'] = wins.get(r.get('pcs_name') or '', 0)
+        print(f"Pripojených výhier 2026: {sum(1 for r in self.integrated_data if r.get('wins_2026'))} jazdcov má ≥1 výhru")
+
     def calculate_value_metrics(self):
         """Compute value_points (12m+YTD blend), points_per_credit and the
-        per-category value tiers. Logic lives in value_utils (single source of
-        truth, shared with app.py)."""
+        value tiers (incl. the stage-win nudge). Logic lives in value_utils
+        (single source of truth, shared with app.py)."""
         V.recompute_value(self.integrated_data)
         
     def print_integration_summary(self, n=10):
@@ -748,7 +761,10 @@ class FantasyPCSIntegrator:
 
         # 3. Integruj dáta
         self.integrate_data()
-        
+
+        # 3.1. Pripoj počty výhier 2026 z cache (generuje scrape_wins_2026.py)
+        self.load_wins_2026()
+
         # 4. Vypočítaj value metriky
         self.calculate_value_metrics()
         
