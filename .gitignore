@@ -3,3 +3,4 @@ __pycache__/
 *.pyc
 *.pre2026.bak.json
 wins_scrape.log
+.vercel
