@@ -632,7 +632,7 @@
       "wins_2026": 1,
       "value_points": 570.2,
       "points_per_credit": 37.419375,
-      "value_category": "Good"
+      "value_category": "Great"
     },
     {
       "fantasy_name": "D. MARTINEZ POVEDA",
@@ -765,7 +765,7 @@
       "wins_2026": 1,
       "value_points": 539.8,
       "points_per_credit": 37.786,
-      "value_category": "Good"
+      "value_category": "Great"
     },
     {
       "fantasy_name": "J. NARVAEZ PRADO",
@@ -2399,7 +2399,7 @@
       "wins_2026": 0,
       "value_points": 141.6,
       "points_per_credit": 12.872727272727273,
-      "value_category": "Poor"
+      "value_category": "Average"
     },
     {
       "fantasy_name": "S. KRAGH ANDERSEN",
@@ -2494,7 +2494,7 @@
       "wins_2026": 2,
       "value_points": 336.0,
       "points_per_credit": 36.96000000000001,
-      "value_category": "Good"
+      "value_category": "Great"
     },
     {
       "fantasy_name": "T. VAN DIJKE",
@@ -2551,7 +2551,7 @@
       "wins_2026": 3,
       "value_points": 323.6,
       "points_per_credit": 37.214,
-      "value_category": "Good"
+      "value_category": "Great"
     },
     {
       "fantasy_name": "J. LABROSSE",
@@ -3945,19 +3945,19 @@
       "team": "Alpecin-Premier Tech",
       "category": "All-rounders",
       "price": 8,
-      "pcs_match_found": false,
-      "match_similarity": 0.0,
-      "pcs_name": null,
+      "pcs_match_found": true,
+      "match_similarity": 1.0,
+      "pcs_name": "RIESEBEEK Oscar",
       "pcs_rank": null,
-      "pcs_points_2025": 0,
-      "pcs_points_12m": 0,
-      "pcs_nationality": null,
-      "pcs_team": null,
-      "pcs_url": null,
+      "pcs_points_2025": 0.0,
+      "pcs_points_12m": 20.0,
+      "pcs_nationality": "NL",
+      "pcs_team": "Alpecin-Premier Tech",
+      "pcs_url": "https://www.procyclingstats.com/rider/oscar-riesebeek",
       "wins_2026": 0,
-      "value_points": 0,
-      "points_per_credit": 0,
-      "value_category": "Unknown"
+      "value_points": 4.0,
+      "points_per_credit": 0.5,
+      "value_category": "Poor"
     },
     {
       "fantasy_name": "J. TRATNIK",
@@ -4223,26 +4223,26 @@
       "wins_2026": 0,
       "value_points": 158.2,
       "points_per_credit": 22.599999999999998,
-      "value_category": "Average"
+      "value_category": "Good"
     },
     {
       "fantasy_name": "M. CAMPRUBI  PIJUAN",
       "team": "Pinarello-Q.36.5 Pro Cycling Team",
       "category": "Climbers",
       "price": 7,
-      "pcs_match_found": false,
-      "match_similarity": 0.0,
-      "pcs_name": null,
-      "pcs_rank": null,
-      "pcs_points_2025": 0,
-      "pcs_points_12m": 0,
-      "pcs_nationality": null,
-      "pcs_team": null,
-      "pcs_url": null,
-      "wins_2026": 0,
-      "value_points": 0,
-      "points_per_credit": 0,
-      "value_category": "Unknown"
+      "pcs_match_found": true,
+      "match_similarity": 1.0,
+      "pcs_name": "CAMPRUBÍ Marcel",
+      "pcs_rank": 308,
+      "pcs_points_2025": 130.0,
+      "pcs_points_12m": 158.0,
+      "pcs_nationality": "ES",
+      "pcs_team": "Pinarello-Q.36.5 Pro Cycling Team",
+      "pcs_url": "https://www.procyclingstats.com/rider/marcel-camprubi",
+      "wins_2026": 1,
+      "value_points": 135.6,
+      "points_per_credit": 20.34,
+      "value_category": "Average"
     },
     {
       "fantasy_name": "X. AZPARREN IRURZUN",
@@ -4743,19 +4743,19 @@
       "team": "Team Picnic PostNL",
       "category": "All-rounders",
       "price": 6,
-      "pcs_match_found": false,
-      "match_similarity": 0.0,
-      "pcs_name": null,
+      "pcs_match_found": true,
+      "match_similarity": 1.0,
+      "pcs_name": "EEKHOFF Nils",
       "pcs_rank": null,
-      "pcs_points_2025": 0,
-      "pcs_points_12m": 0,
-      "pcs_nationality": null,
-      "pcs_team": null,
-      "pcs_url": null,
+      "pcs_points_2025": 0.0,
+      "pcs_points_12m": 93.0,
+      "pcs_nationality": "NL",
+      "pcs_team": "Team Picnic PostNL",
+      "pcs_url": "https://www.procyclingstats.com/rider/nils-eekhoff",
       "wins_2026": 0,
-      "value_points": 0,
-      "points_per_credit": 0,
-      "value_category": "Unknown"
+      "value_points": 18.6,
+      "points_per_credit": 3.1,
+      "value_category": "Poor"
     },
     {
       "fantasy_name": "M. DINHAM",
@@ -4800,19 +4800,19 @@
       "team": "Cofidis",
       "category": "All-rounders",
       "price": 6,
-      "pcs_match_found": false,
-      "match_similarity": 0.0,
-      "pcs_name": null,
+      "pcs_match_found": true,
+      "match_similarity": 1.0,
+      "pcs_name": "ALLEGAERT Piet",
       "pcs_rank": null,
-      "pcs_points_2025": 0,
-      "pcs_points_12m": 0,
-      "pcs_nationality": null,
-      "pcs_team": null,
-      "pcs_url": null,
+      "pcs_points_2025": 5.0,
+      "pcs_points_12m": 5.0,
+      "pcs_nationality": "BE",
+      "pcs_team": "Cofidis",
+      "pcs_url": "https://www.procyclingstats.com/rider/piet-allegaert",
       "wins_2026": 0,
-      "value_points": 0,
-      "points_per_credit": 0,
-      "value_category": "Unknown"
+      "value_points": 5.0,
+      "points_per_credit": 0.8333333333333334,
+      "value_category": "Poor"
     },
     {
       "fantasy_name": "T. MARSMAN",

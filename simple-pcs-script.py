@@ -15,6 +15,15 @@ from difflib import SequenceMatcher
 import re
 import value_utils as V
 
+# Riders confirmed on PCS but OUTSIDE the scraped top-1500 ranking. Their season
+# points are fetched from their own rider page so they are never left unmatched.
+# fantasy_name -> (pcs_name, page slug, nationality)
+PCS_PAGE_OVERRIDES = {
+    'O. RIESEBEEK': ('RIESEBEEK Oscar', 'oscar-riesebeek', 'NL'),
+    'N. EEKHOFF': ('EEKHOFF Nils', 'nils-eekhoff', 'NL'),
+    'P. ALLEGAERT': ('ALLEGAERT Piet', 'piet-allegaert', 'BE'),
+}
+
 class FantasyPCSIntegrator:
     def __init__(self, fantasy_csv_path='all_tour_de_france_riders.csv'):
         self.base_url = "https://www.procyclingstats.com"
@@ -441,7 +450,7 @@ class FantasyPCSIntegrator:
             'J. NICOLAU BELTRAN': 'NICOLAU Joel',
             'J. PARRA CUERDA': 'PARRA José Félix',
             'S. FERNANDEZ GARCIA': 'FERNÁNDEZ Samuel',
-            'M. CAMPRUBI  PIJUAN': None,  # outside PCS top 1500 -> 0 pts
+            'M. CAMPRUBI  PIJUAN': 'CAMPRUBÍ Marcel',  # in ranking, missed earlier due to accent
         }
     
     def find_pcs_match_advanced(self, fantasy_rider):
@@ -707,6 +716,41 @@ class FantasyPCSIntegrator:
             json.dump(data, f, ensure_ascii=False, indent=2)
         print(f"Integrované dáta uložené do {json_filename}")
         
+    def apply_page_overrides(self):
+        """Rescue riders confirmed on PCS but outside the scraped top-1500 ranking
+        (PCS_PAGE_OVERRIDES) — fetch their current-season points from their own page
+        so they're matched, never dropped as 'unmatched'."""
+        year = str(datetime.now().year)
+        for r in self.integrated_data:
+            ov = PCS_PAGE_OVERRIDES.get(r['fantasy_name'])
+            if not ov or r['pcs_match_found']:
+                continue
+            pcs_name, slug, nat = ov
+            pts = 0.0
+            try:
+                resp = requests.get(f"{self.base_url}/rider/{slug}", headers=self.headers, timeout=20)
+                soup = BeautifulSoup(resp.text, 'html.parser')
+                done = False
+                for tbl in soup.find_all('table'):
+                    for tr in tbl.find_all('tr'):
+                        c = [td.get_text(strip=True) for td in tr.find_all(['td', 'th'])]
+                        if len(c) >= 2 and c[0] == year:
+                            pts = float(c[1]) if c[1].replace('.', '').isdigit() else 0.0
+                            done = True
+                            break
+                    if done:
+                        break
+            except Exception as e:
+                print(f"  ⚠️ page-override fetch failed for {slug}: {e}")
+            r.update({
+                'pcs_match_found': True, 'match_similarity': 1.0,
+                'pcs_name': pcs_name, 'pcs_rank': None,
+                'pcs_points_2025': pts, 'pcs_points_12m': pts,
+                'pcs_nationality': nat, 'pcs_team': r['team'],
+                'pcs_url': f"{self.base_url}/rider/{slug}",
+            })
+            print(f"  ✅ page-override: {r['fantasy_name']} -> {pcs_name} ({pts} pts)")
+
     def load_wins_2026(self, path='wins_2026.csv'):
         """Attach 2026 win counts (cached by scrape_wins_2026.py) to integrated
         riders. Drives the stage-win tier nudge; missing -> 0."""
@@ -777,6 +821,9 @@ class FantasyPCSIntegrator:
 
         # 3. Integruj dáta
         self.integrate_data()
+
+        # 3.05. Doplň jazdcov mimo top-1500 rebríčka z ich PCS stránok
+        self.apply_page_overrides()
 
         # 3.1. Pripoj počty výhier 2026 z cache (generuje scrape_wins_2026.py)
         self.load_wins_2026()
