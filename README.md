@@ -162,6 +162,28 @@ Riders are automatically classified into 5 value tiers based on their points-per
 - **Average**: 10-20 points per credit (yellow)
 - **Poor**: <10 points per credit (red)
 
+## Deployment
+
+Live at **https://fantasy.mareksulik.sk** (also https://fantasy-tdf.vercel.app).
+
+- **Host:** Vercel, project `fantasy-tdf`, git-connected to `mareksulik/fantasy` (production branch `main`). Serving Flask via `@vercel/python` (`vercel.json`). The custom domain's DNS lives at WebSupport (`CNAME fantasy → cname.vercel-dns.com`); SSL is auto-issued by Vercel.
+- **Serverless notes:** `app.py` `os.chdir()`s to its own directory (so relative data paths resolve) and skips the daily background scheduler when the `VERCEL` env var is set (serverless has no long-lived process / read-only filesystem).
+
+### Updating the live site
+
+1. Refresh data locally: `python simple-pcs-script.py` (PCS points + integration), then `python scrape_wins_2026.py` (2026 win counts).
+2. `git add -A && git commit -m "Update roster" && git push origin main` — Vercel auto-deploys from `main`.
+
+> ⚠️ **Git committer email gotcha.** Vercel (Hobby) **blocks** any git-triggered deploy whose commit committer email is not linked to a GitHub user — the deploy ends in `BLOCKED` state and production silently stays on the previous build. Make sure git is configured with a GitHub-verified email:
+> ```bash
+> git config user.email "marek.sulik@gmail.com"
+> git config user.name  "mareksulik"
+> ```
+> **Manual / emergency deploy** (bypasses the committer check by deploying without git metadata):
+> ```bash
+> mv .git /tmp/dotgit && vercel deploy --prod --yes; mv /tmp/dotgit .git
+> ```
+
 ## Contributing
 
 This project was developed to provide better insights for fantasy cycling enthusiasts. Feel free to suggest improvements or report issues.

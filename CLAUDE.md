@@ -75,6 +75,13 @@ source venv/bin/activate && nohup python app.py > app.log 2>&1 &
 # GET /api/update-status - check last update time
 ```
 
+## Deployment (Vercel + GitHub)
+- **Live:** https://fantasy.mareksulik.sk (alias) + https://fantasy-tdf.vercel.app. Vercel project `fantasy-tdf` (Hobby account `mareksulik`), git-connected to `mareksulik/fantasy`, production branch `main`. DNS for the custom domain is at WebSupport: `CNAME fantasy → cname.vercel-dns.com`. SSO protection disabled (public).
+- **Serverless config:** `vercel.json` serves Flask via `@vercel/python` (`includeFiles: templates/**, *.json`). `app.py` `os.chdir(dirname(__file__))` (relative data paths) and skips the scheduler thread when `os.environ['VERCEL']` is set.
+- **Update workflow:** refresh data locally (`python simple-pcs-script.py` → `python scrape_wins_2026.py`), then `git commit && git push origin main` → Vercel auto-deploys. The in-app daily scheduler does NOT run on Vercel.
+- **⚠️ CRITICAL git gotcha:** Vercel Hobby BLOCKS git deploys whose commit committer email isn't linked to a GitHub user ("could not associate the committer with a GitHub user"); the deploy goes to `BLOCKED` and production silently keeps the old build. The repo originally had NO `user.email` set → git auto-generated an unrecognized email → all git deploys blocked. Fixed: `git config user.email "marek.sulik@gmail.com"` / `user.name "mareksulik"`. Always keep a GitHub-verified committer email.
+- **Manual/emergency deploy** (bypasses the committer block by removing git metadata): `mv .git /tmp/dotgit && vercel deploy --prod --yes; mv /tmp/dotgit .git`. Vercel auth token: `~/Library/Application Support/com.vercel.cli/auth.json`.
+
 ## File Structure
 ```
 /fantasy/
