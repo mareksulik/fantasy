@@ -426,6 +426,22 @@ class FantasyPCSIntegrator:
             'D. MARTINEZ POVEDA': 'MARTÍNEZ Daniel Felipe',
             'D. GEE': 'GEE-WEST Derek',
             'P. ALLEGAERT': 'ALLEGAERT Piet',  # outside PCS top 1500 -> 0 pts
+
+            # --- TdF 2026 roster update (newly added riders mis-resolved by fuzzy) ---
+            'I. DEL TORO ROMERO': 'DEL TORO Isaac',
+            'T. VAN DIJKE': 'VAN DIJKE Tim',
+            'T. VAN ASBROECK': 'VAN ASBROECK Tom',
+            'V. VAN MECHELEN': 'VAN MECHELEN Vlad',
+            'A. DE GENDT': 'DE GENDT Aimé',
+            'X. AZPARREN IRURZUN': 'AZPARREN Xabier Mikel',
+            'F. BARCELO ARAGON': 'BARCELÓ Fernando',
+            'A. BALDERSTONE ROUMENS': 'BALDERSTONE Abel',
+            'G. SORARRAIN AGIRREZABALA': 'SORARRAIN Gorka',
+            'J. CASTELLON RIBALTA': 'CASTELLON Jan',
+            'J. NICOLAU BELTRAN': 'NICOLAU Joel',
+            'J. PARRA CUERDA': 'PARRA José Félix',
+            'S. FERNANDEZ GARCIA': 'FERNÁNDEZ Samuel',
+            'M. CAMPRUBI  PIJUAN': None,  # outside PCS top 1500 -> 0 pts
         }
     
     def find_pcs_match_advanced(self, fantasy_rider):

@@ -313,34 +313,34 @@ rank,name,nationality,team,points,rider_url
 312,PEÑA Jesús David,CO,Efapel Cycling,129.0,https://www.procyclingstats.com/rider/jesus-david-pena-jimenez
 313,MAESTRI Mirco,IT,Team Polti VisitMalta,128.0,https://www.procyclingstats.com/rider/mirco-maestri
 314,KOERDT Bjorn,GB,Team Picnic PostNL,127.0,https://www.procyclingstats.com/rider/bjoern-koerdt
-315,DONOVAN Mark,GB,Pinarello Q36.5 Pro Cycling Team,126.0,https://www.procyclingstats.com/rider/mark-donovan
-316,MARTÍ Pau,ES,NSN Cycling Team,126.0,https://www.procyclingstats.com/rider/pau-marti-soriano
-317,BLEDDYN Oliver,AU,Team Brennan,123.0,https://www.procyclingstats.com/rider/oliver-bleddyn
-318,OLDANI Stefano,IT,Caja Rural - Seguros RGA,123.0,https://www.procyclingstats.com/rider/stefano-oldani
-319,BRUSTENGA Marc,ES,Equipo Kern Pharma,123.0,https://www.procyclingstats.com/rider/marc-brustenga-masague
-320,MÜHLBERGER Gregor,AT,Decathlon CMA CGM Team,123.0,https://www.procyclingstats.com/rider/gregor-muhlberger
-321,BALMER Alexandre,CH,Solution Tech NIPPO Rali,121.0,https://www.procyclingstats.com/rider/alexandre-balmer
-322,PLOWRIGHT Jensen,AU,Alpecin - Premier Tech,120.0,https://www.procyclingstats.com/rider/jensen-plowright
-323,ENGELHARDT Felix,DE,Team Jayco AlUla,120.0,https://www.procyclingstats.com/rider/felix-engelhardt
-324,TJØTTA Martin,NO,Uno-X Mobility,120.0,https://www.procyclingstats.com/rider/martin-tjotta
-325,JEŽEK Václav,CZ,Kasper crypto4me,120.0,https://www.procyclingstats.com/rider/vaclav-jezek1
-326,SALBY Alexander,DK,Li Ning Star,119.0,https://www.procyclingstats.com/rider/alexander-salby
-327,THÉOT Killian,FR,Van Rysel Roubaix,119.0,https://www.procyclingstats.com/rider/killian-theot
-328,TEUTENBERG Tim Torn,DE,Lidl - Trek,118.0,https://www.procyclingstats.com/rider/tim-torn-teutenberg
-329,GLIVAR Gal,SI,Alpecin - Premier Tech,118.0,https://www.procyclingstats.com/rider/gal-glivar
-330,MEEHAN Jamie,IE,Cofidis,118.0,https://www.procyclingstats.com/rider/jamie-meehan
-331,SEPÚLVEDA Eduardo,AR,Li Ning Star,117.0,https://www.procyclingstats.com/rider/eduardo-sepulveda
-332,BROWNING Fergus,AU,Terengganu Cycling Team,116.0,https://www.procyclingstats.com/rider/fergus-browning
-333,VERRE Alessandro,IT,MBH Bank CSB Telecom Fort,116.0,https://www.procyclingstats.com/rider/alessandro-verre
-334,KRETSCHY Moritz,DE,NSN Cycling Team,116.0,https://www.procyclingstats.com/rider/moritz-kretschy
-335,PAJUR Romet,EE,Red Bull - BORA - hansgrohe Rookies,116.0,https://www.procyclingstats.com/rider/romet-pajur
-336,FERNÁNDEZ Samuel,ES,Caja Rural - Seguros RGA,115.0,https://www.procyclingstats.com/rider/samuel-fernandez-garcia
-337,HERREGODTS Rune,BE,UAE Team Emirates - XRG,115.0,https://www.procyclingstats.com/rider/rune-herregodts
-338,VAN DEN BERG Marijn,NL,EF Education - EasyPost,115.0,https://www.procyclingstats.com/rider/marijn-van-den-berg
-339,ZANONCELLO Enrico,IT,Bardiani CSF 7 Saber,115.0,https://www.procyclingstats.com/rider/enrico-zanoncello
-340,CHRISTIE-JOHNSTON Alastair,AU,CCACHE x BODYWRAP,115.0,https://www.procyclingstats.com/rider/alastair-christie-johnston
-341,SEVILLA Diego Pablo,ES,Team Polti VisitMalta,113.0,https://www.procyclingstats.com/rider/diego-pablo-sevilla
-342,SU Haoyu,CN,XDS Astana Team,112.0,https://www.procyclingstats.com/rider/haoyu-su
+315,SU Haoyu,CN,XDS Astana Team,127.0,https://www.procyclingstats.com/rider/haoyu-su
+316,DONOVAN Mark,GB,Pinarello Q36.5 Pro Cycling Team,126.0,https://www.procyclingstats.com/rider/mark-donovan
+317,MARTÍ Pau,ES,NSN Cycling Team,126.0,https://www.procyclingstats.com/rider/pau-marti-soriano
+318,BLEDDYN Oliver,AU,Team Brennan,123.0,https://www.procyclingstats.com/rider/oliver-bleddyn
+319,OLDANI Stefano,IT,Caja Rural - Seguros RGA,123.0,https://www.procyclingstats.com/rider/stefano-oldani
+320,BRUSTENGA Marc,ES,Equipo Kern Pharma,123.0,https://www.procyclingstats.com/rider/marc-brustenga-masague
+321,MÜHLBERGER Gregor,AT,Decathlon CMA CGM Team,123.0,https://www.procyclingstats.com/rider/gregor-muhlberger
+322,BALMER Alexandre,CH,Solution Tech NIPPO Rali,121.0,https://www.procyclingstats.com/rider/alexandre-balmer
+323,PLOWRIGHT Jensen,AU,Alpecin - Premier Tech,120.0,https://www.procyclingstats.com/rider/jensen-plowright
+324,ENGELHARDT Felix,DE,Team Jayco AlUla,120.0,https://www.procyclingstats.com/rider/felix-engelhardt
+325,TJØTTA Martin,NO,Uno-X Mobility,120.0,https://www.procyclingstats.com/rider/martin-tjotta
+326,JEŽEK Václav,CZ,Kasper crypto4me,120.0,https://www.procyclingstats.com/rider/vaclav-jezek1
+327,SALBY Alexander,DK,Li Ning Star,119.0,https://www.procyclingstats.com/rider/alexander-salby
+328,THÉOT Killian,FR,Van Rysel Roubaix,119.0,https://www.procyclingstats.com/rider/killian-theot
+329,TEUTENBERG Tim Torn,DE,Lidl - Trek,118.0,https://www.procyclingstats.com/rider/tim-torn-teutenberg
+330,GLIVAR Gal,SI,Alpecin - Premier Tech,118.0,https://www.procyclingstats.com/rider/gal-glivar
+331,MEEHAN Jamie,IE,Cofidis,118.0,https://www.procyclingstats.com/rider/jamie-meehan
+332,SEPÚLVEDA Eduardo,AR,Li Ning Star,117.0,https://www.procyclingstats.com/rider/eduardo-sepulveda
+333,BROWNING Fergus,AU,Terengganu Cycling Team,116.0,https://www.procyclingstats.com/rider/fergus-browning
+334,VERRE Alessandro,IT,MBH Bank CSB Telecom Fort,116.0,https://www.procyclingstats.com/rider/alessandro-verre
+335,KRETSCHY Moritz,DE,NSN Cycling Team,116.0,https://www.procyclingstats.com/rider/moritz-kretschy
+336,PAJUR Romet,EE,Red Bull - BORA - hansgrohe Rookies,116.0,https://www.procyclingstats.com/rider/romet-pajur
+337,FERNÁNDEZ Samuel,ES,Caja Rural - Seguros RGA,115.0,https://www.procyclingstats.com/rider/samuel-fernandez-garcia
+338,HERREGODTS Rune,BE,UAE Team Emirates - XRG,115.0,https://www.procyclingstats.com/rider/rune-herregodts
+339,VAN DEN BERG Marijn,NL,EF Education - EasyPost,115.0,https://www.procyclingstats.com/rider/marijn-van-den-berg
+340,ZANONCELLO Enrico,IT,Bardiani CSF 7 Saber,115.0,https://www.procyclingstats.com/rider/enrico-zanoncello
+341,CHRISTIE-JOHNSTON Alastair,AU,CCACHE x BODYWRAP,115.0,https://www.procyclingstats.com/rider/alastair-christie-johnston
+342,SEVILLA Diego Pablo,ES,Team Polti VisitMalta,113.0,https://www.procyclingstats.com/rider/diego-pablo-sevilla
 343,KELDERMAN Wilco,NL,Team Visma | Lease a Bike,112.0,https://www.procyclingstats.com/rider/wilco-kelderman
 344,KOOIJ Olav,NL,Decathlon CMA CGM Team,112.0,https://www.procyclingstats.com/rider/olav-kooij
 345,HOLTER Ådne,NO,Uno-X Mobility,111.0,https://www.procyclingstats.com/rider/adne-holter
@@ -853,649 +853,649 @@ rank,name,nationality,team,points,rider_url
 852,ȘEREMET Ilie,MD,,30.0,https://www.procyclingstats.com/rider/ilie-seremet
 853,BODDEN Christopher,KY,,30.0,https://www.procyclingstats.com/rider/christopher-bodden
 854,NUHA Blerton,XK,CLN - Kosova,30.0,https://www.procyclingstats.com/rider/blerton-nuha
-855,KELEMEN Petr,CZ,Tudor Pro Cycling Team,29.0,https://www.procyclingstats.com/rider/petr-kelemen
-856,DOLVEN Halvor,NO,Lotto - Groupe Wanty,29.0,https://www.procyclingstats.com/rider/halvor-dolven
-857,ZAMPERINI Edoardo,IT,Cofidis,29.0,https://www.procyclingstats.com/rider/edoardo-zamperini
-858,PARISINI Nicolò,IT,Pinarello Q36.5 Pro Cycling Team,29.0,https://www.procyclingstats.com/rider/nicolo-parisini
-859,CUYLITS Mauro,BE,Lotto - Groupe Wanty,29.0,https://www.procyclingstats.com/rider/mauro-cuylits
-860,MINTEGI Iker,ES,Euskaltel - Euskadi,29.0,https://www.procyclingstats.com/rider/iker-mintegi-claver
-861,HAUG Kieran,US,Modern Adventure Pro Cycling,29.0,https://www.procyclingstats.com/rider/kieran-haug
-862,DEPE Serdar Anıl,TR,Spor Toto Cycling Team,29.0,https://www.procyclingstats.com/rider/serdar-depe
-863,GIAIMI Luca,IT,UAE Team Emirates - XRG,28.0,https://www.procyclingstats.com/rider/luca-giaimi
-864,BOBOSHEROV Farrukh,UZ,7 Saber Uzbekistan Cycling Team,28.0,https://www.procyclingstats.com/rider/farrukh-bobosherov
-865,MILAN Matteo,IT,Groupama - FDJ United,28.0,https://www.procyclingstats.com/rider/matteo-milan
-866,VAN GILS Lucas,BE,Lotto - Groupe Wanty,28.0,https://www.procyclingstats.com/rider/lucas-van-gils
-867,ARRIGHETTI Nicolò,IT,General Store - Essegibi - F.Lli Curia,28.0,https://www.procyclingstats.com/rider/nicolo-arrighetti
-868,TAILLIEU Aldo,BE,Team Visma | Lease a Bike Development,28.0,https://www.procyclingstats.com/rider/aldo-taillieu
-869,HAVERDINGS David,NL,Alpecin-Premier Tech Development Team,28.0,https://www.procyclingstats.com/rider/david-haverdings
-870,REES Brent,AU,,28.0,https://www.procyclingstats.com/rider/brent-rees
-871,MARCHAND Gianni,BE,Tarteletto - Isorex,28.0,https://www.procyclingstats.com/rider/gianni-marchand
-872,VERMOOTE Jelle,BE,Tarteletto - Isorex,28.0,https://www.procyclingstats.com/rider/jelle-vermoote
-873,VAN DE PUTTE Victor,BE,Lotto - Groupe Wanty,28.0,https://www.procyclingstats.com/rider/victor-van-de-putte
-874,WRIGHT Paul,NZ,Modern Adventure Pro Cycling,28.0,https://www.procyclingstats.com/rider/paul-wright
-875,ROMEO Sergio,ES,Equipo Kern Pharma,28.0,https://www.procyclingstats.com/rider/sergio-romeo
-876,DELLE VEDOVE Alessio,IT,XDS Astana Development Team,27.0,https://www.procyclingstats.com/rider/alessio-delle-vedove
-877,VERVENNE Jonathan,BE,Soudal Quick-Step,27.0,https://www.procyclingstats.com/rider/jonathan-vervenne
-878,PATTINSON Tomos,GB,EF Education - Aevolo,27.0,https://www.procyclingstats.com/rider/tomos-pattinson
-879,NARRAWAY Nicholas,BM,Competitive Edge Racing,27.0,https://www.procyclingstats.com/rider/nicholas-narraway
-880,NØRTOFT Morten Aalling,DK,Team ColoQuick,27.0,https://www.procyclingstats.com/rider/morten-aalling-nortoft
-881,JEAN Victor,FR,Elite Fondations Cycling Team,27.0,https://www.procyclingstats.com/rider/victor-jean
-882,GARCÍA PIERNA Carlos,ES,Burgos Burpellet BH,27.0,https://www.procyclingstats.com/rider/carlos-garcia-pierna
-883,HOULE Hugo,CA,Alpecin - Premier Tech,27.0,https://www.procyclingstats.com/rider/hugo-houle
-884,RIZQI Dimas Nur Fadhil,ID,Jakarta Pro Cycling Team,27.0,https://www.procyclingstats.com/rider/dimas-nur-fadhil-rizqi
-885,GAUTHIER Jérôme,CA,Project Echelon Racing,27.0,https://www.procyclingstats.com/rider/jerome-gauthier
-886,KUDUS Merhawi,ER,Burgos Burpellet BH,26.0,https://www.procyclingstats.com/rider/merhawi-kudus
-887,TAKHIROV Diyor,UZ,7 Saber Uzbekistan Cycling Team,26.0,https://www.procyclingstats.com/rider/diyor-takhirov
-888,URIARTE Diego,ES,Equipo Kern Pharma,26.0,https://www.procyclingstats.com/rider/diego-uriarte-belzunegi
-889,VANHOUCKE Harm,BE,Pinarello Q36.5 Pro Cycling Team,26.0,https://www.procyclingstats.com/rider/harm-vanhoucke
-890,BOUCHARD Geoffrey,FR,TotalEnergies,26.0,https://www.procyclingstats.com/rider/geoffrey-bouchard
-891,ALHAMMADI Ali Eissa,AE,,26.0,https://www.procyclingstats.com/rider/abdulla-alhammadi
-892,MARTINEZ Juan Guillermo,CO,Team Picnic PostNL,26.0,https://www.procyclingstats.com/rider/guillermo-juan-martinez
-893,ZOCCARATO Samuele,IT,MBH Bank CSB Telecom Fort,26.0,https://www.procyclingstats.com/rider/samuele-zoccarato
-894,ROSENLUND Stian,DK,AIRTOX - Carl Ras,26.0,https://www.procyclingstats.com/rider/stian-rosenlund
-895,D'AMATO Andrea,IT,Team UKYO,26.0,https://www.procyclingstats.com/rider/andrea-d-amato
-896,WILLIAMS Cory,BZ,L39ION of Los Angeles,26.0,https://www.procyclingstats.com/rider/cory-williams
-897,RIŠKA Richard,SK,Hrinkow Advarics,26.0,https://www.procyclingstats.com/rider/richard-riska
-898,KAJAMINI Florian Samuel,IT,XDS Astana Team,25.0,https://www.procyclingstats.com/rider/florian-samuel-kajamini
-899,SWIFT Ben,GB,Netcompany INEOS,25.0,https://www.procyclingstats.com/rider/ben-swift
-900,MORO Manlio,IT,Movistar Team,25.0,https://www.procyclingstats.com/rider/manlio-moro
-901,ØRN-KRISTOFF Felix,NO,Lotto Intermarché,25.0,https://www.procyclingstats.com/rider/felix-orn-kristoff
-902,IMAMURA Shunsuke,JP,Lotto - Groupe Wanty,25.0,https://www.procyclingstats.com/rider/shunsuke-imamura
-903,VAN SINTMAARTENSDIJK Roel,NL,Lotto Intermarché,25.0,https://www.procyclingstats.com/rider/roel-van-sintmaartensdijk
-904,DELACROIX Théo,FR,St Michel - Preference Home - Auber93,25.0,https://www.procyclingstats.com/rider/theo-delacroix
-905,ASCONEGUY Roderyck,UY,Dolores Cycles Club,25.0,https://www.procyclingstats.com/rider/roderyck-asconeguy
-906,FRĄTCZAK Radosław,PL,Wibatech Lubelskie Perła Polski,25.0,https://www.procyclingstats.com/rider/radoslaw-fratczak
-907,PODLUZHNYY Mikhail,KZ,XDS Astana Development Team,25.0,https://www.procyclingstats.com/rider/mikhail-podluzhnyy
-908,YILMAZ Ramazan,TR,Konya Büyükşehir Belediye Spor,25.0,https://www.procyclingstats.com/rider/ramazan-yilmaz
-909,QUINN Sean,US,EF Education - EasyPost,25.0,https://www.procyclingstats.com/rider/sean-quinn
-910,KRUIJSWIJK Steven,NL,Team Visma | Lease a Bike,25.0,https://www.procyclingstats.com/rider/steven-kruijswijk
-911,GONZALES Freddy,BO,,25.0,https://www.procyclingstats.com/rider/freddy-gonzales-soto
-912,LAMPAERT Yves,BE,Soudal Quick-Step,25.0,https://www.procyclingstats.com/rider/yves-lampaert
-913,GRADEK Kamil,PL,Bahrain - Victorious,25.0,https://www.procyclingstats.com/rider/kamil-gradek
-914,FRISON Frederik,BE,Pinarello Q36.5 Pro Cycling Team,25.0,https://www.procyclingstats.com/rider/frederik-frison
-915,HLADY Gavin,US,EF Education - Aevolo,25.0,https://www.procyclingstats.com/rider/gavin-hlady
-916,O'BRIEN Liam,IE,Lidl - Trek Future Racing,25.0,https://www.procyclingstats.com/rider/liam-o-brien
-917,ZWIEHOFF Ben,DE,Red Bull - BORA - hansgrohe,25.0,https://www.procyclingstats.com/rider/ben-zwiehoff
-918,FAURE PROST Alexy,FR,Team Picnic PostNL,25.0,https://www.procyclingstats.com/rider/alexy-faure-prost
-919,NAVAS Kevin,EC,Best PC Ecuador,25.0,https://www.procyclingstats.com/rider/kevin-navas-paredes
-920,SANCHO José Pablo,CR,Colono Bikestation Kölbi,25.0,https://www.procyclingstats.com/rider/jose-sancho
-921,MENDES Diego De Jesus,BR,,25.0,https://www.procyclingstats.com/rider/diego-de-jesus-mendes
-922,TERCERO Fernando,ES,Team Polti VisitMalta,25.0,https://www.procyclingstats.com/rider/fernando-tercero-lopez
-923,CHAVARRIA Derrick,BZ,China Chermin Cycling Team,25.0,https://www.procyclingstats.com/rider/derrick-chavarria
-924,CAMPBELL Max,AU,CCACHE x BODYWRAP,25.0,https://www.procyclingstats.com/rider/max-campbell
-925,LIENHARD Fabian,CH,Tudor Pro Cycling Team,25.0,https://www.procyclingstats.com/rider/fabian-lienhard
-926,HALDIMANN Guillaume,CH,Humard VP,25.0,https://www.procyclingstats.com/rider/guillaume-haldimann
-927,PAWLAK Tobiasz,PL,ATT Investments,25.0,https://www.procyclingstats.com/rider/tobiasz-pawlak
-928,SLESARENKO Ilya,BY,Biesse - Carrera - Premac,25.0,https://www.procyclingstats.com/rider/ilya-slesarenko
-929,NIYONKURU Samuel,RW,Team Amani,24.0,https://www.procyclingstats.com/rider/samuel-niyonkuru
-930,SCHWARZBACHER Matthias,SK,EF Education - EasyPost,24.0,https://www.procyclingstats.com/rider/matthias-schwarzbacher
-931,SIMMONS Colby,US,EF Education - EasyPost,24.0,https://www.procyclingstats.com/rider/colby-simmons
-932,VAN LERBERGHE Bert,BE,Soudal Quick-Step,24.0,https://www.procyclingstats.com/rider/bert-van-lerberghe
-933,HOUCOU Emmanuel,FR,Pinarello Q36.5 Pro Cycling Team,24.0,https://www.procyclingstats.com/rider/emmanuel-houcou
-934,BRUNEL Alexys,FR,TotalEnergies,24.0,https://www.procyclingstats.com/rider/alexys-brunel
-935,MONIQUET Sylvain,BE,Cofidis,24.0,https://www.procyclingstats.com/rider/sylvain-moniquet
-936,AMBROSSI Facundo Nicolás,AR,,24.0,https://www.procyclingstats.com/rider/facundo-nicolas-ambrossi
-937,BARRILLOT Bohémond,FR,AVC Aix Provence Dole,24.0,https://www.procyclingstats.com/rider/bohemond-barrillot
-938,RUIZ Robinson Steven,PE,,24.0,https://www.procyclingstats.com/rider/robinson-steven-ruiz
-939,HUE Antoine,FR,Veloce Club Rouen 76,24.0,https://www.procyclingstats.com/rider/antoine-hue
-940,ARSAC Rémi,FR,Decathlon CMA CGM Development Team,24.0,https://www.procyclingstats.com/rider/remi-arsac
-941,ARCHIBOLD Franklin,PA,Solution Tech NIPPO Rali,24.0,https://www.procyclingstats.com/rider/franklin-archibold
-942,RAMÍREZ Donovan,CR,Colono Bikestation Kölbi,24.0,https://www.procyclingstats.com/rider/donovan-ramirez
-943,ZOIDL Riccardo,AT,Hrinkow Advarics,24.0,https://www.procyclingstats.com/rider/riccardo-zoidl
-944,CHARROIS Leo,DE,Embrace The World,24.0,https://www.procyclingstats.com/rider/leo-charrois
-945,KUYPERS Gerben,BE,Pauwels Sauzen - Altez Industriebouw Cycling Team,24.0,https://www.procyclingstats.com/rider/gerben-kuypers
-946,MÉNDEZ Diego Alejandro,VE,Lotería del Táchira Servitel,23.0,https://www.procyclingstats.com/rider/diego-alejandro-mendez
-947,BALLERSTEDT Maurice,DE,Alpecin - Premier Tech,23.0,https://www.procyclingstats.com/rider/maurice-ballerstedt
-948,MAINGUENAUD Tom,FR,Nice Métropole Côte d'Azur,23.0,https://www.procyclingstats.com/rider/tom-mainguenaud
-949,NENCINI Tommaso,IT,Solution Tech NIPPO Rali,23.0,https://www.procyclingstats.com/rider/tommaso-nencini
-950,LIM Nash,PH,Factor Racing,23.0,https://www.procyclingstats.com/rider/nash-lim
-951,DE CLERCQ Mathijs,BE,Soudal Quick-Step Devo Team,23.0,https://www.procyclingstats.com/rider/mathijs-de-clercq
-952,BENITO Adrián,ES,Team Polti VisitMalta,23.0,https://www.procyclingstats.com/rider/adrian-benito-gonzalez
-953,LEROUX Samuel,FR,TotalEnergies,23.0,https://www.procyclingstats.com/rider/samuel-leroux
-954,NOVÁK Samuel,SK,Tirol KTM Cycling Team,23.0,https://www.procyclingstats.com/rider/samuel-novak
-955,KROONEN Max,NL,BEAT CC p/b Saxo,23.0,https://www.procyclingstats.com/rider/max-kroonen
-956,PROCTOR-PARKER Dylan,AU,,23.0,https://www.procyclingstats.com/rider/dylan-proctor-parker
-957,DELGADO David,ES,Quick Pro Team,23.0,https://www.procyclingstats.com/rider/david-delgado
-958,EL KOURAJI Mohcine,MA,,23.0,https://www.procyclingstats.com/rider/mohcine-el-kouraji
-959,FERREIRA DE MELO Alex,BR,Andbank Cycling Team,23.0,https://www.procyclingstats.com/rider/alex-ferreira-de-melo
-960,BUCK JONES Huw,GB,Bourg-en-Bresse Ain Cyclisme,23.0,https://www.procyclingstats.com/rider/huw-buck-jones
-961,GUGLIELMI Simon,FR,St Michel - Preference Home - Auber93,23.0,https://www.procyclingstats.com/rider/simon-guglielmi
-962,HUBY Antoine,FR,7Eleven Cliqq Roadbike Philippines,23.0,https://www.procyclingstats.com/rider/antoine-huby
-963,ROJAS Brandon Alejandro,CO,GW Erco SportFitness,22.0,https://www.procyclingstats.com/rider/brandon-alejandro-rojas-vega
-964,TAMINIAUX Lionel,BE,Lotto Intermarché,22.0,https://www.procyclingstats.com/rider/lionel-taminiaux
-965,PALENI Enzo,FR,Groupama - FDJ United,22.0,https://www.procyclingstats.com/rider/enzo-paleni
-966,KEPPLINGER Rainer,AT,Bahrain - Victorious,22.0,https://www.procyclingstats.com/rider/rainer-kepplinger
-967,FREYER Martin,NA,,22.0,https://www.procyclingstats.com/rider/martin-freyer
-968,JANSE VAN RENSBURG Reinardt,ZA,Tshenolo Pro Cycling Team,22.0,https://www.procyclingstats.com/rider/reinardt-janse-van-rensburg
-969,MOYATA Eduardo,BO,Pío Rico Cycling Team,22.0,https://www.procyclingstats.com/rider/eduardo-moyata
-970,REMKHI Rudolf,KZ,Muğla Büyükşehir Belediyesi Spor Kulübü,22.0,https://www.procyclingstats.com/rider/rudolf-remkhi
-971,MILOSTIC Lindon,AU,St George Continental Cycling Team,22.0,https://www.procyclingstats.com/rider/lindon-milostic
-972,DEL PINO Jesus,ES,Aviludo - Louletano - Loulé,22.0,https://www.procyclingstats.com/rider/jesus-del-pino
-973,MASENGESHO Vainqueur,RW,Benediction Banafrica Team,22.0,https://www.procyclingstats.com/rider/vainqueur-masengesho
-974,DAHL Gustav Frederik,DK,Team Give Steel,22.0,https://www.procyclingstats.com/rider/gustav-frederik-dahl
-975,BORREMANS Kasper,FI,Bahrain Victorious Development Team,22.0,https://www.procyclingstats.com/rider/kasper-borremans
-976,KLOPPENBORG Lukas Sulaj,AL,Sidi Ali - Unlock Sports Team,22.0,https://www.procyclingstats.com/rider/lukas-sulaj-kloppenborg
-977,KIMANI Wangai Evan,KE,,22.0,https://www.procyclingstats.com/rider/evan-wangai
-978,DIALLO Tiémoko,ML,,22.0,https://www.procyclingstats.com/rider/tiemoko-diallo
-979,ROSSI João Pedro,BR,Localiza Meoo / Swift Pro Cycling,22.0,https://www.procyclingstats.com/rider/joao-pedro-rossi
-980,ABU HARRAH Majid,JO,,22.0,https://www.procyclingstats.com/rider/majid-abu-harrah
-981,TORRES Pablo,ES,UAE Team Emirates - XRG,21.0,https://www.procyclingstats.com/rider/pablo-torres-arias
-982,ARRIOLABENGOA Julen,ES,Caja Rural - Seguros RGA,21.0,https://www.procyclingstats.com/rider/julen-arriola-bengoa-beitia
-983,NOVAK Domen,SI,UAE Team Emirates - XRG,21.0,https://www.procyclingstats.com/rider/domen-novak
-984,FLÓREZ Samuel,CO,Modern Adventure Pro Cycling,21.0,https://www.procyclingstats.com/rider/samuel-florez-garces
-985,GIANNOUTSOS Miltiadis,GR,,21.0,https://www.procyclingstats.com/rider/miltiadis-giannoutsos
-986,CARVALHO Gonçalo,PT,Tavfer-Ovos Matinados-Mortágua,21.0,https://www.procyclingstats.com/rider/goncalo-carvalho
-987,WALLS Matthew,GB,Team Storck - MRW Bau,21.0,https://www.procyclingstats.com/rider/matthew-walls
-988,GAL Ryan,NL,Metec - SOLARWATT p/b Mantel,21.0,https://www.procyclingstats.com/rider/ryan-gal
-989,SAIDI Nassim,DZ,Madar Pro Cycling Team,21.0,https://www.procyclingstats.com/rider/nassim-saidi
-990,TAKÁCS Zsombor Tamás,HU,MBH Bank CSB Telecom Fort,21.0,https://www.procyclingstats.com/rider/zsombor-tamas-takacs
-991,NESPOLI Lorenzo,IT,MBH Bank CSB Telecom Fort,20.0,https://www.procyclingstats.com/rider/lorenzo-nespoli
-992,KNOX James,GB,Team Picnic PostNL,20.0,https://www.procyclingstats.com/rider/james-knox
-993,PEACE Oliver,GB,Team Picnic PostNL,20.0,https://www.procyclingstats.com/rider/oliver-peace
-994,DRIZNERS Jarrad,AU,Red Bull - BORA - hansgrohe,20.0,https://www.procyclingstats.com/rider/jarrad-drizners
-995,URIANSTAD BUGGE Martin,NO,Uno-X Mobility,20.0,https://www.procyclingstats.com/rider/martin-urianstad
-996,KÜNG Stefan,CH,Tudor Pro Cycling Team,20.0,https://www.procyclingstats.com/rider/stefan-kung
-997,HVIDEBERG Jonas Hem,NO,Uno-X Mobility,20.0,https://www.procyclingstats.com/rider/jonas-hem-hvideberg
-998,VILLA Giacomo,IT,Biesse - Carrera - Premac,20.0,https://www.procyclingstats.com/rider/giacomo-villa
-999,PIRAS Andrea,IT,Solution Tech NIPPO Rali,20.0,https://www.procyclingstats.com/rider/andrea-piras
-1000,QU Chengjun,CN,,20.0,https://www.procyclingstats.com/rider/chengjun-qu
-1001,WU Chun Yin,HK,HKSI Pro Cycling Team,20.0,https://www.procyclingstats.com/rider/chun-yin-wu
-1002,BATSAIKHAN Tegsh-Bayar,MN,Roojai Insurance Winspace,20.0,https://www.procyclingstats.com/rider/tegsh-bayar-batsaikhan
-1003,TENDON Arnaud,CH,Van Rysel Roubaix,20.0,https://www.procyclingstats.com/rider/arnaud-tendon
-1004,VERCOUILLIE Victor,BE,Team Flanders - Baloise,20.0,https://www.procyclingstats.com/rider/victor-vercouillie
-1005,EGHOLM Kristian,DK,Lidl - Trek Future Racing,20.0,https://www.procyclingstats.com/rider/kristian-egholm1
-1006,PUTZ Sebastian,AT,Red Bull - BORA - hansgrohe Rookies,20.0,https://www.procyclingstats.com/rider/sebastian-putz
-1007,ARCAS Jorge,ES,Movistar Team,20.0,https://www.procyclingstats.com/rider/jorge-arcas
-1008,OURSELIN Paul,FR,Cofidis,20.0,https://www.procyclingstats.com/rider/paul-ourselin
-1009,ERIKSSON Jacob,SE,Tudor Pro Cycling Team,20.0,https://www.procyclingstats.com/rider/jacob-eriksson
-1010,GONZÁLEZ Abner,PR,Feirense - Beeceler,20.0,https://www.procyclingstats.com/rider/abner-gonzalez-rivera
-1011,VERGAERDE Otto,BE,Lidl - Trek,20.0,https://www.procyclingstats.com/rider/otto-vergaerde
-1012,BOGDANOVIČS Māris,LV,FNIX - SCOM - Hengxiang Cycling Team,20.0,https://www.procyclingstats.com/rider/maris-bogdanovics
-1013,ROY Léo,CA,Team Vittel N'side,20.0,https://www.procyclingstats.com/rider/leo-roy
-1014,HEFFERNAN William,AU,CCACHE x BODYWRAP,20.0,https://www.procyclingstats.com/rider/william-heffernan
-1015,CATTANI Alessandro,IT,Team Technipes #inEmiliaRomagna Caffè Borbone,20.0,https://www.procyclingstats.com/rider/alessandro-cattani
-1016,MAAS Jan,NL,Cofidis,20.0,https://www.procyclingstats.com/rider/jan-maas
-1017,AMARI Hamza,DZ,Madar Pro Cycling Team,20.0,https://www.procyclingstats.com/rider/hamza-amari
-1018,HELLEMOSE Asbjørn,DK,Team Jayco AlUla,20.0,https://www.procyclingstats.com/rider/asbjorn-hellemose
-1019,LAYRAC Gabriel,FR,AVC Aix Provence Dole,20.0,https://www.procyclingstats.com/rider/gabriel-layrac
-1020,SCHEMPP Oscar,DE,BIKE AID,20.0,https://www.procyclingstats.com/rider/oscar-schempp
-1021,TORRES Jaime,ES,UAE Team Emirates Gen Z,20.0,https://www.procyclingstats.com/rider/jaime-torres
-1022,NUNES Hugo,PT,Credibom / LA Alumínios / Marcos Car,20.0,https://www.procyclingstats.com/rider/hugo-nunes
-1023,DE BRUYCKERE Kay,BE,Pauwels Sauzen - Altez Industriebouw Cycling Team,20.0,https://www.procyclingstats.com/rider/kay-de-bruyckere
-1024,COSTA Fábio,PT,Feira dos Sofás - Boavista,20.0,https://www.procyclingstats.com/rider/fabio-manuel-fernandes-costa
-1025,SHERRY Gavin,US,,20.0,https://www.procyclingstats.com/rider/gavin-sherry
-1026,KAMZONG Clovis,CM,SNH Vélo Club,20.0,https://www.procyclingstats.com/rider/clovis-kamzong-abessolo
-1027,RAMÍREZ Mateo,EC,UAE Team Emirates Gen Z,20.0,https://www.procyclingstats.com/rider/mateo-pablo-ramirez
-1028,DESAL Ceriel,BE,Soudal Quick-Step Devo Team,19.0,https://www.procyclingstats.com/rider/ceriel-desal
-1029,ARASHIRO Yukiya,JP,Solution Tech NIPPO Rali,19.0,https://www.procyclingstats.com/rider/yukiya-arashiro
-1030,BYSTRØM Sven Erik,NO,Uno-X Mobility,19.0,https://www.procyclingstats.com/rider/sven-erik-bystrom
-1031,BOCK Max,DE,Red Bull - BORA - hansgrohe Rookies,19.0,https://www.procyclingstats.com/rider/max-bock
-1032,ARAMAYO Jose Manuel,BO,Pío Rico Cycling Team,19.0,https://www.procyclingstats.com/rider/jose-manuel-aramayo-villena
-1033,QUIROZ Tomas,CL,Plus Performance - ZEO Sport,19.0,https://www.procyclingstats.com/rider/tomas-quiroz
-1034,KAMBERAJ Valentino,AL,Team Skyline,19.0,https://www.procyclingstats.com/rider/valentino-kamberaj
-1035,LINAREZ Leangel Rubén,VE,Tavfer-Ovos Matinados-Mortágua,19.0,https://www.procyclingstats.com/rider/leangel-linarez
-1036,JOALLAND Yaël,FR,Cofidis,19.0,https://www.procyclingstats.com/rider/yael-joalland
-1037,ANTONENKO Heorhii,UA,Energus Cycling Team,19.0,https://www.procyclingstats.com/rider/heorhii-antonenko
-1038,CRETTI Luca,IT,MBH Bank CSB Telecom Fort,19.0,https://www.procyclingstats.com/rider/luca-cretti
-1039,PIRA Yesid Albeiro,CO,Hino One La Red Suzuki,19.0,https://www.procyclingstats.com/rider/yesid-albeiro-pira
-1040,SAVINO Federico,IT,Soudal Quick-Step Devo Team,19.0,https://www.procyclingstats.com/rider/federico-savino
-1041,PLACE Maxence,BE,Aarco,19.0,https://www.procyclingstats.com/rider/maxence-place
-1042,STEWART Jake,GB,NSN Cycling Team,18.0,https://www.procyclingstats.com/rider/jake-stewart
-1043,CAPRA Thomas,IT,Bahrain Victorious Development Team,18.0,https://www.procyclingstats.com/rider/thomas-capra
-1044,CONTRERAS Rodrigo,CO,Nu Colombia,18.0,https://www.procyclingstats.com/rider/rodrigo-contreras
-1045,BAHODIROV Behzod,UZ,7 Saber Uzbekistan Cycling Team,18.0,https://www.procyclingstats.com/rider/behzod-bahodirov
-1046,SCHOOFS Jasper,BE,Soudal Quick-Step Devo Team,18.0,https://www.procyclingstats.com/rider/jasper-schoofs
-1047,PETER Jannis,DE,Unibet Rose Rockets,18.0,https://www.procyclingstats.com/rider/jannis-peter
-1048,DUNBAR Eddie,IE,Pinarello Q36.5 Pro Cycling Team,18.0,https://www.procyclingstats.com/rider/edward-irl-dunbar
-1049,MATTHEIS Oliver,DE,BIKE AID,18.0,https://www.procyclingstats.com/rider/oliver-mattheis
-1050,BOULET Eliott,FR,Groupama-FDJ United CT,18.0,https://www.procyclingstats.com/rider/eliott-boulet
-1051,PIETROBON Andrea,IT,Team Polti VisitMalta,18.0,https://www.procyclingstats.com/rider/andrea-pietrobon
-1052,MARTE Jesus Roniel,DO,,18.0,https://www.procyclingstats.com/rider/jesus-roniel-marte
-1053,ROJAS Gabriel Francisco,CR,,18.0,https://www.procyclingstats.com/rider/gabriel-francisco-rojas
-1054,RASCH Jesper,NL,China Anta - Mentech Cycling Team,18.0,https://www.procyclingstats.com/rider/jesper-rasch
-1055,BAMBAGIONI Tommaso,IT,Team Technipes #inEmiliaRomagna Caffè Borbone,18.0,https://www.procyclingstats.com/rider/tommaso-bambagioni
-1056,HAYASHIBARA Shoma,JP,Shimano Racing Team,18.0,https://www.procyclingstats.com/rider/shoma-hayashibara
-1057,VAN HAUTEGEM Leander,BE,Team Flanders - Baloise,18.0,https://www.procyclingstats.com/rider/leander-van-hautegem
-1058,TUMINELLO Christian,AU,COBRA9 x Leigh Surveyors,18.0,https://www.procyclingstats.com/rider/christian-tuminello
-1059,DE KEERSMAEKER Mathias,BE,Lotto - Groupe Wanty,18.0,https://www.procyclingstats.com/rider/mathias-de-keersmaeker
-1060,TSISHKOU Raman,BY,Li Ning Star,18.0,https://www.procyclingstats.com/rider/raman-tsishkou
-1061,GALIMBERTI Lorenzo,IT,Swatt Club,18.0,https://www.procyclingstats.com/rider/lorenzo-galimberti
-1062,GUÉGAN Maël,FR,CIC Pro Cycling Academy,18.0,https://www.procyclingstats.com/rider/mael-guegan
-1063,DE COMARMOND Aurelien,MU,The Joyrun & Hurricane Cycling Team,18.0,https://www.procyclingstats.com/rider/aurelien-de-comarmond
-1064,RETEGI Mikel,ES,Equipo Kern Pharma,17.0,https://www.procyclingstats.com/rider/mikel-retegi
-1065,SIBANDA Mthokozisi,ZW,,17.0,https://www.procyclingstats.com/rider/mthokozisi-sibanda
-1066,PEÑA Wilson Estiben,CO,Team Sistecredito,17.0,https://www.procyclingstats.com/rider/wilson-estiben-pena-molano
-1067,STEWART Mark,GB,Modern Adventure Pro Cycling,17.0,https://www.procyclingstats.com/rider/mark-stewart
-1068,TARLING Finlay,GB,NSN Development Team,17.0,https://www.procyclingstats.com/rider/finlay-tarling
-1069,YEMANE Even,ER,BIKE AID,17.0,https://www.procyclingstats.com/rider/even-yemane
-1070,SAMBINELLO Enea,IT,UAE Team Emirates Gen Z,17.0,https://www.procyclingstats.com/rider/enea-sambinello
-1071,RASENBERG Martijn,NL,Unibet Rose Rockets,17.0,https://www.procyclingstats.com/rider/martijn-rasenberg
-1072,SOMMER Jan,CH,Elite Fondations Cycling Team,17.0,https://www.procyclingstats.com/rider/jan-sommer
-1073,BAEZA Cristobal,CL,Plus Performance - ZEO Sport,17.0,https://www.procyclingstats.com/rider/cristobal-baeza
-1074,RAMÍREZ Joseph Gerardo,CR,Colono Bikestation Kölbi,17.0,https://www.procyclingstats.com/rider/joseph-gerardo-ramirez
-1075,DA SILVA SANTOS Vinicius,BR,São José Ciclismo,17.0,https://www.procyclingstats.com/rider/vinicius-da-silva-santos
-1076,STENNING Oliver,AU,Shenzhen Kung Cycling Team,17.0,https://www.procyclingstats.com/rider/oliver-stenning
-1077,MARIS Jesse,US,Technosylva Rower Bembibre,17.0,https://www.procyclingstats.com/rider/jesse-maris
-1078,METAWEA Mahmoud,EG,,17.0,https://www.procyclingstats.com/rider/mahmoud-metawea
-1079,ZABELINSKIY Bogdan,CY,Aarco,17.0,https://www.procyclingstats.com/rider/bogdan-zabelinskiy
-1080,ATTAI Corneil Kokou,BJ,,17.0,https://www.procyclingstats.com/rider/corneil-kokou-attai
-1081,SOWOU Rémi,BJ,,17.0,https://www.procyclingstats.com/rider/remi-sowou
-1082,KASTRATI Albion,XK,CLN - Kosova,17.0,https://www.procyclingstats.com/rider/albion-kastrati
-1083,ALREJJAL Mo'men,JO,,17.0,https://www.procyclingstats.com/rider/mo-men-alrejjal
-1084,AL MAYYAS Mohammad,JO,,17.0,https://www.procyclingstats.com/rider/mohammad-al-mayyas
-1085,LUKIĆ Leon,HR,Kolesarski Klub Novo Mesto,17.0,https://www.procyclingstats.com/rider/leon-lukic
-1086,FLEMMING Abbiel,AG,,17.0,https://www.procyclingstats.com/rider/abbiel-flemming
-1087,RETAILLEAU Valentin,FR,TotalEnergies,16.0,https://www.procyclingstats.com/rider/valentin-retailleau
-1088,TOWNSEND Rory,IE,Unibet Rose Rockets,16.0,https://www.procyclingstats.com/rider/rory-townsend
-1089,MA Binyan,CN,China Anta - Mentech Cycling Team,16.0,https://www.procyclingstats.com/rider/binyan-ma
-1090,LANGELLA Lenaic,FR,CIC Pro Cycling Academy,16.0,https://www.procyclingstats.com/rider/lenaic-langella
-1091,AMAN Awet,ER,Istanbul Team,16.0,https://www.procyclingstats.com/rider/awet-aman
-1092,TERADA Yoshiki,JP,Team UKYO,16.0,https://www.procyclingstats.com/rider/yoshiki-terada
-1093,MENGHINI Alessio,IT,Team Technipes #inEmiliaRomagna Caffè Borbone,16.0,https://www.procyclingstats.com/rider/alessio-menghini
-1094,VAN DER WERFF Thom,NL,Development Team Picnic PostNL,16.0,https://www.procyclingstats.com/rider/thom-van-der-werff
-1095,FLYNN Sean,GB,Team Picnic PostNL,16.0,https://www.procyclingstats.com/rider/sean-flynn
-1096,BETTENDORFF Loïc,LU,Hrinkow Advarics,16.0,https://www.procyclingstats.com/rider/loic-bettendorf
-1097,NEAVES Jadian,TT,,16.0,https://www.procyclingstats.com/rider/jadian-neaves
-1098,DOMÍNGUEZ David,ES,Feira dos Sofás - Boavista,16.0,https://www.procyclingstats.com/rider/david-dominguez-vilchez
-1099,BORTOLUZZI Giovanni,IT,General Store - Essegibi - F.Lli Curia,16.0,https://www.procyclingstats.com/rider/giovanni-bortoluzzi
-1100,MALMBERG Matias,DK,Swatt Club,16.0,https://www.procyclingstats.com/rider/matias-malmberg
-1101,KMIELIAUSKAS Rokas,LT,Energus Cycling Team,16.0,https://www.procyclingstats.com/rider/rokas-kmieliauskas
-1102,GOSZCZURNY Patryk,PL,Team Visma | Lease a Bike Development,16.0,https://www.procyclingstats.com/rider/patryk-goszczurny
-1103,BASSON Gustav,ZA,Tshenolo Pro Cycling Team,16.0,https://www.procyclingstats.com/rider/gustav-basson
-1104,ELSAIFY Hassan,EG,,16.0,https://www.procyclingstats.com/rider/hassan-elsaify
-1105,LIGHTFOOT Mark,GB,AVC Aix Provence Dole,16.0,https://www.procyclingstats.com/rider/mark-lightfoot
-1106,AEBERSOLD Nils,CH,Elite Fondations Cycling Team,16.0,https://www.procyclingstats.com/rider/nils-aebersold
-1107,BDADOU Youssef,MA,,16.0,https://www.procyclingstats.com/rider/youssef-bdadou
-1108,CASTILLO Kevin David,CO,Orgullo Paisa,16.0,https://www.procyclingstats.com/rider/kevin-david-castillo-miranda
-1109,FORSSELL Hugo,SE,CK Hymer,16.0,https://www.procyclingstats.com/rider/hugo-forssell
-1110,GORDILLO Emerson Ronaldo,CO,Nu Colombia,16.0,https://www.procyclingstats.com/rider/emerson-gordillo
-1111,OKA Atsushi,JP,Astemo Utsunomiya Blitzen,16.0,https://www.procyclingstats.com/rider/atsushi-oka
-1112,MESSEL Kevin Andre Sandli,NO,Team Ringerike,16.0,https://www.procyclingstats.com/rider/kevin-andre-sandli-messel
-1113,HAFIZH Muhammad,ID,ASC Monsters Indonesia,16.0,https://www.procyclingstats.com/rider/muhammad-hafizh
-1114,BELLENS Jarno,BE,Baloise Verzekeringen - Het Poetsbureau Lions,16.0,https://www.procyclingstats.com/rider/jarno-bellens
-1115,RODRIGUES Rúben,PT,Feira dos Sofás - Boavista,16.0,https://www.procyclingstats.com/rider/ruben-rodrigues
-1116,MACHHOLDT Magnus,DK,Reffen CO:PLAY Giant Store,16.0,https://www.procyclingstats.com/rider/magnus-machholdt
-1117,ADOMAITIS Rokas,LT,Energus Cycling Team,16.0,https://www.procyclingstats.com/rider/rokas-adomaitis
-1118,ORMISTON Callum,ZA,The Joyrun & Hurricane Cycling Team,16.0,https://www.procyclingstats.com/rider/callum-ormiston
-1119,SIRIRONNACHAI Sarawut,TH,,15.0,https://www.procyclingstats.com/rider/sarawut-sirironnachai
-1120,GREENWOOD Matthew,AU,CCACHE x BODYWRAP,15.0,https://www.procyclingstats.com/rider/matthew-greenwood
-1121,HOWSON Damien,AU,Pinarello Q36.5 Pro Cycling Team,15.0,https://www.procyclingstats.com/rider/damien-howson
-1122,STOCKWELL Oliver,GB,Bahrain - Victorious,15.0,https://www.procyclingstats.com/rider/oliver-stockwell
-1123,KIECK Blaine,ZA,UV Aube,15.0,https://www.procyclingstats.com/rider/blaine-kieck
-1124,RODRÍGUEZ Diego Leonel,UY,,15.0,https://www.procyclingstats.com/rider/diego-leonel-rodriguez
-1125,SURÉN Roger,NA,Alpecin-Premier Tech Development Team,15.0,https://www.procyclingstats.com/rider/roger-suren
-1126,WILKSCH Hannes,DE,Tudor Pro Cycling Team,15.0,https://www.procyclingstats.com/rider/hannes-wilksch
-1127,GAMPER Patrick,AT,Team Jayco AlUla,15.0,https://www.procyclingstats.com/rider/patrick-gamper
-1128,QUITA Ronnilan,PH,7Eleven Cliqq Roadbike Philippines,15.0,https://www.procyclingstats.com/rider/ronnilan-quita
-1129,DE POOTER Dries,BE,Team Jayco AlUla,15.0,https://www.procyclingstats.com/rider/dries-de-pooter
-1130,MOORE Viggo,US,Tirol KTM Cycling Team,15.0,https://www.procyclingstats.com/rider/viggo-moore
-1131,CALDERÓN Jerónimo,CO,Team Sistecredito,15.0,https://www.procyclingstats.com/rider/jeronimo-calderon
-1132,ALUSTIZA Nicolás,ES,Euskaltel - Euskadi,15.0,https://www.procyclingstats.com/rider/nicolas-alustiza
-1133,LAENGEN Vegard Stake,NO,UAE Team Emirates - XRG,15.0,https://www.procyclingstats.com/rider/vegard-stake-laengen
-1134,MARCEROU Nicola,FR,TotalEnergies,15.0,https://www.procyclingstats.com/rider/nicola-marcerou
-1135,FABRIES Ugo,FR,UAE Team Emirates Gen Z,15.0,https://www.procyclingstats.com/rider/ugo-fabries
-1136,SVARRE Tobias,DK,Uno-X Mobility,15.0,https://www.procyclingstats.com/rider/tobias-svarre
-1137,DEMAN Brem,BE,Team Flanders - Baloise,15.0,https://www.procyclingstats.com/rider/brem-deman
-1138,VANDEN EYNDE Mats,BE,Lidl - Trek Future Racing,15.0,https://www.procyclingstats.com/rider/mats-vanden-eynde
-1139,BEHRENS Eike,DE,Team Lotto Kern-Haus Outlet Montabaur,15.0,https://www.procyclingstats.com/rider/eike-behrens
-1140,VERSCHUREN Killian,FR,Unibet Rose Rockets,15.0,https://www.procyclingstats.com/rider/killian-verschuren
-1141,VOLTR Martin,CZ,ATT Investments,15.0,https://www.procyclingstats.com/rider/martin-voltr
-1142,QUAEDVLIEG Lars,NL,Universe Cycling Team,15.0,https://www.procyclingstats.com/rider/lars-quaedvlieg
-1143,CALDERÓN Sebastian,CR,7C - Economy - Hyundai,15.0,https://www.procyclingstats.com/rider/sebastian-calderon
-1144,THALMANN Roland,CH,Tudor Pro Cycling Team,15.0,https://www.procyclingstats.com/rider/roland-thalmann
-1145,BOZZOLA Mirko,IT,S.C. Padovani Polo Cherry Bank,15.0,https://www.procyclingstats.com/rider/mirko-bozzola
-1146,ELSAID Omar,EG,,15.0,https://www.procyclingstats.com/rider/omar-elsaid
-1147,MOLLY Kenny,BE,Van Rysel Roubaix,15.0,https://www.procyclingstats.com/rider/kenny-molly
-1148,LOVIDIUS Gustav,SE,Svealand Cycling Team,15.0,https://www.procyclingstats.com/rider/gustav-lovidius
-1149,ŘEHA Filip,CZ,ATT Investments,15.0,https://www.procyclingstats.com/rider/filip-reha
-1150,PETTITI Nicolò,IT,Swatt Club,15.0,https://www.procyclingstats.com/rider/nicolo-pettiti
-1151,GIALLI Matteo,IT,Team Hopplà,15.0,https://www.procyclingstats.com/rider/matteo-gialli
-1152,BEREZNYAK Aleksandr,RU,Wheeltop Rotor Chengdu Team,15.0,https://www.procyclingstats.com/rider/aleksandr-bereznyak
-1153,MOHD ZARIFF Muhammad Nur Aiman,MY,Terengganu Cycling Team,15.0,https://www.procyclingstats.com/rider/muhammad-nur-aiman-mohd-zariff
-1154,MCBIRNEY Tim,US,Project Echelon Racing,15.0,https://www.procyclingstats.com/rider/tim-mcbirney
-1155,AHTOSALO Matias,FI,UN Cycling Team,15.0,https://www.procyclingstats.com/rider/matias-ahtosalo
-1156,CAICEDO Jonathan Klever,EC,Wheeltop Rotor Chengdu Team,15.0,https://www.procyclingstats.com/rider/jonathan-klever-caicedo
-1157,BABOVICH Mikita,BY,Bahrain Victorious Development Team,15.0,https://www.procyclingstats.com/rider/mikita-babovich
-1158,DIALLO Yaya,ML,,15.0,https://www.procyclingstats.com/rider/yaya-diallo
-1159,JÓNSSON Davíð,IS,Team Cranks,15.0,https://www.procyclingstats.com/rider/david-jonsson
-1160,SODJEDE Ricardo,BJ,,15.0,https://www.procyclingstats.com/rider/ricardo-sodjede
-1161,KAMAU Peter,KE,,15.0,https://www.procyclingstats.com/rider/peter-kamau1
-1162,RODRÍGUEZ Brandon Ulises,SV,,15.0,https://www.procyclingstats.com/rider/brandon-rodriguez
-1163,PEÁK Barnabás,HU,MBH Bank CSB Telecom Fort,15.0,https://www.procyclingstats.com/rider/barnabas-peak
-1164,ABREHA Negasi Haylu,ET,Vega - Vitalcare - Dynatek,15.0,https://www.procyclingstats.com/rider/negasi-abreha
-1165,BULUT Samet,TR,Muğla Büyükşehir Belediyesi Spor Kulübü,15.0,https://www.procyclingstats.com/rider/samet-bulut
-1166,NAUMOVSKI Bojan,MK,,15.0,https://www.procyclingstats.com/rider/bojan-naumovski
-1167,JELE Kwanele,SZ,,15.0,https://www.procyclingstats.com/rider/kwanele-jele
-1168,WHITTAKER Alexander,AG,,15.0,https://www.procyclingstats.com/rider/alexander-whittaker
+855,WHITTAKER Alexander,AG,,30.0,https://www.procyclingstats.com/rider/alexander-whittaker
+856,KELEMEN Petr,CZ,Tudor Pro Cycling Team,29.0,https://www.procyclingstats.com/rider/petr-kelemen
+857,DOLVEN Halvor,NO,Lotto - Groupe Wanty,29.0,https://www.procyclingstats.com/rider/halvor-dolven
+858,ZAMPERINI Edoardo,IT,Cofidis,29.0,https://www.procyclingstats.com/rider/edoardo-zamperini
+859,PARISINI Nicolò,IT,Pinarello Q36.5 Pro Cycling Team,29.0,https://www.procyclingstats.com/rider/nicolo-parisini
+860,CUYLITS Mauro,BE,Lotto - Groupe Wanty,29.0,https://www.procyclingstats.com/rider/mauro-cuylits
+861,MINTEGI Iker,ES,Euskaltel - Euskadi,29.0,https://www.procyclingstats.com/rider/iker-mintegi-claver
+862,HAUG Kieran,US,Modern Adventure Pro Cycling,29.0,https://www.procyclingstats.com/rider/kieran-haug
+863,DEPE Serdar Anıl,TR,Spor Toto Cycling Team,29.0,https://www.procyclingstats.com/rider/serdar-depe
+864,GIAIMI Luca,IT,UAE Team Emirates - XRG,28.0,https://www.procyclingstats.com/rider/luca-giaimi
+865,BOBOSHEROV Farrukh,UZ,7 Saber Uzbekistan Cycling Team,28.0,https://www.procyclingstats.com/rider/farrukh-bobosherov
+866,MILAN Matteo,IT,Groupama - FDJ United,28.0,https://www.procyclingstats.com/rider/matteo-milan
+867,VAN GILS Lucas,BE,Lotto - Groupe Wanty,28.0,https://www.procyclingstats.com/rider/lucas-van-gils
+868,ARRIGHETTI Nicolò,IT,General Store - Essegibi - F.Lli Curia,28.0,https://www.procyclingstats.com/rider/nicolo-arrighetti
+869,TAILLIEU Aldo,BE,Team Visma | Lease a Bike Development,28.0,https://www.procyclingstats.com/rider/aldo-taillieu
+870,HAVERDINGS David,NL,Alpecin-Premier Tech Development Team,28.0,https://www.procyclingstats.com/rider/david-haverdings
+871,REES Brent,AU,,28.0,https://www.procyclingstats.com/rider/brent-rees
+872,MARCHAND Gianni,BE,Tarteletto - Isorex,28.0,https://www.procyclingstats.com/rider/gianni-marchand
+873,VERMOOTE Jelle,BE,Tarteletto - Isorex,28.0,https://www.procyclingstats.com/rider/jelle-vermoote
+874,VAN DE PUTTE Victor,BE,Lotto - Groupe Wanty,28.0,https://www.procyclingstats.com/rider/victor-van-de-putte
+875,WRIGHT Paul,NZ,Modern Adventure Pro Cycling,28.0,https://www.procyclingstats.com/rider/paul-wright
+876,ROMEO Sergio,ES,Equipo Kern Pharma,28.0,https://www.procyclingstats.com/rider/sergio-romeo
+877,DELLE VEDOVE Alessio,IT,XDS Astana Development Team,27.0,https://www.procyclingstats.com/rider/alessio-delle-vedove
+878,VERVENNE Jonathan,BE,Soudal Quick-Step,27.0,https://www.procyclingstats.com/rider/jonathan-vervenne
+879,PATTINSON Tomos,GB,EF Education - Aevolo,27.0,https://www.procyclingstats.com/rider/tomos-pattinson
+880,NARRAWAY Nicholas,BM,Competitive Edge Racing,27.0,https://www.procyclingstats.com/rider/nicholas-narraway
+881,NØRTOFT Morten Aalling,DK,Team ColoQuick,27.0,https://www.procyclingstats.com/rider/morten-aalling-nortoft
+882,JEAN Victor,FR,Elite Fondations Cycling Team,27.0,https://www.procyclingstats.com/rider/victor-jean
+883,GARCÍA PIERNA Carlos,ES,Burgos Burpellet BH,27.0,https://www.procyclingstats.com/rider/carlos-garcia-pierna
+884,HOULE Hugo,CA,Alpecin - Premier Tech,27.0,https://www.procyclingstats.com/rider/hugo-houle
+885,RIZQI Dimas Nur Fadhil,ID,Jakarta Pro Cycling Team,27.0,https://www.procyclingstats.com/rider/dimas-nur-fadhil-rizqi
+886,GAUTHIER Jérôme,CA,Project Echelon Racing,27.0,https://www.procyclingstats.com/rider/jerome-gauthier
+887,KUDUS Merhawi,ER,Burgos Burpellet BH,26.0,https://www.procyclingstats.com/rider/merhawi-kudus
+888,TAKHIROV Diyor,UZ,7 Saber Uzbekistan Cycling Team,26.0,https://www.procyclingstats.com/rider/diyor-takhirov
+889,URIARTE Diego,ES,Equipo Kern Pharma,26.0,https://www.procyclingstats.com/rider/diego-uriarte-belzunegi
+890,VANHOUCKE Harm,BE,Pinarello Q36.5 Pro Cycling Team,26.0,https://www.procyclingstats.com/rider/harm-vanhoucke
+891,BOUCHARD Geoffrey,FR,TotalEnergies,26.0,https://www.procyclingstats.com/rider/geoffrey-bouchard
+892,ALHAMMADI Ali Eissa,AE,,26.0,https://www.procyclingstats.com/rider/abdulla-alhammadi
+893,MARTINEZ Juan Guillermo,CO,Team Picnic PostNL,26.0,https://www.procyclingstats.com/rider/guillermo-juan-martinez
+894,ZOCCARATO Samuele,IT,MBH Bank CSB Telecom Fort,26.0,https://www.procyclingstats.com/rider/samuele-zoccarato
+895,ROSENLUND Stian,DK,AIRTOX - Carl Ras,26.0,https://www.procyclingstats.com/rider/stian-rosenlund
+896,D'AMATO Andrea,IT,Team UKYO,26.0,https://www.procyclingstats.com/rider/andrea-d-amato
+897,WILLIAMS Cory,BZ,L39ION of Los Angeles,26.0,https://www.procyclingstats.com/rider/cory-williams
+898,RIŠKA Richard,SK,Hrinkow Advarics,26.0,https://www.procyclingstats.com/rider/richard-riska
+899,KAJAMINI Florian Samuel,IT,XDS Astana Team,25.0,https://www.procyclingstats.com/rider/florian-samuel-kajamini
+900,SWIFT Ben,GB,Netcompany INEOS,25.0,https://www.procyclingstats.com/rider/ben-swift
+901,MORO Manlio,IT,Movistar Team,25.0,https://www.procyclingstats.com/rider/manlio-moro
+902,ØRN-KRISTOFF Felix,NO,Lotto Intermarché,25.0,https://www.procyclingstats.com/rider/felix-orn-kristoff
+903,IMAMURA Shunsuke,JP,Lotto - Groupe Wanty,25.0,https://www.procyclingstats.com/rider/shunsuke-imamura
+904,VAN SINTMAARTENSDIJK Roel,NL,Lotto Intermarché,25.0,https://www.procyclingstats.com/rider/roel-van-sintmaartensdijk
+905,DELACROIX Théo,FR,St Michel - Preference Home - Auber93,25.0,https://www.procyclingstats.com/rider/theo-delacroix
+906,ASCONEGUY Roderyck,UY,Dolores Cycles Club,25.0,https://www.procyclingstats.com/rider/roderyck-asconeguy
+907,FRĄTCZAK Radosław,PL,Wibatech Lubelskie Perła Polski,25.0,https://www.procyclingstats.com/rider/radoslaw-fratczak
+908,PODLUZHNYY Mikhail,KZ,XDS Astana Development Team,25.0,https://www.procyclingstats.com/rider/mikhail-podluzhnyy
+909,YILMAZ Ramazan,TR,Konya Büyükşehir Belediye Spor,25.0,https://www.procyclingstats.com/rider/ramazan-yilmaz
+910,QUINN Sean,US,EF Education - EasyPost,25.0,https://www.procyclingstats.com/rider/sean-quinn
+911,KRUIJSWIJK Steven,NL,Team Visma | Lease a Bike,25.0,https://www.procyclingstats.com/rider/steven-kruijswijk
+912,GONZALES Freddy,BO,,25.0,https://www.procyclingstats.com/rider/freddy-gonzales-soto
+913,LAMPAERT Yves,BE,Soudal Quick-Step,25.0,https://www.procyclingstats.com/rider/yves-lampaert
+914,GRADEK Kamil,PL,Bahrain - Victorious,25.0,https://www.procyclingstats.com/rider/kamil-gradek
+915,FRISON Frederik,BE,Pinarello Q36.5 Pro Cycling Team,25.0,https://www.procyclingstats.com/rider/frederik-frison
+916,HLADY Gavin,US,EF Education - Aevolo,25.0,https://www.procyclingstats.com/rider/gavin-hlady
+917,O'BRIEN Liam,IE,Lidl - Trek Future Racing,25.0,https://www.procyclingstats.com/rider/liam-o-brien
+918,ZWIEHOFF Ben,DE,Red Bull - BORA - hansgrohe,25.0,https://www.procyclingstats.com/rider/ben-zwiehoff
+919,FAURE PROST Alexy,FR,Team Picnic PostNL,25.0,https://www.procyclingstats.com/rider/alexy-faure-prost
+920,NAVAS Kevin,EC,Best PC Ecuador,25.0,https://www.procyclingstats.com/rider/kevin-navas-paredes
+921,SANCHO José Pablo,CR,Colono Bikestation Kölbi,25.0,https://www.procyclingstats.com/rider/jose-sancho
+922,MENDES Diego De Jesus,BR,,25.0,https://www.procyclingstats.com/rider/diego-de-jesus-mendes
+923,TERCERO Fernando,ES,Team Polti VisitMalta,25.0,https://www.procyclingstats.com/rider/fernando-tercero-lopez
+924,CHAVARRIA Derrick,BZ,China Chermin Cycling Team,25.0,https://www.procyclingstats.com/rider/derrick-chavarria
+925,CAMPBELL Max,AU,CCACHE x BODYWRAP,25.0,https://www.procyclingstats.com/rider/max-campbell
+926,LIENHARD Fabian,CH,Tudor Pro Cycling Team,25.0,https://www.procyclingstats.com/rider/fabian-lienhard
+927,HALDIMANN Guillaume,CH,Humard VP,25.0,https://www.procyclingstats.com/rider/guillaume-haldimann
+928,PAWLAK Tobiasz,PL,ATT Investments,25.0,https://www.procyclingstats.com/rider/tobiasz-pawlak
+929,SLESARENKO Ilya,BY,Biesse - Carrera - Premac,25.0,https://www.procyclingstats.com/rider/ilya-slesarenko
+930,NIYONKURU Samuel,RW,Team Amani,24.0,https://www.procyclingstats.com/rider/samuel-niyonkuru
+931,SCHWARZBACHER Matthias,SK,EF Education - EasyPost,24.0,https://www.procyclingstats.com/rider/matthias-schwarzbacher
+932,SIMMONS Colby,US,EF Education - EasyPost,24.0,https://www.procyclingstats.com/rider/colby-simmons
+933,VAN LERBERGHE Bert,BE,Soudal Quick-Step,24.0,https://www.procyclingstats.com/rider/bert-van-lerberghe
+934,HOUCOU Emmanuel,FR,Pinarello Q36.5 Pro Cycling Team,24.0,https://www.procyclingstats.com/rider/emmanuel-houcou
+935,BRUNEL Alexys,FR,TotalEnergies,24.0,https://www.procyclingstats.com/rider/alexys-brunel
+936,MONIQUET Sylvain,BE,Cofidis,24.0,https://www.procyclingstats.com/rider/sylvain-moniquet
+937,AMBROSSI Facundo Nicolás,AR,,24.0,https://www.procyclingstats.com/rider/facundo-nicolas-ambrossi
+938,BARRILLOT Bohémond,FR,AVC Aix Provence Dole,24.0,https://www.procyclingstats.com/rider/bohemond-barrillot
+939,RUIZ Robinson Steven,PE,,24.0,https://www.procyclingstats.com/rider/robinson-steven-ruiz
+940,HUE Antoine,FR,Veloce Club Rouen 76,24.0,https://www.procyclingstats.com/rider/antoine-hue
+941,ARSAC Rémi,FR,Decathlon CMA CGM Development Team,24.0,https://www.procyclingstats.com/rider/remi-arsac
+942,ARCHIBOLD Franklin,PA,Solution Tech NIPPO Rali,24.0,https://www.procyclingstats.com/rider/franklin-archibold
+943,RAMÍREZ Donovan,CR,Colono Bikestation Kölbi,24.0,https://www.procyclingstats.com/rider/donovan-ramirez
+944,ZOIDL Riccardo,AT,Hrinkow Advarics,24.0,https://www.procyclingstats.com/rider/riccardo-zoidl
+945,CHARROIS Leo,DE,Embrace The World,24.0,https://www.procyclingstats.com/rider/leo-charrois
+946,KUYPERS Gerben,BE,Pauwels Sauzen - Altez Industriebouw Cycling Team,24.0,https://www.procyclingstats.com/rider/gerben-kuypers
+947,MÉNDEZ Diego Alejandro,VE,Lotería del Táchira Servitel,23.0,https://www.procyclingstats.com/rider/diego-alejandro-mendez
+948,BALLERSTEDT Maurice,DE,Alpecin - Premier Tech,23.0,https://www.procyclingstats.com/rider/maurice-ballerstedt
+949,MAINGUENAUD Tom,FR,Nice Métropole Côte d'Azur,23.0,https://www.procyclingstats.com/rider/tom-mainguenaud
+950,NENCINI Tommaso,IT,Solution Tech NIPPO Rali,23.0,https://www.procyclingstats.com/rider/tommaso-nencini
+951,LIM Nash,PH,Factor Racing,23.0,https://www.procyclingstats.com/rider/nash-lim
+952,DE CLERCQ Mathijs,BE,Soudal Quick-Step Devo Team,23.0,https://www.procyclingstats.com/rider/mathijs-de-clercq
+953,BENITO Adrián,ES,Team Polti VisitMalta,23.0,https://www.procyclingstats.com/rider/adrian-benito-gonzalez
+954,LEROUX Samuel,FR,TotalEnergies,23.0,https://www.procyclingstats.com/rider/samuel-leroux
+955,NOVÁK Samuel,SK,Tirol KTM Cycling Team,23.0,https://www.procyclingstats.com/rider/samuel-novak
+956,KROONEN Max,NL,BEAT CC p/b Saxo,23.0,https://www.procyclingstats.com/rider/max-kroonen
+957,PROCTOR-PARKER Dylan,AU,,23.0,https://www.procyclingstats.com/rider/dylan-proctor-parker
+958,DELGADO David,ES,Quick Pro Team,23.0,https://www.procyclingstats.com/rider/david-delgado
+959,EL KOURAJI Mohcine,MA,,23.0,https://www.procyclingstats.com/rider/mohcine-el-kouraji
+960,FERREIRA DE MELO Alex,BR,Andbank Cycling Team,23.0,https://www.procyclingstats.com/rider/alex-ferreira-de-melo
+961,BUCK JONES Huw,GB,Bourg-en-Bresse Ain Cyclisme,23.0,https://www.procyclingstats.com/rider/huw-buck-jones
+962,GUGLIELMI Simon,FR,St Michel - Preference Home - Auber93,23.0,https://www.procyclingstats.com/rider/simon-guglielmi
+963,HUBY Antoine,FR,7Eleven Cliqq Roadbike Philippines,23.0,https://www.procyclingstats.com/rider/antoine-huby
+964,ROJAS Brandon Alejandro,CO,GW Erco SportFitness,22.0,https://www.procyclingstats.com/rider/brandon-alejandro-rojas-vega
+965,TAMINIAUX Lionel,BE,Lotto Intermarché,22.0,https://www.procyclingstats.com/rider/lionel-taminiaux
+966,PALENI Enzo,FR,Groupama - FDJ United,22.0,https://www.procyclingstats.com/rider/enzo-paleni
+967,KEPPLINGER Rainer,AT,Bahrain - Victorious,22.0,https://www.procyclingstats.com/rider/rainer-kepplinger
+968,FREYER Martin,NA,,22.0,https://www.procyclingstats.com/rider/martin-freyer
+969,JANSE VAN RENSBURG Reinardt,ZA,Tshenolo Pro Cycling Team,22.0,https://www.procyclingstats.com/rider/reinardt-janse-van-rensburg
+970,MOYATA Eduardo,BO,Pío Rico Cycling Team,22.0,https://www.procyclingstats.com/rider/eduardo-moyata
+971,REMKHI Rudolf,KZ,Muğla Büyükşehir Belediyesi Spor Kulübü,22.0,https://www.procyclingstats.com/rider/rudolf-remkhi
+972,MILOSTIC Lindon,AU,St George Continental Cycling Team,22.0,https://www.procyclingstats.com/rider/lindon-milostic
+973,DEL PINO Jesus,ES,Aviludo - Louletano - Loulé,22.0,https://www.procyclingstats.com/rider/jesus-del-pino
+974,MASENGESHO Vainqueur,RW,Benediction Banafrica Team,22.0,https://www.procyclingstats.com/rider/vainqueur-masengesho
+975,DAHL Gustav Frederik,DK,Team Give Steel,22.0,https://www.procyclingstats.com/rider/gustav-frederik-dahl
+976,BORREMANS Kasper,FI,Bahrain Victorious Development Team,22.0,https://www.procyclingstats.com/rider/kasper-borremans
+977,KLOPPENBORG Lukas Sulaj,AL,Sidi Ali - Unlock Sports Team,22.0,https://www.procyclingstats.com/rider/lukas-sulaj-kloppenborg
+978,KIMANI Wangai Evan,KE,,22.0,https://www.procyclingstats.com/rider/evan-wangai
+979,DIALLO Tiémoko,ML,,22.0,https://www.procyclingstats.com/rider/tiemoko-diallo
+980,ROSSI João Pedro,BR,Localiza Meoo / Swift Pro Cycling,22.0,https://www.procyclingstats.com/rider/joao-pedro-rossi
+981,ABU HARRAH Majid,JO,,22.0,https://www.procyclingstats.com/rider/majid-abu-harrah
+982,TORRES Pablo,ES,UAE Team Emirates - XRG,21.0,https://www.procyclingstats.com/rider/pablo-torres-arias
+983,ARRIOLABENGOA Julen,ES,Caja Rural - Seguros RGA,21.0,https://www.procyclingstats.com/rider/julen-arriola-bengoa-beitia
+984,NOVAK Domen,SI,UAE Team Emirates - XRG,21.0,https://www.procyclingstats.com/rider/domen-novak
+985,FLÓREZ Samuel,CO,Modern Adventure Pro Cycling,21.0,https://www.procyclingstats.com/rider/samuel-florez-garces
+986,GIANNOUTSOS Miltiadis,GR,,21.0,https://www.procyclingstats.com/rider/miltiadis-giannoutsos
+987,CARVALHO Gonçalo,PT,Tavfer-Ovos Matinados-Mortágua,21.0,https://www.procyclingstats.com/rider/goncalo-carvalho
+988,WALLS Matthew,GB,Team Storck - MRW Bau,21.0,https://www.procyclingstats.com/rider/matthew-walls
+989,GAL Ryan,NL,Metec - SOLARWATT p/b Mantel,21.0,https://www.procyclingstats.com/rider/ryan-gal
+990,SAIDI Nassim,DZ,Madar Pro Cycling Team,21.0,https://www.procyclingstats.com/rider/nassim-saidi
+991,TAKÁCS Zsombor Tamás,HU,MBH Bank CSB Telecom Fort,21.0,https://www.procyclingstats.com/rider/zsombor-tamas-takacs
+992,NESPOLI Lorenzo,IT,MBH Bank CSB Telecom Fort,20.0,https://www.procyclingstats.com/rider/lorenzo-nespoli
+993,KNOX James,GB,Team Picnic PostNL,20.0,https://www.procyclingstats.com/rider/james-knox
+994,PEACE Oliver,GB,Team Picnic PostNL,20.0,https://www.procyclingstats.com/rider/oliver-peace
+995,DRIZNERS Jarrad,AU,Red Bull - BORA - hansgrohe,20.0,https://www.procyclingstats.com/rider/jarrad-drizners
+996,URIANSTAD BUGGE Martin,NO,Uno-X Mobility,20.0,https://www.procyclingstats.com/rider/martin-urianstad
+997,KÜNG Stefan,CH,Tudor Pro Cycling Team,20.0,https://www.procyclingstats.com/rider/stefan-kung
+998,HVIDEBERG Jonas Hem,NO,Uno-X Mobility,20.0,https://www.procyclingstats.com/rider/jonas-hem-hvideberg
+999,VILLA Giacomo,IT,Biesse - Carrera - Premac,20.0,https://www.procyclingstats.com/rider/giacomo-villa
+1000,PIRAS Andrea,IT,Solution Tech NIPPO Rali,20.0,https://www.procyclingstats.com/rider/andrea-piras
+1001,QU Chengjun,CN,,20.0,https://www.procyclingstats.com/rider/chengjun-qu
+1002,WU Chun Yin,HK,HKSI Pro Cycling Team,20.0,https://www.procyclingstats.com/rider/chun-yin-wu
+1003,BATSAIKHAN Tegsh-Bayar,MN,Roojai Insurance Winspace,20.0,https://www.procyclingstats.com/rider/tegsh-bayar-batsaikhan
+1004,TENDON Arnaud,CH,Van Rysel Roubaix,20.0,https://www.procyclingstats.com/rider/arnaud-tendon
+1005,VERCOUILLIE Victor,BE,Team Flanders - Baloise,20.0,https://www.procyclingstats.com/rider/victor-vercouillie
+1006,EGHOLM Kristian,DK,Lidl - Trek Future Racing,20.0,https://www.procyclingstats.com/rider/kristian-egholm1
+1007,PUTZ Sebastian,AT,Red Bull - BORA - hansgrohe Rookies,20.0,https://www.procyclingstats.com/rider/sebastian-putz
+1008,ARCAS Jorge,ES,Movistar Team,20.0,https://www.procyclingstats.com/rider/jorge-arcas
+1009,OURSELIN Paul,FR,Cofidis,20.0,https://www.procyclingstats.com/rider/paul-ourselin
+1010,ERIKSSON Jacob,SE,Tudor Pro Cycling Team,20.0,https://www.procyclingstats.com/rider/jacob-eriksson
+1011,GONZÁLEZ Abner,PR,Feirense - Beeceler,20.0,https://www.procyclingstats.com/rider/abner-gonzalez-rivera
+1012,VERGAERDE Otto,BE,Lidl - Trek,20.0,https://www.procyclingstats.com/rider/otto-vergaerde
+1013,BOGDANOVIČS Māris,LV,FNIX - SCOM - Hengxiang Cycling Team,20.0,https://www.procyclingstats.com/rider/maris-bogdanovics
+1014,ROY Léo,CA,Team Vittel N'side,20.0,https://www.procyclingstats.com/rider/leo-roy
+1015,HEFFERNAN William,AU,CCACHE x BODYWRAP,20.0,https://www.procyclingstats.com/rider/william-heffernan
+1016,CATTANI Alessandro,IT,Team Technipes #inEmiliaRomagna Caffè Borbone,20.0,https://www.procyclingstats.com/rider/alessandro-cattani
+1017,MAAS Jan,NL,Cofidis,20.0,https://www.procyclingstats.com/rider/jan-maas
+1018,AMARI Hamza,DZ,Madar Pro Cycling Team,20.0,https://www.procyclingstats.com/rider/hamza-amari
+1019,HELLEMOSE Asbjørn,DK,Team Jayco AlUla,20.0,https://www.procyclingstats.com/rider/asbjorn-hellemose
+1020,LAYRAC Gabriel,FR,AVC Aix Provence Dole,20.0,https://www.procyclingstats.com/rider/gabriel-layrac
+1021,SCHEMPP Oscar,DE,BIKE AID,20.0,https://www.procyclingstats.com/rider/oscar-schempp
+1022,TORRES Jaime,ES,UAE Team Emirates Gen Z,20.0,https://www.procyclingstats.com/rider/jaime-torres
+1023,NUNES Hugo,PT,Credibom / LA Alumínios / Marcos Car,20.0,https://www.procyclingstats.com/rider/hugo-nunes
+1024,DE BRUYCKERE Kay,BE,Pauwels Sauzen - Altez Industriebouw Cycling Team,20.0,https://www.procyclingstats.com/rider/kay-de-bruyckere
+1025,COSTA Fábio,PT,Feira dos Sofás - Boavista,20.0,https://www.procyclingstats.com/rider/fabio-manuel-fernandes-costa
+1026,SHERRY Gavin,US,,20.0,https://www.procyclingstats.com/rider/gavin-sherry
+1027,KAMZONG Clovis,CM,SNH Vélo Club,20.0,https://www.procyclingstats.com/rider/clovis-kamzong-abessolo
+1028,RAMÍREZ Mateo,EC,UAE Team Emirates Gen Z,20.0,https://www.procyclingstats.com/rider/mateo-pablo-ramirez
+1029,DESAL Ceriel,BE,Soudal Quick-Step Devo Team,19.0,https://www.procyclingstats.com/rider/ceriel-desal
+1030,ARASHIRO Yukiya,JP,Solution Tech NIPPO Rali,19.0,https://www.procyclingstats.com/rider/yukiya-arashiro
+1031,BYSTRØM Sven Erik,NO,Uno-X Mobility,19.0,https://www.procyclingstats.com/rider/sven-erik-bystrom
+1032,BOCK Max,DE,Red Bull - BORA - hansgrohe Rookies,19.0,https://www.procyclingstats.com/rider/max-bock
+1033,ARAMAYO Jose Manuel,BO,Pío Rico Cycling Team,19.0,https://www.procyclingstats.com/rider/jose-manuel-aramayo-villena
+1034,QUIROZ Tomas,CL,Plus Performance - ZEO Sport,19.0,https://www.procyclingstats.com/rider/tomas-quiroz
+1035,KAMBERAJ Valentino,AL,Team Skyline,19.0,https://www.procyclingstats.com/rider/valentino-kamberaj
+1036,LINAREZ Leangel Rubén,VE,Tavfer-Ovos Matinados-Mortágua,19.0,https://www.procyclingstats.com/rider/leangel-linarez
+1037,JOALLAND Yaël,FR,Cofidis,19.0,https://www.procyclingstats.com/rider/yael-joalland
+1038,ANTONENKO Heorhii,UA,Energus Cycling Team,19.0,https://www.procyclingstats.com/rider/heorhii-antonenko
+1039,CRETTI Luca,IT,MBH Bank CSB Telecom Fort,19.0,https://www.procyclingstats.com/rider/luca-cretti
+1040,PIRA Yesid Albeiro,CO,Hino One La Red Suzuki,19.0,https://www.procyclingstats.com/rider/yesid-albeiro-pira
+1041,SAVINO Federico,IT,Soudal Quick-Step Devo Team,19.0,https://www.procyclingstats.com/rider/federico-savino
+1042,PLACE Maxence,BE,Aarco,19.0,https://www.procyclingstats.com/rider/maxence-place
+1043,STEWART Jake,GB,NSN Cycling Team,18.0,https://www.procyclingstats.com/rider/jake-stewart
+1044,CAPRA Thomas,IT,Bahrain Victorious Development Team,18.0,https://www.procyclingstats.com/rider/thomas-capra
+1045,CONTRERAS Rodrigo,CO,Nu Colombia,18.0,https://www.procyclingstats.com/rider/rodrigo-contreras
+1046,BAHODIROV Behzod,UZ,7 Saber Uzbekistan Cycling Team,18.0,https://www.procyclingstats.com/rider/behzod-bahodirov
+1047,SCHOOFS Jasper,BE,Soudal Quick-Step Devo Team,18.0,https://www.procyclingstats.com/rider/jasper-schoofs
+1048,PETER Jannis,DE,Unibet Rose Rockets,18.0,https://www.procyclingstats.com/rider/jannis-peter
+1049,DUNBAR Eddie,IE,Pinarello Q36.5 Pro Cycling Team,18.0,https://www.procyclingstats.com/rider/edward-irl-dunbar
+1050,MATTHEIS Oliver,DE,BIKE AID,18.0,https://www.procyclingstats.com/rider/oliver-mattheis
+1051,BOULET Eliott,FR,Groupama-FDJ United CT,18.0,https://www.procyclingstats.com/rider/eliott-boulet
+1052,PIETROBON Andrea,IT,Team Polti VisitMalta,18.0,https://www.procyclingstats.com/rider/andrea-pietrobon
+1053,MARTE Jesus Roniel,DO,,18.0,https://www.procyclingstats.com/rider/jesus-roniel-marte
+1054,ROJAS Gabriel Francisco,CR,,18.0,https://www.procyclingstats.com/rider/gabriel-francisco-rojas
+1055,RASCH Jesper,NL,China Anta - Mentech Cycling Team,18.0,https://www.procyclingstats.com/rider/jesper-rasch
+1056,BAMBAGIONI Tommaso,IT,Team Technipes #inEmiliaRomagna Caffè Borbone,18.0,https://www.procyclingstats.com/rider/tommaso-bambagioni
+1057,HAYASHIBARA Shoma,JP,Shimano Racing Team,18.0,https://www.procyclingstats.com/rider/shoma-hayashibara
+1058,VAN HAUTEGEM Leander,BE,Team Flanders - Baloise,18.0,https://www.procyclingstats.com/rider/leander-van-hautegem
+1059,TUMINELLO Christian,AU,COBRA9 x Leigh Surveyors,18.0,https://www.procyclingstats.com/rider/christian-tuminello
+1060,DE KEERSMAEKER Mathias,BE,Lotto - Groupe Wanty,18.0,https://www.procyclingstats.com/rider/mathias-de-keersmaeker
+1061,TSISHKOU Raman,BY,Li Ning Star,18.0,https://www.procyclingstats.com/rider/raman-tsishkou
+1062,GALIMBERTI Lorenzo,IT,Swatt Club,18.0,https://www.procyclingstats.com/rider/lorenzo-galimberti
+1063,GUÉGAN Maël,FR,CIC Pro Cycling Academy,18.0,https://www.procyclingstats.com/rider/mael-guegan
+1064,DE COMARMOND Aurelien,MU,The Joyrun & Hurricane Cycling Team,18.0,https://www.procyclingstats.com/rider/aurelien-de-comarmond
+1065,RETEGI Mikel,ES,Equipo Kern Pharma,17.0,https://www.procyclingstats.com/rider/mikel-retegi
+1066,SIBANDA Mthokozisi,ZW,,17.0,https://www.procyclingstats.com/rider/mthokozisi-sibanda
+1067,PEÑA Wilson Estiben,CO,Team Sistecredito,17.0,https://www.procyclingstats.com/rider/wilson-estiben-pena-molano
+1068,STEWART Mark,GB,Modern Adventure Pro Cycling,17.0,https://www.procyclingstats.com/rider/mark-stewart
+1069,TARLING Finlay,GB,NSN Development Team,17.0,https://www.procyclingstats.com/rider/finlay-tarling
+1070,YEMANE Even,ER,BIKE AID,17.0,https://www.procyclingstats.com/rider/even-yemane
+1071,SAMBINELLO Enea,IT,UAE Team Emirates Gen Z,17.0,https://www.procyclingstats.com/rider/enea-sambinello
+1072,RASENBERG Martijn,NL,Unibet Rose Rockets,17.0,https://www.procyclingstats.com/rider/martijn-rasenberg
+1073,SOMMER Jan,CH,Elite Fondations Cycling Team,17.0,https://www.procyclingstats.com/rider/jan-sommer
+1074,BAEZA Cristobal,CL,Plus Performance - ZEO Sport,17.0,https://www.procyclingstats.com/rider/cristobal-baeza
+1075,RAMÍREZ Joseph Gerardo,CR,Colono Bikestation Kölbi,17.0,https://www.procyclingstats.com/rider/joseph-gerardo-ramirez
+1076,DA SILVA SANTOS Vinicius,BR,São José Ciclismo,17.0,https://www.procyclingstats.com/rider/vinicius-da-silva-santos
+1077,STENNING Oliver,AU,Shenzhen Kung Cycling Team,17.0,https://www.procyclingstats.com/rider/oliver-stenning
+1078,MARIS Jesse,US,Technosylva Rower Bembibre,17.0,https://www.procyclingstats.com/rider/jesse-maris
+1079,METAWEA Mahmoud,EG,,17.0,https://www.procyclingstats.com/rider/mahmoud-metawea
+1080,ZABELINSKIY Bogdan,CY,Aarco,17.0,https://www.procyclingstats.com/rider/bogdan-zabelinskiy
+1081,ATTAI Corneil Kokou,BJ,,17.0,https://www.procyclingstats.com/rider/corneil-kokou-attai
+1082,SOWOU Rémi,BJ,,17.0,https://www.procyclingstats.com/rider/remi-sowou
+1083,PEÁK Barnabás,HU,MBH Bank CSB Telecom Fort,17.0,https://www.procyclingstats.com/rider/barnabas-peak
+1084,KASTRATI Albion,XK,CLN - Kosova,17.0,https://www.procyclingstats.com/rider/albion-kastrati
+1085,ALREJJAL Mo'men,JO,,17.0,https://www.procyclingstats.com/rider/mo-men-alrejjal
+1086,AL MAYYAS Mohammad,JO,,17.0,https://www.procyclingstats.com/rider/mohammad-al-mayyas
+1087,LUKIĆ Leon,HR,Kolesarski Klub Novo Mesto,17.0,https://www.procyclingstats.com/rider/leon-lukic
+1088,MARSH Robert,AG,,17.0,https://www.procyclingstats.com/rider/robert-marsh
+1089,RETAILLEAU Valentin,FR,TotalEnergies,16.0,https://www.procyclingstats.com/rider/valentin-retailleau
+1090,TOWNSEND Rory,IE,Unibet Rose Rockets,16.0,https://www.procyclingstats.com/rider/rory-townsend
+1091,MA Binyan,CN,China Anta - Mentech Cycling Team,16.0,https://www.procyclingstats.com/rider/binyan-ma
+1092,LANGELLA Lenaic,FR,CIC Pro Cycling Academy,16.0,https://www.procyclingstats.com/rider/lenaic-langella
+1093,AMAN Awet,ER,Istanbul Team,16.0,https://www.procyclingstats.com/rider/awet-aman
+1094,TERADA Yoshiki,JP,Team UKYO,16.0,https://www.procyclingstats.com/rider/yoshiki-terada
+1095,MENGHINI Alessio,IT,Team Technipes #inEmiliaRomagna Caffè Borbone,16.0,https://www.procyclingstats.com/rider/alessio-menghini
+1096,VAN DER WERFF Thom,NL,Development Team Picnic PostNL,16.0,https://www.procyclingstats.com/rider/thom-van-der-werff
+1097,FLYNN Sean,GB,Team Picnic PostNL,16.0,https://www.procyclingstats.com/rider/sean-flynn
+1098,BETTENDORFF Loïc,LU,Hrinkow Advarics,16.0,https://www.procyclingstats.com/rider/loic-bettendorf
+1099,NEAVES Jadian,TT,,16.0,https://www.procyclingstats.com/rider/jadian-neaves
+1100,DOMÍNGUEZ David,ES,Feira dos Sofás - Boavista,16.0,https://www.procyclingstats.com/rider/david-dominguez-vilchez
+1101,BORTOLUZZI Giovanni,IT,General Store - Essegibi - F.Lli Curia,16.0,https://www.procyclingstats.com/rider/giovanni-bortoluzzi
+1102,MALMBERG Matias,DK,Swatt Club,16.0,https://www.procyclingstats.com/rider/matias-malmberg
+1103,KMIELIAUSKAS Rokas,LT,Energus Cycling Team,16.0,https://www.procyclingstats.com/rider/rokas-kmieliauskas
+1104,GOSZCZURNY Patryk,PL,Team Visma | Lease a Bike Development,16.0,https://www.procyclingstats.com/rider/patryk-goszczurny
+1105,BASSON Gustav,ZA,Tshenolo Pro Cycling Team,16.0,https://www.procyclingstats.com/rider/gustav-basson
+1106,ELSAIFY Hassan,EG,,16.0,https://www.procyclingstats.com/rider/hassan-elsaify
+1107,LIGHTFOOT Mark,GB,AVC Aix Provence Dole,16.0,https://www.procyclingstats.com/rider/mark-lightfoot
+1108,AEBERSOLD Nils,CH,Elite Fondations Cycling Team,16.0,https://www.procyclingstats.com/rider/nils-aebersold
+1109,BDADOU Youssef,MA,,16.0,https://www.procyclingstats.com/rider/youssef-bdadou
+1110,CASTILLO Kevin David,CO,Orgullo Paisa,16.0,https://www.procyclingstats.com/rider/kevin-david-castillo-miranda
+1111,FORSSELL Hugo,SE,CK Hymer,16.0,https://www.procyclingstats.com/rider/hugo-forssell
+1112,GORDILLO Emerson Ronaldo,CO,Nu Colombia,16.0,https://www.procyclingstats.com/rider/emerson-gordillo
+1113,OKA Atsushi,JP,Astemo Utsunomiya Blitzen,16.0,https://www.procyclingstats.com/rider/atsushi-oka
+1114,MESSEL Kevin Andre Sandli,NO,Team Ringerike,16.0,https://www.procyclingstats.com/rider/kevin-andre-sandli-messel
+1115,HAFIZH Muhammad,ID,ASC Monsters Indonesia,16.0,https://www.procyclingstats.com/rider/muhammad-hafizh
+1116,BELLENS Jarno,BE,Baloise Verzekeringen - Het Poetsbureau Lions,16.0,https://www.procyclingstats.com/rider/jarno-bellens
+1117,RODRIGUES Rúben,PT,Feira dos Sofás - Boavista,16.0,https://www.procyclingstats.com/rider/ruben-rodrigues
+1118,MACHHOLDT Magnus,DK,Reffen CO:PLAY Giant Store,16.0,https://www.procyclingstats.com/rider/magnus-machholdt
+1119,ADOMAITIS Rokas,LT,Energus Cycling Team,16.0,https://www.procyclingstats.com/rider/rokas-adomaitis
+1120,ORMISTON Callum,ZA,The Joyrun & Hurricane Cycling Team,16.0,https://www.procyclingstats.com/rider/callum-ormiston
+1121,SIRIRONNACHAI Sarawut,TH,,15.0,https://www.procyclingstats.com/rider/sarawut-sirironnachai
+1122,GREENWOOD Matthew,AU,CCACHE x BODYWRAP,15.0,https://www.procyclingstats.com/rider/matthew-greenwood
+1123,HOWSON Damien,AU,Pinarello Q36.5 Pro Cycling Team,15.0,https://www.procyclingstats.com/rider/damien-howson
+1124,STOCKWELL Oliver,GB,Bahrain - Victorious,15.0,https://www.procyclingstats.com/rider/oliver-stockwell
+1125,KIECK Blaine,ZA,UV Aube,15.0,https://www.procyclingstats.com/rider/blaine-kieck
+1126,RODRÍGUEZ Diego Leonel,UY,,15.0,https://www.procyclingstats.com/rider/diego-leonel-rodriguez
+1127,SURÉN Roger,NA,Alpecin-Premier Tech Development Team,15.0,https://www.procyclingstats.com/rider/roger-suren
+1128,WILKSCH Hannes,DE,Tudor Pro Cycling Team,15.0,https://www.procyclingstats.com/rider/hannes-wilksch
+1129,GAMPER Patrick,AT,Team Jayco AlUla,15.0,https://www.procyclingstats.com/rider/patrick-gamper
+1130,QUITA Ronnilan,PH,7Eleven Cliqq Roadbike Philippines,15.0,https://www.procyclingstats.com/rider/ronnilan-quita
+1131,DE POOTER Dries,BE,Team Jayco AlUla,15.0,https://www.procyclingstats.com/rider/dries-de-pooter
+1132,MOORE Viggo,US,Tirol KTM Cycling Team,15.0,https://www.procyclingstats.com/rider/viggo-moore
+1133,CALDERÓN Jerónimo,CO,Team Sistecredito,15.0,https://www.procyclingstats.com/rider/jeronimo-calderon
+1134,ALUSTIZA Nicolás,ES,Euskaltel - Euskadi,15.0,https://www.procyclingstats.com/rider/nicolas-alustiza
+1135,LAENGEN Vegard Stake,NO,UAE Team Emirates - XRG,15.0,https://www.procyclingstats.com/rider/vegard-stake-laengen
+1136,MARCEROU Nicola,FR,TotalEnergies,15.0,https://www.procyclingstats.com/rider/nicola-marcerou
+1137,FABRIES Ugo,FR,UAE Team Emirates Gen Z,15.0,https://www.procyclingstats.com/rider/ugo-fabries
+1138,SVARRE Tobias,DK,Uno-X Mobility,15.0,https://www.procyclingstats.com/rider/tobias-svarre
+1139,DEMAN Brem,BE,Team Flanders - Baloise,15.0,https://www.procyclingstats.com/rider/brem-deman
+1140,VANDEN EYNDE Mats,BE,Lidl - Trek Future Racing,15.0,https://www.procyclingstats.com/rider/mats-vanden-eynde
+1141,BEHRENS Eike,DE,Team Lotto Kern-Haus Outlet Montabaur,15.0,https://www.procyclingstats.com/rider/eike-behrens
+1142,VERSCHUREN Killian,FR,Unibet Rose Rockets,15.0,https://www.procyclingstats.com/rider/killian-verschuren
+1143,VOLTR Martin,CZ,ATT Investments,15.0,https://www.procyclingstats.com/rider/martin-voltr
+1144,QUAEDVLIEG Lars,NL,Universe Cycling Team,15.0,https://www.procyclingstats.com/rider/lars-quaedvlieg
+1145,CALDERÓN Sebastian,CR,7C - Economy - Hyundai,15.0,https://www.procyclingstats.com/rider/sebastian-calderon
+1146,THALMANN Roland,CH,Tudor Pro Cycling Team,15.0,https://www.procyclingstats.com/rider/roland-thalmann
+1147,BOZZOLA Mirko,IT,S.C. Padovani Polo Cherry Bank,15.0,https://www.procyclingstats.com/rider/mirko-bozzola
+1148,ELSAID Omar,EG,,15.0,https://www.procyclingstats.com/rider/omar-elsaid
+1149,MOLLY Kenny,BE,Van Rysel Roubaix,15.0,https://www.procyclingstats.com/rider/kenny-molly
+1150,LOVIDIUS Gustav,SE,Svealand Cycling Team,15.0,https://www.procyclingstats.com/rider/gustav-lovidius
+1151,ŘEHA Filip,CZ,ATT Investments,15.0,https://www.procyclingstats.com/rider/filip-reha
+1152,PETTITI Nicolò,IT,Swatt Club,15.0,https://www.procyclingstats.com/rider/nicolo-pettiti
+1153,GIALLI Matteo,IT,Team Hopplà,15.0,https://www.procyclingstats.com/rider/matteo-gialli
+1154,BEREZNYAK Aleksandr,RU,Wheeltop Rotor Chengdu Team,15.0,https://www.procyclingstats.com/rider/aleksandr-bereznyak
+1155,MOHD ZARIFF Muhammad Nur Aiman,MY,Terengganu Cycling Team,15.0,https://www.procyclingstats.com/rider/muhammad-nur-aiman-mohd-zariff
+1156,MCBIRNEY Tim,US,Project Echelon Racing,15.0,https://www.procyclingstats.com/rider/tim-mcbirney
+1157,AHTOSALO Matias,FI,UN Cycling Team,15.0,https://www.procyclingstats.com/rider/matias-ahtosalo
+1158,CAICEDO Jonathan Klever,EC,Wheeltop Rotor Chengdu Team,15.0,https://www.procyclingstats.com/rider/jonathan-klever-caicedo
+1159,BABOVICH Mikita,BY,Bahrain Victorious Development Team,15.0,https://www.procyclingstats.com/rider/mikita-babovich
+1160,DIALLO Yaya,ML,,15.0,https://www.procyclingstats.com/rider/yaya-diallo
+1161,JÓNSSON Davíð,IS,Team Cranks,15.0,https://www.procyclingstats.com/rider/david-jonsson
+1162,SODJEDE Ricardo,BJ,,15.0,https://www.procyclingstats.com/rider/ricardo-sodjede
+1163,KAMAU Peter,KE,,15.0,https://www.procyclingstats.com/rider/peter-kamau1
+1164,RODRÍGUEZ Brandon Ulises,SV,,15.0,https://www.procyclingstats.com/rider/brandon-rodriguez
+1165,ABREHA Negasi Haylu,ET,Vega - Vitalcare - Dynatek,15.0,https://www.procyclingstats.com/rider/negasi-abreha
+1166,BULUT Samet,TR,Muğla Büyükşehir Belediyesi Spor Kulübü,15.0,https://www.procyclingstats.com/rider/samet-bulut
+1167,NAUMOVSKI Bojan,MK,,15.0,https://www.procyclingstats.com/rider/bojan-naumovski
+1168,JELE Kwanele,SZ,,15.0,https://www.procyclingstats.com/rider/kwanele-jele
 1169,PHONASA Thavone,LA,,15.0,https://www.procyclingstats.com/rider/thavone-phonasa
 1170,MACIEJUK Kacper,PL,Voster Team,15.0,https://www.procyclingstats.com/rider/kacper-maciejuk
 1171,ŞAMLI Feritcan,TR,Spor Toto Cycling Team,15.0,https://www.procyclingstats.com/rider/ferit-samli
-1172,DEBAY Filimon Zerabruk,ET,,15.0,https://www.procyclingstats.com/rider/filimon-zerabruk-debay
-1173,LUKOVIĆ Danilo,ME,,15.0,https://www.procyclingstats.com/rider/danilo-lukovic
-1174,GERMOSO Rudy,DO,,15.0,https://www.procyclingstats.com/rider/rudy-germoso
-1175,HUTCHINSON Liam,BB,,15.0,https://www.procyclingstats.com/rider/liam-hutchinson
-1176,RABOUDE Jeremy,MU,,15.0,https://www.procyclingstats.com/rider/jeremy-raboude
-1177,MILAKONG Ananxay,LA,,15.0,https://www.procyclingstats.com/rider/ananxay-milakong
-1178,TOMIĆ Ivan Luka,HR,,15.0,https://www.procyclingstats.com/rider/ivan-luka-tomic
-1179,BALLABIO Giacomo,IT,Team Vorarlberg,14.0,https://www.procyclingstats.com/rider/giacomo-ballabio
-1180,KESSLER Bruno,DE,Tudor Pro Cycling Team U23,14.0,https://www.procyclingstats.com/rider/bruno-kessler
-1181,KUZMIN Anton,KZ,XDS Astana Team,14.0,https://www.procyclingstats.com/rider/anton-kuzmin
-1182,MANCILLA Martin,CL,,14.0,https://www.procyclingstats.com/rider/martin-mancilla
-1183,BATTISTELLA Samuele,IT,EF Education - EasyPost,14.0,https://www.procyclingstats.com/rider/samuele-battistella
-1184,VAN DEN EIJNDEN Guus,NL,Alpecin-Premier Tech Development Team,14.0,https://www.procyclingstats.com/rider/guus-van-den-eijnden
-1185,BICELLI Michele,IT,Biesse - Carrera - Premac,14.0,https://www.procyclingstats.com/rider/michele-bicelli1
-1186,ESPINOSA Bolivar,PA,,14.0,https://www.procyclingstats.com/rider/bolivar-espinosa-serrano
-1187,JENNI Luca,CH,Run & Race - Solarpur,14.0,https://www.procyclingstats.com/rider/luca-jenni
-1188,SMITH Adam,CA,AVC Aix Provence Dole,14.0,https://www.procyclingstats.com/rider/adam-smith1
-1189,TENE Rotem,IL,NSN Cycling Team,14.0,https://www.procyclingstats.com/rider/rotem-tene
-1190,MELOTTE Matteo,BE,Color Code - Alu Center,14.0,https://www.procyclingstats.com/rider/matteo-melotte
-1191,TOMAN Patrik,CZ,Kasper crypto4me,14.0,https://www.procyclingstats.com/rider/patrik-toman
-1192,SANFILIPPO Cristian,IT,Biesse - Carrera - Premac,14.0,https://www.procyclingstats.com/rider/cristian-sanfilippo
-1193,HOWELL Adam,GB,Bourg-en-Bresse Ain Cyclisme,14.0,https://www.procyclingstats.com/rider/adam-howell
-1194,SHPAKOUSKI Viachaslau,BY,,14.0,https://www.procyclingstats.com/rider/viachaslau-shpakouski
-1195,AMELINE Jerome,KY,,14.0,https://www.procyclingstats.com/rider/jerome-ameline
-1196,PELIKÁN János,HU,Team United Shipping,14.0,https://www.procyclingstats.com/rider/janos-pelikan
-1197,PHOMSOUVANH Thepphasith,LA,,14.0,https://www.procyclingstats.com/rider/thepphasith-phomsouvanh
-1198,GÁLVIZ Carlos Johan,VE,Politachira Heidy Lee Sport TVN Norte,13.0,https://www.procyclingstats.com/rider/carlos-galviz
-1199,GIL Angel Alexander,CO,GW Erco SportFitness,13.0,https://www.procyclingstats.com/rider/angel-alexander-gil
-1200,KYFFIN Zeb,GB,Terengganu Cycling Team,13.0,https://www.procyclingstats.com/rider/zeb-kyffin
-1201,BOCHAROV Dmitriy,UZ,7 Saber Uzbekistan Cycling Team,13.0,https://www.procyclingstats.com/rider/dmitriy-bocharov
-1202,GEOGHEGAN HART Tao,GB,Lidl - Trek,13.0,https://www.procyclingstats.com/rider/tao-geoghegan-hart
-1203,FRYDKJÆR Patrick Boje,DK,Lidl - Trek Future Racing,13.0,https://www.procyclingstats.com/rider/patrick-boje-frydkjaer
-1204,BUDA Simone,IT,Solme - Olmo - Arvedi,13.0,https://www.procyclingstats.com/rider/simone-buda2
-1205,SMITH William,GB,Team Visma | Lease a Bike Development,13.0,https://www.procyclingstats.com/rider/william-smith
-1206,JURADO Christofer Robín,PA,,13.0,https://www.procyclingstats.com/rider/christofer-robin-jurado
-1207,NISU Oskar,EE,China Anta - Mentech Cycling Team,13.0,https://www.procyclingstats.com/rider/oskar-nisu
-1208,GUTIÉRREZ Jorge,ES,Equipo Kern Pharma,13.0,https://www.procyclingstats.com/rider/jorge-gutierrez-gonzalez
-1209,SCALA Hugo,US,Modern Adventure Pro Cycling,13.0,https://www.procyclingstats.com/rider/hugo-scala
-1210,ANDERSEN Kasper,DK,Swatt Club,13.0,https://www.procyclingstats.com/rider/kasper-andersen1
-1211,LÓPEZ Robinson Fabián,CO,GW Erco SportFitness,13.0,https://www.procyclingstats.com/rider/robinson-fabian-lopez
-1212,LEWIS Adam,GB,APS Pro Cycling by Team Cadence Cyclery,13.0,https://www.procyclingstats.com/rider/adam-lewis
-1213,SAMITIER Sergio,ES,Cofidis,13.0,https://www.procyclingstats.com/rider/sergio-samitier
-1214,KLISMETS Kārlis,LV,Energus Cycling Team,13.0,https://www.procyclingstats.com/rider/karlis-klismets
-1215,DORENBOS Yanne,NL,Azerion / Villa Valkenburg,13.0,https://www.procyclingstats.com/rider/yanne-dorenbos
-1216,MOREIRA Daniel Filipe Vieira,PT,Hagens Berman Jayco,13.0,https://www.procyclingstats.com/rider/daniel-filipe-vieira-moreira-silva
-1217,BOROŠ Michael,CZ,Kasper crypto4me,13.0,https://www.procyclingstats.com/rider/michael-boros
-1218,MIMOUNI Oussama Abdellah,DZ,Madar Pro Cycling Team,13.0,https://www.procyclingstats.com/rider/oussama-abdellah-mimouni
-1219,KOSSOKO Sadikou Jérémie,CM,SNH Vélo Club,13.0,https://www.procyclingstats.com/rider/sadikou-jeremie-kossoko
-1220,HOFBAUER Philipp,AT,Team Vorarlberg,13.0,https://www.procyclingstats.com/rider/philipp-hofbauer
-1221,WIRTGEN Luc,LU,Tudor Pro Cycling Team,12.0,https://www.procyclingstats.com/rider/luc-wirtgen
-1222,GRINDLEY Sebastian,GB,Lidl - Trek Future Racing,12.0,https://www.procyclingstats.com/rider/sebastian-grindley
-1223,MANZIN Lorrenzo,FR,TotalEnergies,12.0,https://www.procyclingstats.com/rider/lorrenzo-manzin
-1224,LI You,CN,XDS Astana Development Team,12.0,https://www.procyclingstats.com/rider/you-li
-1225,MARRIAGE Zac,AU,NSN Development Team,12.0,https://www.procyclingstats.com/rider/zac-marriage
-1226,MARTINSEN Georg Rydningen,NO,Lillehammer CK Continental Team,12.0,https://www.procyclingstats.com/rider/georg-rydningen-martinsen
-1227,ŠUMPÍK Pavel,CZ,Development Team Picnic PostNL,12.0,https://www.procyclingstats.com/rider/pavel-sumpik
-1228,ABDUL HALIL Mohamad Izzat Hilmi,MY,Malaysia Pro Cycling,12.0,https://www.procyclingstats.com/rider/mohamad-izzat-hilmi-abdul-halil
-1229,MONK Cyrus,AU,FNIX - SCOM - Hengxiang Cycling Team,12.0,https://www.procyclingstats.com/rider/cyrus-monk
-1230,STITES Tyler,US,Modern Adventure Pro Cycling,12.0,https://www.procyclingstats.com/rider/tyler-stites
-1231,PLAMONDON Joel,CA,Charvieu Chavagneux Isère Cyclisme,12.0,https://www.procyclingstats.com/rider/joel-plamondon
-1232,BENNETT Sam,IE,Pinarello Q36.5 Pro Cycling Team,12.0,https://www.procyclingstats.com/rider/sam-bennett
-1233,FERNÁNDEZ Sinuhé,ES,Burgos Burpellet BH,12.0,https://www.procyclingstats.com/rider/sinuhe-fernandez-rodriguez
-1234,HEIDEMANN Miguel,DE,REMBE | rad-net,12.0,https://www.procyclingstats.com/rider/miguel-heidemann
-1235,VAN BYLEN Liam,BE,Decathlon CMA CGM Development Team,12.0,https://www.procyclingstats.com/rider/liam-van-bylen
-1236,GONÇALVES Diogo,PT,Efapel Cycling,12.0,https://www.procyclingstats.com/rider/diogo-goncalves
-1237,FERNÁNDEZ Rubén,ES,Anicolor / Campicarn,12.0,https://www.procyclingstats.com/rider/ruben-fernandez-andujar
-1238,CANTONI Andrea,IT,Mg.K Vis Costruzioni e Ambiente,12.0,https://www.procyclingstats.com/rider/andrea-cantoni
-1239,BARBAS Rafael,PT,Tavfer-Ovos Matinados-Mortágua,12.0,https://www.procyclingstats.com/rider/rafael-elvas-barbas
-1240,AVOINE Kévin,FR,Van Rysel Roubaix,12.0,https://www.procyclingstats.com/rider/kevin-avoine
-1241,HØYDAHL Jonas Kind,NO,Team Visma | Lease a Bike Development,12.0,https://www.procyclingstats.com/rider/jonas-kind-hoydahl
-1242,VERHOEFF Stefan,NL,Universe Cycling Team,12.0,https://www.procyclingstats.com/rider/stefan-verhoeff
-1243,VELIA Olsian,AL,Sidi Ali - Unlock Sports Team,12.0,https://www.procyclingstats.com/rider/olsian-velia
-1244,KEMBOI Cornelius,KE,,12.0,https://www.procyclingstats.com/rider/cornelius-kemboi
-1245,KOK Mun Wa,MO,,12.0,https://www.procyclingstats.com/rider/mun-wa-kok
-1246,ZAGOREANU Dumitru,MD,,12.0,https://www.procyclingstats.com/rider/dumitru-zagoreanu
-1247,SANTY Arne,BE,Tarteletto - Isorex,11.0,https://www.procyclingstats.com/rider/arne-santy
-1248,ALONSO Agustín,UY,,11.0,https://www.procyclingstats.com/rider/agustin-alonso1
-1249,KESSLER Cole,US,Modern Adventure Pro Cycling,11.0,https://www.procyclingstats.com/rider/cole-kessler
-1250,PARETA Roger,ES,Movistar Team Academy,11.0,https://www.procyclingstats.com/rider/roger-pareta
-1251,GIULIANO Dario,FR,Team Polti VisitMalta,11.0,https://www.procyclingstats.com/rider/dario-giuliano
-1252,KOTSAKIS Francisco,CL,Plus Performance - ZEO Sport,11.0,https://www.procyclingstats.com/rider/francisco-kotsakis
-1253,GOLLIKER Joshua,GB,EF Education - Aevolo,11.0,https://www.procyclingstats.com/rider/joshua-golliker
-1254,QUINTERO Juan Diego,CO,,11.0,https://www.procyclingstats.com/rider/juan-diego-quintero-osorno
-1255,RODRIGUEZ Angel,PR,,11.0,https://www.procyclingstats.com/rider/angel-rodriguez1
-1256,SCHAPER Joeri,NL,Soudal Quick-Step Devo Team,11.0,https://www.procyclingstats.com/rider/joeri-schaper
-1257,CUBILLAS Javier,ES,Movistar Team Academy,11.0,https://www.procyclingstats.com/rider/javier-cubillas
-1258,STRAVERS Jarri,NL,Universe Cycling Team,11.0,https://www.procyclingstats.com/rider/jarri-stravers
-1259,RIAHI Anes,DZ,Madar Pro Cycling Team,11.0,https://www.procyclingstats.com/rider/anes-riahi
-1260,MERLÖV Ville,SE,BHS - PL Beton Bornholm,11.0,https://www.procyclingstats.com/rider/ville-merlov1
-1261,CZASA Moritz,DE,Hucare Factory Team,11.0,https://www.procyclingstats.com/rider/moritz-czasa
-1262,CASTAÑO Sebastián Alexander,CO,Team Sistecredito,11.0,https://www.procyclingstats.com/rider/sebastian-alexander-castano-munoz
-1263,LEMES Bruno Martins,BR,Localiza Meoo / Swift Pro Cycling,11.0,https://www.procyclingstats.com/rider/bruno-martins-lemes
-1264,PELLAUD Simon,CH,Li Ning Star,11.0,https://www.procyclingstats.com/rider/simon-pellaud
-1265,VANDEPUTTE Niels,BE,Alpecin-Premier Tech Development Team,11.0,https://www.procyclingstats.com/rider/niels-vandeputte
-1266,CROCKETT Finn,IE,VolkerWessels Cycling Team,11.0,https://www.procyclingstats.com/rider/finn-crockett
-1267,EDINGER Roei,IL,NSN Development Team,11.0,https://www.procyclingstats.com/rider/roei-edinger
-1268,ROSS Kent,US,Cascadia,11.0,https://www.procyclingstats.com/rider/kent-ross
-1269,PIKU Leo,AL,,11.0,https://www.procyclingstats.com/rider/leo-piku
-1270,JUMCHAT Nattapol,TH,Thailand Continental Cycling Team,10.0,https://www.procyclingstats.com/rider/nattapol-jumchat
-1271,BAIS Davide,IT,Team Polti VisitMalta,10.0,https://www.procyclingstats.com/rider/davide-bais
-1272,MCKENZIE Hamish,AU,Team Jayco AlUla,10.0,https://www.procyclingstats.com/rider/hamish-mckenzie
-1273,CLARKE Simon,AU,,10.0,https://www.procyclingstats.com/rider/simon-clarke
-1274,AMIRI Yousuf,AE,,10.0,https://www.procyclingstats.com/rider/yousuf-amiri
-1275,YUN Jaebin,KR,Roojai Insurance Winspace,10.0,https://www.procyclingstats.com/rider/jaebin-yun
-1276,YIĞIT Tahir Buğra,TR,Spor Toto Cycling Team,10.0,https://www.procyclingstats.com/rider/tahir-yigit
-1277,GARDNER James,NZ,Terengganu Cycling Team,10.0,https://www.procyclingstats.com/rider/james-gardner
-1278,GIBBONS Ryan,ZA,Fly Cool Collective,10.0,https://www.procyclingstats.com/rider/ryan-gibbons
-1279,MILLER Alex,NA,,10.0,https://www.procyclingstats.com/rider/alex-miller
-1280,JANIKULOV Samandar,UZ,7 Saber Uzbekistan Cycling Team,10.0,https://www.procyclingstats.com/rider/samandar-janikulov
-1281,ARNDT Nikias,DE,Bahrain - Victorious,10.0,https://www.procyclingstats.com/rider/nikias-arndt
-1282,VANGHELUWE Warre,BE,Soudal Quick-Step,10.0,https://www.procyclingstats.com/rider/warre-vangheluwe
-1283,CAUDELL Ezra,US,Modern Adventure Pro Cycling,10.0,https://www.procyclingstats.com/rider/ezra-caudell
-1284,TORRES Albert,ES,Movistar Team,10.0,https://www.procyclingstats.com/rider/albert-torres
-1285,JAKOBSEN Fabio,NL,Team Picnic PostNL,10.0,https://www.procyclingstats.com/rider/fabio-jakobsen
-1286,GROSPE Ismael Jr.,PH,Victoria Sports Pro Cycling,10.0,https://www.procyclingstats.com/rider/ismael-jr.-grospe
-1287,BELMANS Lennert,BE,Alpecin - Premier Tech,10.0,https://www.procyclingstats.com/rider/lennert-belmans
-1288,BOIVIN Guillaume,CA,NSN Cycling Team,10.0,https://www.procyclingstats.com/rider/guillaume-boivin
-1289,GELEIJN Owen,NL,Unibet Rose Rockets,10.0,https://www.procyclingstats.com/rider/owen-geleijn
-1290,IACCHI Alessandro,IT,Solution Tech NIPPO Rali,10.0,https://www.procyclingstats.com/rider/alessandro-iacchi
-1291,NIELSEN Emil Nymand,DK,NSN Development Team,10.0,https://www.procyclingstats.com/rider/emil-nielsen
-1292,ERRIPA Nehuén,AR,Bialini Wheellab,10.0,https://www.procyclingstats.com/rider/nehuen-erripa
-1293,CHALEIL Louis,FR,Decathlon CMA CGM Development Team,10.0,https://www.procyclingstats.com/rider/louis-chaleil
-1294,RIDOLFO Filippo,IT,Team Novo Nordisk,10.0,https://www.procyclingstats.com/rider/filippo-ridolfo
-1295,COLNAGHI Luca,IT,Bardiani CSF 7 Saber,10.0,https://www.procyclingstats.com/rider/luca-colnaghi
-1296,RACCAGNI Gabriele,IT,Team Polti VisitMalta,10.0,https://www.procyclingstats.com/rider/gabriele-raccagni
-1297,CRUZ Nahuel,DO,,10.0,https://www.procyclingstats.com/rider/nahuel-cruz
-1298,RIVERA Loyd Yuan,PR,,10.0,https://www.procyclingstats.com/rider/loyd-rivera
-1299,SHICHKIN Vlas,RU,,10.0,https://www.procyclingstats.com/rider/vlas-shichkin
-1300,GEERAERTS Ferre,BE,Team Flanders - Baloise,10.0,https://www.procyclingstats.com/rider/ferre-geeraerts
-1301,WANDAHL Frederik,DK,Red Bull - BORA - hansgrohe,10.0,https://www.procyclingstats.com/rider/frederik-wandahl
-1302,AZNAR Hugo,ES,Equipo Kern Pharma,10.0,https://www.procyclingstats.com/rider/hugo-aznar
-1303,CHZHAN Igor,KZ,Quick Pro Team,10.0,https://www.procyclingstats.com/rider/igor-chzhan
-1304,CETTOLIN Filippo,IT,Bardiani CSF 7 Saber,10.0,https://www.procyclingstats.com/rider/filippo-cettolin
-1305,CORRELL Alexander,AU,CCACHE x BODYWRAP,10.0,https://www.procyclingstats.com/rider/alexander-correll
-1306,ÁGUILAR Jonathan,CR,,10.0,https://www.procyclingstats.com/rider/jonathan-aguilar
-1307,SWAN Bailey,AU,Zappi Racing Team,10.0,https://www.procyclingstats.com/rider/bailey-swan
-1308,FORBES James,AU,Qinghai Tianyoude Hotel Cycling Team,10.0,https://www.procyclingstats.com/rider/james-forbes
-1309,LÓPEZ Joseba,ES,Caja Rural - Seguros RGA,10.0,https://www.procyclingstats.com/rider/joseba-lopez-cuesta
-1310,NEMBRINI Diego,IT,General Store - Essegibi - F.Lli Curia,10.0,https://www.procyclingstats.com/rider/diego-nembrini
-1311,ALHAJERI Abdulaziz,AE,Dubai Residence Cycling Club,10.0,https://www.procyclingstats.com/rider/abdulaziz-alhajeri
-1312,OSES Luis Daniel,CR,,10.0,https://www.procyclingstats.com/rider/luis-daniel-oses
-1313,HAUGSTED Conrad,DK,Team ColoQuick,10.0,https://www.procyclingstats.com/rider/conrad-haugsted
-1314,SOLEN Keije,NL,Lotto - Groupe Wanty,10.0,https://www.procyclingstats.com/rider/keije-solen
-1315,JUNGELS Bob,LU,Netcompany INEOS,10.0,https://www.procyclingstats.com/rider/bob-jungels
-1316,VARELA Leandro,CR,,10.0,https://www.procyclingstats.com/rider/leandro-varela
-1317,ORINS Robin,BE,Lotto Intermarché,10.0,https://www.procyclingstats.com/rider/robin-orins
-1318,GELDERS Gil,BE,Soudal Quick-Step,10.0,https://www.procyclingstats.com/rider/gil-gelders
-1319,ARMSTRONG Thomas,GB,Wheelbase - Cabtech - Castelli,10.0,https://www.procyclingstats.com/rider/thomas-armstrong
-1320,BASSET Pierre-Henry,FR,XDS Astana Development Team,10.0,https://www.procyclingstats.com/rider/pierre-henry-basset
-1321,KHALMURATOV Muradjan,UZ,7 Saber Uzbekistan Cycling Team,10.0,https://www.procyclingstats.com/rider/muradjan-khalmuratov
-1322,GUERNALEC Thibault,FR,TotalEnergies,10.0,https://www.procyclingstats.com/rider/thibault-guernalec
-1323,HAJEK Alexander,AT,Red Bull - BORA - hansgrohe,10.0,https://www.procyclingstats.com/rider/alexander-hajek
-1324,URIAN Jose Misael,CO,Team Sistecredito,10.0,https://www.procyclingstats.com/rider/jose-misael-urian
-1325,VAN SCHIP Jan-Willem,NL,Azerion / Villa Valkenburg,10.0,https://www.procyclingstats.com/rider/jan-willem-van-schip
-1326,JØLVING Otto Schultz,DK,Team ColoQuick,10.0,https://www.procyclingstats.com/rider/otto-schultz-jolving
-1327,MAJEWSKI Kacper,PL,Wibatech Lubelskie Perła Polski,10.0,https://www.procyclingstats.com/rider/kacper-majewski
-1328,NAKKEN Tobias Risan,NO,Team Drali - Repsol,10.0,https://www.procyclingstats.com/rider/tobias-risan-nakken
-1329,DEN BRABER Simon,NL,Volharding Cycling Team,10.0,https://www.procyclingstats.com/rider/simon-den-braber
-1330,VĂIDIAN Iustin-Ioan,RO,MENtoRISE Teem CCN,10.0,https://www.procyclingstats.com/rider/iustin-ioan-vaidian
-1331,BOSCARO Davide,IT,S.C. Padovani Polo Cherry Bank,10.0,https://www.procyclingstats.com/rider/davide-boscaro
-1332,DEURWEILHER Guillaume,FR,,10.0,https://www.procyclingstats.com/rider/guillaume-deurweilher
-1333,DA SILVA Tiano,ZA,The Joyrun & Hurricane Cycling Team,10.0,https://www.procyclingstats.com/rider/tiano-da-silva
-1334,GUAMÁ Byron,EC,Best PC Ecuador,10.0,https://www.procyclingstats.com/rider/byron-guama
-1335,ÖVERMARK Riku,FI,,10.0,https://www.procyclingstats.com/rider/riku-overmark
-1336,STEININGER Fabian,AT,Schwingshandl Intralogistics,10.0,https://www.procyclingstats.com/rider/fabian-steininger
-1337,JÓNSSON Kristinn,IS,Team Give Steel,10.0,https://www.procyclingstats.com/rider/kristinn-jonsson
-1338,KUSUMA Terry,ID,Jakarta Pro Cycling Team,10.0,https://www.procyclingstats.com/rider/terry-kusuma
-1339,PRECUP Horea-Stefan,RO,,10.0,https://www.procyclingstats.com/rider/horea-stefan-precup
-1340,FIDEL Esnard,LC,,10.0,https://www.procyclingstats.com/rider/esnard-fidel
-1341,CISSÉ Fidèle,ML,,10.0,https://www.procyclingstats.com/rider/fidele-cisse
-1342,MORGAN Carl,KY,,10.0,https://www.procyclingstats.com/rider/carl-morgan
-1343,VALENTI Luke,CA,Club Ciclista Padronés - Cortizo,10.0,https://www.procyclingstats.com/rider/luke-valenti
-1344,SIKHONDZE Sihlangu,SZ,,10.0,https://www.procyclingstats.com/rider/sihlangu-sikhondze
-1345,FELDHOFFER Bálint,HU,Bahrain Victorious Development Team,10.0,https://www.procyclingstats.com/rider/balint-feldhoffer
-1346,KÜÜT Oskar,EE,Quick Pro Team,10.0,https://www.procyclingstats.com/rider/oskar-kuut
-1347,SILVA Afonso,PT,Team Tavira / Crédito Agrícola,10.0,https://www.procyclingstats.com/rider/afonso-silva
-1348,CANASTUJ José David,GT,Eca Electricidad Ciclismo,10.0,https://www.procyclingstats.com/rider/jose-canastuj
-1349,ALEMAYO Tekle,ET,China Chermin Cycling Team,10.0,https://www.procyclingstats.com/rider/tekle-alemayo
-1350,LAZAREVIĆ Miloš,ME,,10.0,https://www.procyclingstats.com/rider/milos-lazarevic
-1351,KANEKO Sohei,JP,,10.0,https://www.procyclingstats.com/rider/sohei-kaneko
-1352,DUARTE Thiago,BR,,10.0,https://www.procyclingstats.com/rider/thiago-duarte-nardin
-1353,ĐURIĆ Đorđe,RS,Solution Tech NIPPO Rali,10.0,https://www.procyclingstats.com/rider/dorde-duric
-1354,VANDERPOOL Gregory,BB,Team Cadence Cyclery p/b Waldo Racing,10.0,https://www.procyclingstats.com/rider/gregory-vanderpool
-1355,PHAPHO Volavath,LA,,10.0,https://www.procyclingstats.com/rider/volavath-phapho
-1356,BOŠNJAK Fran,HR,,10.0,https://www.procyclingstats.com/rider/fran-bosnjak
-1357,OLARS Anton,SE,Svealand Cycling Team,10.0,https://www.procyclingstats.com/rider/anton-olars
-1358,ROSTOVTSEV Sergey,UZ,Bardiani CSF 7 Saber,9.0,https://www.procyclingstats.com/rider/sergey-rostovtsev
-1359,FANTINI Christian,IT,Solme - Olmo - Arvedi,9.0,https://www.procyclingstats.com/rider/christian-fantini
-1360,TIVANI German Nicolás,AR,Aviludo - Louletano - Loulé,9.0,https://www.procyclingstats.com/rider/german-nicolas-tivani-perez
-1361,ZAHÁLKA Matěj,CZ,Kasper crypto4me,9.0,https://www.procyclingstats.com/rider/matej-zahalka
-1362,UGARTE Gari,ES,Euskaltel - Euskadi,9.0,https://www.procyclingstats.com/rider/gari-ugarte
-1363,KLIMAVIČIUS Nikolas,LT,Energus Cycling Team,9.0,https://www.procyclingstats.com/rider/nikolas-klimavicius
-1364,URKAREGI Eñaut,ES,Lidl - Trek Future Racing,9.0,https://www.procyclingstats.com/rider/enaut-urcaregui
-1365,FEURSTEIN Kilian,AT,Team Vorarlberg,9.0,https://www.procyclingstats.com/rider/kilian-feurstein
-1366,RÖBER Dominik,DE,Team Vorarlberg,9.0,https://www.procyclingstats.com/rider/dominik-rober
-1367,FIORIN Matteo,IT,Solme - Olmo - Arvedi,9.0,https://www.procyclingstats.com/rider/matteo-fiorin
-1368,SCHOUREN Jip,NL,Wielerploeg Groot Amsterdam,9.0,https://www.procyclingstats.com/rider/jip-schouren
-1369,FABBRO Riccardo,IT,UC Trevigiani - Energiapura Marchiol,9.0,https://www.procyclingstats.com/rider/riccardo-fabbro
-1370,GROß Felix,DE,Team Standert Brandenburg,9.0,https://www.procyclingstats.com/rider/felix-gros
-1371,YMERI Albion,XK,,9.0,https://www.procyclingstats.com/rider/albion-ymeri
-1372,ÖRKEN Ahmet,TR,Spor Toto Cycling Team,9.0,https://www.procyclingstats.com/rider/ahmet-orken
-1373,YON HIN Daniel,MU,7Eleven Cliqq Roadbike Philippines,9.0,https://www.procyclingstats.com/rider/daniel-yon-hin
-1374,VILORIA Enmanuel David,VE,Team Fam Birdman Level Up,8.0,https://www.procyclingstats.com/rider/enmanuel-viloria
-1375,OBANDO Bryan Raul,EC,GW Erco SportFitness,8.0,https://www.procyclingstats.com/rider/bryan-raul-obando-rosas
-1376,PÉREZ César,ES,Equipo Kern Pharma,8.0,https://www.procyclingstats.com/rider/cesar-perez-lopez
-1377,LANGE Tyler,ZA,,8.0,https://www.procyclingstats.com/rider/tyler-lange
-1378,MATSUI George,JP,Aisan Racing Team,8.0,https://www.procyclingstats.com/rider/george-matsui
-1379,DOUBEY Fabien,FR,TotalEnergies,8.0,https://www.procyclingstats.com/rider/fabien-doubey
-1380,BATMUNKH Maral-Erdene,MN,Roojai Insurance Winspace,8.0,https://www.procyclingstats.com/rider/maral-erdene-batmunkh
-1381,WANG Ruidong,CN,Li Ning Star,8.0,https://www.procyclingstats.com/rider/ruidong-wang
-1382,MESA Santiago,CO,Anicolor / Campicarn,8.0,https://www.procyclingstats.com/rider/santiago-mesa-pietralunga
-1383,PAREJA Nichol Blanca,PH,Victoria Sports Pro Cycling,8.0,https://www.procyclingstats.com/rider/nichol-blanca-pareja
-1384,VADIC Baptiste,FR,TotalEnergies,8.0,https://www.procyclingstats.com/rider/baptiste-vadic
-1385,BORRESCH Julian,DE,REMBE | rad-net,8.0,https://www.procyclingstats.com/rider/julian-borresch
-1386,UPTEGROVE Ed,NL,EEW-VDK Cyclingteam,8.0,https://www.procyclingstats.com/rider/ed-uptegrove
-1387,ROTTMANN Jonathan Malte,DE,Team Lotto Kern-Haus Outlet Montabaur,8.0,https://www.procyclingstats.com/rider/jonathan-malte-rottmann
-1388,SERVRANCKX Gauthier,BE,Soudal Quick-Step Devo Team,8.0,https://www.procyclingstats.com/rider/gauthier-servranckx
-1389,BRENNER Mauro,DE,REMBE | rad-net,8.0,https://www.procyclingstats.com/rider/mauro-brenner
-1390,ISASA Xabier,ES,Euskaltel - Euskadi,8.0,https://www.procyclingstats.com/rider/xabier-isasa-larranaga
-1391,RUIZ Bredio,PA,,8.0,https://www.procyclingstats.com/rider/bredio-ruiz
-1392,GOMEZ Luis António,VE,Fina Arroz CES Multimarcas Bancamiga,8.0,https://www.procyclingstats.com/rider/luis-gomez
-1393,GROSU Eduard-Michael,RO,FNIX - SCOM - Hengxiang Cycling Team,8.0,https://www.procyclingstats.com/rider/eduard-michael-grosu
-1394,CARSTENSEN Magnus,DK,EF Education - Aevolo,8.0,https://www.procyclingstats.com/rider/magnus-carstensen
-1395,NESBITT Jake,AU,,8.0,https://www.procyclingstats.com/rider/jake-nesbitt
-1396,RAWSON Dylan,NZ,,8.0,https://www.procyclingstats.com/rider/dylan-rawson
-1397,KRAINER Taruia,PF,,8.0,https://www.procyclingstats.com/rider/taruia-krainer
-1398,JACQUES Lucas,BE,Color Code - Alu Center,8.0,https://www.procyclingstats.com/rider/lucas-jacques
-1399,INION Sander,BE,Madar Pro Cycling Team,8.0,https://www.procyclingstats.com/rider/sander-inion
-1400,MACÉ Marius,FR,SCO Dijon Team Matériel-Velo.com,8.0,https://www.procyclingstats.com/rider/marius-mace
-1401,TOADER Alin,RO,,8.0,https://www.procyclingstats.com/rider/alin-toader
-1402,CHAPLIN Sam,GB,Jakroo Handsling Racing,8.0,https://www.procyclingstats.com/rider/sam-chaplin
-1403,ANASTASIA Tommaso,IT,Team Technipes #inEmiliaRomagna Caffè Borbone,8.0,https://www.procyclingstats.com/rider/tommaso-anastasia
-1404,DOWNES Brandon,ZA,Tshenolo Pro Cycling Team,8.0,https://www.procyclingstats.com/rider/brandon-downes
-1405,MRAOUNI Salah Eddine,MA,,8.0,https://www.procyclingstats.com/rider/salah-eddine-mraouni
-1406,REYES Yeison Sebastian,CO,Orgullo Paisa,8.0,https://www.procyclingstats.com/rider/yeison-reyes
-1407,ARDILA Andrés Camilo,CO,Nu Colombia,8.0,https://www.procyclingstats.com/rider/andres-camilo-ardila
-1408,SCHULTZ Elliot,AU,Victoire Hiroshima,8.0,https://www.procyclingstats.com/rider/elliot-schultz
-1409,HASHIKAWA Jo,JP,Kinan Racing Team,8.0,https://www.procyclingstats.com/rider/jo-hashikawa
-1410,VASSAL Théophile,FR,Decathlon CMA CGM Development Team,8.0,https://www.procyclingstats.com/rider/theophile-vassal
-1411,GINTER Nicolas,CH,Tirol KTM Cycling Team,8.0,https://www.procyclingstats.com/rider/nicolas-ginter
-1412,AGOSTINACCHIO Filippo,IT,Biesse - Carrera - Premac,8.0,https://www.procyclingstats.com/rider/filippo-agostinacchio
-1413,HEMING Miká,DE,ATT Investments,8.0,https://www.procyclingstats.com/rider/mika-heming
-1414,BROOKES Joseph,GB,AVC Aix Provence Dole,8.0,https://www.procyclingstats.com/rider/joseph-brookes
-1415,ILBOUDO Soumaila,BF,,8.0,https://www.procyclingstats.com/rider/soumaila-ilboudo
-1416,ADAM Guillaume,FR,Veloce Club Rouen 76,8.0,https://www.procyclingstats.com/rider/guillaume-adam
-1417,PAREDES Anderson Timoteo,VE,,7.0,https://www.procyclingstats.com/rider/anderson-timoteo-paredes
-1418,GOYO Jesus Miguel,VE,Fina Arroz CES Multimarcas Bancamiga,7.0,https://www.procyclingstats.com/rider/jesus-miguel-goyo
-1419,LADNGERN Peerapong,TH,,7.0,https://www.procyclingstats.com/rider/peerapong-ladngern
-1420,MAESTRE Winston,VE,Caja Rural - Alea,7.0,https://www.procyclingstats.com/rider/winston-maestre
-1421,REYNDERS Jens,BE,Qatar Pro Team,7.0,https://www.procyclingstats.com/rider/jens-reynders
-1422,HADEN Glenn,NZ,,7.0,https://www.procyclingstats.com/rider/glenn-haden
-1423,SAKUNTAE Thanapat,TH,,7.0,https://www.procyclingstats.com/rider/thanapat-sakuntae
-1424,HANEKOM Jaques,NA,,7.0,https://www.procyclingstats.com/rider/jaques-hanekom
-1425,BÁRTA Tomáš,CZ,Istanbul Team,7.0,https://www.procyclingstats.com/rider/tomas-barta
-1426,WILSON Matthew,NZ,,7.0,https://www.procyclingstats.com/rider/matthew-wilson1
-1427,RAVLA Prateek,ZW,,7.0,https://www.procyclingstats.com/rider/prateek-ravla
-1428,GROVES Kaden,AU,Alpecin - Premier Tech,7.0,https://www.procyclingstats.com/rider/kaden-groves
-1429,OKAMIKA Ander,ES,Burgos Burpellet BH,7.0,https://www.procyclingstats.com/rider/ander-okamika
-1430,GIRMAY Mewael,ER,Istanbul Team,7.0,https://www.procyclingstats.com/rider/meweal-girmay
-1431,ORANZA Ronald,PH,Standard Insurance PHI,7.0,https://www.procyclingstats.com/rider/ronald-oranza
-1432,LUCERO Jericho,PH,Go For Gold Philippines,7.0,https://www.procyclingstats.com/rider/jericho-lucero
-1433,FETTER Erik,HU,Team United Shipping,7.0,https://www.procyclingstats.com/rider/erik-fetter
-1434,OBLAK Gal,SI,Factor Racing,7.0,https://www.procyclingstats.com/rider/gal-oblak
-1435,RAMIREZ Cristobal Ignacio,CL,,7.0,https://www.procyclingstats.com/rider/cristobal-ignacio-ramirez
-1436,PRONSKIY Daniil,KZ,Team Vino - North Qazaqstan Region,7.0,https://www.procyclingstats.com/rider/daniil-pronskiy
-1437,RAUS Jerome,BE,AVC Aix Provence Dole,7.0,https://www.procyclingstats.com/rider/jerome-raus
-1438,DUARTE Emanuel,PT,Credibom / LA Alumínios / Marcos Car,7.0,https://www.procyclingstats.com/rider/emanuel-duarte
-1439,BAPTISTA Gabriel,PT,Technosylva Rower Bembibre,7.0,https://www.procyclingstats.com/rider/gabriel-baptista
-1440,KERGOZOU DE LA BOESSIERE Nick,NZ,St George Continental Cycling Team,7.0,https://www.procyclingstats.com/rider/nick-kergozou
-1441,BEAUNE Mavric,FR,Veloce Club Rouen 76,7.0,https://www.procyclingstats.com/rider/mavric-beaune
-1442,DYBALL Benjamin,AU,FNIX - SCOM - Hengxiang Cycling Team,7.0,https://www.procyclingstats.com/rider/benjamin-dyball
-1443,BERGAUD Sacha,FR,SCO Dijon Team Matériel-Velo.com,7.0,https://www.procyclingstats.com/rider/sacha-bergaud
-1444,DE GENDT Leander,BE,Bahrain Victorious Development Team,7.0,https://www.procyclingstats.com/rider/leander-de-gendt
-1445,BIEHL Kevin,DK,General Store - Essegibi - F.Lli Curia,7.0,https://www.procyclingstats.com/rider/kevin-biehl
-1446,JONES Toby,AU,CCACHE x BODYWRAP,7.0,https://www.procyclingstats.com/rider/toby-jones
-1447,TORRES Melvin,GT,Hino One La Red Suzuki,7.0,https://www.procyclingstats.com/rider/melvin-torres
-1448,OTTEMA Rick,NL,EEW-VDK Cyclingteam,7.0,https://www.procyclingstats.com/rider/rick-ottema
-1449,ALKAABI Saif,AE,Shabab Al Ahli Cycling Team,7.0,https://www.procyclingstats.com/rider/saif-alkaabi
-1450,TÓTH Márkó,HU,Team United Shipping,7.0,https://www.procyclingstats.com/rider/marko-toth
-1451,MAŚLAK Piotr,PL,Voster Team,7.0,https://www.procyclingstats.com/rider/piotr-maslak
-1452,REDAE Bizay Tesfu,ET,Madar Pro Cycling Team,7.0,https://www.procyclingstats.com/rider/bizay-redae
-1453,ADEL ELZOGHABY Abdelrahman,EG,,7.0,https://www.procyclingstats.com/rider/abdelrahman-adel-elzoghaby
-1454,NIELSEN Magnus Lorents,DK,Atom 6 Bikes - Cycleur de Luxe - Auto Stroo Continental Team,7.0,https://www.procyclingstats.com/rider/magnus-lorents-nielsen
-1455,AMANN Meo,DE,Embrace The World,7.0,https://www.procyclingstats.com/rider/meo-amann
-1456,SQUIRE Ben,BE,DCR Cycling Team,7.0,https://www.procyclingstats.com/rider/ben-squire
-1457,PEZZO ROSOLA Kevin,IT,General Store - Essegibi - F.Lli Curia,7.0,https://www.procyclingstats.com/rider/kevin-pezzo-rosola
-1458,MARTINGIL César,PT,Tavfer-Ovos Matinados-Mortágua,7.0,https://www.procyclingstats.com/rider/cesar-martingil
-1459,MIKKELSEN Pelle Køster,DK,AIRTOX - Carl Ras,7.0,https://www.procyclingstats.com/rider/pelle-koster-mikkelsen
-1460,VEENIS Vigo,NL,Volharding Cycling Team,7.0,https://www.procyclingstats.com/rider/vigo-veenis
-1461,SWIRBUL Keegan,US,Efapel Cycling,7.0,https://www.procyclingstats.com/rider/keegan-swirbul
-1462,DO NASCIMENTO Rodrigo,BR,Localiza Meoo / Swift Pro Cycling,7.0,https://www.procyclingstats.com/rider/rodrigo-nascimento
-1463,EFRIEM Nahom,ER,BIKE AID,7.0,https://www.procyclingstats.com/rider/nahom-efriem
-1464,OYOLA Róbigzon Leandro,CO,Team Medellín - EPM,7.0,https://www.procyclingstats.com/rider/robigzon-leandro-oyola
-1465,RICO Cristian David,CO,Nu Colombia,7.0,https://www.procyclingstats.com/rider/cristian-david-rico
-1466,KLARIS Magnus Bak,DK,AIRTOX - Carl Ras,7.0,https://www.procyclingstats.com/rider/magnus-bak-klaris
-1467,MAROLT Jaka,SI,Factor Racing,7.0,https://www.procyclingstats.com/rider/jaka-marolt
-1468,GRECHISHKIN Vadim,RU,PC Baix Ebre,7.0,https://www.procyclingstats.com/rider/vadim-grechishkin
-1469,JANSSEN Christoph,CH,Huansheng - Vonoa - Taishan Sport Team,7.0,https://www.procyclingstats.com/rider/christoph-janssen
-1470,BIANCALANI Andrea,IT,Beltrami TSA Tre Colli,7.0,https://www.procyclingstats.com/rider/andrea-biancalani
-1471,TOFTEMARK Lucas,DK,AIRTOX - Carl Ras,7.0,https://www.procyclingstats.com/rider/lucas-toftemark
-1472,ÅRNES Daniel,NO,Van Rysel Roubaix,7.0,https://www.procyclingstats.com/rider/daniel-arnes
-1473,FREDHEIM Stian,NO,Uno-X Mobility,7.0,https://www.procyclingstats.com/rider/stian-fredheim
-1474,NIKAČEVIĆ Rastko,RS,Team United Shipping,7.0,https://www.procyclingstats.com/rider/rastko-nikacevic
-1475,SWENNE Delano,NL,VolkerWessels Cycling Team,7.0,https://www.procyclingstats.com/rider/delano-swenne
-1476,DODD Matthew,GB,INEOS Grenadiers Racing Academy,7.0,https://www.procyclingstats.com/rider/matthew-dodd
-1477,LOPES Lucas,PT,Efapel Cycling,7.0,https://www.procyclingstats.com/rider/lucas-lopes1
-1478,YAMAMOTO Tetsuo,JP,Team UKYO,7.0,https://www.procyclingstats.com/rider/tetsuo-yamamoto
-1479,ERBERVELD Jorik,NL,Dutch Food Valley Cycling Team,7.0,https://www.procyclingstats.com/rider/jorik-erberveld
-1480,WOUTERS Rutger,BE,K.O.F.M. x Thielemans - Bildin - Van Eyck Sport Cycling Team,7.0,https://www.procyclingstats.com/rider/rutger-wouters
-1481,HUPPERTZ Joshua,DE,Team Lotto Kern-Haus Outlet Montabaur,7.0,https://www.procyclingstats.com/rider/joshua-huppertz
-1482,FRATICELLI Luca,IT,Vega - Vitalcare - Dynatek,7.0,https://www.procyclingstats.com/rider/luca-fraticell
-1483,MONTENEGRO Santiago,EC,Best PC Ecuador,7.0,https://www.procyclingstats.com/rider/santiago-montenegro
-1484,HAUGLAND Kasper,NO,Decathlon CMA CGM Development Team,7.0,https://www.procyclingstats.com/rider/kasper-haugland
-1485,TEPPO Petja,FI,UN Cycling Team,7.0,https://www.procyclingstats.com/rider/petja-teppo
-1486,ABDURRAHMAN Muhammad,ID,Jakarta Pro Cycling Team,7.0,https://www.procyclingstats.com/rider/muhammad-abdurrahman
-1487,GANDAHO Charbel,BJ,Team Baobab World Cola,7.0,https://www.procyclingstats.com/rider/charbel-gandaho
-1488,KAMAU Davis,KE,,7.0,https://www.procyclingstats.com/rider/davis-kamau
-1489,LAO Long San,MO,,7.0,https://www.procyclingstats.com/rider/long-san-lao
-1490,CELESTIN Joshua,LC,,7.0,https://www.procyclingstats.com/rider/joshua-celestin
-1491,HARITONOV Andrei,MD,,7.0,https://www.procyclingstats.com/rider/andrei-haritonov
-1492,ÓMARSSON Ingvar,IS,,7.0,https://www.procyclingstats.com/rider/ingvar-omarsson
-1493,CARBUNAREA Andrei,RO,CC Villeneuve Saint Germain,7.0,https://www.procyclingstats.com/rider/andrei-carbunarea
-1494,HEI LAU Wan,HK,,7.0,https://www.procyclingstats.com/rider/wan-hei-lau
-1495,LIU Qihua,MO,,7.0,https://www.procyclingstats.com/rider/liu-qihua
-1496,JOSEPH Eltus,LC,,7.0,https://www.procyclingstats.com/rider/eltus-joseph
-1497,JOYA José Dagoberto,SV,Pegasus Premier Texas,7.0,https://www.procyclingstats.com/rider/jose-dagoberto-joya
-1498,RODAS Manuel,GT,Decorabaños - Bantrab,7.0,https://www.procyclingstats.com/rider/manuel-rodas
-1499,DJIRE Daouda,ML,,7.0,https://www.procyclingstats.com/rider/daouda-djire
-1500,MORGUN Ghennadii,MD,,7.0,https://www.procyclingstats.com/rider/ghennadii-morgun
+1172,KARIĆ Vedad,BA,Sidi Ali - Unlock Sports Team,15.0,https://www.procyclingstats.com/rider/vedad-karic
+1173,DEBAY Filimon Zerabruk,ET,,15.0,https://www.procyclingstats.com/rider/filimon-zerabruk-debay
+1174,LUKOVIĆ Danilo,ME,,15.0,https://www.procyclingstats.com/rider/danilo-lukovic
+1175,RAMOS Alberto Rafael,DO,,15.0,https://www.procyclingstats.com/rider/alberto-ramos
+1176,HUTCHINSON Liam,BB,,15.0,https://www.procyclingstats.com/rider/liam-hutchinson
+1177,RABOUDE Jeremy,MU,,15.0,https://www.procyclingstats.com/rider/jeremy-raboude
+1178,MILAKONG Ananxay,LA,,15.0,https://www.procyclingstats.com/rider/ananxay-milakong
+1179,TOMIĆ Ivan Luka,HR,,15.0,https://www.procyclingstats.com/rider/ivan-luka-tomic
+1180,MEUNIER SOW Neriah,SN,Surne Bilbao Cycling Team,15.0,https://www.procyclingstats.com/rider/neriah-meunier-sow
+1181,BALLABIO Giacomo,IT,Team Vorarlberg,14.0,https://www.procyclingstats.com/rider/giacomo-ballabio
+1182,KESSLER Bruno,DE,Tudor Pro Cycling Team U23,14.0,https://www.procyclingstats.com/rider/bruno-kessler
+1183,KUZMIN Anton,KZ,XDS Astana Team,14.0,https://www.procyclingstats.com/rider/anton-kuzmin
+1184,MANCILLA Martin,CL,,14.0,https://www.procyclingstats.com/rider/martin-mancilla
+1185,BATTISTELLA Samuele,IT,EF Education - EasyPost,14.0,https://www.procyclingstats.com/rider/samuele-battistella
+1186,VAN DEN EIJNDEN Guus,NL,Alpecin-Premier Tech Development Team,14.0,https://www.procyclingstats.com/rider/guus-van-den-eijnden
+1187,BICELLI Michele,IT,Biesse - Carrera - Premac,14.0,https://www.procyclingstats.com/rider/michele-bicelli1
+1188,ESPINOSA Bolivar,PA,,14.0,https://www.procyclingstats.com/rider/bolivar-espinosa-serrano
+1189,JENNI Luca,CH,Run & Race - Solarpur,14.0,https://www.procyclingstats.com/rider/luca-jenni
+1190,SMITH Adam,CA,AVC Aix Provence Dole,14.0,https://www.procyclingstats.com/rider/adam-smith1
+1191,TENE Rotem,IL,NSN Cycling Team,14.0,https://www.procyclingstats.com/rider/rotem-tene
+1192,MELOTTE Matteo,BE,Color Code - Alu Center,14.0,https://www.procyclingstats.com/rider/matteo-melotte
+1193,TOMAN Patrik,CZ,Kasper crypto4me,14.0,https://www.procyclingstats.com/rider/patrik-toman
+1194,SANFILIPPO Cristian,IT,Biesse - Carrera - Premac,14.0,https://www.procyclingstats.com/rider/cristian-sanfilippo
+1195,HOWELL Adam,GB,Bourg-en-Bresse Ain Cyclisme,14.0,https://www.procyclingstats.com/rider/adam-howell
+1196,SHPAKOUSKI Viachaslau,BY,,14.0,https://www.procyclingstats.com/rider/viachaslau-shpakouski
+1197,AMELINE Jerome,KY,,14.0,https://www.procyclingstats.com/rider/jerome-ameline
+1198,PELIKÁN János,HU,Team United Shipping,14.0,https://www.procyclingstats.com/rider/janos-pelikan
+1199,PHOMSOUVANH Thepphasith,LA,,14.0,https://www.procyclingstats.com/rider/thepphasith-phomsouvanh
+1200,GÁLVIZ Carlos Johan,VE,Politachira Heidy Lee Sport TVN Norte,13.0,https://www.procyclingstats.com/rider/carlos-galviz
+1201,GIL Angel Alexander,CO,GW Erco SportFitness,13.0,https://www.procyclingstats.com/rider/angel-alexander-gil
+1202,KYFFIN Zeb,GB,Terengganu Cycling Team,13.0,https://www.procyclingstats.com/rider/zeb-kyffin
+1203,BOCHAROV Dmitriy,UZ,7 Saber Uzbekistan Cycling Team,13.0,https://www.procyclingstats.com/rider/dmitriy-bocharov
+1204,GEOGHEGAN HART Tao,GB,Lidl - Trek,13.0,https://www.procyclingstats.com/rider/tao-geoghegan-hart
+1205,FRYDKJÆR Patrick Boje,DK,Lidl - Trek Future Racing,13.0,https://www.procyclingstats.com/rider/patrick-boje-frydkjaer
+1206,BUDA Simone,IT,Solme - Olmo - Arvedi,13.0,https://www.procyclingstats.com/rider/simone-buda2
+1207,SMITH William,GB,Team Visma | Lease a Bike Development,13.0,https://www.procyclingstats.com/rider/william-smith
+1208,JURADO Christofer Robín,PA,,13.0,https://www.procyclingstats.com/rider/christofer-robin-jurado
+1209,NISU Oskar,EE,China Anta - Mentech Cycling Team,13.0,https://www.procyclingstats.com/rider/oskar-nisu
+1210,GUTIÉRREZ Jorge,ES,Equipo Kern Pharma,13.0,https://www.procyclingstats.com/rider/jorge-gutierrez-gonzalez
+1211,SCALA Hugo,US,Modern Adventure Pro Cycling,13.0,https://www.procyclingstats.com/rider/hugo-scala
+1212,ANDERSEN Kasper,DK,Swatt Club,13.0,https://www.procyclingstats.com/rider/kasper-andersen1
+1213,LÓPEZ Robinson Fabián,CO,GW Erco SportFitness,13.0,https://www.procyclingstats.com/rider/robinson-fabian-lopez
+1214,LEWIS Adam,GB,APS Pro Cycling by Team Cadence Cyclery,13.0,https://www.procyclingstats.com/rider/adam-lewis
+1215,SAMITIER Sergio,ES,Cofidis,13.0,https://www.procyclingstats.com/rider/sergio-samitier
+1216,KLISMETS Kārlis,LV,Energus Cycling Team,13.0,https://www.procyclingstats.com/rider/karlis-klismets
+1217,DORENBOS Yanne,NL,Azerion / Villa Valkenburg,13.0,https://www.procyclingstats.com/rider/yanne-dorenbos
+1218,MOREIRA Daniel Filipe Vieira,PT,Hagens Berman Jayco,13.0,https://www.procyclingstats.com/rider/daniel-filipe-vieira-moreira-silva
+1219,BOROŠ Michael,CZ,Kasper crypto4me,13.0,https://www.procyclingstats.com/rider/michael-boros
+1220,MIMOUNI Oussama Abdellah,DZ,Madar Pro Cycling Team,13.0,https://www.procyclingstats.com/rider/oussama-abdellah-mimouni
+1221,KOSSOKO Sadikou Jérémie,CM,SNH Vélo Club,13.0,https://www.procyclingstats.com/rider/sadikou-jeremie-kossoko
+1222,HOFBAUER Philipp,AT,Team Vorarlberg,13.0,https://www.procyclingstats.com/rider/philipp-hofbauer
+1223,CHEN Yusheng,CN,China Anta - Mentech Cycling Team,13.0,https://www.procyclingstats.com/rider/yusheng-chen
+1224,WIRTGEN Luc,LU,Tudor Pro Cycling Team,12.0,https://www.procyclingstats.com/rider/luc-wirtgen
+1225,GRINDLEY Sebastian,GB,Lidl - Trek Future Racing,12.0,https://www.procyclingstats.com/rider/sebastian-grindley
+1226,MANZIN Lorrenzo,FR,TotalEnergies,12.0,https://www.procyclingstats.com/rider/lorrenzo-manzin
+1227,LI You,CN,XDS Astana Development Team,12.0,https://www.procyclingstats.com/rider/you-li
+1228,MARRIAGE Zac,AU,NSN Development Team,12.0,https://www.procyclingstats.com/rider/zac-marriage
+1229,MARTINSEN Georg Rydningen,NO,Lillehammer CK Continental Team,12.0,https://www.procyclingstats.com/rider/georg-rydningen-martinsen
+1230,ŠUMPÍK Pavel,CZ,Development Team Picnic PostNL,12.0,https://www.procyclingstats.com/rider/pavel-sumpik
+1231,ABDUL HALIL Mohamad Izzat Hilmi,MY,Malaysia Pro Cycling,12.0,https://www.procyclingstats.com/rider/mohamad-izzat-hilmi-abdul-halil
+1232,MONK Cyrus,AU,FNIX - SCOM - Hengxiang Cycling Team,12.0,https://www.procyclingstats.com/rider/cyrus-monk
+1233,STITES Tyler,US,Modern Adventure Pro Cycling,12.0,https://www.procyclingstats.com/rider/tyler-stites
+1234,PLAMONDON Joel,CA,Charvieu Chavagneux Isère Cyclisme,12.0,https://www.procyclingstats.com/rider/joel-plamondon
+1235,BENNETT Sam,IE,Pinarello Q36.5 Pro Cycling Team,12.0,https://www.procyclingstats.com/rider/sam-bennett
+1236,FERNÁNDEZ Sinuhé,ES,Burgos Burpellet BH,12.0,https://www.procyclingstats.com/rider/sinuhe-fernandez-rodriguez
+1237,HEIDEMANN Miguel,DE,REMBE | rad-net,12.0,https://www.procyclingstats.com/rider/miguel-heidemann
+1238,VAN BYLEN Liam,BE,Decathlon CMA CGM Development Team,12.0,https://www.procyclingstats.com/rider/liam-van-bylen
+1239,GONÇALVES Diogo,PT,Efapel Cycling,12.0,https://www.procyclingstats.com/rider/diogo-goncalves
+1240,FERNÁNDEZ Rubén,ES,Anicolor / Campicarn,12.0,https://www.procyclingstats.com/rider/ruben-fernandez-andujar
+1241,CANTONI Andrea,IT,Mg.K Vis Costruzioni e Ambiente,12.0,https://www.procyclingstats.com/rider/andrea-cantoni
+1242,BARBAS Rafael,PT,Tavfer-Ovos Matinados-Mortágua,12.0,https://www.procyclingstats.com/rider/rafael-elvas-barbas
+1243,AVOINE Kévin,FR,Van Rysel Roubaix,12.0,https://www.procyclingstats.com/rider/kevin-avoine
+1244,HØYDAHL Jonas Kind,NO,Team Visma | Lease a Bike Development,12.0,https://www.procyclingstats.com/rider/jonas-kind-hoydahl
+1245,VERHOEFF Stefan,NL,Universe Cycling Team,12.0,https://www.procyclingstats.com/rider/stefan-verhoeff
+1246,VELIA Olsian,AL,Sidi Ali - Unlock Sports Team,12.0,https://www.procyclingstats.com/rider/olsian-velia
+1247,KEMBOI Cornelius,KE,,12.0,https://www.procyclingstats.com/rider/cornelius-kemboi
+1248,KOK Mun Wa,MO,,12.0,https://www.procyclingstats.com/rider/mun-wa-kok
+1249,ZAGOREANU Dumitru,MD,,12.0,https://www.procyclingstats.com/rider/dumitru-zagoreanu
+1250,SANTY Arne,BE,Tarteletto - Isorex,11.0,https://www.procyclingstats.com/rider/arne-santy
+1251,ALONSO Agustín,UY,,11.0,https://www.procyclingstats.com/rider/agustin-alonso1
+1252,KESSLER Cole,US,Modern Adventure Pro Cycling,11.0,https://www.procyclingstats.com/rider/cole-kessler
+1253,PARETA Roger,ES,Movistar Team Academy,11.0,https://www.procyclingstats.com/rider/roger-pareta
+1254,GIULIANO Dario,FR,Team Polti VisitMalta,11.0,https://www.procyclingstats.com/rider/dario-giuliano
+1255,KOTSAKIS Francisco,CL,Plus Performance - ZEO Sport,11.0,https://www.procyclingstats.com/rider/francisco-kotsakis
+1256,GOLLIKER Joshua,GB,EF Education - Aevolo,11.0,https://www.procyclingstats.com/rider/joshua-golliker
+1257,QUINTERO Juan Diego,CO,,11.0,https://www.procyclingstats.com/rider/juan-diego-quintero-osorno
+1258,RODRIGUEZ Angel,PR,,11.0,https://www.procyclingstats.com/rider/angel-rodriguez1
+1259,SCHAPER Joeri,NL,Soudal Quick-Step Devo Team,11.0,https://www.procyclingstats.com/rider/joeri-schaper
+1260,CUBILLAS Javier,ES,Movistar Team Academy,11.0,https://www.procyclingstats.com/rider/javier-cubillas
+1261,STRAVERS Jarri,NL,Universe Cycling Team,11.0,https://www.procyclingstats.com/rider/jarri-stravers
+1262,RIAHI Anes,DZ,Madar Pro Cycling Team,11.0,https://www.procyclingstats.com/rider/anes-riahi
+1263,MERLÖV Ville,SE,BHS - PL Beton Bornholm,11.0,https://www.procyclingstats.com/rider/ville-merlov1
+1264,CZASA Moritz,DE,Hucare Factory Team,11.0,https://www.procyclingstats.com/rider/moritz-czasa
+1265,CASTAÑO Sebastián Alexander,CO,Team Sistecredito,11.0,https://www.procyclingstats.com/rider/sebastian-alexander-castano-munoz
+1266,LEMES Bruno Martins,BR,Localiza Meoo / Swift Pro Cycling,11.0,https://www.procyclingstats.com/rider/bruno-martins-lemes
+1267,PELLAUD Simon,CH,Li Ning Star,11.0,https://www.procyclingstats.com/rider/simon-pellaud
+1268,VANDEPUTTE Niels,BE,Alpecin-Premier Tech Development Team,11.0,https://www.procyclingstats.com/rider/niels-vandeputte
+1269,CROCKETT Finn,IE,VolkerWessels Cycling Team,11.0,https://www.procyclingstats.com/rider/finn-crockett
+1270,EDINGER Roei,IL,NSN Development Team,11.0,https://www.procyclingstats.com/rider/roei-edinger
+1271,ROSS Kent,US,Cascadia,11.0,https://www.procyclingstats.com/rider/kent-ross
+1272,PIKU Leo,AL,,11.0,https://www.procyclingstats.com/rider/leo-piku
+1273,JUMCHAT Nattapol,TH,Thailand Continental Cycling Team,10.0,https://www.procyclingstats.com/rider/nattapol-jumchat
+1274,BAIS Davide,IT,Team Polti VisitMalta,10.0,https://www.procyclingstats.com/rider/davide-bais
+1275,MCKENZIE Hamish,AU,Team Jayco AlUla,10.0,https://www.procyclingstats.com/rider/hamish-mckenzie
+1276,CLARKE Simon,AU,,10.0,https://www.procyclingstats.com/rider/simon-clarke
+1277,AMIRI Yousuf,AE,,10.0,https://www.procyclingstats.com/rider/yousuf-amiri
+1278,YUN Jaebin,KR,Roojai Insurance Winspace,10.0,https://www.procyclingstats.com/rider/jaebin-yun
+1279,YIĞIT Tahir Buğra,TR,Spor Toto Cycling Team,10.0,https://www.procyclingstats.com/rider/tahir-yigit
+1280,GARDNER James,NZ,Terengganu Cycling Team,10.0,https://www.procyclingstats.com/rider/james-gardner
+1281,GIBBONS Ryan,ZA,Fly Cool Collective,10.0,https://www.procyclingstats.com/rider/ryan-gibbons
+1282,MILLER Alex,NA,,10.0,https://www.procyclingstats.com/rider/alex-miller
+1283,JANIKULOV Samandar,UZ,7 Saber Uzbekistan Cycling Team,10.0,https://www.procyclingstats.com/rider/samandar-janikulov
+1284,JUNG Woo-Ho,KR,Seoul Cycling Team,10.0,https://www.procyclingstats.com/rider/woo-ho-jung
+1285,ARNDT Nikias,DE,Bahrain - Victorious,10.0,https://www.procyclingstats.com/rider/nikias-arndt
+1286,VANGHELUWE Warre,BE,Soudal Quick-Step,10.0,https://www.procyclingstats.com/rider/warre-vangheluwe
+1287,CAUDELL Ezra,US,Modern Adventure Pro Cycling,10.0,https://www.procyclingstats.com/rider/ezra-caudell
+1288,TORRES Albert,ES,Movistar Team,10.0,https://www.procyclingstats.com/rider/albert-torres
+1289,JAKOBSEN Fabio,NL,Team Picnic PostNL,10.0,https://www.procyclingstats.com/rider/fabio-jakobsen
+1290,GROSPE Ismael Jr.,PH,Victoria Sports Pro Cycling,10.0,https://www.procyclingstats.com/rider/ismael-jr.-grospe
+1291,BELMANS Lennert,BE,Alpecin - Premier Tech,10.0,https://www.procyclingstats.com/rider/lennert-belmans
+1292,BOIVIN Guillaume,CA,NSN Cycling Team,10.0,https://www.procyclingstats.com/rider/guillaume-boivin
+1293,GELEIJN Owen,NL,Unibet Rose Rockets,10.0,https://www.procyclingstats.com/rider/owen-geleijn
+1294,IACCHI Alessandro,IT,Solution Tech NIPPO Rali,10.0,https://www.procyclingstats.com/rider/alessandro-iacchi
+1295,NIELSEN Emil Nymand,DK,NSN Development Team,10.0,https://www.procyclingstats.com/rider/emil-nielsen
+1296,ERRIPA Nehuén,AR,Bialini Wheellab,10.0,https://www.procyclingstats.com/rider/nehuen-erripa
+1297,CHALEIL Louis,FR,Decathlon CMA CGM Development Team,10.0,https://www.procyclingstats.com/rider/louis-chaleil
+1298,RIDOLFO Filippo,IT,Team Novo Nordisk,10.0,https://www.procyclingstats.com/rider/filippo-ridolfo
+1299,COLNAGHI Luca,IT,Bardiani CSF 7 Saber,10.0,https://www.procyclingstats.com/rider/luca-colnaghi
+1300,RACCAGNI Gabriele,IT,Team Polti VisitMalta,10.0,https://www.procyclingstats.com/rider/gabriele-raccagni
+1301,CRUZ Nahuel,DO,,10.0,https://www.procyclingstats.com/rider/nahuel-cruz
+1302,RIVERA Loyd Yuan,PR,,10.0,https://www.procyclingstats.com/rider/loyd-rivera
+1303,SHICHKIN Vlas,RU,,10.0,https://www.procyclingstats.com/rider/vlas-shichkin
+1304,GEERAERTS Ferre,BE,Team Flanders - Baloise,10.0,https://www.procyclingstats.com/rider/ferre-geeraerts
+1305,WANDAHL Frederik,DK,Red Bull - BORA - hansgrohe,10.0,https://www.procyclingstats.com/rider/frederik-wandahl
+1306,AZNAR Hugo,ES,Equipo Kern Pharma,10.0,https://www.procyclingstats.com/rider/hugo-aznar
+1307,CHZHAN Igor,KZ,Quick Pro Team,10.0,https://www.procyclingstats.com/rider/igor-chzhan
+1308,CETTOLIN Filippo,IT,Bardiani CSF 7 Saber,10.0,https://www.procyclingstats.com/rider/filippo-cettolin
+1309,CORRELL Alexander,AU,CCACHE x BODYWRAP,10.0,https://www.procyclingstats.com/rider/alexander-correll
+1310,ÁGUILAR Jonathan,CR,,10.0,https://www.procyclingstats.com/rider/jonathan-aguilar
+1311,SWAN Bailey,AU,Zappi Racing Team,10.0,https://www.procyclingstats.com/rider/bailey-swan
+1312,FORBES James,AU,Qinghai Tianyoude Hotel Cycling Team,10.0,https://www.procyclingstats.com/rider/james-forbes
+1313,LÓPEZ Joseba,ES,Caja Rural - Seguros RGA,10.0,https://www.procyclingstats.com/rider/joseba-lopez-cuesta
+1314,NEMBRINI Diego,IT,General Store - Essegibi - F.Lli Curia,10.0,https://www.procyclingstats.com/rider/diego-nembrini
+1315,ALHAJERI Abdulaziz,AE,Dubai Residence Cycling Club,10.0,https://www.procyclingstats.com/rider/abdulaziz-alhajeri
+1316,OSES Luis Daniel,CR,,10.0,https://www.procyclingstats.com/rider/luis-daniel-oses
+1317,HAUGSTED Conrad,DK,Team ColoQuick,10.0,https://www.procyclingstats.com/rider/conrad-haugsted
+1318,SOLEN Keije,NL,Lotto - Groupe Wanty,10.0,https://www.procyclingstats.com/rider/keije-solen
+1319,JUNGELS Bob,LU,Netcompany INEOS,10.0,https://www.procyclingstats.com/rider/bob-jungels
+1320,VARELA Leandro,CR,,10.0,https://www.procyclingstats.com/rider/leandro-varela
+1321,ORINS Robin,BE,Lotto Intermarché,10.0,https://www.procyclingstats.com/rider/robin-orins
+1322,GELDERS Gil,BE,Soudal Quick-Step,10.0,https://www.procyclingstats.com/rider/gil-gelders
+1323,ARMSTRONG Thomas,GB,Wheelbase - Cabtech - Castelli,10.0,https://www.procyclingstats.com/rider/thomas-armstrong
+1324,BASSET Pierre-Henry,FR,XDS Astana Development Team,10.0,https://www.procyclingstats.com/rider/pierre-henry-basset
+1325,KHALMURATOV Muradjan,UZ,7 Saber Uzbekistan Cycling Team,10.0,https://www.procyclingstats.com/rider/muradjan-khalmuratov
+1326,GUERNALEC Thibault,FR,TotalEnergies,10.0,https://www.procyclingstats.com/rider/thibault-guernalec
+1327,HAJEK Alexander,AT,Red Bull - BORA - hansgrohe,10.0,https://www.procyclingstats.com/rider/alexander-hajek
+1328,URIAN Jose Misael,CO,Team Sistecredito,10.0,https://www.procyclingstats.com/rider/jose-misael-urian
+1329,VAN SCHIP Jan-Willem,NL,Azerion / Villa Valkenburg,10.0,https://www.procyclingstats.com/rider/jan-willem-van-schip
+1330,JØLVING Otto Schultz,DK,Team ColoQuick,10.0,https://www.procyclingstats.com/rider/otto-schultz-jolving
+1331,MAJEWSKI Kacper,PL,Wibatech Lubelskie Perła Polski,10.0,https://www.procyclingstats.com/rider/kacper-majewski
+1332,NAKKEN Tobias Risan,NO,Team Drali - Repsol,10.0,https://www.procyclingstats.com/rider/tobias-risan-nakken
+1333,DEN BRABER Simon,NL,Volharding Cycling Team,10.0,https://www.procyclingstats.com/rider/simon-den-braber
+1334,VĂIDIAN Iustin-Ioan,RO,MENtoRISE Teem CCN,10.0,https://www.procyclingstats.com/rider/iustin-ioan-vaidian
+1335,BOSCARO Davide,IT,S.C. Padovani Polo Cherry Bank,10.0,https://www.procyclingstats.com/rider/davide-boscaro
+1336,DEURWEILHER Guillaume,FR,,10.0,https://www.procyclingstats.com/rider/guillaume-deurweilher
+1337,DA SILVA Tiano,ZA,The Joyrun & Hurricane Cycling Team,10.0,https://www.procyclingstats.com/rider/tiano-da-silva
+1338,GUAMÁ Byron,EC,Best PC Ecuador,10.0,https://www.procyclingstats.com/rider/byron-guama
+1339,ÖVERMARK Riku,FI,,10.0,https://www.procyclingstats.com/rider/riku-overmark
+1340,STEININGER Fabian,AT,Schwingshandl Intralogistics,10.0,https://www.procyclingstats.com/rider/fabian-steininger
+1341,JÓNSSON Kristinn,IS,Team Give Steel,10.0,https://www.procyclingstats.com/rider/kristinn-jonsson
+1342,KUSUMA Terry,ID,Jakarta Pro Cycling Team,10.0,https://www.procyclingstats.com/rider/terry-kusuma
+1343,PRECUP Horea-Stefan,RO,,10.0,https://www.procyclingstats.com/rider/horea-stefan-precup
+1344,FIDEL Esnard,LC,,10.0,https://www.procyclingstats.com/rider/esnard-fidel
+1345,CISSÉ Fidèle,ML,,10.0,https://www.procyclingstats.com/rider/fidele-cisse
+1346,MORGAN Carl,KY,,10.0,https://www.procyclingstats.com/rider/carl-morgan
+1347,VALENTI Luke,CA,Club Ciclista Padronés - Cortizo,10.0,https://www.procyclingstats.com/rider/luke-valenti
+1348,JANG Kyung-Gu,KR,,10.0,https://www.procyclingstats.com/rider/kyung-gu-jang
+1349,SIKHONDZE Sihlangu Ntsetse,SZ,,10.0,https://www.procyclingstats.com/rider/sihlangu-sikhondze
+1350,FELDHOFFER Bálint,HU,Bahrain Victorious Development Team,10.0,https://www.procyclingstats.com/rider/balint-feldhoffer
+1351,KÜÜT Oskar,EE,Quick Pro Team,10.0,https://www.procyclingstats.com/rider/oskar-kuut
+1352,SILVA Afonso,PT,Team Tavira / Crédito Agrícola,10.0,https://www.procyclingstats.com/rider/afonso-silva
+1353,MAHMUTOVIĆ Amir,BA,,10.0,https://www.procyclingstats.com/rider/amir-mahmutovic
+1354,CANASTUJ José David,GT,Eca Electricidad Ciclismo,10.0,https://www.procyclingstats.com/rider/jose-canastuj
+1355,ALEMAYO Tekle,ET,China Chermin Cycling Team,10.0,https://www.procyclingstats.com/rider/tekle-alemayo
+1356,LAZAREVIĆ Miloš,ME,,10.0,https://www.procyclingstats.com/rider/milos-lazarevic
+1357,KANEKO Sohei,JP,,10.0,https://www.procyclingstats.com/rider/sohei-kaneko
+1358,DEL ROSARIO Juan Carlos,DO,,10.0,https://www.procyclingstats.com/rider/juan-carlos-del-rosario-felix
+1359,DUARTE Thiago,BR,,10.0,https://www.procyclingstats.com/rider/thiago-duarte-nardin
+1360,ĐURIĆ Đorđe,RS,Solution Tech NIPPO Rali,10.0,https://www.procyclingstats.com/rider/dorde-duric
+1361,VANDERPOOL Gregory,BB,Team Cadence Cyclery p/b Waldo Racing,10.0,https://www.procyclingstats.com/rider/gregory-vanderpool
+1362,PHAPHO Volavath,LA,,10.0,https://www.procyclingstats.com/rider/volavath-phapho
+1363,BOŠNJAK Fran,HR,,10.0,https://www.procyclingstats.com/rider/fran-bosnjak
+1364,OLARS Anton,SE,Svealand Cycling Team,10.0,https://www.procyclingstats.com/rider/anton-olars
+1365,SOW Nar,SN,,10.0,https://www.procyclingstats.com/rider/nar-sow
+1366,ROSTOVTSEV Sergey,UZ,Bardiani CSF 7 Saber,9.0,https://www.procyclingstats.com/rider/sergey-rostovtsev
+1367,FANTINI Christian,IT,Solme - Olmo - Arvedi,9.0,https://www.procyclingstats.com/rider/christian-fantini
+1368,TIVANI German Nicolás,AR,Aviludo - Louletano - Loulé,9.0,https://www.procyclingstats.com/rider/german-nicolas-tivani-perez
+1369,ZAHÁLKA Matěj,CZ,Kasper crypto4me,9.0,https://www.procyclingstats.com/rider/matej-zahalka
+1370,UGARTE Gari,ES,Euskaltel - Euskadi,9.0,https://www.procyclingstats.com/rider/gari-ugarte
+1371,KLIMAVIČIUS Nikolas,LT,Energus Cycling Team,9.0,https://www.procyclingstats.com/rider/nikolas-klimavicius
+1372,URKAREGI Eñaut,ES,Lidl - Trek Future Racing,9.0,https://www.procyclingstats.com/rider/enaut-urcaregui
+1373,FEURSTEIN Kilian,AT,Team Vorarlberg,9.0,https://www.procyclingstats.com/rider/kilian-feurstein
+1374,RÖBER Dominik,DE,Team Vorarlberg,9.0,https://www.procyclingstats.com/rider/dominik-rober
+1375,FIORIN Matteo,IT,Solme - Olmo - Arvedi,9.0,https://www.procyclingstats.com/rider/matteo-fiorin
+1376,SCHOUREN Jip,NL,Wielerploeg Groot Amsterdam,9.0,https://www.procyclingstats.com/rider/jip-schouren
+1377,FABBRO Riccardo,IT,UC Trevigiani - Energiapura Marchiol,9.0,https://www.procyclingstats.com/rider/riccardo-fabbro
+1378,GROß Felix,DE,Team Standert Brandenburg,9.0,https://www.procyclingstats.com/rider/felix-gros
+1379,YMERI Albion,XK,,9.0,https://www.procyclingstats.com/rider/albion-ymeri
+1380,ÖRKEN Ahmet,TR,Spor Toto Cycling Team,9.0,https://www.procyclingstats.com/rider/ahmet-orken
+1381,YON HIN Daniel,MU,7Eleven Cliqq Roadbike Philippines,9.0,https://www.procyclingstats.com/rider/daniel-yon-hin
+1382,VILORIA Enmanuel David,VE,Team Fam Birdman Level Up,8.0,https://www.procyclingstats.com/rider/enmanuel-viloria
+1383,OBANDO Bryan Raul,EC,GW Erco SportFitness,8.0,https://www.procyclingstats.com/rider/bryan-raul-obando-rosas
+1384,PÉREZ César,ES,Equipo Kern Pharma,8.0,https://www.procyclingstats.com/rider/cesar-perez-lopez
+1385,LANGE Tyler,ZA,,8.0,https://www.procyclingstats.com/rider/tyler-lange
+1386,MATSUI George,JP,Aisan Racing Team,8.0,https://www.procyclingstats.com/rider/george-matsui
+1387,DOUBEY Fabien,FR,TotalEnergies,8.0,https://www.procyclingstats.com/rider/fabien-doubey
+1388,BATMUNKH Maral-Erdene,MN,Roojai Insurance Winspace,8.0,https://www.procyclingstats.com/rider/maral-erdene-batmunkh
+1389,WANG Ruidong,CN,Li Ning Star,8.0,https://www.procyclingstats.com/rider/ruidong-wang
+1390,MESA Santiago,CO,Anicolor / Campicarn,8.0,https://www.procyclingstats.com/rider/santiago-mesa-pietralunga
+1391,PAREJA Nichol Blanca,PH,Victoria Sports Pro Cycling,8.0,https://www.procyclingstats.com/rider/nichol-blanca-pareja
+1392,VADIC Baptiste,FR,TotalEnergies,8.0,https://www.procyclingstats.com/rider/baptiste-vadic
+1393,BORRESCH Julian,DE,REMBE | rad-net,8.0,https://www.procyclingstats.com/rider/julian-borresch
+1394,UPTEGROVE Ed,NL,EEW-VDK Cyclingteam,8.0,https://www.procyclingstats.com/rider/ed-uptegrove
+1395,ROTTMANN Jonathan Malte,DE,Team Lotto Kern-Haus Outlet Montabaur,8.0,https://www.procyclingstats.com/rider/jonathan-malte-rottmann
+1396,SERVRANCKX Gauthier,BE,Soudal Quick-Step Devo Team,8.0,https://www.procyclingstats.com/rider/gauthier-servranckx
+1397,BRENNER Mauro,DE,REMBE | rad-net,8.0,https://www.procyclingstats.com/rider/mauro-brenner
+1398,ISASA Xabier,ES,Euskaltel - Euskadi,8.0,https://www.procyclingstats.com/rider/xabier-isasa-larranaga
+1399,RUIZ Bredio,PA,,8.0,https://www.procyclingstats.com/rider/bredio-ruiz
+1400,GOMEZ Luis António,VE,Fina Arroz CES Multimarcas Bancamiga,8.0,https://www.procyclingstats.com/rider/luis-gomez
+1401,GROSU Eduard-Michael,RO,FNIX - SCOM - Hengxiang Cycling Team,8.0,https://www.procyclingstats.com/rider/eduard-michael-grosu
+1402,CARSTENSEN Magnus,DK,EF Education - Aevolo,8.0,https://www.procyclingstats.com/rider/magnus-carstensen
+1403,NESBITT Jake,AU,,8.0,https://www.procyclingstats.com/rider/jake-nesbitt
+1404,RAWSON Dylan,NZ,,8.0,https://www.procyclingstats.com/rider/dylan-rawson
+1405,KRAINER Taruia,PF,,8.0,https://www.procyclingstats.com/rider/taruia-krainer
+1406,JACQUES Lucas,BE,Color Code - Alu Center,8.0,https://www.procyclingstats.com/rider/lucas-jacques
+1407,INION Sander,BE,Madar Pro Cycling Team,8.0,https://www.procyclingstats.com/rider/sander-inion
+1408,MACÉ Marius,FR,SCO Dijon Team Matériel-Velo.com,8.0,https://www.procyclingstats.com/rider/marius-mace
+1409,TOADER Alin,RO,,8.0,https://www.procyclingstats.com/rider/alin-toader
+1410,CHAPLIN Sam,GB,Jakroo Handsling Racing,8.0,https://www.procyclingstats.com/rider/sam-chaplin
+1411,ANASTASIA Tommaso,IT,Team Technipes #inEmiliaRomagna Caffè Borbone,8.0,https://www.procyclingstats.com/rider/tommaso-anastasia
+1412,DOWNES Brandon,ZA,Tshenolo Pro Cycling Team,8.0,https://www.procyclingstats.com/rider/brandon-downes
+1413,MRAOUNI Salah Eddine,MA,,8.0,https://www.procyclingstats.com/rider/salah-eddine-mraouni
+1414,REYES Yeison Sebastian,CO,Orgullo Paisa,8.0,https://www.procyclingstats.com/rider/yeison-reyes
+1415,ARDILA Andrés Camilo,CO,Nu Colombia,8.0,https://www.procyclingstats.com/rider/andres-camilo-ardila
+1416,SCHULTZ Elliot,AU,Victoire Hiroshima,8.0,https://www.procyclingstats.com/rider/elliot-schultz
+1417,HASHIKAWA Jo,JP,Kinan Racing Team,8.0,https://www.procyclingstats.com/rider/jo-hashikawa
+1418,VASSAL Théophile,FR,Decathlon CMA CGM Development Team,8.0,https://www.procyclingstats.com/rider/theophile-vassal
+1419,GINTER Nicolas,CH,Tirol KTM Cycling Team,8.0,https://www.procyclingstats.com/rider/nicolas-ginter
+1420,AGOSTINACCHIO Filippo,IT,Biesse - Carrera - Premac,8.0,https://www.procyclingstats.com/rider/filippo-agostinacchio
+1421,HEMING Miká,DE,ATT Investments,8.0,https://www.procyclingstats.com/rider/mika-heming
+1422,BROOKES Joseph,GB,AVC Aix Provence Dole,8.0,https://www.procyclingstats.com/rider/joseph-brookes
+1423,ILBOUDO Soumaila,BF,,8.0,https://www.procyclingstats.com/rider/soumaila-ilboudo
+1424,ADAM Guillaume,FR,Veloce Club Rouen 76,8.0,https://www.procyclingstats.com/rider/guillaume-adam
+1425,RODAS Manuel,GT,Decorabaños - Bantrab,8.0,https://www.procyclingstats.com/rider/manuel-rodas
+1426,PAREDES Anderson Timoteo,VE,,7.0,https://www.procyclingstats.com/rider/anderson-timoteo-paredes
+1427,GOYO Jesus Miguel,VE,Fina Arroz CES Multimarcas Bancamiga,7.0,https://www.procyclingstats.com/rider/jesus-miguel-goyo
+1428,LADNGERN Peerapong,TH,,7.0,https://www.procyclingstats.com/rider/peerapong-ladngern
+1429,MAESTRE Winston,VE,Caja Rural - Alea,7.0,https://www.procyclingstats.com/rider/winston-maestre
+1430,REYNDERS Jens,BE,Qatar Pro Team,7.0,https://www.procyclingstats.com/rider/jens-reynders
+1431,HADEN Glenn,NZ,,7.0,https://www.procyclingstats.com/rider/glenn-haden
+1432,SAKUNTAE Thanapat,TH,,7.0,https://www.procyclingstats.com/rider/thanapat-sakuntae
+1433,HANEKOM Jaques,NA,,7.0,https://www.procyclingstats.com/rider/jaques-hanekom
+1434,BÁRTA Tomáš,CZ,Istanbul Team,7.0,https://www.procyclingstats.com/rider/tomas-barta
+1435,WILSON Matthew,NZ,,7.0,https://www.procyclingstats.com/rider/matthew-wilson1
+1436,RAVLA Prateek,ZW,,7.0,https://www.procyclingstats.com/rider/prateek-ravla
+1437,GROVES Kaden,AU,Alpecin - Premier Tech,7.0,https://www.procyclingstats.com/rider/kaden-groves
+1438,OKAMIKA Ander,ES,Burgos Burpellet BH,7.0,https://www.procyclingstats.com/rider/ander-okamika
+1439,GIRMAY Mewael,ER,Istanbul Team,7.0,https://www.procyclingstats.com/rider/meweal-girmay
+1440,ORANZA Ronald,PH,Standard Insurance PHI,7.0,https://www.procyclingstats.com/rider/ronald-oranza
+1441,LUCERO Jericho,PH,Go For Gold Philippines,7.0,https://www.procyclingstats.com/rider/jericho-lucero
+1442,FETTER Erik,HU,Team United Shipping,7.0,https://www.procyclingstats.com/rider/erik-fetter
+1443,OBLAK Gal,SI,Factor Racing,7.0,https://www.procyclingstats.com/rider/gal-oblak
+1444,RAMIREZ Cristobal Ignacio,CL,,7.0,https://www.procyclingstats.com/rider/cristobal-ignacio-ramirez
+1445,PRONSKIY Daniil,KZ,Team Vino - North Qazaqstan Region,7.0,https://www.procyclingstats.com/rider/daniil-pronskiy
+1446,RAUS Jerome,BE,AVC Aix Provence Dole,7.0,https://www.procyclingstats.com/rider/jerome-raus
+1447,DUARTE Emanuel,PT,Credibom / LA Alumínios / Marcos Car,7.0,https://www.procyclingstats.com/rider/emanuel-duarte
+1448,BAPTISTA Gabriel,PT,Technosylva Rower Bembibre,7.0,https://www.procyclingstats.com/rider/gabriel-baptista
+1449,KERGOZOU DE LA BOESSIERE Nick,NZ,St George Continental Cycling Team,7.0,https://www.procyclingstats.com/rider/nick-kergozou
+1450,BEAUNE Mavric,FR,Veloce Club Rouen 76,7.0,https://www.procyclingstats.com/rider/mavric-beaune
+1451,DYBALL Benjamin,AU,FNIX - SCOM - Hengxiang Cycling Team,7.0,https://www.procyclingstats.com/rider/benjamin-dyball
+1452,BERGAUD Sacha,FR,SCO Dijon Team Matériel-Velo.com,7.0,https://www.procyclingstats.com/rider/sacha-bergaud
+1453,DE GENDT Leander,BE,Bahrain Victorious Development Team,7.0,https://www.procyclingstats.com/rider/leander-de-gendt
+1454,BIEHL Kevin,DK,General Store - Essegibi - F.Lli Curia,7.0,https://www.procyclingstats.com/rider/kevin-biehl
+1455,JONES Toby,AU,CCACHE x BODYWRAP,7.0,https://www.procyclingstats.com/rider/toby-jones
+1456,TORRES Melvin,GT,Hino One La Red Suzuki,7.0,https://www.procyclingstats.com/rider/melvin-torres
+1457,OTTEMA Rick,NL,EEW-VDK Cyclingteam,7.0,https://www.procyclingstats.com/rider/rick-ottema
+1458,ALKAABI Saif,AE,Shabab Al Ahli Cycling Team,7.0,https://www.procyclingstats.com/rider/saif-alkaabi
+1459,TÓTH Márkó,HU,Team United Shipping,7.0,https://www.procyclingstats.com/rider/marko-toth
+1460,MAŚLAK Piotr,PL,Voster Team,7.0,https://www.procyclingstats.com/rider/piotr-maslak
+1461,REDAE Bizay Tesfu,ET,Madar Pro Cycling Team,7.0,https://www.procyclingstats.com/rider/bizay-redae
+1462,ADEL ELZOGHABY Abdelrahman,EG,,7.0,https://www.procyclingstats.com/rider/abdelrahman-adel-elzoghaby
+1463,NIELSEN Magnus Lorents,DK,Atom 6 Bikes - Cycleur de Luxe - Auto Stroo Continental Team,7.0,https://www.procyclingstats.com/rider/magnus-lorents-nielsen
+1464,AMANN Meo,DE,Embrace The World,7.0,https://www.procyclingstats.com/rider/meo-amann
+1465,SQUIRE Ben,BE,DCR Cycling Team,7.0,https://www.procyclingstats.com/rider/ben-squire
+1466,PEZZO ROSOLA Kevin,IT,General Store - Essegibi - F.Lli Curia,7.0,https://www.procyclingstats.com/rider/kevin-pezzo-rosola
+1467,MARTINGIL César,PT,Tavfer-Ovos Matinados-Mortágua,7.0,https://www.procyclingstats.com/rider/cesar-martingil
+1468,MIKKELSEN Pelle Køster,DK,AIRTOX - Carl Ras,7.0,https://www.procyclingstats.com/rider/pelle-koster-mikkelsen
+1469,VEENIS Vigo,NL,Volharding Cycling Team,7.0,https://www.procyclingstats.com/rider/vigo-veenis
+1470,SWIRBUL Keegan,US,Efapel Cycling,7.0,https://www.procyclingstats.com/rider/keegan-swirbul
+1471,DO NASCIMENTO Rodrigo,BR,Localiza Meoo / Swift Pro Cycling,7.0,https://www.procyclingstats.com/rider/rodrigo-nascimento
+1472,EFRIEM Nahom,ER,BIKE AID,7.0,https://www.procyclingstats.com/rider/nahom-efriem
+1473,OYOLA Róbigzon Leandro,CO,Team Medellín - EPM,7.0,https://www.procyclingstats.com/rider/robigzon-leandro-oyola
+1474,RICO Cristian David,CO,Nu Colombia,7.0,https://www.procyclingstats.com/rider/cristian-david-rico
+1475,KLARIS Magnus Bak,DK,AIRTOX - Carl Ras,7.0,https://www.procyclingstats.com/rider/magnus-bak-klaris
+1476,MAROLT Jaka,SI,Factor Racing,7.0,https://www.procyclingstats.com/rider/jaka-marolt
+1477,GRECHISHKIN Vadim,RU,PC Baix Ebre,7.0,https://www.procyclingstats.com/rider/vadim-grechishkin
+1478,JANSSEN Christoph,CH,Huansheng - Vonoa - Taishan Sport Team,7.0,https://www.procyclingstats.com/rider/christoph-janssen
+1479,BIANCALANI Andrea,IT,Beltrami TSA Tre Colli,7.0,https://www.procyclingstats.com/rider/andrea-biancalani
+1480,TOFTEMARK Lucas,DK,AIRTOX - Carl Ras,7.0,https://www.procyclingstats.com/rider/lucas-toftemark
+1481,ÅRNES Daniel,NO,Van Rysel Roubaix,7.0,https://www.procyclingstats.com/rider/daniel-arnes
+1482,FREDHEIM Stian,NO,Uno-X Mobility,7.0,https://www.procyclingstats.com/rider/stian-fredheim
+1483,NIKAČEVIĆ Rastko,RS,Team United Shipping,7.0,https://www.procyclingstats.com/rider/rastko-nikacevic
+1484,SWENNE Delano,NL,VolkerWessels Cycling Team,7.0,https://www.procyclingstats.com/rider/delano-swenne
+1485,DODD Matthew,GB,INEOS Grenadiers Racing Academy,7.0,https://www.procyclingstats.com/rider/matthew-dodd
+1486,LOPES Lucas,PT,Efapel Cycling,7.0,https://www.procyclingstats.com/rider/lucas-lopes1
+1487,YAMAMOTO Tetsuo,JP,Team UKYO,7.0,https://www.procyclingstats.com/rider/tetsuo-yamamoto
+1488,ERBERVELD Jorik,NL,Dutch Food Valley Cycling Team,7.0,https://www.procyclingstats.com/rider/jorik-erberveld
+1489,WOUTERS Rutger,BE,K.O.F.M. x Thielemans - Bildin - Van Eyck Sport Cycling Team,7.0,https://www.procyclingstats.com/rider/rutger-wouters
+1490,HUPPERTZ Joshua,DE,Team Lotto Kern-Haus Outlet Montabaur,7.0,https://www.procyclingstats.com/rider/joshua-huppertz
+1491,FRATICELLI Luca,IT,Vega - Vitalcare - Dynatek,7.0,https://www.procyclingstats.com/rider/luca-fraticell
+1492,MONTENEGRO Santiago,EC,Best PC Ecuador,7.0,https://www.procyclingstats.com/rider/santiago-montenegro
+1493,HAUGLAND Kasper,NO,Decathlon CMA CGM Development Team,7.0,https://www.procyclingstats.com/rider/kasper-haugland
+1494,TEPPO Petja,FI,UN Cycling Team,7.0,https://www.procyclingstats.com/rider/petja-teppo
+1495,ABDURRAHMAN Muhammad,ID,Jakarta Pro Cycling Team,7.0,https://www.procyclingstats.com/rider/muhammad-abdurrahman
+1496,GANDAHO Charbel,BJ,Team Baobab World Cola,7.0,https://www.procyclingstats.com/rider/charbel-gandaho
+1497,KAMAU Davis,KE,,7.0,https://www.procyclingstats.com/rider/davis-kamau
+1498,LAO Long San,MO,,7.0,https://www.procyclingstats.com/rider/long-san-lao
+1499,CELESTIN Joshua,LC,,7.0,https://www.procyclingstats.com/rider/joshua-celestin
+1500,HARITONOV Andrei,MD,,7.0,https://www.procyclingstats.com/rider/andrei-haritonov
