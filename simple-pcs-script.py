@@ -193,6 +193,7 @@ class FantasyPCSIntegrator:
             'D. GROENEWEGEN': 'GROENEWEGEN Dylan',
             'F. GAVIRIA RENDON': 'GAVIRIA Fernando',
             'A. DE LIE': 'DE LIE Arnaud',
+            'A. DE KLEIJN': 'DE KLEIJN Arvid',
             'J. MEEUS': 'MEEUS Jordi',
             'A. DAINESE': 'DAINESE Alberto',
             'T. STEWART': 'STEWART Jake',
