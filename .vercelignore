@@ -1,0 +1,7 @@
+.DS_Store
+.git/
+.vercel/
+__pycache__/
+*.pyc
+*.log
+venv/
