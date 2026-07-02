@@ -187,6 +187,7 @@ class FantasyPCSIntegrator:
             'J. MILAN': 'MILAN Jonathan',
             'T. MERLIER': 'MERLIER Tim',
             'J. PHILIPSEN': 'PHILIPSEN Jasper',
+            'O. KOOIJ': 'KOOIJ Olav',
             'B. GIRMAY': 'GIRMAY Biniam',
             'K. GROVES': 'GROVES Kaden',
             'D. GROENEWEGEN': 'GROENEWEGEN Dylan',
