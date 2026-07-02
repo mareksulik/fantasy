@@ -195,16 +195,6 @@
         </div>
     </nav>
 
-    {% if race_type not in ['vuelta', 'tdf2025'] %}
-    <div class="container mt-3">
-        <div class="alert alert-warning alert-dismissible fade show small mb-0" role="alert">
-            <i class="fas fa-triangle-exclamation"></i>
-            <strong>Provisional start list.</strong> Not every 2026 team has locked in its final eight yet, so the roster can still change. It gets refreshed after the official team presentation on Thursday 2 July — keep that in mind while putting your team together.
-            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
-    </div>
-    {% endif %}
-
     <main class="container mt-4">
         {% block content %}{% endblock %}
     </main>
