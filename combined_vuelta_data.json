@@ -4,11 +4,12 @@
     "fantasy_riders_count": 176,
     "pcs_riders_count": 1500,
     "matched_riders": 176,
-    "last_update": "2026-08-21T11:06:02.274050",
+    "last_update": "2026-08-21T13:37:39.680870",
     "race_type": "vuelta",
     "edition": "Vuelta a España 2026",
     "source_roster": "official startlist PDF (2026-08-21) — final 184 starters, 176 present in fantasy pool",
-    "match_audit": "startlist-verified 2026-08-21T10:51:46.212940"
+    "match_audit": "startlist-verified 2026-08-21T10:51:46.212940",
+    "wins_note": "wins exclude secondary classifications (fixed 2026-08-21)"
   },
   "riders": [
     {
@@ -25,7 +26,7 @@
       "pcs_nationality": "SI",
       "pcs_team": "UAE Team Emirates - XRG",
       "pcs_url": "https://www.procyclingstats.com/rider/tadej-pogacar",
-      "wins_2026": 21,
+      "wins_2026": 19,
       "value_points": 3673.2,
       "points_per_credit": 191.0064,
       "value_category": "Excellent"
@@ -44,7 +45,7 @@
       "pcs_nationality": "BE",
       "pcs_team": "Team Visma | Lease a Bike",
       "pcs_url": "https://www.procyclingstats.com/rider/wout-van-aert",
-      "wins_2026": 9,
+      "wins_2026": 8,
       "value_points": 1087.8,
       "points_per_credit": 58.9225,
       "value_category": "Excellent"
@@ -63,9 +64,9 @@
       "pcs_nationality": "DK",
       "pcs_team": "Lidl - Trek",
       "pcs_url": "https://www.procyclingstats.com/rider/mads-pedersen",
-      "wins_2026": 2,
+      "wins_2026": 1,
       "value_points": 962.8,
-      "points_per_credit": 46.04695652173913,
+      "points_per_credit": 43.953913043478266,
       "value_category": "Excellent"
     },
     {
@@ -82,9 +83,9 @@
       "pcs_nationality": "EC",
       "pcs_team": "EF Education - EasyPost",
       "pcs_url": "https://www.procyclingstats.com/rider/richard-carapaz",
-      "wins_2026": 3,
+      "wins_2026": 2,
       "value_points": 1212.6,
-      "points_per_credit": 63.38590909090909,
+      "points_per_credit": 60.63,
       "value_category": "Excellent"
     },
     {
@@ -158,7 +159,7 @@
       "pcs_nationality": "GB",
       "pcs_team": "Team Visma | Lease a Bike",
       "pcs_url": "https://www.procyclingstats.com/rider/matthew-brennan",
-      "wins_2026": 8,
+      "wins_2026": 7,
       "value_points": 571.6,
       "points_per_credit": 39.10947368421053,
       "value_category": "Great"
@@ -196,9 +197,9 @@
       "pcs_nationality": "GB",
       "pcs_team": "Netcompany INEOS",
       "pcs_url": "https://www.procyclingstats.com/rider/oscar-onley",
-      "wins_2026": 4,
+      "wins_2026": 2,
       "value_points": 390.8,
-      "points_per_credit": 24.682105263157894,
+      "points_per_credit": 22.62526315789474,
       "value_category": "Good"
     },
     {
@@ -424,9 +425,9 @@
       "pcs_nationality": "NO",
       "pcs_team": "Team Visma | Lease a Bike",
       "pcs_url": "https://www.procyclingstats.com/rider/jorgen-nordhagen",
-      "wins_2026": 2,
+      "wins_2026": 1,
       "value_points": 432.0,
-      "points_per_credit": 29.700000000000003,
+      "points_per_credit": 28.35,
       "value_category": "Good"
     },
     {
@@ -462,9 +463,9 @@
       "pcs_nationality": "FR",
       "pcs_team": "Decathlon CMA CGM Team",
       "pcs_url": "https://www.procyclingstats.com/rider/leo-bisiaux",
-      "wins_2026": 1,
+      "wins_2026": 0,
       "value_points": 346.0,
-      "points_per_credit": 22.70625,
+      "points_per_credit": 21.625,
       "value_category": "Good"
     },
     {
@@ -538,9 +539,9 @@
       "pcs_nationality": "US",
       "pcs_team": "Decathlon CMA CGM Team",
       "pcs_url": "https://www.procyclingstats.com/rider/matthew-riccitello",
-      "wins_2026": 4,
+      "wins_2026": 3,
       "value_points": 685.8,
-      "points_per_credit": 51.434999999999995,
+      "points_per_credit": 49.29187499999999,
       "value_category": "Excellent"
     },
     {
@@ -747,9 +748,9 @@
       "pcs_nationality": "ES",
       "pcs_team": "XDS Astana Team",
       "pcs_url": "https://www.procyclingstats.com/rider/cristian-rodriguez",
-      "wins_2026": 1,
+      "wins_2026": 0,
       "value_points": 305.0,
-      "points_per_credit": 21.35,
+      "points_per_credit": 20.333333333333332,
       "value_category": "Good"
     },
     {
@@ -1203,9 +1204,9 @@
       "pcs_nationality": "DE",
       "pcs_team": "EF Education - EasyPost",
       "pcs_url": "https://www.procyclingstats.com/rider/georg-steinhauser",
-      "wins_2026": 1,
+      "wins_2026": 0,
       "value_points": 313.0,
-      "points_per_credit": 25.28076923076923,
+      "points_per_credit": 24.076923076923077,
       "value_category": "Good"
     },
     {
@@ -1279,9 +1280,9 @@
       "pcs_nationality": "SI",
       "pcs_team": "Bahrain - Victorious",
       "pcs_url": "https://www.procyclingstats.com/rider/jakob-omrzel",
-      "wins_2026": 1,
+      "wins_2026": 0,
       "value_points": 270.0,
-      "points_per_credit": 23.625,
+      "points_per_credit": 22.5,
       "value_category": "Good"
     },
     {
@@ -1317,9 +1318,9 @@
       "pcs_nationality": "US",
       "pcs_team": "UAE Team Emirates - XRG",
       "pcs_url": "https://www.procyclingstats.com/rider/kevin-vermaerke",
-      "wins_2026": 1,
+      "wins_2026": 0,
       "value_points": 337.0,
-      "points_per_credit": 29.4875,
+      "points_per_credit": 28.083333333333332,
       "value_category": "Good"
     },
     {
@@ -1374,9 +1375,9 @@
       "pcs_nationality": "PT",
       "pcs_team": "UAE Team Emirates - XRG",
       "pcs_url": "https://www.procyclingstats.com/rider/rui-oliveira",
-      "wins_2026": 2,
+      "wins_2026": 1,
       "value_points": 131.0,
-      "points_per_credit": 12.008333333333333,
+      "points_per_credit": 11.4625,
       "value_category": "Average"
     },
     {
@@ -1564,9 +1565,9 @@
       "pcs_nationality": "ER",
       "pcs_team": "XDS Astana Team",
       "pcs_url": "https://www.procyclingstats.com/rider/henok-mulubrhan",
-      "wins_2026": 5,
+      "wins_2026": 2,
       "value_points": 462.0,
-      "points_per_credit": 52.5,
+      "points_per_credit": 46.2,
       "value_category": "Excellent"
     },
     {
@@ -2096,9 +2097,9 @@
       "pcs_nationality": "ES",
       "pcs_team": null,
       "pcs_url": "https://www.procyclingstats.com/rider/markel-beloki",
-      "wins_2026": 4,
+      "wins_2026": 2,
       "value_points": 337.6,
-      "points_per_credit": 40.51200000000001,
+      "points_per_credit": 37.13600000000001,
       "value_category": "Great"
     },
     {
@@ -2400,9 +2401,9 @@
       "pcs_nationality": "IT",
       "pcs_team": "Pinarello Q36.5 Pro Cycling Team",
       "pcs_url": "https://www.procyclingstats.com/rider/walter-calzoni",
-      "wins_2026": 1,
+      "wins_2026": 0,
       "value_points": 127.0,
-      "points_per_credit": 14.816666666666666,
+      "points_per_credit": 14.11111111111111,
       "value_category": "Average"
     },
     {
@@ -2780,9 +2781,9 @@
       "pcs_nationality": "DE",
       "pcs_team": "Tudor Pro Cycling Team",
       "pcs_url": "https://www.procyclingstats.com/rider/marco-brenner",
-      "wins_2026": 2,
+      "wins_2026": 1,
       "value_points": 568.8,
-      "points_per_credit": 78.21,
+      "points_per_credit": 74.655,
       "value_category": "Excellent"
     },
     {
@@ -2856,9 +2857,9 @@
       "pcs_nationality": "FR",
       "pcs_team": "Burgos Burpellet BH",
       "pcs_url": "https://www.procyclingstats.com/rider/clement-alleno",
-      "wins_2026": 1,
+      "wins_2026": 0,
       "value_points": 119.4,
-      "points_per_credit": 15.67125,
+      "points_per_credit": 14.925,
       "value_category": "Average"
     },
     {
@@ -3160,9 +3161,9 @@
       "pcs_nationality": "ES",
       "pcs_team": null,
       "pcs_url": "https://www.procyclingstats.com/rider/hugo-de-la-calle-arango",
-      "wins_2026": 1,
+      "wins_2026": 0,
       "value_points": 97.4,
-      "points_per_credit": 14.610000000000001,
+      "points_per_credit": 13.914285714285715,
       "value_category": "Average"
     },
     {

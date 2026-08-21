@@ -20,8 +20,14 @@ def wins_for(url):
     wins = 0
     for tr in rows[1:]:
         tds = tr.find_all('td')
-        if len(tds) > ri and tds[ri].get_text(strip=True) == '1':
-            wins += 1
+        if len(tds) <= ri or tds[ri].get_text(strip=True) != '1':
+            continue
+        # PCS counts stage/one-day/GC victories as wins, but NOT secondary
+        # classifications (points/mountains/youth), whose rows also show "1".
+        label = tr.get_text(' ', strip=True).lower()
+        if 'classification' in label and 'general classification' not in label:
+            continue
+        wins += 1
     return wins
 
 
