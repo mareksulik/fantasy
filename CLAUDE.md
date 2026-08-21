@@ -3,7 +3,13 @@
 ## Project Overview
 Web application to help users select better riders for Tour de France fantasy league (https://fantasybytissot.letour.fr).
 
-## Current Status (TdF 2026)
+## Current Status (Vuelta 2026 — active race)
+- ✅ **Vuelta a España 2026** dataset live: 253-rider fantasy pool (extended squads, 23 teams; final startlist = 184), scraped from fantasybytissot.lavuelta.es via `fantasy_scraper_vuelta.js` → `all_vuelta_riders.csv`
+- ✅ Pipeline: `run_vuelta_2026_integration.py` reuses `FantasyPCSIntegrator` from `simple-pcs-script.py` (PCS season + 12m + wins + value model) → `combined_vuelta_data.json`; wins cached in `wins_vuelta_2026.csv` (`--cached-wins` to skip re-scrape)
+- ✅ Match audit: `audit_fix_vuelta_matches.py` re-resolves all fuzzy matches deterministically against the PCS Vuelta startlist (team + surname + initial) — fuzzy matching produced ~40 false positives on compound Spanish names. Final: 253/253 matched. ⚠️ Fantasy initials are unreliable (sometimes from middle names: "S. NORSGAARD" = Mathias Sunekær, "P. BLACKMORE" = Joseph); don't trust initial-mismatch alone.
+- ✅ `DEFAULT_RACE = 'vuelta'` in app.py — no `?race=` param shows Vuelta; TdF 2026/2025 stay in the race dropdown (`?race=tdf` / `?race=tdf2025`)
+
+## Previous Status (TdF 2026)
 - ✅ Updated to **Tour de France 2026** — 197 selectable riders, 23 teams
 - ✅ Fantasy rider data scraped via `fantasy_scraper.js` (now count-agnostic pagination) → `all_tour_de_france_riders.csv`
 - ✅ PCS scraper with advanced name matching (`simple-pcs-script.py`); live 2026-season points

@@ -4,7 +4,7 @@
 
 {% block content %}
 <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2><i class="fas fa-users"></i> Tour de France 2026 Riders</h2>
+    <h2><i class="fas fa-users"></i> {% if race_type == 'vuelta' %}Vuelta a España 2026{% elif race_type == 'tdf2025' %}Tour de France 2025{% else %}Tour de France 2026{% endif %} Riders</h2>
     <div class="d-flex align-items-center gap-3">
         <div class="btn-group" role="group">
             <input type="radio" class="btn-check" name="viewMode" id="cardView" autocomplete="off">

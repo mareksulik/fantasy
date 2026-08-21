@@ -22,6 +22,9 @@ os.chdir(os.path.dirname(os.path.abspath(__file__)))
 
 app = Flask(__name__)
 
+# Race shown when no ?race= parameter is given (the currently running grand tour)
+DEFAULT_RACE = 'vuelta'
+
 # Global variable for cached data
 riders_data = None
 vuelta_riders_data = None
@@ -307,7 +310,7 @@ def index():
 def riders():
     """Page with list of all riders"""
     # Get race type from URL parameter
-    race_type = request.args.get('race', 'tdf')
+    race_type = request.args.get('race', DEFAULT_RACE)
     data = load_riders_data(race_type)
     
     # Filtering
@@ -369,7 +372,7 @@ def riders():
 @app.route('/api/riders')
 def api_riders():
     """API endpoint for getting rider data"""
-    race_type = request.args.get('race', 'tdf')
+    race_type = request.args.get('race', DEFAULT_RACE)
     data = load_riders_data(race_type)
     return jsonify({
         'success': True,
@@ -381,7 +384,7 @@ def api_riders():
 @app.route('/api/rider/<rider_name>')
 def api_rider_detail(rider_name):
     """API endpoint for rider detail"""
-    race_type = request.args.get('race', 'tdf')
+    race_type = request.args.get('race', DEFAULT_RACE)
     data = load_riders_data(race_type)
     rider = next((r for r in data if r['fantasy_name'] == rider_name), None)
     
@@ -400,7 +403,7 @@ def api_rider_detail(rider_name):
 def compare():
     """Page for comparing riders"""
     riders1 = request.args.getlist('riders')
-    race_type = request.args.get('race', 'tdf')
+    race_type = request.args.get('race', DEFAULT_RACE)
     data = load_riders_data(race_type)
     
     selected_riders = []
@@ -417,7 +420,7 @@ def compare():
 @app.route('/team-builder')
 def team_builder():
     """Page for team building"""
-    race_type = request.args.get('race', 'tdf')
+    race_type = request.args.get('race', DEFAULT_RACE)
     data = load_riders_data(race_type)
     
     # Get filter parameters
@@ -489,7 +492,7 @@ def api_optimize_team():
     """API endpoint for team optimization"""
     budget = request.args.get('budget', default=120, type=int)
     strategy = request.args.get('strategy', default='value')  # value, points, balanced
-    race_type = request.args.get('race', 'tdf')
+    race_type = request.args.get('race', DEFAULT_RACE)
     
     # Get existing team for incremental optimization
     current_team_json = request.args.get('current_team', '[]')
@@ -721,7 +724,7 @@ def api_optimize_team():
 @app.route('/stats')
 def stats():
     """Statistics page"""
-    race_type = request.args.get('race', 'tdf')
+    race_type = request.args.get('race', DEFAULT_RACE)
     data = load_riders_data(race_type)
     matched_riders = [r for r in data if r['pcs_match_found']]
     

@@ -145,7 +145,7 @@
                         <a class="nav-link dropdown-toggle" href="#" id="raceDropdown" role="button" data-bs-toggle="dropdown">
                             <i class="fas fa-flag-checkered"></i>
                             {% if race_type == 'vuelta' %}
-                                <span class="text-warning">Vuelta 2025</span>
+                                <span class="text-warning">Vuelta 2026</span>
                             {% elif race_type == 'tdf2025' %}
                                 <span class="text-warning">Tour de France 2025</span>
                             {% else %}
@@ -153,14 +153,14 @@
                             {% endif %}
                         </a>
                         <ul class="dropdown-menu">
+                            <li><a class="dropdown-item {% if race_type == 'vuelta' %}active{% endif %}" href="{{ url_for(request.endpoint, race='vuelta', **request.view_args) }}">
+                                🇪🇸 Vuelta 2026
+                            </a></li>
                             <li><a class="dropdown-item {% if race_type not in ['vuelta', 'tdf2025'] %}active{% endif %}" href="{{ url_for(request.endpoint, race='tdf', **request.view_args) }}">
                                 🇫🇷 Tour de France 2026
                             </a></li>
                             <li><a class="dropdown-item {% if race_type == 'tdf2025' %}active{% endif %}" href="{{ url_for(request.endpoint, race='tdf2025', **request.view_args) }}">
                                 🇫🇷 Tour de France 2025
-                            </a></li>
-                            <li><a class="dropdown-item {% if race_type == 'vuelta' %}active{% endif %}" href="{{ url_for(request.endpoint, race='vuelta', **request.view_args) }}">
-                                🇪🇸 Vuelta 2025
                             </a></li>
                         </ul>
                     </li>

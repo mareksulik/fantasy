@@ -553,7 +553,7 @@ function exportTeam() {
     ctx.fillStyle = '#212529';
     ctx.font = 'bold 24px Arial';
     ctx.textAlign = 'center';
-    ctx.fillText('Tour de France 2026 Fantasy Team', canvas.width / 2, 40);
+    ctx.fillText('{{ 'Vuelta a España 2026' if race_type == 'vuelta' else ('Tour de France 2025' if race_type == 'tdf2025' else 'Tour de France 2026') }} Fantasy Team', canvas.width / 2, 40);
     
     // Team stats
     const totalCost = currentTeam.reduce((sum, rider) => sum + rider.price, 0);
@@ -632,7 +632,7 @@ function exportTeam() {
         const url = URL.createObjectURL(blob);
         const a = document.createElement('a');
         a.href = url;
-        a.download = 'fantasy_tdf_team.png';
+        a.download = '{{ 'fantasy_vuelta_team.png' if race_type == 'vuelta' else 'fantasy_tdf_team.png' }}';
         a.click();
         URL.revokeObjectURL(url);
     });

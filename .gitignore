@@ -5,3 +5,6 @@ __pycache__/
 wins_scrape.log
 .vercel
 *.bak-*.json
+app.log
+deploy*.log
+vuelta_*.log
